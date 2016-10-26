@@ -8,10 +8,14 @@ def swap(arr, a, b):
 # https://en.wikipedia.org/wiki/Bubble_sort
 def bubble_sort(arr):
     alen = len(arr)
-    for _ in range(alen):
+    while True:
+        swapped = False
         for i in range(1, alen):
             if arr[i-1] > arr[i]:
                 swap(arr, i-1, i)
+                swapped = True
+        if not swapped:
+            break
 
 
 def main():
