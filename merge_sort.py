@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-"""Helper routines"""
 
 
 def copy_array(a, begin, end, b):
@@ -7,10 +6,7 @@ def copy_array(a, begin, end, b):
         b[k] = a[k]
 
 
-"""Mergesort routines"""
-
-
-def mergesort(a, style="topdown"):
+def sort(a, style="topdown"):
     n = len(a)
     # copy new array
     b = [0 for i in range(n)]
@@ -46,7 +42,7 @@ def mergesort_bottomup(a, b, n):
     while width < n:
         i = 0
         while i < n:
-            merge(a, i, min(i+width, n), min(i+2*width, n), b)
+            merge(a, i, min(i + width, n), min(i + 2 * width, n), b)
             i += 2 * width
         copy_array(b, 0, n, a)
         width *= 2
@@ -64,16 +60,3 @@ def merge(a, left, right, end, b):
         else:
             b[k] = a[j]
             j += 1
-
-
-"""Main routine"""
-
-
-def main():
-    A = [1, 10, 4, 5, 4, 18, 17, 20, 3, 16]
-    print("before:", A)
-    mergesort(A)
-    print("after:", A)
-
-if __name__ == '__main__':
-    main()
