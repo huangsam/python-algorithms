@@ -1,0 +1,7 @@
+__pycache__/
+.cache
+*.py[cod]
+
+.DS_Store
+
+hosts
