@@ -1,9 +1,9 @@
 from random import randint
 
-import bubble_sort
-import insertion_sort
-import merge_sort
-import quick_sort
+from sorting import bubble_sort
+from sorting import insertion_sort
+from sorting import merge_sort
+from sorting import quick_sort
 
 
 class TestSort():
