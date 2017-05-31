@@ -6,16 +6,11 @@ def copy_array(a, begin, end, b):
         b[k] = a[k]
 
 
-def sort(a, style="topdown"):
+def sort(a):
     n = len(a)
     # copy new array
     b = [0 for i in range(n)]
-    if style == "bottomup":
-        mergesort_bottomup(a, b, n)
-    elif style == "topdown":
-        mergesort_topdown(a, b, n)
-    else:
-        raise Exception("Invalid style - " + style)
+    mergesort_topdown(a, b, n)
 
 
 # https://en.wikipedia.org/wiki/Merge_sort#Top-down_implementation
@@ -36,19 +31,6 @@ def split_merge_topdown(b, begin, end, a):
     merge(b, begin, middle, end, a)
 
 
-# https://en.wikipedia.org/wiki/Merge_sort#Bottom-up_implementation
-def mergesort_bottomup(a, b, n):
-    width = 1
-    while width < n:
-        i = 0
-        while i < n:
-            merge(a, i, min(i + width, n), min(i + 2 * width, n), b)
-            i += 2 * width
-        copy_array(b, 0, n, a)
-        width *= 2
-
-
-# Common merge routine
 def merge(a, left, right, end, b):
     i, j = left, right
     # while elements in left or right runs

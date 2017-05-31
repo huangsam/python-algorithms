@@ -5,25 +5,6 @@ def swap(arr, a, b):
     arr[a], arr[b] = arr[b], arr[a]
 
 
-# https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme
-def hoare(arr, lo, hi):
-    pivot = arr[lo]
-    i = lo - 1
-    j = hi + 1
-    while True:
-        while True:
-            i += 1
-            if arr[i] >= pivot:
-                break
-        while True:
-            j -= 1
-            if arr[j] <= pivot:
-                break
-        if i >= j:
-            return j
-        swap(arr, i, j)
-
-
 # https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme
 def lomuto(arr, lo, hi):
     i = lo
@@ -36,47 +17,33 @@ def lomuto(arr, lo, hi):
     return i
 
 
-def partition_iterative(arr, lo, hi, stack, scheme="lomuto"):
-    p = None
-    if scheme == "lomuto":
-        p = lomuto(arr, lo, hi)
-        stack.append((lo, p - 1))
-    elif scheme == "hoare":
-        p = hoare(arr, lo, hi)
-        stack.append((lo, p))
-    else:
-        raise Exception("Invalid partition scheme - " + scheme)
+def partition_iterative(arr, lo, hi, stack):
+    p = lomuto(arr, lo, hi)
+    stack.append((lo, p - 1))
     stack.append((p + 1, hi))
 
 
-def partition_recursive(arr, lo, hi, scheme="lomuto"):
-    p = None
-    if scheme == "lomuto":
-        p = lomuto(arr, lo, hi)
-        quicksort_recursive(arr, lo, p - 1, scheme)
-    elif scheme == "hoare":
-        p = hoare(arr, lo, hi)
-        quicksort_recursive(arr, lo, p, scheme)
-    else:
-        raise Exception("Invalid partition scheme - " + scheme)
-    quicksort_recursive(arr, p + 1, hi, scheme)
+def partition_recursive(arr, lo, hi):
+    p = lomuto(arr, lo, hi)
+    quicksort_recursive(arr, lo, p - 1)
+    quicksort_recursive(arr, p + 1, hi)
 
 
-def quicksort_iterative(arr, lo, hi, scheme):
+def quicksort_iterative(arr, lo, hi):
     stack = [(lo, hi)]
     while len(stack) > 0:
         lo, hi = stack.pop()
         if lo < hi:
-            partition_iterative(arr, lo, hi, stack, scheme)
+            partition_iterative(arr, lo, hi, stack)
 
 
-def quicksort_recursive(arr, lo, hi, scheme):
+def quicksort_recursive(arr, lo, hi):
     if lo < hi:
-        partition_recursive(arr, lo, hi, scheme)
+        partition_recursive(arr, lo, hi)
 
 
-def sort(arr, scheme="hoare", style="iterative"):
-    if style == "iterative":
-        quicksort_iterative(arr, 0, len(arr) - 1, scheme)
+def sort(arr, iterative=True):
+    if iterative is True:
+        quicksort_iterative(arr, 0, len(arr) - 1)
     else:
-        quicksort_recursive(arr, 0, len(arr) - 1, scheme)
+        quicksort_recursive(arr, 0, len(arr) - 1)

@@ -1,5 +1,3 @@
-from random import randint
-
 from sorting import selection_sort
 
 

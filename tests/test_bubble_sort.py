@@ -1,5 +1,3 @@
-from random import randint
-
 from sorting import bubble_sort
 
 
