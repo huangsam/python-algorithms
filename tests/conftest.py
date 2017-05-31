@@ -3,7 +3,7 @@ from random import randint
 import pytest
 
 
-@pytest.fixture(scope="session",
+@pytest.fixture(scope="function",
                 autouse=True,
                 params=[50, 100, 400])
 def array(request):
