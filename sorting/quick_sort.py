@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
-
-def swap(arr, a, b):
-    arr[a], arr[b] = arr[b], arr[a]
+from utils.array import swap
 
 
 # https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme
