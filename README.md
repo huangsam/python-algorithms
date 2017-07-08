@@ -1,11 +1,17 @@
 # algorithms
 
-Currently implemented so far:
+[![Build Status](https://travis-ci.org/huangsam/algorithms.svg?branch=master)](https://travis-ci.org/huangsam/algorithms)
 
-- Bubble sort
-- Insertion sort
-- Selection sort
-- Merge sort
-- Quick sort
+The section below shows the categories covered so far.
+
+## Categories
+
+Sorting:
+
+- [X] Bubble sort
+- [X] Insertion sort
+- [X] Selection sort
+- [X] Merge sort
+- [X] Quick sort
 
 To test sorts, simply run `py.test`.
