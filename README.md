@@ -14,4 +14,25 @@ Sorting:
 - [X] Merge sort
 - [X] Quick sort
 
+Graph:
+
+- [ ] BFS
+- [ ] DFS
+- [ ] Dijkstra
+- [ ] Bellman-Ford
+- [ ] Floyd-Warshall
+- [ ] Ford-Fulkerson
+
+Data Structures:
+
+- [ ] Arrays
+- [ ] Maps
+- [ ] Queue
+- [ ] Stacks
+- [ ] BST (AVL)
+- [ ] B-Tree
+- [ ] Segment/interval
+- [ ] K-D Tree
+- [ ] Tries
+
 To test sorts, simply run `py.test`.
