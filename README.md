@@ -33,6 +33,6 @@ Data Structures:
 - [ ] B-Tree
 - [ ] Segment/interval
 - [ ] K-D Tree
-- [ ] Tries
+- [X] Tries
 
 To test sorts, simply run `py.test`.
