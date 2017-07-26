@@ -26,7 +26,7 @@ class Trie(object):
         node = prev_node if prev_node is not None else self.node
         for letter in key:
             if letter not in node.children:
-                return False
+                return False, None
             else:
                 node = node.children[letter]
         return True, node
