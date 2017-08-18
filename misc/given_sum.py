@@ -5,6 +5,8 @@
 #     self.value = x
 #     self.left = None
 #     self.right = None
+
+
 def leafSumFound(t, s, prev_val):
     if t is None:
         return False
@@ -20,4 +22,3 @@ def hasPathWithGivenSum(t, s):
     if t is None and s == 0:
         return True
     return leafSumFound(t, s, 0)
-
