@@ -32,7 +32,7 @@ XXXXXXXXX
 
 
 def print_line(length, index, is_hallow):
-    """Print single ilne of Christmas tree.
+    """Print single line of Christmas tree.
 
     Args:
         length: Length of tree.
