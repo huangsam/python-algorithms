@@ -1,6 +1,6 @@
 # algorithms
 
-[![Build Status](https://travis-ci.org/huangsam/algorithms.svg?branch=master)](https://travis-ci.org/huangsam/algorithms)
+[![Build Status](https://travis-ci.com/huangsam/algorithms.svg?branch=master)](https://travis-ci.com/huangsam/algorithms)
 
 The section below shows the categories covered so far.
 
