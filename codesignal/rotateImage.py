@@ -1,6 +1,3 @@
-#!/bin/bash
-
-
 def printMatrix(a):
     print("---")
     a_len = len(a)
