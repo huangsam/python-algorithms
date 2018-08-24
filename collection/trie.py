@@ -1,5 +1,6 @@
 # https://jamesroutley.co.uk/tech/2017/07/16/tries.html#implementation
 class Node(object):
+    """A set of children exist down the line."""
 
     def __init__(self, value=None):
         self.value = value
@@ -8,6 +9,7 @@ class Node(object):
 
 
 class Trie(object):
+    """Trie starts with a root character."""
 
     def __init__(self):
         self.node = Node()

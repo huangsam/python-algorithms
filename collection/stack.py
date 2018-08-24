@@ -1,4 +1,5 @@
 class Stack(object):
+    """Stack is a LIFO data structure."""
 
     def __init__(self):
         self.array = []

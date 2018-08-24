@@ -1,4 +1,5 @@
 class Queue(object):
+    """Queue is a FIFO data structure."""
 
     def __init__(self):
         self.array = []
