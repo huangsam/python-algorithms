@@ -1,3 +1,4 @@
+# https://www.youtube.com/watch?v=XKu_SEDAykw
 def pair_sum(arr, target):
     """Return pair of array values that yield target sum.
 
