@@ -3,6 +3,7 @@
 from utils.array import copy_array
 
 
+# https://en.wikipedia.org/wiki/Merge_sort
 def sort(a):
     n = len(a)
     # copy new array
@@ -10,7 +11,6 @@ def sort(a):
     mergesort_topdown(a, b, n)
 
 
-# https://en.wikipedia.org/wiki/Merge_sort#Top-down_implementation
 def mergesort_topdown(a, b, n):
     copy_array(a, 0, n, b)
     split_merge_topdown(b, 0, n, a)
