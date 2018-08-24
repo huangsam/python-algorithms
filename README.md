@@ -23,7 +23,7 @@ Graph:
 - [ ] Floyd-Warshall
 - [ ] Ford-Fulkerson
 
-Data Structures:
+Collections:
 
 - [X] Queue
 - [X] Stacks
