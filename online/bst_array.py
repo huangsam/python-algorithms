@@ -45,11 +45,12 @@ def inorder(node):
 
 
 def main():
-    for given, expected in [([1], 1),
-                            ([1, 2, 3], 2),
-                            ([6, 8, 10], 8),
-                            ([1, 2, 3, 4, 5], 3),
-                            ([1, 2, 3, 4, 5, 6, 7], 4)]:
+    for given, expected in [
+            ([1], 1),
+            ([1, 2, 3], 2),
+            ([6, 8, 10], 8),
+            ([1, 2, 3, 4, 5], 3),
+            ([1, 2, 3, 4, 5, 6, 7], 4)]:
         result = create_bst_from_array(given, 0, len(given) - 1)
         assert result.val == expected
         assert is_sorted(result, []) is True
