@@ -21,15 +21,3 @@ def check_anagram(s1, s2):
         if smap[c2] < 0:
             return False
     return True
-
-
-def main():
-    assert check_anagram("dog", "god") is True
-    assert check_anagram("mom", "mom") is True
-    assert check_anagram("cinema", "iceman") is True
-    assert check_anagram("gas", "gag") is False
-    assert check_anagram("gas", "gass") is False
-
-
-if __name__ == '__main__':
-    main()
