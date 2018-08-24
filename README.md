@@ -25,10 +25,9 @@ Graph:
 
 Data Structures:
 
-- [ ] Arrays
 - [ ] Maps
-- [ ] Queue
-- [ ] Stacks
+- [X] Queue
+- [X] Stacks
 - [ ] BST (AVL)
 - [ ] B-Tree
 - [ ] Segment/interval
