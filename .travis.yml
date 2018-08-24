@@ -8,4 +8,4 @@ install:
   - pip install pipenv
   - pipenv install --system
 script:
-  - py.test
+  - pytest

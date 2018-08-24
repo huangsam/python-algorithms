@@ -30,4 +30,6 @@ Data Structures:
 - [X] BST
 - [X] Tries
 
-To test sorts, simply run `py.test`.
+To run the test suite:
+
+    pytest
