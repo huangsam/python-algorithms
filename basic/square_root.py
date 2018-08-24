@@ -1,4 +1,4 @@
-def square_root(x: float, error=0.05) -> float:
+def square_root(x, error=0.05):
     """Square root of x.
 
     Args:

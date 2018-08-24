@@ -1,4 +1,4 @@
-def check_anagram(s1: str, s2: str) -> bool:
+def check_anagram(s1, s2):
     """Determine if 2 Strings are anagrams.
 
     Args:
