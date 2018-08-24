@@ -18,15 +18,3 @@ def square_root(x, error=0.05):
         else:
             return round(mid, 2)
     return round(start, 2)
-
-
-def main():
-    assert 9.0 == square_root(81)
-    assert 12.0 == square_root(144)
-    assert 13.0 == square_root(169)
-    assert 14.0 < square_root(200) and \
-        square_root(200) < 15.0
-
-
-if __name__ == '__main__':
-    main()
