@@ -11,6 +11,7 @@ class TestQueue(object):
     def test_pop(self):
         queue = Queue()
         queue.push(1)
+        queue.push(2)
         assert queue.pop() == 1
 
     def test_size(self):
