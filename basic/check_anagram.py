@@ -6,7 +6,7 @@ def check_anagram(s1, s2):
         s2: Second string to evaluate.
 
     Returns:
-        bool: True if applicable, False otherwise.
+        True if applicable, False otherwise.
     """
     smap = {}
     for c1 in s1:
