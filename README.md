@@ -29,6 +29,7 @@ Data Structures:
 - [X] Stacks
 - [X] BST
 - [X] Tries
+- [ ] Linked List
 
 To run the test suite:
 
