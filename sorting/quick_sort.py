@@ -15,29 +15,21 @@ def lomuto(arr, lo, hi):
     return i
 
 
-def partition_iterative(arr, lo, hi, stack):
-    p = lomuto(arr, lo, hi)
-    stack.append((lo, p - 1))
-    stack.append((p + 1, hi))
-
-
-def partition_recursive(arr, lo, hi):
-    p = lomuto(arr, lo, hi)
-    quicksort_recursive(arr, lo, p - 1)
-    quicksort_recursive(arr, p + 1, hi)
-
-
 def quicksort_iterative(arr, lo, hi):
     stack = [(lo, hi)]
     while len(stack) > 0:
         lo, hi = stack.pop()
         if lo < hi:
-            partition_iterative(arr, lo, hi, stack)
+            p = lomuto(arr, lo, hi)
+            stack.append((lo, p - 1))
+            stack.append((p + 1, hi))
 
 
 def quicksort_recursive(arr, lo, hi):
     if lo < hi:
-        partition_recursive(arr, lo, hi)
+        p = lomuto(arr, lo, hi)
+        quicksort_recursive(arr, lo, p - 1)
+        quicksort_recursive(arr, p + 1, hi)
 
 
 def sort(arr, iterative=True):
