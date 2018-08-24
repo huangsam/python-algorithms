@@ -6,7 +6,7 @@ class TreeNode(object):
 
 
 def create_bst_from_array(arr, left, right):
-    """ Create BST from array of integers.
+    """Create BST from array of integers.
     Args:
         arr (list): List of integer elements.
         left (int): Left boundary.
