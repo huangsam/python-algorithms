@@ -1,5 +1,6 @@
 # https://jamesroutley.co.uk/tech/2017/07/16/tries.html#implementation
 class Node(object):
+
     def __init__(self, value=None):
         self.value = value
         self.children = {}
@@ -7,6 +8,7 @@ class Node(object):
 
 
 class Trie(object):
+
     def __init__(self):
         self.node = Node()
 
