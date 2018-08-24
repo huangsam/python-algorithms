@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-
-from utils.array import swap
-
-
 # https://en.wikipedia.org/wiki/Selection_sort
 def sort(arr):
     alen = len(arr)
@@ -11,4 +6,4 @@ def sort(arr):
         for i in range(sort_index, alen):
             if arr[i] < arr[min_index]:
                 min_index = i
-        swap(arr, sort_index, min_index)
+        arr[sort_index], arr[min_index] = arr[min_index], arr[sort_index]
