@@ -25,13 +25,9 @@ Graph:
 
 Data Structures:
 
-- [ ] Maps
 - [X] Queue
 - [X] Stacks
-- [ ] BST (AVL)
-- [ ] B-Tree
-- [ ] Segment/interval
-- [ ] K-D Tree
+- [X] BST
 - [X] Tries
 
 To test sorts, simply run `py.test`.
