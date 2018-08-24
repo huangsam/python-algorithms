@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/huangsam/algorithms.svg?branch=master)](https://travis-ci.com/huangsam/algorithms)
 
-The section below shows the categories covered so far.
+Collection of algorithms and data structures.
 
 ## Categories
 
