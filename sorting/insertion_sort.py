@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 # https://en.wikipedia.org/wiki/Insertion_sort
 def sort(arr):
     alen = len(arr)

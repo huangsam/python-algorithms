@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-
-from utils.array import swap
-
-
 # https://en.wikipedia.org/wiki/Quicksort
 def sort(arr, iterative=True):
     if iterative is True:
@@ -16,9 +11,9 @@ def partition_lomuto(arr, lo, hi):
     pivot = arr[hi]
     for j in range(lo, hi):
         if arr[j] <= pivot:
-            swap(arr, i, j)
+            arr[i], arr[j] = arr[j], arr[i]
             i += 1
-    swap(arr, i, hi)
+    arr[i], arr[hi] = arr[hi], arr[i]
     return i
 
 

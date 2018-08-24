@@ -1,12 +1,7 @@
-#!/usr/bin/env python
-
-from utils.array import copy_array
-
-
 # https://en.wikipedia.org/wiki/Merge_sort
 def sort(a):
     n = len(a)
-    # copy new array
+    # create new array
     b = [0 for i in range(n)]
     mergesort_topdown(a, b, n)
 
@@ -39,3 +34,8 @@ def merge(a, left, right, end, b):
         else:
             b[k] = a[j]
             j += 1
+
+
+def copy_array(a, begin, end, b):
+    for k in range(begin, end):
+        b[k] = a[k]
