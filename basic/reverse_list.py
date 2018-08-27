@@ -9,26 +9,14 @@ class ListNode(object):
 
 def reverse_list(ll):
     cur_node = ll
-
-    # 0 nodes
-    if not cur_node:
-        return None
-
-    next_node = cur_node.next_node
+    next_node = None
     prev_node = None
-
-    # n nodes
-    while True:
-        if next_node:
-            next_next_node = next_node.next_node
-            next_node = cur_node.next_node
-            cur_node.next_node = prev_node
-            prev_node = cur_node
-            cur_node = next_node
-            next_node = next_next_node
-        else:
-            cur_node.next_node = prev_node
-            return cur_node
+    while cur_node:
+        next_node = cur_node.next_node
+        cur_node.next_node = prev_node
+        prev_node = cur_node
+        cur_node = next_node
+    return prev_node
 
 
 def create_list(n):
