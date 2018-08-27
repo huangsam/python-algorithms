@@ -29,7 +29,7 @@ Collections:
 - [X] Stacks
 - [X] BST
 - [X] Tries
-- [ ] Linked List
+- [X] Linked List
 
 To run the test suite:
 
