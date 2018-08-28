@@ -54,12 +54,12 @@ def nearby_words(word):
 
 
 def main():
-    not_sures = ["ki", "kat"]
+    not_sures = ['ki', 'kat']
     for not_sure in not_sures:
-        print("Possible words for {}:".format(not_sure))
+        print('Possible words for {}:'.format(not_sure))
         for word in nearby_words(not_sure):
             print(word)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

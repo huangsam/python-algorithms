@@ -69,9 +69,9 @@ def print_tree(height, is_hallow):
 
 
 def main():
-    print("Hallow\n===")
+    print('Hallow\n===')
     print_tree(10, True)
-    print("\nNot hallow\n===")
+    print('\nNot hallow\n===')
     print_tree(10, False)
 
 
