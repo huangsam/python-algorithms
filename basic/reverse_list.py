@@ -17,32 +17,3 @@ def reverse_list(ll):
         prev_node = cur_node
         cur_node = next_node
     return prev_node
-
-
-def create_list(n):
-    head = ListNode(0)
-    node = head
-    for i in range(1, n):
-        node.next_node = ListNode(i)
-        node = node.next_node
-    return head
-
-
-def print_list(ll):
-    current_node = ll
-    while current_node:
-        print(current_node.value)
-        current_node = current_node.next_node
-
-
-def main():
-    head = create_list(10)
-    print('=== before')
-    print_list(head)
-    new_head = reverse_list(head)
-    print('=== after')
-    print_list(new_head)
-
-
-if __name__ == '__main__':
-    main()
