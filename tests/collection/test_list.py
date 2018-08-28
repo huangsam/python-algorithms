@@ -1,16 +1,4 @@
-import pytest
-
 from collection.list import ListNode
-
-
-@pytest.fixture
-def sorted_list(request):
-    head = ListNode(0)
-    node = head
-    for i in range(1, 6):
-        node.next_node = ListNode(i)
-        node = node.next_node
-    return head
 
 
 class TestList(object):
