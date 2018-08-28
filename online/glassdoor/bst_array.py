@@ -54,7 +54,7 @@ def main():
         result = create_bst_from_array(given, 0, len(given) - 1)
         assert result.val == expected
         assert is_sorted(result, []) is True
-        print("===")
+        print('===')
         inorder(result)
 
 
