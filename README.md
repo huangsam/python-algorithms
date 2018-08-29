@@ -22,8 +22,10 @@ Graph algorithms:
 - [ ] Floyd-Warshall
 - [ ] Ford-Fulkerson
 
-### Test suite
+## Test suite
 
 To run the test suite:
 
     pytest
+
+Feel free to add additional tests under the `tests` directory.
