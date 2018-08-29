@@ -6,15 +6,14 @@ Collection of algorithms and data structures.
 
 ## Categories
 
-Sorting:
+- Simple algorithms
+- Sorting algorithms
+- Data structures
+- Online algorithms
 
-- [X] Bubble sort
-- [X] Insertion sort
-- [X] Selection sort
-- [X] Merge sort
-- [X] Quick sort
+### To Do
 
-Graph:
+Graph algorithms:
 
 - [ ] BFS
 - [ ] DFS
@@ -23,13 +22,7 @@ Graph:
 - [ ] Floyd-Warshall
 - [ ] Ford-Fulkerson
 
-Collections:
-
-- [X] Queue
-- [X] Stacks
-- [X] BST
-- [X] Tries
-- [X] Linked List
+### Test suite
 
 To run the test suite:
 
