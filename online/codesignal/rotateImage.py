@@ -1,10 +1,3 @@
-def printMatrix(a):
-    print("---")
-    a_len = len(a)
-    for i in range(a_len):
-        print(a[i])
-
-
 def rotateImage(a):
     a_len = len(a)
     # squares
@@ -21,36 +14,3 @@ def rotateImage(a):
             # top -> right
             a[y][a_len-1-x] = north
     return a
-
-
-three_a = [
-    [1, 1, 1],
-    [2, 2, 2],
-    [3, 3, 3]
-]
-
-five_a = [
-    [1, 1, 1, 1, 1],
-    [2, 2, 2, 2, 2],
-    [3, 3, 3, 3, 3],
-    [4, 4, 4, 4, 4],
-    [5, 5, 5, 5, 5]
-]
-
-seven_a = [
-    [1, 1, 1, 1, 1, 1, 1],
-    [2, 2, 2, 2, 2, 2, 2],
-    [3, 3, 3, 3, 3, 3, 3],
-    [4, 4, 4, 4, 4, 4, 4],
-    [5, 5, 5, 5, 5, 5, 5],
-    [6, 6, 6, 6, 6, 6, 6],
-    [7, 7, 7, 7, 7, 7, 7]
-]
-
-# Provide input
-a_in = seven_a
-
-# Provide output
-printMatrix(a_in)
-result = rotateImage(a_in)
-printMatrix(result)
