@@ -18,3 +18,10 @@ def rotateImage(a):
             # right <- top
             a[y][a_len-x-1] = north
     return a
+
+
+def printImage(a):
+    print('---')
+    for i in range(len(a)):
+        print('|'.join(map(str, a[i])))
+    print('---')
