@@ -6,7 +6,7 @@ def simplifyPath(path):
             continue
         elif token == '..':
             if len(simple) > 0:
-                _ = simple.pop()
+                simple.pop()
             continue
         simple.append(token)
     return '/' + '/'.join(simple)
