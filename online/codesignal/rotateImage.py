@@ -1,7 +1,7 @@
 def rotateImage(a):
     a_len = len(a)
     # squares
-    for x in range(int(a_len/2)):
+    for x in range(a_len//2):
         # elements
         for y in range(x, a_len-x-1):
             north = a[x][y]
