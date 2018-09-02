@@ -1,54 +1,44 @@
+import pytest
+
 from online.codesignal.rotateImage import rotateImage
 
 
 class TestRotateImage(object):
 
-    def test_rotate_one(self):
-        image = [
+    @pytest.mark.parametrize("image", [
+        [
             [1],
-        ]
-        rotated = [
-            [1],
-        ]
-        assert rotated == rotateImage(image)
-
-    def test_rotate_two(self):
-        image = [
-            [1, 1],
-            [2, 2],
-        ]
-        rotated = [
-            [2, 1],
-            [2, 1],
-        ]
-        assert rotated == rotateImage(image)
-
-    def test_rotate_three(self):
-        image = [
-            [1, 1, 1],
-            [2, 2, 2],
-            [3, 3, 3],
-        ]
-        rotated = [
-            [3, 2, 1],
-            [3, 2, 1],
-            [3, 2, 1],
-        ]
-        assert rotated == rotateImage(image)
-
-    def test_rotate_five(self):
-        image = [
-            [1, 1, 1, 1, 1],
-            [2, 2, 2, 2, 2],
-            [3, 3, 3, 3, 3],
-            [4, 4, 4, 4, 4],
-            [5, 5, 5, 5, 5],
-        ]
-        rotated = [
-            [5, 4, 3, 2, 1],
-            [5, 4, 3, 2, 1],
-            [5, 4, 3, 2, 1],
-            [5, 4, 3, 2, 1],
-            [5, 4, 3, 2, 1],
-        ]
-        assert rotated == rotateImage(image)
+        ],
+        [
+            [1, 2],
+            [1, 2],
+        ],
+        [
+            [1, 2, 3],
+            [1, 2, 3],
+            [1, 2, 3],
+        ],
+        [
+            [1, 2, 3, 4, 5],
+            [1, 2, 3, 4, 5],
+            [1, 2, 3, 4, 5],
+            [1, 2, 3, 4, 5],
+            [1, 2, 3, 4, 5],
+        ],
+        [
+            [1, 2, 3, 4, 5, 6, 7, 8],
+            [1, 2, 3, 4, 5, 6, 7, 8],
+            [1, 2, 3, 4, 5, 6, 7, 8],
+            [1, 2, 3, 4, 5, 6, 7, 8],
+            [1, 2, 3, 4, 5, 6, 7, 8],
+            [1, 2, 3, 4, 5, 6, 7, 8],
+            [1, 2, 3, 4, 5, 6, 7, 8],
+            [1, 2, 3, 4, 5, 6, 7, 8],
+        ],
+    ])
+    def test_rotate_image(self, image):
+        rotated = rotateImage(image)
+        ilen = len(image)
+        for i in range(ilen):
+            for j in range(ilen):
+                assert image[i][j] == rotated[j][ilen-i-1]
