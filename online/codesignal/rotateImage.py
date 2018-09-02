@@ -10,11 +10,11 @@ def rotateImage(a):
         for y in range(x, a_len-x-1):
             north = a[x][y]
             # top <- left
-            a[x][y] = a[a_len-1-y][x]
+            a[x][y] = a[a_len-y-1][x]
             # left <- bottom
-            a[a_len-1-y][x] = a[a_len-1-x][a_len-1-y]
+            a[a_len-y-1][x] = a[a_len-x-1][a_len-y-1]
             # bottom <- right
-            a[a_len-1-x][a_len-1-y] = a[y][a_len-1-x]
+            a[a_len-x-1][a_len-y-1] = a[y][a_len-x-1]
             # right <- top
-            a[y][a_len-1-x] = north
+            a[y][a_len-x-1] = north
     return a
