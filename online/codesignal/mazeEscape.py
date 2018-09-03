@@ -2,8 +2,8 @@ def mazeEscape(w, h, impassable):
     # build
     maze = [[0 for i in range(w)] for j in range(h)]
     for i in range(0, len(impassable), 2):
-        by, bx = impassable[i], impassable[i+1]
-        maze[bx][by] = -1
+        bx, by = impassable[i], impassable[i+1]
+        maze[by][bx] = -1
     # bfs
     to_visit = [(0, 0)]
     while to_visit:
