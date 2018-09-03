@@ -1,5 +1,5 @@
 from collection.graph import Graph
-from graph.bfs import bfs
+from graph.breadth import bfs
 
 
 class TestBFS(object):
