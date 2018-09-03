@@ -11,17 +11,6 @@ Collection of algorithms and data structures.
 - Data structures
 - Online algorithms
 
-### To Do
-
-Graph algorithms:
-
-- [ ] BFS
-- [ ] DFS
-- [ ] Dijkstra
-- [ ] Bellman-Ford
-- [ ] Floyd-Warshall
-- [ ] Ford-Fulkerson
-
 ## Test suite
 
 To run the test suite:
