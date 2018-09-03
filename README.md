@@ -7,6 +7,7 @@ Collection of algorithms and data structures.
 ## Categories
 
 - Simple algorithms
+- Graph algorithms
 - Sorting algorithms
 - Data structures
 - Online algorithms
