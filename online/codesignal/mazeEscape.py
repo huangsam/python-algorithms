@@ -1,4 +1,5 @@
 def mazeEscape(w, h, impassable):
+    # build
     maze = [[0 for i in range(w)] for j in range(h)]
     for i in range(0, len(impassable), 2):
         by, bx = impassable[i], impassable[i+1]
