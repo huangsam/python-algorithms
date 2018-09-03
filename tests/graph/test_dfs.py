@@ -1,5 +1,5 @@
 from collection.graph import Graph
-from basic.dfs import dfs
+from graph.dfs import dfs
 
 
 class TestDFS(object):
