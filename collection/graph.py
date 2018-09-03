@@ -19,7 +19,7 @@ class Graph(object):
         self._add_nodes(src, dst)
 
     def get_children(self, a):
-        return self.graph.get(a, [])
+        return sorted(self.graph.get(a, []))
 
     def get_nodes(self):
         return self.nodes
