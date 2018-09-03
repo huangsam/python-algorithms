@@ -13,6 +13,9 @@ def array(request):
 
 @pytest.fixture(scope='function')
 def sorted_list(request):
+    """
+    1 -> 2 -> 3 -> 4 -> 5
+    """
     head = ListNode(0)
     node = head
     for i in range(1, 6):
@@ -24,13 +27,13 @@ def sorted_list(request):
 @pytest.fixture(scope='function')
 def simple_tree(request):
     """
-         1
-          \
-           2
+       1
+        \
+         2
+        / \
+       3   4
           / \
-         3   4
-            / \
-           5   6
+         5   6
     """
     root = TreeNode(1)
     root.right = TreeNode(2)
