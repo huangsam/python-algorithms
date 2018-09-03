@@ -1,4 +1,4 @@
-from online.glassdoor.reverse_list import reverse_list
+from online.cake.reverse_list import reverse_list
 
 
 class TestReverseList(object):
