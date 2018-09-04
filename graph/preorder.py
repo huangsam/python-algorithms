@@ -9,14 +9,12 @@ def preorder_recursive(root):
 
 def preorder_iterative(root):
     visited = []
-    c = root
-    s = []
-    while c is not None or len(s) > 0:
-        while c is not None:
-            if c.val not in visited:
-                visited.append(c.val)
-            s.append(c)
-            c = c.left
+    s = [root]
+    while len(s) > 0:
         c = s.pop()
-        c = c.right
+        visited.append(c.val)
+        if c.right is not None:
+            s.append(c.right)
+        if c.left is not None:
+            s.append(c.left)
     return visited
