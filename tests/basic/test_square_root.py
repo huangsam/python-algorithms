@@ -15,7 +15,7 @@ class TestSquareRoot(object):
 
     @pytest.mark.parametrize("left, right, x", [
         (14.0, 15.0, 200),
-        (12.0, 13.0, 130),
+        (11.0, 12.0, 130),
         (2.0, 3.0, 7),
     ])
     def test_square_root_about(self, left, right, x):
