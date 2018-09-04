@@ -7,6 +7,7 @@ def preorder_recursive(root):
     return result
 
 
+# https://www.geeksforgeeks.org/iterative-preorder-traversal/
 def preorder_iterative(root):
     visited = []
     s = [root]
