@@ -11,14 +11,14 @@ def array(request):
     return [randint(0, 100) for i in range(request.param)]
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', params=[50, 100, 400])
 def sorted_list(request):
     """
-    1 -> 2 -> 3 -> 4 -> 5
+    1 -> 2 -> 3 -> ... -> n
     """
     head = ListNode(0)
     node = head
-    for i in range(1, 6):
+    for i in range(1, request.param):
         node.next_node = ListNode(i)
         node = node.next_node
     return head
