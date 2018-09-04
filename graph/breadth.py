@@ -1,7 +1,7 @@
 def bfs(graph, root):
     queue = [root]
     visited = set()
-    order = []
+    scanned = []
     while len(queue) > 0:
         node = queue.pop(0)
         if node in visited:
@@ -9,5 +9,5 @@ def bfs(graph, root):
         visited.add(node)
         for child in graph.get_children(node):
             queue.append(child)
-        order.append(node)
-    return order
+        scanned.append(node)
+    return scanned

@@ -1,7 +1,7 @@
 def dfs(graph, root):
     stack = [root]
     visited = set()
-    order = []
+    scanned = []
     while len(stack) > 0:
         node = stack.pop()
         if node in visited:
@@ -9,5 +9,5 @@ def dfs(graph, root):
         visited.add(node)
         for child in graph.get_children(node):
             stack.append(child)
-        order.append(node)
-    return order
+        scanned.append(node)
+    return scanned
