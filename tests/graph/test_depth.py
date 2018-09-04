@@ -13,4 +13,4 @@ class TestDFS(object):
         )
         order = dfs(graph, 'a')
         assert len(order) == len(graph.get_nodes())
-        assert 'acebd' == ''.join(order)
+        assert 'a,c,e,b,d' == ','.join(order)
