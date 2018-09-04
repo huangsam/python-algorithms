@@ -1,12 +1,22 @@
+import pytest
+
 from basic.square_root import square_root
 
 
 class TestSquareRoot(object):
 
-    def test_square_root_exact(self):
-        assert 9.0 == square_root(81)
-        assert 12.0 == square_root(144)
-        assert 13.0 == square_root(169)
+    @pytest.parametrize("root, x", [
+        (9.0, 81),
+        (12.0, 144),
+        (13.0, 169),
+    ])
+    def test_square_root_exact(self, root, x):
+        assert root == square_root(x)
 
-    def test_square_root_about(self):
-        assert 14.0 < square_root(200) and square_root(200) < 15.0
+    @pytest.parametrize("left, right, x", [
+        (14.0, 15.0, 200),
+        (12.0, 13.0, 130),
+        (2.0, 3.0, 7),
+    ])
+    def test_square_root_about(self, left, right, x):
+        assert left < square_root(x) < right
