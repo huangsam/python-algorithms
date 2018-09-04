@@ -6,11 +6,11 @@ Collection of algorithms and data structures.
 
 ## Categories
 
-- Simple algorithms
-- Graph algorithms
-- Sorting algorithms
+- Basic algorithms
 - Data structures
-- Online algorithms
+- Graph algorithms
+- Online resources
+- Sorting algorithms
 
 ## Test suite
 
