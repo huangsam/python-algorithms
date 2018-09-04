@@ -13,4 +13,4 @@ class TestBFS(object):
         )
         order = bfs(graph, 'a')
         assert len(order) == len(graph.get_nodes())
-        assert 'abcde' == ''.join(order)
+        assert 'a,b,c,d,e' == ','.join(order)
