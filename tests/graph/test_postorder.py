@@ -1,4 +1,3 @@
-from collection.tree import TreeNode
 from graph.postorder import (
     postorder_iterative,
     postorder_recursive,
