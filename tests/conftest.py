@@ -4,6 +4,7 @@ import pytest
 
 from collection.list import ListNode
 from collection.tree import TreeNode
+from collection.graph import Graph
 
 
 @pytest.fixture(scope='function', params=[50, 100, 400])
@@ -42,3 +43,14 @@ def simple_tree(request):
     root.right.right.left = TreeNode(5)
     root.right.right.right = TreeNode(6)
     return root
+
+
+@pytest.fixture(scope='function')
+def simple_graph(request):
+    graph = Graph(
+        ('a', 'b'),
+        ('a', 'c'),
+        ('b', 'd'),
+        ('c', 'e')
+    )
+    return graph
