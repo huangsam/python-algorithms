@@ -4,7 +4,7 @@
 
 Collection of algorithms and data structures.
 
-This is useful for Computer Science students and professionals to brush up on their fundamentals. All coding artifacts in this repository are written in Python and `pytest` is used as the test runner. Although each module should run properly on Python 2.7, it is strongly suggested to move over to the latest version of Python 3.x.
+The goal of this repository is to help both students and professionals brush up on their Computer Science fundamentals. All of the modules are written in Python and `pytest` is the test runner used for this project. Although each module should run properly on Python 2.7, it is strongly suggested for users to use the latest version of Python 3.x for these project artifacts.
 
 ## Categories
 
