@@ -1,4 +1,3 @@
-from collection.tree import TreeNode
 from graph.inorder import (
     inorder_iterative,
     inorder_recursive,
