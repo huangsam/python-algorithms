@@ -1,6 +1,7 @@
 from collection.tree import TreeNode
 
 
+# https://www.geeksforgeeks.org/construct-a-binary-tree-from-postorder-and-inorder/
 def create_postorder_inorder(postorder, postrange, inorder, inrange):
     post_left, post_right = postrange
     if post_right - post_left == 0:
@@ -33,6 +34,7 @@ def create_postorder_inorder(postorder, postrange, inorder, inrange):
     return node
 
 
+# https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
 def create_preorder_inorder(preorder, prerange, inorder, inrange):
     pre_left, pre_right = prerange
     if pre_right - pre_left == 0:
