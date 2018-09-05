@@ -20,4 +20,4 @@ class TestIsBST(object):
         root.right.left = TreeNode(6)
         root.right.right = TreeNode(5)
         val, flag = is_bst(root)
-        assert val is None and flag is False
+        assert val == 6 and flag is False
