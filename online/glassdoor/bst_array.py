@@ -24,16 +24,16 @@ def create_bst_from_array(arr, left, right):
     return result
 
 
-def is_sorted(node, l):
+def is_sorted(node):
     if node is None:
-        return True
-    if node.left and node.left.val > node.val:
-        return False
-    elif node.right and node.right.val < node.val:
-        return False
-    if not is_sorted(node.left, l) or not is_sorted(node.right, l):
-        return False
-    return True
+        return (None, True)
+    left_value, left_sorted = is_sorted(node.left)
+    if (left_sorted is False) or (left_value and left_value > node.val):
+        return (None, False)
+    right_value, right_sorted = is_sorted(node.right)
+    if (right_sorted is False) or (right_value is not None and right_value < node.val):
+        return (None, False)
+    return (node.val, True)
 
 
 def inorder(node):
@@ -51,11 +51,13 @@ def main():
             ([6, 8, 10], 8),
             ([1, 2, 3, 4, 5], 3),
             ([1, 2, 3, 4, 5, 6, 7], 4)]:
-        result = create_bst_from_array(given, 0, len(given) - 1)
-        assert result.val == expected
-        assert is_sorted(result, []) is True
+        root = create_bst_from_array(given, 0, len(given) - 1)
+        assert root.val == expected
+        val, flag = is_sorted(root)
+        assert val == root.val
+        assert flag is True
         print('===')
-        inorder(result)
+        inorder(root)
 
 
 if __name__ == '__main__':
