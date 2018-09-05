@@ -34,31 +34,3 @@ def is_sorted(node):
     if (right_sorted is False) or (right_value is not None and right_value < node.val):
         return (None, False)
     return (node.val, True)
-
-
-def inorder(node):
-    if node is None:
-        return
-    inorder(node.left)
-    print(node.val)
-    inorder(node.right)
-
-
-def main():
-    for given, expected in [
-            ([1], 1),
-            ([1, 2, 3], 2),
-            ([6, 8, 10], 8),
-            ([1, 2, 3, 4, 5], 3),
-            ([1, 2, 3, 4, 5, 6, 7], 4)]:
-        root = create_bst_from_array(given, 0, len(given) - 1)
-        assert root.val == expected
-        val, flag = is_sorted(root)
-        assert val == root.val
-        assert flag is True
-        print('===')
-        inorder(root)
-
-
-if __name__ == '__main__':
-    main()
