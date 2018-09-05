@@ -1,5 +1,5 @@
 class TreeNode(object):
-    """Binary search tree has two children."""
+    """Binary tree has two children and an associated value."""
 
     def __init__(self, x):
         self.val = x
