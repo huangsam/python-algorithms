@@ -1,10 +1,8 @@
 import pytest
 
 from graph.inorder import inorder_recursive
-from online.glassdoor.bst_array import (
-    create_bst_from_array,
-    is_sorted,
-)
+from online.glassdoor.bst_array import create_bst_from_array
+from online.glassdoor.is_sorted import is_sorted
 
 
 class TestBSTArray(object):
