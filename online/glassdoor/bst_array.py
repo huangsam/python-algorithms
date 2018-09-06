@@ -17,7 +17,7 @@ def create_bst_from_array(arr, left, right):
     """
     if left > right:
         return None
-    middle = int((left + right) / 2)
+    middle = (left + right) // 2
     result = TreeNode(arr[middle])
     result.left = create_bst_from_array(arr, left, middle - 1)
     result.right = create_bst_from_array(arr, middle + 1, right)
