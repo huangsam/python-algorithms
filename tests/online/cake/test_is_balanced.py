@@ -1,5 +1,8 @@
 from collection.tree import TreeNode
-from online.cake.is_balanced import is_balanced
+from online.cake.is_balanced import (
+    is_balanced,
+    is_balanced_optimal,
+)
 
 
 class TestIsBalanced(object):
