@@ -12,7 +12,7 @@ class TestIsBalanced(object):
         root.left.insert_right(7)
         assert is_balanced(root) is True
 
-   def test_is_balanced_optimal_good(self):
+    def test_is_balanced_optimal_good(self):
         root = TreeNode(6)
         root.insert_left(3)
         root.insert_right(4)
@@ -21,7 +21,7 @@ class TestIsBalanced(object):
         balanced, _ = is_balanced_optimal(root)
         assert balanced is True
 
-   def test_is_balanced_optimal_bad(self):
+    def test_is_balanced_optimal_bad(self):
         root = TreeNode(6)
         root.insert_left(3)
         root.left.insert_right(7)
