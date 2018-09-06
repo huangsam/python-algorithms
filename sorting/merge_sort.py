@@ -12,9 +12,9 @@ def mergesort_topdown(a, b, n):
 
 
 def split_merge_topdown(b, begin, end, a):
-    if (end - begin < 2):
+    if end - begin < 2:
         return
-    middle = int((end + begin) / 2)
+    middle = (end + begin) // 2
     # sort left into B
     split_merge_topdown(a, begin, middle, b)
     # sort right into B

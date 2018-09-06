@@ -39,7 +39,7 @@ def print_line(length, index, is_hallow):
         index: Which line we are printing out.
         is_hallow: Whether the tree is hallow or not.
     """
-    middle = int(length / 2)
+    middle = length // 2
     left_boundary = middle - index
     right_boundary = middle + index
     result = ''
