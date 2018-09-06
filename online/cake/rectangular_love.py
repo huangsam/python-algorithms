@@ -6,11 +6,9 @@ class Rectangle(object):
 
 
 def rectangular_love(r1, r2):
-    if not has_overlap(r1.bottom, r1.top, r2.bottom, r2.top):
-        return False
-    if not has_overlap(r1.left, r1.right, r2.left, r2.right):
-        return False
-    return True
+    y_coords = (r1.bottom, r1.top, r2.bottom, r2.top)
+    x_coords = (r1.left, r1.right, r2.left, r2.right)
+    return has_overlap(*y_coords) and has_overlap(*x_coords)
 
 
 def has_overlap(a_min, a_max, b_min, b_max):
