@@ -31,13 +31,3 @@ def max_duffel_bag_value(cake_tuples, capacity):
                 if max_value < new_value:
                     max_value = new_value
     return max_value
-
-
-def main():
-    cake_tuples = [(7, 160), (3, 90), (2, 15)]
-    capacity = 20
-    assert 555 == max_duffel_bag_value(cake_tuples, capacity)
-
-
-if __name__ == '__main__':
-    main()
