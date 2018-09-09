@@ -11,18 +11,18 @@ def largest_rect(histo):
     positions, heights = [], []
     max_area = 0
     # build `heights`
-    for i, height in enumerate(histo):
-        if len(heights) == 0 or height > heights[-1]:
-            heights.append(height)
+    for i, h in enumerate(histo):
+        if len(heights) == 0 or h > heights[-1]:
+            heights.append(h)
             positions.append(i)
-        elif height < heights[-1]:
+        elif h < heights[-1]:
             last_position = 0
-            while len(heights) > 0 and height < heights[-1]:
+            while len(heights) > 0 and h < heights[-1]:
                 last_position = positions.pop()
                 tmp_area = heights.pop() * (i - last_position)
                 if max_area < tmp_area:
                     max_area = tmp_area
-            heights.append(height)
+            heights.append(h)
             positions.append(last_position)
     # process remainder of `heights`
     while len(heights) > 0:
