@@ -1,5 +1,6 @@
 from online.cake.cake_thief import max_duffel_bag_value
 
+
 class TestCakeThief(object):
 
     def test_max_duffel_bag_value(self):
