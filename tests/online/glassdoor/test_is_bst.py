@@ -12,6 +12,10 @@ class TestIsBST(object):
         root.right.right = TreeNode(5)
         assert is_bst(root) is True
 
+    def test_is_bst_good_empty(self):
+        root = None
+        assert is_bst(root) is True
+
     def test_is_bst_bad_general(self):
         root = TreeNode(2)
         root.left = TreeNode(1)
