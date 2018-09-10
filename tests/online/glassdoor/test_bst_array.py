@@ -17,8 +17,7 @@ class TestBSTArray(object):
     def test_create_bst_from_array(self, given, expected):
         root = create_bst_from_array(given, 0, len(given) - 1)
         assert root.val == expected
-        val, flag = is_bst(root)
-        assert val == root.val and flag is True
+        assert is_bst(root) is True
         visited = inorder_recursive(root)
         assert len(visited) == len(given)
         for v, g in zip(visited, given):
