@@ -4,7 +4,7 @@ from online.glassdoor.is_bst import is_bst
 
 class TestIsBST(object):
 
-    def test_is_bst_good(self):
+    def test_is_bst_good_basic(self):
         root = TreeNode(2)
         root.left = TreeNode(1)
         root.right = TreeNode(4)
@@ -16,7 +16,7 @@ class TestIsBST(object):
         root = None
         assert is_bst(root) is True
 
-    def test_is_bst_bad_general(self):
+    def test_is_bst_bad_basic(self):
         root = TreeNode(2)
         root.left = TreeNode(1)
         root.right = TreeNode(4)
