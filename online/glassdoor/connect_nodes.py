@@ -13,3 +13,18 @@ def connect_nodes(root):
             prev_n = n
         while len(next_nodes) > 0:
             cur_nodes.append(next_nodes.pop(0))
+
+
+# https://www.geeksforgeeks.org/connect-nodes-level-level-order-traversal/
+def connect_nodes_optimal(root):
+    queue = [root, None]
+    while len(queue) > 0:
+        n = queue.pop(0)
+        if n:
+            n.next = queue[0]
+            if n.left:
+                queue.append(n.left)
+            if n.right:
+                queue.append(n.right)
+        elif len(queue) > 0:
+            queue.append(None)
