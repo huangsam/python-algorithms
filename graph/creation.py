@@ -55,7 +55,7 @@ def create_preorder_inorder(preorder, prerange, inorder, inrange):
     # get left node
     left_inorder = (in_left, i-1)
     left_diff = (i-1) - in_left
-    left_preorder = (pre_left + 1, pre_left + left_diff + 1)
+    left_preorder = (pre_left+1, pre_left+left_diff+1)
     node.left = create_preorder_inorder(preorder, left_preorder, inorder, left_inorder)
 
     # get right node
