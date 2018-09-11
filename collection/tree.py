@@ -5,6 +5,7 @@ class TreeNode(object):
         self.val = x
         self.left = None
         self.right = None
+        self.next = None
 
     def insert_left(self, val):
         self.left = TreeNode(val)
