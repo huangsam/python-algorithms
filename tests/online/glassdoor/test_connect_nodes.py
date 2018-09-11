@@ -2,16 +2,16 @@ import pytest
 
 from collection.tree import TreeNode
 from online.glassdoor.connect_nodes import (
-    connect_nodes,
-    connect_nodes_optimal,
+    connect_nodes_single,
+    connect_nodes_double,
 )
 
 
 class TestConnectNodes(object):
 
     @pytest.mark.parametrize("func", [
-        connect_nodes,
-        connect_nodes_optimal,
+        connect_nodes_double,
+        connect_nodes_single,
     ])
     def test_connect_nodes(self, func):
         root = TreeNode(1)

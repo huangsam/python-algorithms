@@ -1,4 +1,4 @@
-def connect_nodes(root):
+def connect_nodes_double(root):
     cur_nodes = [root]
     next_nodes = []
     while len(cur_nodes) > 0 or len(next_nodes) > 0:
@@ -16,7 +16,7 @@ def connect_nodes(root):
 
 
 # https://www.geeksforgeeks.org/connect-nodes-level-level-order-traversal/
-def connect_nodes_optimal(root):
+def connect_nodes_single(root):
     queue = [root, None]
     while len(queue) > 0:
         n = queue.pop(0)
