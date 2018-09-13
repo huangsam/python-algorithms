@@ -12,3 +12,17 @@ class Queue(object):
 
     def size(self):
         return len(self.array)
+
+
+class FunkyQueue(object):
+    """Queue made of two stacks."""
+
+    def __init__(self):
+        self.s1 = []
+        self.s2 = []
+
+    def push(self, val):
+        raise NotImplementedError('Not implemented at this level')
+
+    def pop(self):
+        raise NotImplementedError('Not implemented at this level')

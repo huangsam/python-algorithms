@@ -23,3 +23,17 @@ class Stack(object):
 
     def size(self):
         return len(self.array)
+
+
+class FunkyStack(object):
+    """Stack made of two queues."""
+
+    def __init__(self):
+        self.q1 = []
+        self.q2 = []
+
+    def push(self, val):
+        raise NotImplementedError('Not implemented at this level')
+
+    def pop(self):
+        raise NotImplementedError('Not implemented at this level')
