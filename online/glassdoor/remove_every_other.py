@@ -12,9 +12,8 @@ def remove_every_other(head):
 
         if toggle is True and cur != head:
             prev.next_node = cur.next_node
-            toggle = False
-        else:
-            toggle = True
+
+        toggle ^= True
 
         prev = cur
         cur = cur.next_node
