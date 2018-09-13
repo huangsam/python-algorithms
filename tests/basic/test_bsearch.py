@@ -1,8 +1,8 @@
 import pytest
 
 from basic.bsearch import (
-    bsearch_recursive,
     bsearch_iterative,
+    bsearch_recursive,
 )
 
 
