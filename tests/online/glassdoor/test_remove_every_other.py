@@ -1,6 +1,3 @@
-import pytest
-
-from collection.list import ListNode
 from online.glassdoor.remove_every_other import remove_every_other
 
 
