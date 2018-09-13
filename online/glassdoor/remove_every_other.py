@@ -2,12 +2,12 @@ def remove_every_other(head):
     toggle = False
     prev = None
     cur = head
-    traversed_head = 0
+    traversed = 0
 
     while True:
         if cur == head:
-            traversed_head += 1
-            if traversed_head == 2:
+            traversed += 1
+            if traversed == 2:
                 return
 
         if toggle is True and cur != head:
