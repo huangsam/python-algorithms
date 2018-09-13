@@ -14,6 +14,7 @@ def bsearch_recursive_work(arr, t, lo, hi):
     return bsearch_recursive_work(arr, t, lo, mid - 1)
 
 
+# https://en.wikipedia.org/wiki/Binary_search_algorithm
 def bsearch_iterative(arr, t):
     lo, hi = 0, len(arr) - 1
     while lo <= hi:
