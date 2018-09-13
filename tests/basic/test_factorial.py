@@ -1,3 +1,5 @@
+import pytest
+
 from basic.factorial import (
     factorial_recursive,
     factorial_stack,
@@ -6,8 +8,15 @@ from basic.factorial import (
 
 class TestFactorial(object):
 
-    def test_factorial_recursive(self):
-        assert factorial_recursive(4) == 24
-
-    def test_factorial_stack(self):
-        assert factorial_stack(4) == 24
+    @pytest.mark.parametrize('func', [
+        factorial_recursive,
+        factorial_stack,
+    ])
+    @pytest.mark.parametrize('i,o', [
+        (0, 1),
+        (1, 1),
+        (4, 24),
+        (5, 120),
+    ])
+    def test_factorial(self, func, i, o):
+        assert func(i) == o
