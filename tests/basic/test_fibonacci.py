@@ -1,23 +1,24 @@
+import pytest
+
 from basic.fibonacci import (
     fibonacci_recursive,
     fibonacci_iterative,
     fibonacci_stack,
+    fibonacci_dp_bottom,
 )
 
 
 class TestFibonacci(object):
 
-    def test_fibonacci_recursive(self):
-        assert fibonacci_recursive(0) == 0
-        assert fibonacci_recursive(1) == 1
-        assert fibonacci_recursive(4) == 3
-
-    def test_fibonacci_iterative(self):
-        assert fibonacci_iterative(0) == 0
-        assert fibonacci_iterative(1) == 1
-        assert fibonacci_iterative(4) == 3
-
-    def test_fibonacci_stack(self):
-        assert fibonacci_stack(0) == 0
-        assert fibonacci_stack(1) == 1
-        assert fibonacci_stack(4) == 3
+    @pytest.mark.parametrize('func', [
+        fibonacci_iterative,
+        fibonacci_recursive,
+        fibonacci_stack,
+    ])
+    @pytest.mark.parametrize('i,o', [
+        (0, 0),
+        (1, 1),
+        (4, 3),
+    ])
+    def test_fibonacci(self, func, i, o):
+        assert func(i) == o
