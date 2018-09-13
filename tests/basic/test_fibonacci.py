@@ -15,6 +15,8 @@ class TestFibonacci(object):
         fibonacci_iterative,
         fibonacci_recursive,
         fibonacci_stack,
+        fibonacci_dp_bottom,
+        fibonacci_dp_top,
     ])
     @pytest.mark.parametrize('i,o', [
         (0, 0),

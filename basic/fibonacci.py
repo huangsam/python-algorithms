@@ -35,7 +35,7 @@ def fibonacci_stack(n):
 
 
 def fibonacci_dp_bottom(n):
-    mem = [0] * (n + 1)
+    mem = [0] * max(2, n + 1)
     mem[1] = 1
     if n < 2:
         return mem[n]
