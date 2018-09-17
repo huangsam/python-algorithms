@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.check_paren import check_paren
+from online.glassdoor.check_parens import check_parens
 
 
 class TestCheckParenthesis(object):
@@ -11,5 +11,5 @@ class TestCheckParenthesis(object):
         ('[{(})]', False),
         ('{()}', True),
     ])
-    def test_check_paren(self, exp, valid):
-        assert check_paren(exp) is valid
+    def test_check_parens(self, exp, valid):
+        assert check_parens(exp) is valid
