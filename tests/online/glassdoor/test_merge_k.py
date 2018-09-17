@@ -1,6 +1,9 @@
 import pytest
 
-from online.glassdoor.merge_k import merge_k
+from online.glassdoor.merge_k import (
+    merge_k_queue,
+    merge_k_heap,
+)
 
 
 class TestMergeK(object):
@@ -31,7 +34,8 @@ class TestMergeK(object):
             [1, 1, 1, 3, 5, 10, 20, 30, 40],
         ),
     ])
-    def test_merge_k(self, arrays, expected):
-        result = merge_k(arrays)
+    @pytest.mark.parametrize('func', [merge_k_queue, merge_k_heap])
+    def test_merge_k(self, arrays, expected, func):
+        result = func(arrays)
         for i, j in zip(result, expected):
             assert i == j
