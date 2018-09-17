@@ -5,12 +5,12 @@ def merge_k_queue(arrays):
     while len(arrays) >= 2:
         arr1 = arrays.pop(0)
         arr2 = arrays.pop(0)
-        narr = merge(arr1, arr2)
+        narr = merge_two_arrays(arr1, arr2)
         arrays.append(narr)
     return arrays.pop(0) if arrays else []
 
 
-def merge(arr1, arr2):
+def merge_two_arrays(arr1, arr2):
     i1 = 0
     i2 = 0
     result = []
