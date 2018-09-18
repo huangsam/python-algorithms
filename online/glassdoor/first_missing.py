@@ -22,6 +22,7 @@ def first_missing(arr):
     return minimum if minimum else maximum + 1
 
 
+# https://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/
 def first_missing_optimal(arr):
     # Ignore zeros and negatives
     for i, val in enumerate(arr):
