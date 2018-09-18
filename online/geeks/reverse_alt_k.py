@@ -1,6 +1,6 @@
 # https://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/
 def reverse_alt_k(head, k):
-    if head is None or head.next is None:
+    if head is None or head.next_node is None:
         return head
 
     cur = head
