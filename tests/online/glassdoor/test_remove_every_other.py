@@ -1,4 +1,4 @@
-from online.geeks.remove_every_other import remove_every_other
+from online.glassdoor.remove_every_other import remove_every_other
 
 
 class TestRemoveEveryOther(object):

@@ -1,5 +1,5 @@
 from collection.tree import TreeNode
-from online.geeks.remove_bad_edge import remove_bad_edge
+from online.glassdoor.remove_bad_edge import remove_bad_edge
 
 
 class TestRemoveBadEdge(object):
