@@ -8,7 +8,9 @@ class TestReverseList(object):
 
     @pytest.mark.parametrize('k, size, expected', [
         (3, 6, [3, 2, 1, 4, 5, 6]),
-        (3, 9, [3, 2, 1, 4, 5, 6, 9, 8, 7])
+        (3, 9, [3, 2, 1, 4, 5, 6, 9, 8, 7]),
+        (2, 6, [2, 1, 3, 4, 6, 5]),
+        (2, 5, [2, 1, 3, 4, 5]),
     ])
     def test_reverse_alt_k(self, k, size, expected):
         head = ListNode(1)
