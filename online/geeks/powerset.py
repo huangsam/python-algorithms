@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/power-set/
 def powerset(items):
     N = len(items)
     # run 2 ** N possible combinations
