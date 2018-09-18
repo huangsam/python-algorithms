@@ -10,7 +10,7 @@ class TestDepthSum(object):
 
     @pytest.mark.parametrize('nested, expected', [
         ([[1, 1], 2, [1, 1]], 10),
-        ([[[3], [1,2]]], 18),
+        ([[[3], [1, 2]]], 18),
         ([1, [2], [[3]]], 14),
     ])
     @pytest.mark.parametrize('func', [depth_sum, depth_sum_stack])
