@@ -1,3 +1,5 @@
+import pytest
+
 from collection.tree import TreeNode
 from online.glassdoor.is_bst import (
     is_bst,
@@ -7,42 +9,42 @@ from online.glassdoor.is_bst import (
 
 class TestIsBST(object):
 
-    def test_is_bst_good_basic(self):
+    @pytest.mark.parametrize('func', [is_bst, is_bst_optimal])
+    def test_is_bst_good_basic(self, func):
         root = TreeNode(2)
         root.left = TreeNode(1)
         root.right = TreeNode(4)
         root.right.left = TreeNode(3)
         root.right.right = TreeNode(5)
-        assert is_bst(root) is True
-        assert is_bst_optimal(root) is True
+        assert func(root) is True
 
-    def test_is_bst_good_empty(self):
+    @pytest.mark.parametrize('func', [is_bst, is_bst_optimal])
+    def test_is_bst_good_empty(self, func):
         root = None
-        assert is_bst(root) is True
-        assert is_bst_optimal(root) is True
+        assert func(root) is True
 
-    def test_is_bst_bad_basic(self):
+    @pytest.mark.parametrize('func', [is_bst, is_bst_optimal])
+    def test_is_bst_bad_basic(self, func):
         root = TreeNode(2)
         root.left = TreeNode(1)
         root.right = TreeNode(4)
         root.right.left = TreeNode(6)
         root.right.right = TreeNode(5)
-        assert is_bst(root) is False
-        assert is_bst_optimal(root) is False
+        assert func(root) is False
 
-    def test_is_bst_bad_left(self):
+    @pytest.mark.parametrize('func', [is_bst, is_bst_optimal])
+    def test_is_bst_bad_left(self, func):
         root = TreeNode(2)
         root.left = TreeNode(1)
         root.left.right = TreeNode(5)
         root.left.right.left = TreeNode(3)
         root.left.right.right = TreeNode(7)
-        assert is_bst(root) is False
-        assert is_bst_optimal(root) is False
+        assert func(root) is False
 
-    def test_is_bst_bad_right(self):
+    @pytest.mark.parametrize('func', [is_bst, is_bst_optimal])
+    def test_is_bst_bad_right(self, func):
         root = TreeNode(2)
         root.right = TreeNode(4)
         root.right.left = TreeNode(3)
         root.right.left.left = TreeNode(1)
-        assert is_bst(root) is False
-        assert is_bst_optimal(root) is False
+        assert func(root) is False
