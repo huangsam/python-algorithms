@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.check_parens import check_parens
+from online.geeks.check_parens import check_parens
 
 
 class TestCheckParenthesis(object):

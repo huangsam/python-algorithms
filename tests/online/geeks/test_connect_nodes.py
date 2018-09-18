@@ -1,7 +1,7 @@
 import pytest
 
 from collection.tree import TreeNode
-from online.glassdoor.connect_nodes import (
+from online.geeks.connect_nodes import (
     connect_nodes_single,
     connect_nodes_double,
 )

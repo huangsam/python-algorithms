@@ -1,7 +1,7 @@
 import pytest
 
 from collection.tree import TreeNode
-from online.glassdoor.is_bst import (
+from online.geeks.is_bst import (
     is_bst,
     is_bst_optimal,
 )

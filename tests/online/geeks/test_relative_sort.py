@@ -1,4 +1,4 @@
-from online.glassdoor.relative_sort import relative_sort
+from online.geeks.relative_sort import relative_sort
 
 
 class TestRelativeSort(object):

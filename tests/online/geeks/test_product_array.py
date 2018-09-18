@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.product_array import product_array
+from online.geeks.product_array import product_array
 
 
 class TestProductArray(object):
