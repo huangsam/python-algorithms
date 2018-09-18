@@ -23,5 +23,5 @@ def depth_sum_stack(a):
     return result
 
 
-depth_sum([[1, 1], 2, [1, 1]])
-depth_sum_stack([[1, 1], 2, [1, 1]])
+d1 = depth_sum([[1, 1], 2, [1, 1]])
+d2 = depth_sum_stack([[1, 1], 2, [1, 1]])
