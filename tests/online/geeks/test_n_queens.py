@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.n_queens import n_queens
+from online.geeks.n_queens import n_queens
 
 
 class TestNQueens(object):

@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.merge_k import (
+from online.geeks.merge_k import (
     merge_k_queue,
     merge_k_heap,
     merge_two_arrays,

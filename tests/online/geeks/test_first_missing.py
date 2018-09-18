@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.first_missing import (
+from online.geeks.first_missing import (
     first_missing,
     first_missing_optimal,
 )
