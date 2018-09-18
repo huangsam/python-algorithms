@@ -19,7 +19,6 @@ class TestReverseList(object):
             node.next_node = ListNode(i)
             node = node.next_node
         nhead = reverse_alt_k(head, k)
-        result = []
         node = nhead
         i = 0
         while node:
