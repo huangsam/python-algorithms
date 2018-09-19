@@ -90,7 +90,7 @@ def opposite(direction):
 
 
 def main():
-    op_queue = set([(4, 8), (7, 4), (6, 3), (7, 8), (8, 9), (1, 2)])
+    op_queue = set([(4, 8), (7, 4), (6, 3), (8, 9), (1, 2)])
     current_level = 5
     direction = 'UP'
     move_elevator(current_level, op_queue, direction)
