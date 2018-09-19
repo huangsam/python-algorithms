@@ -1,0 +1,67 @@
+Problem statement: Model an elevator system using OOD.
+
+class Elevator:
+    move(a, b) # up or down
+    on_finish() # callback (observer, requests)
+    on_start() # callback (observer, requests)
+    on_moving() # callback (observer, requests)
+
+state:
+- cur_level: int
+- direction: string
+- priority: list
+- max_level: int
+- min_level: int
+
+has-a:
+- door (left/right, front/behind, open/close)
+- open-button
+- close-button
+- level-button
+- platform
+- ceiling
+- four walls
+- lights (turn on/off)
+- emergency-button
+- pulley
+- sensor
+
+is-a:
+- moving object (moves one floor at a time)
+- hardware
+- building component
+
+
+===============
+
+
+class Door:
+    open()
+    close()
+
+state:
+- opened: bool
+- closed: bool
+- manufacturer: str
+- installed_time: datetime
+
+class RollingDoor # left-to-right, right-to-left
+class SplitDoor # split-open, split-close
+
+
+===============
+
+
+class Button:
+    click()
+    on_press_down()
+    on_press_up()
+
+state:
+- pressed: bool
+- color: str
+
+class EmergencyButton
+class OpenButton
+class CloseButton
+class LevelButton
