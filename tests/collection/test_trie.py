@@ -29,7 +29,7 @@ class TestTrie(object):
         assert node.ref_count == 1
 
     @pytest.mark.parametrize('word', ['he', 'hell', 'ca'])
-    def test_search_found_good(self, simple_trie, word):
+    def test_search_found_bad(self, simple_trie, word):
         found, node = simple_trie.search(word)
         assert found is False
         assert node is not None
