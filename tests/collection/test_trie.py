@@ -1,25 +1,14 @@
 import pytest
 
-from collection import trie
-
-
-@pytest.fixture(scope='function')
-def simple_trie():
-    tr = trie.Trie()
-    tr.insert('hello')
-    tr.insert('hat')
-    tr.insert('cat')
-    return tr
-
 
 class TestTrie(object):
 
-    def test_insert(self):
-        tr = trie.Trie()
-        tr.insert('hello')
-        assert tr.node.is_complete is False
-        assert 'h' in tr.node.children
-        assert 'e' in tr.node.children['h'].children
+    def test_insert(self, simple_trie):
+        assert simple_trie.node.is_complete is False
+        assert 'h' in simple_trie.node.children
+        assert 'e' in simple_trie.node.children['h'].children
+        simple_trie.insert('happy')
+        assert 'a' in simple_trie.node.children['h'].children
 
     @pytest.mark.parametrize('word', ['hello', 'hat', 'cat'])
     def test_search_found_good(self, simple_trie, word):
