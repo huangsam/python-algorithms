@@ -1,7 +1,7 @@
 # https://www.geeksforgeeks.org/count-possible-decodings-given-digit-sequence/
 def count_decode(digit):
     n = len(digit)
-    count = [0] * (n + 1)
+    count = [0] * max(2, n + 1)
     count[0] = 1
     count[1] = 1
     for i in range(2, n + 1):
