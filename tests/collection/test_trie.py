@@ -21,18 +21,19 @@ class TestTrie(object):
         assert 'h' in tr.node.children
         assert 'e' in tr.node.children['h'].children
 
-    def test_search_found_good(self, simple_trie):
-        for word in ('hello', 'cat'):
-            found, node = simple_trie.search(word)
-            assert found is True
-            assert node.ref_count == 1
+    @pytest.mark.parametrize('word', ['hello', 'hat', 'cat'])
+    def test_search_found_good(self, simple_trie, word):
+        found, node = simple_trie.search(word)
+        assert found is True
+        assert node is not None
+        assert node.ref_count == 1
 
-    def test_search_found_good(self, simple_trie):
-        for word in ('he', 'hell', 'ca'):
-            found, node = simple_trie.search(word)
-            assert found is False
-            assert node is not None
-            assert node.ref_count == 0
+    @pytest.mark.parametrize('word', ['he', 'hell', 'ca'])
+    def test_search_found_good(self, simple_trie, word):
+        found, node = simple_trie.search(word)
+        assert found is False
+        assert node is not None
+        assert node.ref_count == 0
 
     def test_search_not_found(self, simple_trie):
         found, node = simple_trie.search('fat')
