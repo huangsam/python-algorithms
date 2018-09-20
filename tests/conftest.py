@@ -5,6 +5,7 @@ import pytest
 from collection.list import ListNode
 from collection.tree import TreeNode
 from collection.graph import Graph
+from collection.trie import Trie
 
 
 @pytest.fixture(scope='function', params=[50, 100, 400])
@@ -54,3 +55,12 @@ def simple_graph(request):
         ('c', 'e')
     )
     return graph
+
+
+@pytest.fixture(scope='function')
+def simple_trie():
+    tr = Trie()
+    tr.insert('hello')
+    tr.insert('hat')
+    tr.insert('cat')
+    return tr
