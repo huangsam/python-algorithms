@@ -6,6 +6,7 @@ class Node(object):
         self.value = value
         self.children = {}
         self.is_complete = False
+        self.ref_count = 0
 
 
 class Trie(object):
@@ -33,4 +34,8 @@ class Trie(object):
                 return False, None
             else:
                 node = node.children[letter]
-        return True, node
+        if node.is_complete:
+            node.ref_count += 1
+            return True, node
+        else:
+            return False, node
