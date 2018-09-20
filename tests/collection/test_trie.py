@@ -35,7 +35,8 @@ class TestTrie(object):
         assert node is not None
         assert node.ref_count == 0
 
-    def test_search_not_found(self, simple_trie):
-        found, node = simple_trie.search('fat')
+    @pytest.mark.parametrize('word', ['fat', 'car', 'road'])
+    def test_search_not_found(self, simple_trie, word):
+        found, node = simple_trie.search(word)
         assert found is False
         assert node is None
