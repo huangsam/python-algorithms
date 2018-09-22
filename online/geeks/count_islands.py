@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/find-number-of-islands/
 def count_islands(grid):
     result = 0
     for i in range(len(grid)):
@@ -8,7 +9,6 @@ def count_islands(grid):
     return result
 
 
-# https://www.geeksforgeeks.org/find-number-of-islands/
 def visit_island(i, j, grid):
     if i < 0 or j < 0:
         return
