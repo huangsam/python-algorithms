@@ -8,12 +8,9 @@ def largest_sum_non_adjacent(arr):
     answers[1] = arr[1]
     for i in range(2, len(arr)):
         cur_max = arr[i]
-        j = i - 2
-        while j >= 0:
+        for j in range(i - 2, -1, -1):
             cur_val = arr[i] + answers[j]
-            if cur_max is None or cur_max < cur_val:
-                cur_max = cur_val
-            j -= 1
+            cur_max = max(cur_max, cur_val)
         answers[i] = cur_max
         if result is None or result < cur_max:
             result = cur_max
