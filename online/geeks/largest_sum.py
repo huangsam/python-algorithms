@@ -4,16 +4,19 @@ def largest_sum_non_adjacent(arr):
         return 0
     elif len(arr) < 3:
         return max(arr)
+    result = None
     answers = [0] * len(arr)
     answers[0] = arr[0]
     answers[1] = arr[1]
     for i in range(2, len(arr)):
-        cur_max = None
-        cur_val = arr[i]
+        cur_max = arr[i]
         j = i - 2
         while j >= 0:
-            if cur_max is None or cur_max < answers[j]:
-                cur_max = answers[j]
+            cur_val = arr[i] + answers[j]
+            if cur_max is None or cur_max < cur_val:
+                cur_max = cur_val
             j -= 1
-        answers[i] = cur_max + cur_val
-    return answers[len(arr) - 1]
+        answers[i] = cur_max
+        if result is None or result < cur_max:
+            result = cur_max
+    return result
