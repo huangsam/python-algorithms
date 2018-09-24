@@ -17,12 +17,3 @@ def largest_sum_non_adjacent(arr):
             j -= 1
         answers[i] = cur_max + cur_val
     return answers[len(arr) - 1]
-
-
-largest_sum_non_adjacent([2, 4, 6, 2, 5]) == 13
-largest_sum_non_adjacent([5, 1, 1, 5]) == 10
-largest_sum_non_adjacent([]) == 0
-largest_sum_non_adjacent([1]) == 1
-largest_sum_non_adjacent([2, 1]) == 2
-largest_sum_non_adjacent([3, 2, 5, 10, 7]) == 15
-largest_sum_non_adjacent([3, 2, 7, 10]) == 13
