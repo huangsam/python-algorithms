@@ -15,3 +15,17 @@ def largest_sum_non_adjacent(arr):
         if result is None or result < cur_max:
             result = cur_max
     return result
+
+
+# https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+def largest_sum_adjacent(arr):
+    if len(arr) == 0:
+        return 0
+    answers = [0] * len(arr)
+    result = answers[0] = max(arr[0], 0)
+    for i in range(1, len(arr)):
+        val = answers[i - 1] + arr[i]
+        answers[i] = max(val, 0)
+        if result is None or answers[i] > result:
+            result = answers[i]
+    return result
