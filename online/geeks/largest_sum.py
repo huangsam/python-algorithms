@@ -26,6 +26,5 @@ def largest_sum_adjacent(arr):
     for i in range(1, len(arr)):
         val = answers[i - 1] + arr[i]
         answers[i] = max(val, 0)
-        if answers[i] > result:
-            result = answers[i]
+        result = max(answers[i], result)
     return result
