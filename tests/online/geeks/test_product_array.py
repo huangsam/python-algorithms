@@ -8,6 +8,7 @@ class TestProductArray(object):
     @pytest.mark.parametrize('old, expected', [
         ([1, 2, 3, 4, 5], [120, 60, 40, 30, 24]),
         ([10, 3, 5, 6, 2], [180, 600, 360, 300, 900]),
+        ([0, 5, 10, 20], [1000, 0, 0, 0]),
     ])
     def test_product_array(self, old, expected):
         new_arr = product_array(old)
