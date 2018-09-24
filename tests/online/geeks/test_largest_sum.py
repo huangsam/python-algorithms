@@ -13,6 +13,7 @@ class TestLargestSum(object):
         ([2, 4, 6, 2, 5], 13),
         ([3, 2, 7, 10], 13),
         ([3, 2, 5, 10, 7], 15),
+        ([6, 0, 0, 92, 12], 98),
     ])
     def test_largest_sum(self, given, expected):
         assert largest_sum_non_adjacent(given) is expected
