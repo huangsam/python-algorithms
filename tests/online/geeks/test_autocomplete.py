@@ -11,5 +11,4 @@ class TestAutocomplete(object):
     ])
     def test_autocomplete(self, s, queries, expected):
         result = autocomplete(s, queries)
-        for i, j in zip(result, expected):
-            assert i == j
+        assert set(result) == set(expected)
