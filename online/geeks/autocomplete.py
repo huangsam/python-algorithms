@@ -15,7 +15,6 @@ def autocomplete(s, queries):
         cur_node, cur_str = to_visit.pop(0)
         if cur_node.is_complete is True:
             result.append(cur_str)
-            continue
         for child in cur_node.children.values():
             to_visit.append((child, cur_str + child.value))
     return result
