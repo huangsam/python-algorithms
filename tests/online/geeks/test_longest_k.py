@@ -12,4 +12,4 @@ class TestLongestK(object):
         ('a', 2, ''),
     ])
     def test_longest_k_distinct(self, given, k, expected):
-        assert longest_k_distinct(given, k) == expected
+        assert longest_k_distinct(given, k, {}) == expected
