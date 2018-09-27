@@ -39,11 +39,10 @@ def longest_k_distinct_optimal(s, k):
             if counts[sval] == 0:
                 del counts[sval]
             start += 1
-        if (end - start + 1) > result_size:
-            result_size = end - start + 1
+        if (end - start) > result_size:
+            result_size = end - start
             result_start = start
-    print(s, result_start, result_size)
-    return s[result_start:(result_start + result_size - 1)]
+    return s[result_start:(result_start + result_size)]
 
 
 def is_valid_optimal(counts, k):
