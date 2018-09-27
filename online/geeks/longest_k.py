@@ -1,15 +1,11 @@
-def longest_k_distinct(s, k, answers):
+def longest_k_distinct(s, k):
     if len(s) == 0:
         return ''
-    if s in answers:
-        return answers[s]
     if is_valid(s, k) is True:
-        answers[s] = s
-    else:
-        left = longest_k_distinct(s[1:], k, answers)
-        right = longest_k_distinct(s[:-1], k, answers)
-        answers[s] = left if len(left) > len(right) else right
-    return answers[s]
+        return s
+    left = longest_k_distinct(s[1:], k)
+    right = longest_k_distinct(s[:-1], k)
+    return left if len(left) > len(right) else right
 
 
 def is_valid(s, k):
