@@ -14,3 +14,7 @@ class TestDuplicateSubtree(object):
         root.right.right.left = TreeNode('D')
         root.right.right.right = TreeNode('E')
         assert duplicate_subtree(root) is True
+
+    def test_duplicate_subtree_empty(self):
+        root = None
+        assert duplicate_subtree(root) is False
