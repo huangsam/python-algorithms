@@ -1,7 +1,6 @@
-import pytest
-
 from collection.tree import TreeNode
 from online.geeks.duplicate_subtree import duplicate_subtree
+
 
 class TestDuplicateSubtree(object):
 
