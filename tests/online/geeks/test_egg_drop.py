@@ -8,10 +8,12 @@ from online.geeks.egg_drop import (
 
 class TestEggDrop(object):
 
+    def test_egg_drop(self):
+        assert egg_drop(2, 10) == 4
+
     @pytest.mark.parametrize('eggs, floors, expected', [
         (2, 10, 4),
         (2, 36, 8),
     ])
-    @pytest.mark.parametrize('func', [egg_drop, egg_drop_optimal])
-    def test_egg_drop(self, eggs, floors, expected, func):
-        assert func(eggs, floors) == expected
+    def test_egg_drop_optimal(self, eggs, floors, expected):
+        assert egg_drop_optimal(eggs, floors) == expected
