@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/count-ways-reach-nth-stair/
 def climb_steps(n, steps):
     max_step = max(steps)
     answers = [0] * max(max_step + 1, n + 1)
