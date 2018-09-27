@@ -12,6 +12,7 @@ class TestLongestK(object):
         ('a', 2, ''),
         ('aaaaaaa', 2, ''),
         ('hatsofftowhoever', 4, 'tsoffto'),
+        ('aaabcccd', 2, 'aaab'),
     ])
     def test_longest_k_distinct(self, kin, kval, expected):
         assert longest_k_distinct(kin, kval, {}) == expected
