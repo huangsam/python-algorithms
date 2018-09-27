@@ -7,9 +7,10 @@ def longest_k_distinct(s, k, answers):
     if is_valid(s, k) is True:
         answers[s] = s
     else:
-        left_longest = longest_k_distinct(s[1:], k, answers)
-        right_longest = longest_k_distinct(s[:-1], k, answers)
-        answers[s] = longest_two(left_longest, right_longest)
+        answers[s] = longest_two(
+            longest_k_distinct(s[1:], k, answers),
+            longest_k_distinct(s[:-1], k, answers)
+        )
     return answers[s]
 
 
