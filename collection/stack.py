@@ -32,8 +32,17 @@ class FunkyStack(object):
         self.q1 = []
         self.q2 = []
 
+    # Optimized for push
     def push(self, val):
-        raise NotImplementedError('Not implemented at this level')
+        self.q1.append(val)
 
     def pop(self):
-        raise NotImplementedError('Not implemented at this level')
+        if len(self.q1) == 0 and len(self.q2) == 0:
+            return None
+        while len(self.q1) > 1:
+            self.q2.append(self.q1.pop(0))
+        self.q1, self.q2 = self.q2, self.q1
+        return self.q2.pop(0)
+
+    def size(self):
+        return len(self.q1) + len(self.q2)
