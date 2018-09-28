@@ -21,6 +21,7 @@ class FunkyQueue(object):
         self.s1 = []
         self.s2 = []
 
+    # Optimized for push
     def push(self, val):
         self.s1.append(val)
 
