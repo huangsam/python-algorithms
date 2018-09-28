@@ -22,7 +22,15 @@ class FunkyQueue(object):
         self.s2 = []
 
     def push(self, val):
-        raise NotImplementedError('Not implemented at this level')
+        self.s1.append(val)
 
     def pop(self):
-        raise NotImplementedError('Not implemented at this level')
+        if len(self.s1) == 0 and len(self.s2) == 0:
+            return None
+        if len(self.s2) == 0:
+            while len(self.s1) > 0:
+                self.s2.append(self.s1.pop())
+        return self.s2.pop()
+
+    def size(self):
+        return len(self.s1) + len(self.s2)
