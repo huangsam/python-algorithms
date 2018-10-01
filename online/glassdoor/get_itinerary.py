@@ -6,14 +6,13 @@ def get_itinerary(start, flights):
 
 def get_itinerary_work(start, flights, itinerary, visited):
     if 0 < len(flights) == len(visited):
-        itinerary.append(start)
         return True
-    exists = False
     for src, dst in flights:
         if (src, dst) not in visited and src == start:
             visited.add((src, dst))
-            exists |= get_itinerary_work(dst, flights, itinerary, visited)
+            exists = get_itinerary_work(dst, flights, itinerary, visited)
             visited.remove((src, dst))
-    if exists:
-        itinerary.append(start)
-    return exists
+            if exists:
+                itinerary.append((src, dst))
+                return True
+    return False

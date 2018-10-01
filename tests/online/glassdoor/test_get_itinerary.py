@@ -9,17 +9,17 @@ class TestGetItinerary(object):
         (
             'YUL',
             [('HNL', 'AKL'), ('YUL', 'ORD'), ('ORD', 'SFO'), ('SFO', 'HNL')],
-            ['YUL', 'ORD', 'SFO', 'HNL', 'AKL'],
+            [('YUL', 'ORD'), ('ORD', 'SFO'), ('SFO', 'HNL'), ('HNL', 'AKL')],
         ),
         (
             'SFO',
             [('SFO', 'HNL'), ('HNL', 'SFO')],
-            ['SFO', 'HNL', 'SFO'],
+            [('SFO', 'HNL'), ('HNL', 'SFO')],
         ),
         (
             'HNL',
             [('SFO', 'HNL'), ('HNL', 'SFO')],
-            ['HNL', 'SFO', 'HNL'],
+            [('HNL', 'SFO'), ('SFO', 'HNL')],
         ),
     ])
     def test_get_itinerary_good(self, start, flights, expected):
