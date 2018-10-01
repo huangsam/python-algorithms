@@ -10,6 +10,7 @@ def duplicate_subtree_work(root):
 
     left_post, left_seen, left_dup = duplicate_subtree_work(root.left)
     right_post, right_seen, right_dup = duplicate_subtree_work(root.right)
+
     cur_str = left_post + right_post + root.val
     common = [i for i in left_seen.intersection(right_seen) if len(i) > 1]
 
