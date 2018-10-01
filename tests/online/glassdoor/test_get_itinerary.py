@@ -21,6 +21,11 @@ class TestGetItinerary(object):
             [('SFO', 'HNL'), ('HNL', 'SFO')],
             [('HNL', 'SFO'), ('SFO', 'HNL')],
         ),
+        (
+            'HNL',
+            [('SFO', 'HNL'), ('HNL', 'SFO'), ('HNL', 'ORD')],
+            [('HNL', 'SFO'), ('SFO', 'HNL'), ('HNL', 'ORD')],
+        ),
     ])
     def test_get_itinerary_good(self, start, flights, expected):
         result = get_itinerary(start, flights)
@@ -35,6 +40,10 @@ class TestGetItinerary(object):
         (
             'YUL',
             []
+        ),
+        (
+            'YUL',
+            [('SFO', 'HNL')],
         ),
         (
             'YUL',
