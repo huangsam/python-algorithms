@@ -5,7 +5,7 @@ def get_itinerary(start, flights):
 
 
 def get_itinerary_work(start, flights, itinerary, visited):
-    if len(flights) == len(visited):
+    if 0 < len(flights) == len(visited):
         itinerary.append(start)
         return True
     exists = False
