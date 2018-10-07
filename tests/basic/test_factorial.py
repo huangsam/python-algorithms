@@ -3,6 +3,8 @@ import pytest
 from basic.factorial import (
     factorial_recursive,
     factorial_stack,
+    factorial_dp_bottom,
+    factorial_dp_top,
 )
 
 
@@ -11,6 +13,8 @@ class TestFactorial(object):
     @pytest.mark.parametrize('func', [
         factorial_recursive,
         factorial_stack,
+        factorial_dp_bottom,
+        factorial_dp_top,
     ])
     @pytest.mark.parametrize('i,o', [
         (0, 1),
