@@ -6,7 +6,7 @@ Collection of algorithms and data structures.
 
 The goal of this repository is to help both students and professionals brush up on their Computer Science fundamentals. All of the modules are written in Python and `pytest` is the test runner used for this project.
 
-**NOTE:** It is strongly suggested for users to use the latest version of Python 3.x to ensure the algorithms and test code work as expected.
+**NOTE:** Please use the latest version of Python 3.x to ensure the code works as expected.
 
 ## Categories
 
