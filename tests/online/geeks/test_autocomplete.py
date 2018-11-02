@@ -3,6 +3,8 @@ import pytest
 from online.geeks.autocomplete import autocomplete
 
 
+@pytest.mark.string
+@pytest.mark.tree
 class TestAutocomplete(object):
 
     @pytest.mark.parametrize("s, queries, expected", [

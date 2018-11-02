@@ -1,7 +1,10 @@
+import pytest
+
 from collection.tree import TreeNode
 from online.geeks.count_unival import count_unival
 
 
+@pytest.mark.tree
 class TestCountUnival(object):
 
     def test_count_unival_full(self):

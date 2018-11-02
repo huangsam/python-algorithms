@@ -1,6 +1,9 @@
+import pytest
+
 from online.cake.reverse_list import reverse_list
 
 
+@pytest.mark.list
 class TestReverseList(object):
 
     def test_reverse_list(self, sorted_list):

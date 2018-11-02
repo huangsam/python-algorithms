@@ -1,6 +1,9 @@
+import pytest
+
 from online.codesignal.sudoku2 import sudoku2
 
 
+@pytest.mark.array
 class TestSudoku2(object):
 
     def test_grid_good(self):

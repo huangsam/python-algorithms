@@ -3,6 +3,7 @@ import pytest
 from online.youtube.largest_rect import largest_rect
 
 
+@pytest.mark.array
 class TestLargestRect(object):
 
     @pytest.mark.parametrize('histo, expected', [

@@ -3,6 +3,7 @@ import pytest
 from online.geeks.count_decode import count_decode
 
 
+@pytest.mark.string
 class TestCountDecode(object):
 
     @pytest.mark.parametrize('digits, expected', [

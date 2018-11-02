@@ -3,6 +3,7 @@ import pytest
 from online.geeks.count_islands import count_islands
 
 
+@pytest.mark.graph
 class TestCountIslands(object):
 
     @pytest.mark.parametrize("grid, answer", [

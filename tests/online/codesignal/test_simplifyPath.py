@@ -3,6 +3,7 @@ import pytest
 from online.codesignal.simplifyPath import simplifyPath
 
 
+@pytest.mark.string
 class TestSimplifyPath(object):
 
     @pytest.mark.parametrize('long_path, short_path', [

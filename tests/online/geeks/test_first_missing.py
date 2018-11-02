@@ -6,6 +6,7 @@ from online.geeks.first_missing import (
 )
 
 
+@pytest.mark.array
 class TestFirstMissing(object):
 
     @pytest.mark.parametrize('arr, missing', [

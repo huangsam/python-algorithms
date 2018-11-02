@@ -1,8 +1,11 @@
+import pytest
+
 from collection.list import ListNode
 from online.cake.has_cycle import has_cycle
 
 
-class TestCakeThief(object):
+@pytest.mark.list
+class TestHasCycle(object):
 
     def test_has_cycle_root(self):
         root = ListNode(0)

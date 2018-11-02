@@ -1,7 +1,10 @@
+import pytest
+
 from collection.tree import TreeNode
 from online.glassdoor.remove_bad_edge import remove_bad_edge
 
 
+@pytest.mark.tree
 class TestRemoveBadEdge(object):
 
     def test_remove_bad_edge(self):

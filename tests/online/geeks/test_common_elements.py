@@ -3,6 +3,7 @@ import pytest
 from online.geeks.common_elements import common_elements
 
 
+@pytest.mark.array
 class TestCommonElements(object):
 
     @pytest.mark.parametrize('a1, a2, a3, expected', [

@@ -1,7 +1,10 @@
+import pytest
+
 from collection.tree import TreeNode
 from online.geeks.duplicate_subtree import duplicate_subtree
 
 
+@pytest.mark.tree
 class TestDuplicateSubtree(object):
 
     def test_duplicate_subtree(self):
