@@ -6,6 +6,7 @@ from online.geeks.egg_drop import (
 )
 
 
+@pytest.mark.dynamic
 class TestEggDrop(object):
 
     def test_egg_drop(self):

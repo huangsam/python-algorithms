@@ -3,6 +3,7 @@ import pytest
 from online.codesignal.findProfession import findProfession
 
 
+@pytest.mark.tree
 class TestFindProfession(object):
 
     @pytest.mark.parametrize("level, pos, expected", [

@@ -7,6 +7,7 @@ from online.geeks.connect_nodes import (
 )
 
 
+@pytest.mark.tree
 class TestConnectNodes(object):
 
     @pytest.mark.parametrize("func", [

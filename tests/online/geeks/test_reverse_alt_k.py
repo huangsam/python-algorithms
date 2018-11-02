@@ -4,7 +4,8 @@ from collection.list import ListNode
 from online.geeks.reverse_alt_k import reverse_alt_k
 
 
-class TestReverseList(object):
+@pytest.mark.list
+class TestReverseAltList(object):
 
     @pytest.mark.parametrize('k, size, expected', [
         (3, 6, [3, 2, 1, 4, 5, 6]),

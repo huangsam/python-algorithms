@@ -3,6 +3,7 @@ import pytest
 from online.geeks.climb_steps import climb_steps
 
 
+@pytest.mark.dynamic
 class TestClimbSteps(object):
 
     @pytest.mark.parametrize('levels, steps, expected', [

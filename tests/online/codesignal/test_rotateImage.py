@@ -3,6 +3,7 @@ import pytest
 from online.codesignal.rotateImage import rotateImage
 
 
+@pytest.mark.array
 class TestRotateImage(object):
 
     @pytest.mark.parametrize("image", [

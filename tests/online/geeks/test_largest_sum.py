@@ -6,6 +6,7 @@ from online.geeks.largest_sum import (
 )
 
 
+@pytest.mark.array
 class TestLargestSum(object):
 
     @pytest.mark.parametrize("given, expected", [

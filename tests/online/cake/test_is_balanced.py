@@ -1,3 +1,5 @@
+import pytest
+
 from collection.tree import TreeNode
 from online.cake.is_balanced import (
     is_balanced,
@@ -5,6 +7,7 @@ from online.cake.is_balanced import (
 )
 
 
+@pytest.mark.tree
 class TestIsBalanced(object):
 
     def test_is_balanced(self):

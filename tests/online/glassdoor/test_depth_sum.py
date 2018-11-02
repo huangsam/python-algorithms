@@ -6,6 +6,8 @@ from online.glassdoor.depth_sum import (
 )
 
 
+@pytest.mark.array
+@pytest.mark.stack
 class TestDepthSum(object):
 
     @pytest.mark.parametrize('nested, expected', [

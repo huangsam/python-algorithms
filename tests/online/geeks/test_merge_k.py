@@ -7,6 +7,7 @@ from online.geeks.merge_k import (
 )
 
 
+@pytest.mark.array
 class TestMergeK(object):
 
     @pytest.mark.parametrize('arrays, expected', [

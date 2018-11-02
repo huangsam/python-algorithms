@@ -7,6 +7,7 @@ from online.geeks.is_bst import (
 )
 
 
+@pytest.mark.tree
 class TestIsBST(object):
 
     @pytest.mark.parametrize('func', [is_bst, is_bst_optimal])

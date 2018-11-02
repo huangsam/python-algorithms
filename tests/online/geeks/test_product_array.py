@@ -3,6 +3,7 @@ import pytest
 from online.geeks.product_array import product_array
 
 
+@pytest.mark.array
 class TestProductArray(object):
 
     @pytest.mark.parametrize('old, expected', [

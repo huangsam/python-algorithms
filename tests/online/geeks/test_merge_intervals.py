@@ -3,6 +3,7 @@ import pytest
 from online.geeks.merge_intervals import merge_intervals
 
 
+@pytest.mark.array
 class TestMergeIntervals(object):
 
     @pytest.mark.parametrize('intervals, expected', [

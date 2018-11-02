@@ -6,6 +6,7 @@ from online.geeks.longest_k import (
 )
 
 
+@pytest.mark.string
 class TestLongestK(object):
 
     @pytest.mark.parametrize('kin, kval, expected', [

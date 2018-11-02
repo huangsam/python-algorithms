@@ -1,6 +1,10 @@
+import pytest
+
 from online.geeks.relative_sort import relative_sort
 
 
+@pytest.mark.array
+@pytest.mark.sorting
 class TestRelativeSort(object):
 
     def test_relative_sort_a1(self):

@@ -1,6 +1,9 @@
+import pytest
+
 from online.glassdoor.remove_every_other import remove_every_other
 
 
+@pytest.mark.list
 class TestRemoveEveryOther(object):
 
     @staticmethod
