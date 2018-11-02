@@ -1,7 +1,5 @@
 import pytest
 
-import pytest
-
 
 @pytest.mark.tree
 class TestTrie(object):
