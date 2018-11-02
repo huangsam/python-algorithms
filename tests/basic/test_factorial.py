@@ -8,6 +8,7 @@ from basic.factorial import (
 )
 
 
+@pytest.mark.dynamic
 class TestFactorial(object):
 
     @pytest.mark.parametrize('func', [

@@ -1,9 +1,12 @@
+import pytest
+
 from collection.queue import (
     Queue,
     FunkyQueue,
 )
 
 
+@pytest.mark.graph
 class TestQueue(object):
 
     def test_push(self):

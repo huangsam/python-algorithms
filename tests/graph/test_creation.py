@@ -1,3 +1,5 @@
+import pytest
+
 from graph.creation import (
     create_postorder_inorder,
     create_preorder_inorder,
@@ -5,6 +7,7 @@ from graph.creation import (
 from graph.inorder import inorder_recursive
 
 
+@pytest.mark.tree
 class TestCreation(object):
 
     def test_create_postorder_inorder(self):

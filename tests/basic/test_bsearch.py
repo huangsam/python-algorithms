@@ -6,6 +6,7 @@ from basic.bsearch import (
 )
 
 
+@pytest.mark.array
 class TestBinarySearch(object):
 
     @pytest.mark.parametrize('i', [4, 0, 10])

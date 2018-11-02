@@ -9,6 +9,7 @@ from basic.fibonacci import (
 )
 
 
+@pytest.mark.dynamic
 class TestFibonacci(object):
 
     @pytest.mark.parametrize('func', [

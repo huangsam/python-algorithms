@@ -1,6 +1,9 @@
+import pytest
+
 from collection.graph import Graph
 
 
+@pytest.mark.graph
 class TestGraph(object):
 
     SAMPLE_DATA = (

@@ -1,6 +1,9 @@
+import pytest
+
 from collection.list import ListNode
 
 
+@pytest.mark.list
 class TestList(object):
 
     def test_list_is_sorted(self, sorted_list):

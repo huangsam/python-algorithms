@@ -1,9 +1,12 @@
+import pytest
+
 from graph.postorder import (
     postorder_iterative,
     postorder_recursive,
 )
 
 
+@pytest.mark.tree
 class TestPostorder(object):
 
     def test_postorder_iterative(self, simple_tree):

@@ -1,6 +1,9 @@
+import pytest
+
 from graph.breadth import bfs
 
 
+@pytest.mark.graph
 class TestBFS(object):
 
     def test_bfs(self, simple_graph):

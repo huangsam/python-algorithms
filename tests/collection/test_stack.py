@@ -6,6 +6,7 @@ from collection.stack import (
 )
 
 
+@pytest.mark.stack
 class TestStack(object):
 
     def test_push(self):
