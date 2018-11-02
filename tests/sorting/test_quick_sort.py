@@ -1,7 +1,11 @@
+import pytest
+
 from sorting import quick_sort
 
 
-class TestSort(object):
+@pytest.mark.array
+@pytest.mark.sorting
+class TestQuickSort(object):
 
     @staticmethod
     def _is_sorted(array):

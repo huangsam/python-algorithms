@@ -1,6 +1,9 @@
+import pytest
+
 from collection.tree import TreeNode
 
 
+@pytest.mark.tree
 class TestTree(object):
 
     def test_root(self):

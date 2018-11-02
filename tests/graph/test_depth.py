@@ -1,6 +1,9 @@
+import pytest
+
 from graph.depth import dfs
 
 
+@pytest.mark.graph
 class TestDFS(object):
 
     def test_dfs(self, simple_graph):

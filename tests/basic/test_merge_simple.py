@@ -1,7 +1,11 @@
+import pytest
+
 from basic.merge_simple import merge_sort
 
 
-class TestSort(object):
+@pytest.mark.array
+@pytest.mark.sorting
+class TestMergeSimpleSort(object):
 
     @staticmethod
     def _is_sorted(array):

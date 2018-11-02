@@ -1,9 +1,12 @@
+import pytest
+
 from graph.preorder import (
     preorder_iterative,
     preorder_recursive,
 )
 
 
+@pytest.mark.tree
 class TestPreorder(object):
 
     def test_preorder_iterative(self, simple_tree):

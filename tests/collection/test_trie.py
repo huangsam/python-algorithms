@@ -1,6 +1,9 @@
 import pytest
 
+import pytest
 
+
+@pytest.mark.tree
 class TestTrie(object):
 
     def test_insert(self, simple_trie):

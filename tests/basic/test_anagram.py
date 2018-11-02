@@ -1,6 +1,9 @@
+import pytest
+
 from basic.anagram import check_anagram
 
 
+@pytest.mark.string
 class TestAnagram(object):
 
     def test_check_anagram_good(self):

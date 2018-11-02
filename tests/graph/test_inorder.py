@@ -1,9 +1,12 @@
+import pytest
+
 from graph.inorder import (
     inorder_iterative,
     inorder_recursive,
 )
 
 
+@pytest.mark.tree
 class TestInorder(object):
 
     def test_inorder_iterative(self, simple_tree):
