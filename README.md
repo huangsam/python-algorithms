@@ -1,5 +1,7 @@
 # algorithms
 
+[![CircleCI](https://circleci.com/gh/huangsam/algorithms.svg?style=svg)](https://circleci.com/gh/huangsam/algorithms)
+
 Collection of algorithms and data structures.
 
 The goal of this repository is to help both students and professionals brush up on their Computer Science fundamentals. All of the modules are written in Python and `pytest` is the test runner used for this project.
