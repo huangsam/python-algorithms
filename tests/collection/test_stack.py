@@ -54,6 +54,7 @@ class TestStack(object):
         assert stack.size() == 80
 
 
+@pytest.mark.stack
 class TestFunkyStack(object):
 
     def test_push(self):
