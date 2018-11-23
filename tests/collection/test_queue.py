@@ -6,7 +6,7 @@ from collection.queue import (
 )
 
 
-@pytest.mark.graph
+@pytest.mark.queue
 class TestQueue(object):
 
     def test_push(self):
@@ -29,6 +29,7 @@ class TestQueue(object):
         assert queue.size() == 80
 
 
+@pytest.mark.queue
 class TestFunkyQueue(object):
 
     def test_push(self):
