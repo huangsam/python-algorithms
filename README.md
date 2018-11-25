@@ -13,6 +13,7 @@ The following categories are covered:
 
 - Basic algorithms
 - Data structures
+- System design
 - Graph algorithms
 - Online resources
 - Sorting algorithms
