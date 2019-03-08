@@ -6,11 +6,7 @@ from collection.graph import Graph
 @pytest.mark.graph
 class TestGraph(object):
 
-    SAMPLE_DATA = (
-        ('a', 'b'),
-        ('a', 'c'),
-        ('a', 'd'),
-    )
+    SAMPLE_DATA = (("a", "b"), ("a", "c"), ("a", "d"))
 
     def test_setup(self):
         graph = Graph(*self.SAMPLE_DATA)
@@ -24,7 +20,7 @@ class TestGraph(object):
 
     def test_get_children(self):
         graph = Graph(*self.SAMPLE_DATA)
-        children = graph.get_children('a')
+        children = graph.get_children("a")
         assert len(children) == len(self.SAMPLE_DATA)
-        assert 'b' in children
-        assert 'c' in children
+        assert "b" in children
+        assert "c" in children

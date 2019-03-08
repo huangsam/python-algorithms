@@ -1,5 +1,4 @@
 class Rectangle(object):
-
     def __init__(self, top_left, bottom_right):
         self.left, self.top = top_left
         self.right, self.bottom = bottom_right

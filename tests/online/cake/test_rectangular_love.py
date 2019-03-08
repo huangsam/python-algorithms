@@ -1,11 +1,7 @@
-from online.cake.rectangular_love import (
-    Rectangle,
-    rectangular_love,
-)
+from online.cake.rectangular_love import Rectangle, rectangular_love
 
 
 class TestRectangularLove(object):
-
     def test_rectangular_love_good(self):
         rect1 = Rectangle((4, 8), (8, 4))
         rect2 = Rectangle((2, 10), (10, 2))

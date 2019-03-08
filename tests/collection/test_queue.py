@@ -1,14 +1,10 @@
 import pytest
 
-from collection.queue import (
-    Queue,
-    FunkyQueue,
-)
+from collection.queue import Queue, FunkyQueue
 
 
 @pytest.mark.queue
 class TestQueue(object):
-
     def test_push(self):
         queue = Queue()
         queue.push(1)
@@ -31,7 +27,6 @@ class TestQueue(object):
 
 @pytest.mark.queue
 class TestFunkyQueue(object):
-
     def test_push(self):
         queue = FunkyQueue()
         queue.push(1)

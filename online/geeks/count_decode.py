@@ -6,9 +6,9 @@ def count_decode(digit):
     count[1] = 1
     for i in range(2, n + 1):
         count[i] = 0
-        if digit[i - 1] > '0':
+        if digit[i - 1] > "0":
             count[i] = count[i - 1]
-        if digit[i - 2] == '1' or (digit[i - 2] == '2' and digit[i - 1] < '7'):
+        if digit[i - 2] == "1" or (digit[i - 2] == "2" and digit[i - 1] < "7"):
             count[i] += count[i - 2]
         i += 1
     return count[n]

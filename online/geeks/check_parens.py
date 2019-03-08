@@ -1,10 +1,6 @@
 # https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
 def check_parens(exp):
-    mapping = {
-        ')': '(',
-        '}': '{',
-        ']': '[',
-    }
+    mapping = {")": "(", "}": "{", "]": "["}
     seen = []
     for ch in exp:
         if ch in mapping.values():

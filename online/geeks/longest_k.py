@@ -1,6 +1,6 @@
 def longest_k_distinct(s, k):
     if len(s) == 0:
-        return ''
+        return ""
     if is_valid(s, k) is True:
         return s
     left = longest_k_distinct(s[1:], k)
@@ -23,7 +23,7 @@ def longest_k_distinct_optimal(s, k):
             unique += 1
         counts[val] += 1
     if unique < k:
-        return ''
+        return ""
     counts = {}
     start, end = 0, 0
     result_start = 0
@@ -42,7 +42,7 @@ def longest_k_distinct_optimal(s, k):
         if (end - start) > result_size:
             result_size = end - start
             result_start = start
-    return s[result_start:(result_start + result_size)]
+    return s[result_start : (result_start + result_size)]
 
 
 def is_valid_optimal(counts, k):

@@ -6,7 +6,7 @@ def duplicate_subtree(root):
 
 def duplicate_subtree_work(root):
     if root is None:
-        return '', set(), False
+        return "", set(), False
 
     left_post, left_seen, left_dup = duplicate_subtree_work(root.left)
     right_post, right_seen, right_dup = duplicate_subtree_work(root.right)

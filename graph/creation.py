@@ -20,16 +20,20 @@ def create_postorder_inorder(postorder, postrange, inorder, inrange):
         i += 1
 
     # generate left node
-    left_inrange = (in_left, i-1)
-    left_diff = (i-1) - in_left
-    left_postrange = (post_left, post_left+left_diff)
-    node.left = create_postorder_inorder(postorder, left_postrange, inorder, left_inrange)
+    left_inrange = (in_left, i - 1)
+    left_diff = (i - 1) - in_left
+    left_postrange = (post_left, post_left + left_diff)
+    node.left = create_postorder_inorder(
+        postorder, left_postrange, inorder, left_inrange
+    )
 
     # generate right node
-    right_inrange = (i+1, in_right)
-    right_diff = in_right - (i+1)
-    right_postrange = (post_right-right_diff-1, post_right-1)
-    node.right = create_postorder_inorder(postorder, right_postrange, inorder, right_inrange)
+    right_inrange = (i + 1, in_right)
+    right_diff = in_right - (i + 1)
+    right_postrange = (post_right - right_diff - 1, post_right - 1)
+    node.right = create_postorder_inorder(
+        postorder, right_postrange, inorder, right_inrange
+    )
 
     return node
 
@@ -53,15 +57,17 @@ def create_preorder_inorder(preorder, prerange, inorder, inrange):
         i += 1
 
     # get left node
-    left_inorder = (in_left, i-1)
-    left_diff = (i-1) - in_left
-    left_preorder = (pre_left+1, pre_left+left_diff+1)
+    left_inorder = (in_left, i - 1)
+    left_diff = (i - 1) - in_left
+    left_preorder = (pre_left + 1, pre_left + left_diff + 1)
     node.left = create_preorder_inorder(preorder, left_preorder, inorder, left_inorder)
 
     # get right node
-    right_inorder = (i+1, in_right)
-    right_diff = in_right - (i+1)
-    right_preorder = (pre_right-right_diff, pre_right)
-    node.right = create_preorder_inorder(preorder, right_preorder, inorder, right_inorder)
+    right_inorder = (i + 1, in_right)
+    right_diff = in_right - (i + 1)
+    right_preorder = (pre_right - right_diff, pre_right)
+    node.right = create_preorder_inorder(
+        preorder, right_preorder, inorder, right_inorder
+    )
 
     return node

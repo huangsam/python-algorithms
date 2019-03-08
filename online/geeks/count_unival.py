@@ -14,7 +14,7 @@ def count_unival_work(root):
     total_count = l_count + r_count
     total_flag = l_flag & r_flag
     if root.left and root.right:
-        total_flag &= (root.left.val == root.right.val)
+        total_flag &= root.left.val == root.right.val
     if total_flag is True:
         total_count += 1
     return total_flag, total_count

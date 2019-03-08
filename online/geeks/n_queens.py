@@ -7,7 +7,7 @@ def n_queens(board, col):
     for row in range(len(board)):
         if is_safe(board, row, col) is True:
             board[row][col] = 1
-            if n_queens(board, col+1) is True:
+            if n_queens(board, col + 1) is True:
                 return True
             board[row][col] = 0
     return False

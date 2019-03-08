@@ -39,8 +39,8 @@ def fibonacci_dp_bottom(n):
     mem[1] = 1
     if n < 2:
         return mem[n]
-    for i in range(2, n+1):
-        mem[i] = mem[i-1] + mem[i-2]
+    for i in range(2, n + 1):
+        mem[i] = mem[i - 1] + mem[i - 2]
     return mem[n]
 
 
@@ -51,5 +51,5 @@ def fibonacci_dp_top(n):
 def fibonacci_dp_top_work(n, mem):
     if n in mem:
         return mem[n]
-    mem[n] = fibonacci_dp_top_work(n-1, mem) + fibonacci_dp_top_work(n-2, mem)
+    mem[n] = fibonacci_dp_top_work(n - 1, mem) + fibonacci_dp_top_work(n - 2, mem)
     return mem[n]
