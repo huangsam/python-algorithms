@@ -8,6 +8,10 @@ pytest = "*"
 
 [dev-packages]
 flake8 = "*"
+black = {version="*", markers="python_version >= '3.6'"}
 
 [requires]
 python_version = "3"
+
+[pipenv]
+allow_prereleases = true
