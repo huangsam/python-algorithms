@@ -18,7 +18,7 @@ def rowValid(grid, row):
         val = grid[row][i]
         if val in seen:
             return False
-        if val != '.':
+        if val != ".":
             seen.add(val)
     return True
 
@@ -30,18 +30,18 @@ def columnValid(grid, column):
         val = grid[i][column]
         if val in seen:
             return False
-        if val != '.':
+        if val != ".":
             seen.add(val)
     return True
 
 
 def gridValid(grid, row, col):
     seen = set()
-    for i in range(3*row, 3*(row+1)):
-        for j in range(3*col, 3*(col+1)):
+    for i in range(3 * row, 3 * (row + 1)):
+        for j in range(3 * col, 3 * (col + 1)):
             val = grid[i][j]
-            if val in seen and val != '.':
+            if val in seen and val != ".":
                 return False
-            if val != '.':
+            if val != ".":
                 seen.add(val)
     return True

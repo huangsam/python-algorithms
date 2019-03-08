@@ -3,14 +3,13 @@ import pytest
 from online.youtube.pair_sum import pair_sum
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def array():
     return [3, 7, 10, 9, 1, 5]
 
 
 @pytest.mark.array
 class TestPairSum(object):
-
     def test_pair_sum_multiple(self, array):
         target = 10
         result = pair_sum(array, target)

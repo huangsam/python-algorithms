@@ -8,12 +8,12 @@ from collection.graph import Graph
 from collection.trie import Trie
 
 
-@pytest.fixture(scope='function', params=[50, 100, 400])
+@pytest.fixture(scope="function", params=[50, 100, 400])
 def array(request):
     return [randint(0, 100) for i in range(request.param)]
 
 
-@pytest.fixture(scope='function', params=[50, 100, 400])
+@pytest.fixture(scope="function", params=[50, 100, 400])
 def sorted_list(request):
     """
     1 -> 2 -> 3 -> ... -> n
@@ -26,7 +26,7 @@ def sorted_list(request):
     return head
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def simple_tree(request):
     """
        1
@@ -46,21 +46,16 @@ def simple_tree(request):
     return root
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def simple_graph(request):
-    graph = Graph(
-        ('a', 'b'),
-        ('a', 'c'),
-        ('b', 'd'),
-        ('c', 'e')
-    )
+    graph = Graph(("a", "b"), ("a", "c"), ("b", "d"), ("c", "e"))
     return graph
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope="function")
 def simple_trie():
     tr = Trie()
-    tr.insert('hello')
-    tr.insert('hat')
-    tr.insert('cat')
+    tr.insert("hello")
+    tr.insert("hat")
+    tr.insert("cat")
     return tr

@@ -9,9 +9,11 @@ def is_balanced(root):
         return True
     left_depth = depth(root.left)
     right_depth = depth(root.right)
-    return abs(left_depth - right_depth) <= 1 \
-        and is_balanced(root.left) \
+    return (
+        abs(left_depth - right_depth) <= 1
+        and is_balanced(root.left)
         and is_balanced(root.right)
+    )
 
 
 def is_balanced_optimal(root):

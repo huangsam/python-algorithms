@@ -1,19 +1,12 @@
 import pytest
 
 from collection.tree import TreeNode
-from online.geeks.connect_nodes import (
-    connect_nodes_single,
-    connect_nodes_double,
-)
+from online.geeks.connect_nodes import connect_nodes_single, connect_nodes_double
 
 
 @pytest.mark.tree
 class TestConnectNodes(object):
-
-    @pytest.mark.parametrize("func", [
-        connect_nodes_double,
-        connect_nodes_single,
-    ])
+    @pytest.mark.parametrize("func", [connect_nodes_double, connect_nodes_single])
     def test_connect_nodes(self, func):
         root = TreeNode(1)
         root.left = TreeNode(2)

@@ -42,16 +42,16 @@ def print_line(length, index, is_hallow):
     middle = length // 2
     left_boundary = middle - index
     right_boundary = middle + index
-    result = ''
+    result = ""
     for i in range(length):
         if middle == index:
-            result += 'X'
+            result += "X"
         elif i > left_boundary and i < right_boundary and is_hallow is False:
-            result += 'X'
+            result += "X"
         elif i == left_boundary or i == right_boundary:
-            result += 'X'
+            result += "X"
         else:
-            result += '-'
+            result += "-"
     print(result)
 
 
@@ -69,11 +69,11 @@ def print_tree(height, is_hallow):
 
 
 def main():
-    print('Hallow\n===')
+    print("Hallow\n===")
     print_tree(10, True)
-    print('\nNot hallow\n===')
+    print("\nNot hallow\n===")
     print_tree(10, False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

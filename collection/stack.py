@@ -7,7 +7,7 @@ class Stack(object):
 
     def max(self):
         if len(self.maxval) == 0:
-            raise ValueError('No entries have been added')
+            raise ValueError("No entries have been added")
         return self.maxval[-1]
 
     def push(self, val):

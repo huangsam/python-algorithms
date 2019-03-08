@@ -41,10 +41,6 @@ def merge_k_heap(arrays):
         result.append(val)
 
         if element_ind + 1 < len(arrays[arr_ind]):
-            next_tuple = (
-                arrays[arr_ind][element_ind + 1],
-                arr_ind,
-                element_ind + 1,
-            )
+            next_tuple = (arrays[arr_ind][element_ind + 1], arr_ind, element_ind + 1)
             heapq.heappush(heap, next_tuple)
     return result

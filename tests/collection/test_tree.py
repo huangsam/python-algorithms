@@ -5,7 +5,6 @@ from collection.tree import TreeNode
 
 @pytest.mark.tree
 class TestTree(object):
-
     def test_root(self):
         root = TreeNode(1)
         assert root.val == 1
