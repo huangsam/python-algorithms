@@ -18,3 +18,8 @@ class TestMergeSimpleSort(object):
         assert not self._is_sorted(array)
         array = merge_sort(array)
         assert self._is_sorted(array)
+
+    def test_merge_empty(self):
+        arr = []
+        actual = merge_sort(arr)
+        assert actual == arr

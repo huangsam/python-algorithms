@@ -1,5 +1,5 @@
 def merge_sort(arr):
-    if len(arr) == 1:
+    if len(arr) <= 1:
         return arr
     middle = len(arr) // 2
     l_merged = merge_sort(arr[:middle])
