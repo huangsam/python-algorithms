@@ -4,7 +4,7 @@ from online.codesignal.sudoku2 import sudoku2
 
 
 @pytest.mark.array
-class TestSudoku2(object):
+class TestSudoku2:
     def test_grid_good(self):
         grid = [
             [".", ".", ".", "1", "4", ".", ".", "2", "."],

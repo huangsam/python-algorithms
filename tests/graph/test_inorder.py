@@ -4,7 +4,7 @@ from graph.inorder import inorder_iterative, inorder_recursive
 
 
 @pytest.mark.tree
-class TestInorder(object):
+class TestInorder:
     def test_inorder_iterative(self, simple_tree):
         result = inorder_iterative(simple_tree)
         assert (len(result)) == 6

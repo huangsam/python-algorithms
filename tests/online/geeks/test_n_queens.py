@@ -5,7 +5,7 @@ from online.geeks.n_queens import n_queens
 
 @pytest.mark.array
 @pytest.mark.backtrack
-class TestNQueens(object):
+class TestNQueens:
     @pytest.mark.parametrize("dim", range(4, 9))
     def test_n_queens(self, dim):
         board = [[0] * dim for i in range(dim)]

@@ -5,7 +5,7 @@ from online.geeks.reverse_alt_k import reverse_alt_k
 
 
 @pytest.mark.list
-class TestReverseAltList(object):
+class TestReverseAltList:
     @pytest.mark.parametrize(
         "k, size, expected",
         [

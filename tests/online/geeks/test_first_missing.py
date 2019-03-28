@@ -4,7 +4,7 @@ from online.geeks.first_missing import first_missing, first_missing_optimal
 
 
 @pytest.mark.array
-class TestFirstMissing(object):
+class TestFirstMissing:
     @pytest.mark.parametrize(
         "arr, missing",
         [

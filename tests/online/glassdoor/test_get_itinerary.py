@@ -5,7 +5,7 @@ from online.glassdoor.get_itinerary import get_itinerary
 
 @pytest.mark.array
 @pytest.mark.backtrack
-class TestGetItinerary(object):
+class TestGetItinerary:
     @pytest.mark.parametrize(
         "start, flights, expected",
         [

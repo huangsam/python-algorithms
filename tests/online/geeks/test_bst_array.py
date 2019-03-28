@@ -7,7 +7,7 @@ from online.geeks.is_bst import is_bst
 
 @pytest.mark.array
 @pytest.mark.tree
-class TestBSTArray(object):
+class TestBSTArray:
     @pytest.mark.parametrize(
         "given, expected",
         [

@@ -5,7 +5,7 @@ from graph.inorder import inorder_recursive
 
 
 @pytest.mark.tree
-class TestCreation(object):
+class TestCreation:
     def test_create_postorder_inorder(self):
         postorder = [6, 7, 5, 3, 4, 2, 1]
         postrange = (0, len(postorder) - 1)

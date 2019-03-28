@@ -5,7 +5,7 @@ from online.geeks.autocomplete import autocomplete
 
 @pytest.mark.string
 @pytest.mark.tree
-class TestAutocomplete(object):
+class TestAutocomplete:
     @pytest.mark.parametrize(
         "s, queries, expected",
         [

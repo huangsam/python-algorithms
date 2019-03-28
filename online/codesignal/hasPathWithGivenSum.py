@@ -1,6 +1,6 @@
 #
 # Definition for binary tree:
-# class Tree(object):
+# class Tree:
 #   def __init__(self, x):
 #     self.value = x
 #     self.left = None

@@ -4,7 +4,7 @@ from collection.queue import Queue, FunkyQueue
 
 
 @pytest.mark.queue
-class TestQueue(object):
+class TestQueue:
     def test_push(self):
         queue = Queue()
         queue.push(1)
@@ -26,7 +26,7 @@ class TestQueue(object):
 
 
 @pytest.mark.queue
-class TestFunkyQueue(object):
+class TestFunkyQueue:
     def test_push(self):
         queue = FunkyQueue()
         queue.push(1)

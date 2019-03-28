@@ -3,7 +3,7 @@ import pytest
 from basic.square_root import square_root
 
 
-class TestSquareRoot(object):
+class TestSquareRoot:
     @pytest.mark.parametrize("root, x", [(3.0, 9), (6.0, 36), (9.0, 81), (12.0, 144)])
     def test_square_root_exact(self, root, x):
         assert root == square_root(x)

@@ -4,7 +4,7 @@ from online.cake.cake_thief import max_duffel_bag_value
 
 
 @pytest.mark.dynamic
-class TestCakeThief(object):
+class TestCakeThief:
     def test_max_duffel_bag_value(self):
         cake_tuples = [(7, 160), (3, 90), (2, 15)]
         capacity = 20

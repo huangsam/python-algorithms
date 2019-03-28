@@ -1,7 +1,7 @@
 from online.glassdoor.car_cdr import car, cdr, cons
 
 
-class TestCarCdr(object):
+class TestCarCdr:
     def test_car(self):
         assert car(cons(3, 4)) == 3
 

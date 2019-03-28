@@ -4,7 +4,7 @@ from collection.graph import Graph
 
 
 @pytest.mark.graph
-class TestGraph(object):
+class TestGraph:
 
     SAMPLE_DATA = (("a", "b"), ("a", "c"), ("a", "d"))
 

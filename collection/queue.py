@@ -1,4 +1,4 @@
-class Queue(object):
+class Queue:
     """Queue is a FIFO data structure."""
 
     def __init__(self):
@@ -14,7 +14,7 @@ class Queue(object):
         return len(self.array)
 
 
-class FunkyQueue(object):
+class FunkyQueue:
     """Queue made of two stacks."""
 
     def __init__(self):

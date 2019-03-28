@@ -4,7 +4,7 @@ from online.geeks.longest_k import longest_k_distinct, longest_k_distinct_optima
 
 
 @pytest.mark.string
-class TestLongestK(object):
+class TestLongestK:
     @pytest.mark.parametrize(
         "kin, kval, expected",
         [

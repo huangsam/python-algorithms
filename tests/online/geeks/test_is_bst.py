@@ -5,7 +5,7 @@ from online.geeks.is_bst import is_bst, is_bst_optimal
 
 
 @pytest.mark.tree
-class TestIsBST(object):
+class TestIsBST:
     @pytest.mark.parametrize("func", [is_bst, is_bst_optimal])
     def test_is_bst_good_basic(self, func):
         root = TreeNode(2)

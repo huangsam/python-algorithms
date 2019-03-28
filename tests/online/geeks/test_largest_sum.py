@@ -4,7 +4,7 @@ from online.geeks.largest_sum import largest_sum_non_adjacent, largest_sum_adjac
 
 
 @pytest.mark.array
-class TestLargestSum(object):
+class TestLargestSum:
     @pytest.mark.parametrize(
         "given, expected",
         [

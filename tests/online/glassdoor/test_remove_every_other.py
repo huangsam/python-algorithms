@@ -4,7 +4,7 @@ from online.glassdoor.remove_every_other import remove_every_other
 
 
 @pytest.mark.list
-class TestRemoveEveryOther(object):
+class TestRemoveEveryOther:
     @staticmethod
     def _add_loop(l):
         prev = None

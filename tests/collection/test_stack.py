@@ -4,7 +4,7 @@ from collection.stack import Stack, FunkyStack
 
 
 @pytest.mark.stack
-class TestStack(object):
+class TestStack:
     def test_push(self):
         stack = Stack()
         stack.push(1)
@@ -51,7 +51,7 @@ class TestStack(object):
 
 
 @pytest.mark.stack
-class TestFunkyStack(object):
+class TestFunkyStack:
     def test_push(self):
         stack = FunkyStack()
         stack.push(1)

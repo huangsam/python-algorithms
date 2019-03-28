@@ -5,7 +5,7 @@ from basic.merge_simple import merge_sort
 
 @pytest.mark.array
 @pytest.mark.sorting
-class TestMergeSimpleSort(object):
+class TestMergeSimpleSort:
     @staticmethod
     def _is_sorted(array):
         alen = len(array)

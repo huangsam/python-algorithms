@@ -4,7 +4,7 @@ from online.codesignal.rotateImage import rotateImage
 
 
 @pytest.mark.array
-class TestRotateImage(object):
+class TestRotateImage:
     @pytest.mark.parametrize(
         "image",
         [

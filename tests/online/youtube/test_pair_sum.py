@@ -9,7 +9,7 @@ def array():
 
 
 @pytest.mark.array
-class TestPairSum(object):
+class TestPairSum:
     def test_pair_sum_multiple(self, array):
         target = 10
         result = pair_sum(array, target)

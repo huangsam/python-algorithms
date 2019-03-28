@@ -5,7 +5,7 @@ from online.cake.has_cycle import has_cycle
 
 
 @pytest.mark.list
-class TestHasCycle(object):
+class TestHasCycle:
     def test_has_cycle_root(self):
         root = ListNode(0)
         root.next_node = root

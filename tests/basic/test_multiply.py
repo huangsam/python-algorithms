@@ -3,7 +3,7 @@ import pytest
 from basic.multiply import multiply
 
 
-class TestMultiply(object):
+class TestMultiply:
     @pytest.mark.parametrize("x,y", [(2, 0), (0, 2), (0, 0)])
     def test_multiply_zero(self, x, y):
         assert multiply(x, y) == 0
