@@ -1,4 +1,4 @@
-class ListNode(object):
+class ListNode:
     """List node has a value and references to other nodes."""
 
     def __init__(self, value=None):

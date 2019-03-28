@@ -5,7 +5,7 @@ from online.geeks.duplicate_subtree import duplicate_subtree
 
 
 @pytest.mark.tree
-class TestDuplicateSubtree(object):
+class TestDuplicateSubtree:
     def test_duplicate_subtree(self):
         root = TreeNode("A")
         root.left = TreeNode("B")

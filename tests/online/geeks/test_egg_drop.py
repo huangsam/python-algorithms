@@ -4,7 +4,7 @@ from online.geeks.egg_drop import egg_drop, egg_drop_optimal
 
 
 @pytest.mark.dynamic
-class TestEggDrop(object):
+class TestEggDrop:
     def test_egg_drop(self):
         assert egg_drop(2, 10) == 4
 

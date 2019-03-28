@@ -4,7 +4,7 @@ from graph.preorder import preorder_iterative, preorder_recursive
 
 
 @pytest.mark.tree
-class TestPreorder(object):
+class TestPreorder:
     def test_preorder_iterative(self, simple_tree):
         result = preorder_iterative(simple_tree)
         assert (len(result)) == 6

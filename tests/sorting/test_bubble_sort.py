@@ -5,7 +5,7 @@ from sorting import bubble_sort
 
 @pytest.mark.array
 @pytest.mark.sorting
-class TestBubbleSort(object):
+class TestBubbleSort:
     @staticmethod
     def _is_sorted(array):
         alen = len(array)

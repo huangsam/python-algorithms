@@ -1,4 +1,4 @@
-class TreeNode(object):
+class TreeNode:
     """Binary tree has two children and an associated value."""
 
     def __init__(self, x):

@@ -4,7 +4,7 @@ from basic.anagram import check_anagram
 
 
 @pytest.mark.string
-class TestAnagram(object):
+class TestAnagram:
     def test_check_anagram_good(self):
         assert check_anagram("dog", "god") is True
         assert check_anagram("mom", "mom") is True

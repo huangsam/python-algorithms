@@ -5,7 +5,7 @@ from sorting import insertion_sort
 
 @pytest.mark.array
 @pytest.mark.sorting
-class TestInsertionSort(object):
+class TestInsertionSort:
     @staticmethod
     def _is_sorted(array):
         alen = len(array)

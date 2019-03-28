@@ -4,7 +4,7 @@ from basic.bsearch import bsearch_iterative, bsearch_recursive
 
 
 @pytest.mark.array
-class TestBinarySearch(object):
+class TestBinarySearch:
     @pytest.mark.parametrize("i", [4, 0, 10])
     @pytest.mark.parametrize("func", [bsearch_iterative, bsearch_recursive])
     def test_bsearch_good(self, func, i):

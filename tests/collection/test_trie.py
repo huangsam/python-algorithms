@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.mark.tree
-class TestTrie(object):
+class TestTrie:
     def test_insert(self, simple_trie):
         assert simple_trie.node.is_complete is False
         assert "h" in simple_trie.node.children

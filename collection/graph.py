@@ -1,4 +1,4 @@
-class Graph(object):
+class Graph:
     """Helper for managing dictionary-based graph."""
 
     def __init__(self, *edges):

@@ -4,7 +4,7 @@ from collection.list import ListNode
 
 
 @pytest.mark.list
-class TestList(object):
+class TestList:
     def test_list_is_sorted(self, sorted_list):
         prev_node = None
         cur_node = sorted_list

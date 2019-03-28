@@ -5,7 +5,7 @@ from online.geeks.connect_nodes import connect_nodes_single, connect_nodes_doubl
 
 
 @pytest.mark.tree
-class TestConnectNodes(object):
+class TestConnectNodes:
     @pytest.mark.parametrize("func", [connect_nodes_double, connect_nodes_single])
     def test_connect_nodes(self, func):
         root = TreeNode(1)

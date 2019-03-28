@@ -1,5 +1,5 @@
 # https://jamesroutley.co.uk/tech/2017/07/16/tries.html#implementation
-class Node(object):
+class Node:
     """A set of children exist down the line."""
 
     def __init__(self, value=None):
@@ -9,7 +9,7 @@ class Node(object):
         self.ref_count = 0
 
 
-class Trie(object):
+class Trie:
     """Trie starts with a root character."""
 
     def __init__(self):

@@ -4,7 +4,7 @@ from graph.postorder import postorder_iterative, postorder_recursive
 
 
 @pytest.mark.tree
-class TestPostorder(object):
+class TestPostorder:
     def test_postorder_iterative(self, simple_tree):
         result = postorder_iterative(simple_tree)
         assert (len(result)) == 6

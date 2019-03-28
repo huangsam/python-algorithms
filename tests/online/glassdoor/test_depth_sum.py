@@ -5,7 +5,7 @@ from online.glassdoor.depth_sum import depth_sum, depth_sum_stack
 
 @pytest.mark.array
 @pytest.mark.stack
-class TestDepthSum(object):
+class TestDepthSum:
     @pytest.mark.parametrize(
         "nested, expected",
         [([[1, 1], 2, [1, 1]], 10), ([[[3], [1, 2]]], 18), ([1, [2], [[3]]], 14)],

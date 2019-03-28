@@ -9,7 +9,7 @@ from basic.factorial import (
 
 
 @pytest.mark.dynamic
-class TestFactorial(object):
+class TestFactorial:
     @pytest.mark.parametrize(
         "func",
         [factorial_recursive, factorial_stack, factorial_dp_bottom, factorial_dp_top],

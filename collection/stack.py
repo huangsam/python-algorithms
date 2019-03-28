@@ -1,4 +1,4 @@
-class Stack(object):
+class Stack:
     """Stack is a LIFO data structure."""
 
     def __init__(self):
@@ -25,7 +25,7 @@ class Stack(object):
         return len(self.array)
 
 
-class FunkyStack(object):
+class FunkyStack:
     """Stack made of two queues."""
 
     def __init__(self):

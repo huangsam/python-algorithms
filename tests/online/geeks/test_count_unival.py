@@ -5,7 +5,7 @@ from online.geeks.count_unival import count_unival
 
 
 @pytest.mark.tree
-class TestCountUnival(object):
+class TestCountUnival:
     def test_count_unival_full(self):
         root = TreeNode(0)
         root.left = TreeNode(1)
