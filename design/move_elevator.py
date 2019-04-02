@@ -1,4 +1,4 @@
-import heapq
+from heapq import heappush, heappop
 
 
 def move_elevator(current_level, op_queue, direction):
@@ -13,12 +13,12 @@ def move_elevator(current_level, op_queue, direction):
     for pair in op_queue:
         pair_left, pair_right = pair
         if spans(bound, pair) and valid(pair, direction):
-            heapq.heappush(priority, (cost(current_level, pair_left), pair_left))
-            heapq.heappush(priority, (cost(current_level, pair_right), pair_right))
+            heappush(priority, (cost(current_level, pair_left), pair_left))
+            heappush(priority, (cost(current_level, pair_right), pair_right))
             visited.add(pair)
     op_queue = op_queue.difference(visited)
     while len(priority) > 0:
-        _, next_level = heapq.heappop(priority)
+        _, next_level = heappop(priority)
         print("Arrived at this level: {nxt}".format(nxt=next_level))
     if len(op_queue) > 0:
         if next_level:
