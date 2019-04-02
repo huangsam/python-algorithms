@@ -1,4 +1,6 @@
 def check_anagram(s1, s2):
+    if len(s1) != len(s2):
+        return False
     cmap = {}
     for c1 in s1:
         if c1 in cmap:
