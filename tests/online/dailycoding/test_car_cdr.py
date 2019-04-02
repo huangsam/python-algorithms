@@ -1,9 +1,9 @@
-from online.dailycoding.car_cdr import car, cdr, cons
+import online.dailycoding.car_cdr as lisp
 
 
 class TestCarCdr:
     def test_car(self):
-        assert car(cons(3, 4)) == 3
+        assert lisp.car(lisp.cons(3, 4)) == 3
 
     def test_cdr(self):
-        assert cdr(cons(3, 4)) == 4
+        assert lisp.cdr(lisp.cons(3, 4)) == 4
