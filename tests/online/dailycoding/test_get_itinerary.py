@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.get_itinerary import get_itinerary
+from online.dailycoding.get_itinerary import get_itinerary
 
 
 @pytest.mark.array

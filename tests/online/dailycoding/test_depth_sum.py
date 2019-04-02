@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.depth_sum import depth_sum, depth_sum_stack
+from online.dailycoding.depth_sum import depth_sum, depth_sum_stack
 
 
 @pytest.mark.array
