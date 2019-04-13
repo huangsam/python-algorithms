@@ -1,15 +1,11 @@
 def max_weight_path(triangle):
     height = len(triangle)
-    result = 0
     i = height - 1
     prev_val = None
     while i > 0:
         sums = []
         above = triangle[i - 1]
-        if prev_val is None:
-            row = triangle[i]
-        else:
-            row = prev_val
+        row = prev_val or triangle[i]
         row_len = len(row)
         j = 0
         while j < row_len - 1:
