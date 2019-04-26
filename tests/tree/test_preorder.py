@@ -1,6 +1,6 @@
 import pytest
 
-from graph.preorder import preorder_iterative, preorder_recursive
+from tree.preorder import preorder_iterative, preorder_recursive
 
 
 @pytest.mark.tree
