@@ -17,6 +17,7 @@ The following categories are covered:
 - Graph algorithms
 - Online resources
 - Sorting algorithms
+- Tree algorithms
 
 ## Test suite
 
