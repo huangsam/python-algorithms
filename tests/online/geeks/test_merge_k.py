@@ -1,6 +1,10 @@
 import pytest
 
-from online.geeks.merge_k import merge_k_queue, merge_k_heap, merge_two_arrays
+from algorithms.online.geeks.merge_k import (
+    merge_k_queue,
+    merge_k_heap,
+    merge_two_arrays,
+)
 
 
 @pytest.mark.array

@@ -1,8 +1,8 @@
 import pytest
 
-from tree.inorder import inorder_recursive
-from online.geeks.bst_array import create_bst_from_array
-from online.geeks.is_bst import is_bst
+from algorithms.tree.inorder import inorder_recursive
+from algorithms.online.geeks.bst_array import create_bst_from_array
+from algorithms.online.geeks.is_bst import is_bst
 
 
 @pytest.mark.array

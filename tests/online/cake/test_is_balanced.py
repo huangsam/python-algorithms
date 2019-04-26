@@ -1,7 +1,7 @@
 import pytest
 
-from collection.tree import TreeNode
-from online.cake.is_balanced import is_balanced, is_balanced_optimal
+from algorithms.collection.tree import TreeNode
+from algorithms.online.cake.is_balanced import is_balanced, is_balanced_optimal
 
 
 @pytest.mark.tree

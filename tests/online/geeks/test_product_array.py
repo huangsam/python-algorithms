@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.product_array import product_array
+from algorithms.online.geeks.product_array import product_array
 
 
 @pytest.mark.array

@@ -1,6 +1,6 @@
 import pytest
 
-from tree.postorder import postorder_iterative, postorder_recursive
+from algorithms.tree.postorder import postorder_iterative, postorder_recursive
 
 
 @pytest.mark.tree

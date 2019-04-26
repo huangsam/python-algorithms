@@ -1,6 +1,6 @@
 import pytest
 
-from online.youtube.pair_sum import pair_sum
+from algorithms.online.youtube.pair_sum import pair_sum
 
 
 @pytest.fixture(scope="function")

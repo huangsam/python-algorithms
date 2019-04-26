@@ -1,7 +1,7 @@
 import pytest
 
-from collection.list import ListNode
-from online.cake.has_cycle import has_cycle
+from algorithms.collection.list import ListNode
+from algorithms.online.cake.has_cycle import has_cycle
 
 
 @pytest.mark.list

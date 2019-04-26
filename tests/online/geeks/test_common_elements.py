@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.common_elements import common_elements
+from algorithms.online.geeks.common_elements import common_elements
 
 
 @pytest.mark.array

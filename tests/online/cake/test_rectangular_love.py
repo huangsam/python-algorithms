@@ -1,4 +1,4 @@
-from online.cake.rectangular_love import Rectangle, rectangular_love
+from algorithms.online.cake.rectangular_love import Rectangle, rectangular_love
 
 
 class TestRectangularLove:

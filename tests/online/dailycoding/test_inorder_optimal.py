@@ -1,7 +1,7 @@
 import pytest
 
-from collection.tree import TreeNode
-from online.dailycoding.inorder_optimal import inorder_optimal
+from algorithms.collection.tree import TreeNode
+from algorithms.online.dailycoding.inorder_optimal import inorder_optimal
 
 
 @pytest.mark.tree

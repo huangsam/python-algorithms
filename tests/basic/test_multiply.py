@@ -1,6 +1,6 @@
 import pytest
 
-from basic.multiply import multiply
+from algorithms.basic.multiply import multiply
 
 
 class TestMultiply:

@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.count_decode import count_decode
+from algorithms.online.geeks.count_decode import count_decode
 
 
 @pytest.mark.string

@@ -1,6 +1,6 @@
 import pytest
 
-from online.youtube.largest_rect import largest_rect
+from algorithms.online.youtube.largest_rect import largest_rect
 
 
 @pytest.mark.array

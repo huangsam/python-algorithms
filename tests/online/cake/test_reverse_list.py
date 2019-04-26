@@ -1,6 +1,6 @@
 import pytest
 
-from online.cake.reverse_list import reverse_list
+from algorithms.online.cake.reverse_list import reverse_list
 
 
 @pytest.mark.list

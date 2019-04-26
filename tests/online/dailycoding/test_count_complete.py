@@ -1,6 +1,6 @@
-from online.dailycoding.count_complete import count_complete
+from algorithms.online.dailycoding.count_complete import count_complete
 
-from collection.tree import TreeNode
+from algorithms.collection.tree import TreeNode
 
 
 class TestCountComplete:

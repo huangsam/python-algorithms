@@ -1,6 +1,6 @@
 import pytest
 
-from tree.inorder import inorder_iterative, inorder_recursive
+from algorithms.tree.inorder import inorder_iterative, inorder_recursive
 
 
 @pytest.mark.tree

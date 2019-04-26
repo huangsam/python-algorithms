@@ -1,6 +1,6 @@
 import pytest
 
-from graph.breadth import bfs
+from algorithms.graph.breadth import bfs
 
 
 @pytest.mark.graph

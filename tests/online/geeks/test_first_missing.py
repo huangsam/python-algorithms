@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.first_missing import first_missing, first_missing_optimal
+from algorithms.online.geeks.first_missing import first_missing, first_missing_optimal
 
 
 @pytest.mark.array

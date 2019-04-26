@@ -1,6 +1,6 @@
 import pytest
 
-from online.glassdoor.remove_every_other import remove_every_other
+from algorithms.online.glassdoor.remove_every_other import remove_every_other
 
 
 @pytest.mark.list

@@ -1,6 +1,6 @@
 import pytest
 
-from online.dailycoding.depth_sum import depth_sum, depth_sum_stack
+from algorithms.online.dailycoding.depth_sum import depth_sum, depth_sum_stack
 
 
 @pytest.mark.array

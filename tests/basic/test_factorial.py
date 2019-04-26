@@ -1,6 +1,6 @@
 import pytest
 
-from basic.factorial import (
+from algorithms.basic.factorial import (
     factorial_recursive,
     factorial_stack,
     factorial_dp_bottom,

@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.egg_drop import egg_drop, egg_drop_optimal
+from algorithms.online.geeks.egg_drop import egg_drop, egg_drop_optimal
 
 
 @pytest.mark.dynamic

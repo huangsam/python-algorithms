@@ -1,6 +1,6 @@
 import pytest
 
-from basic.bsearch import bsearch_iterative, bsearch_recursive
+from algorithms.basic.bsearch import bsearch_iterative, bsearch_recursive
 
 
 @pytest.mark.array

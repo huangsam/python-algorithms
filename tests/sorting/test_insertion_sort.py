@@ -1,6 +1,6 @@
 import pytest
 
-from sorting import insertion_sort
+from algorithms.sorting import insertion_sort
 from tests.utils import is_sorted
 
 

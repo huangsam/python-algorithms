@@ -1,6 +1,6 @@
 import pytest
 
-from sorting import bubble_sort
+from algorithms.sorting import bubble_sort
 from tests.utils import is_sorted
 
 

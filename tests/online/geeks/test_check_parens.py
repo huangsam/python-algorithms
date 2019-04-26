@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.check_parens import check_parens
+from algorithms.online.geeks.check_parens import check_parens
 
 
 @pytest.mark.string
