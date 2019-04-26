@@ -1,6 +1,6 @@
 import pytest
 
-from online.dailycoding.get_itinerary import get_itinerary
+from algorithms.online.dailycoding.get_itinerary import get_itinerary
 
 
 @pytest.mark.array

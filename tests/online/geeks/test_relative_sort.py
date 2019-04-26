@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.relative_sort import relative_sort
+from algorithms.online.geeks.relative_sort import relative_sort
 
 
 @pytest.mark.array

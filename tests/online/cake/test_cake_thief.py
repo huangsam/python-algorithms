@@ -1,6 +1,6 @@
 import pytest
 
-from online.cake.cake_thief import max_duffel_bag_value
+from algorithms.online.cake.cake_thief import max_duffel_bag_value
 
 
 @pytest.mark.dynamic

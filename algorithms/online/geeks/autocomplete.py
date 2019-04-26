@@ -1,4 +1,4 @@
-from collection.trie import Trie
+from algorithms.collection.trie import Trie
 
 
 # https://www.geeksforgeeks.org/auto-complete-feature-using-trie/

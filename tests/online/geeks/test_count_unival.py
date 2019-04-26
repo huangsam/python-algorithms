@@ -1,7 +1,7 @@
 import pytest
 
-from collection.tree import TreeNode
-from online.geeks.count_unival import count_unival
+from algorithms.collection.tree import TreeNode
+from algorithms.online.geeks.count_unival import count_unival
 
 
 @pytest.mark.tree

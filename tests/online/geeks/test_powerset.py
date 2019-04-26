@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.powerset import powerset
+from algorithms.online.geeks.powerset import powerset
 
 
 class TestPowerSet:

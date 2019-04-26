@@ -1,6 +1,6 @@
 import pytest
 
-from basic.square_root import square_root
+from algorithms.basic.square_root import square_root
 
 
 class TestSquareRoot:

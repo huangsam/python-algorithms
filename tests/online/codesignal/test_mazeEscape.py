@@ -1,6 +1,6 @@
 import pytest
 
-from online.codesignal.mazeEscape import mazeEscape
+from algorithms.online.codesignal.mazeEscape import mazeEscape
 
 
 @pytest.mark.graph

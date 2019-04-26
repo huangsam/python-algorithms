@@ -1,4 +1,4 @@
-from online.dailycoding.max_weight_path import max_weight_path
+from algorithms.online.dailycoding.max_weight_path import max_weight_path
 
 
 class TestMaxWeightPath:

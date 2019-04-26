@@ -1,6 +1,6 @@
 import pytest
 
-from online.codesignal.simplifyPath import simplifyPath
+from algorithms.online.codesignal.simplifyPath import simplifyPath
 
 
 @pytest.mark.string

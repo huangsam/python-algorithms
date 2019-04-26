@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.autocomplete import autocomplete
+from algorithms.online.geeks.autocomplete import autocomplete
 
 
 @pytest.mark.string

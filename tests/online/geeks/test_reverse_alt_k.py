@@ -1,7 +1,7 @@
 import pytest
 
-from collection.list import ListNode
-from online.geeks.reverse_alt_k import reverse_alt_k
+from algorithms.collection.list import ListNode
+from algorithms.online.geeks.reverse_alt_k import reverse_alt_k
 
 
 @pytest.mark.list

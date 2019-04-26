@@ -1,6 +1,6 @@
 import pytest
 
-from collection.tree import TreeNode
+from algorithms.collection.tree import TreeNode
 
 
 @pytest.mark.tree

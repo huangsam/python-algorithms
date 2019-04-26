@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.climb_steps import climb_steps
+from algorithms.online.geeks.climb_steps import climb_steps
 
 
 @pytest.mark.dynamic

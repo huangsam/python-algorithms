@@ -1,6 +1,6 @@
 import pytest
 
-from basic.merge_simple import merge_sort
+from algorithms.basic.merge_simple import merge_sort
 
 
 @pytest.mark.array

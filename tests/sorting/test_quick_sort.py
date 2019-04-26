@@ -1,6 +1,6 @@
 import pytest
 
-from sorting import quick_sort
+from algorithms.sorting import quick_sort
 from tests.utils import is_sorted
 
 

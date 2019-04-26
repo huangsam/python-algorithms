@@ -1,6 +1,6 @@
 import pytest
 
-from basic.fibonacci import (
+from algorithms.basic.fibonacci import (
     fibonacci_recursive,
     fibonacci_iterative,
     fibonacci_stack,

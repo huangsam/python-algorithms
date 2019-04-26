@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.merge_intervals import merge_intervals
+from algorithms.online.geeks.merge_intervals import merge_intervals
 
 
 @pytest.mark.array

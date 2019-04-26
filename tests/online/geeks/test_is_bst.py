@@ -1,7 +1,7 @@
 import pytest
 
-from collection.tree import TreeNode
-from online.geeks.is_bst import is_bst, is_bst_optimal
+from algorithms.collection.tree import TreeNode
+from algorithms.online.geeks.is_bst import is_bst, is_bst_optimal
 
 
 @pytest.mark.tree

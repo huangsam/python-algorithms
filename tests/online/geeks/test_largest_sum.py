@@ -1,6 +1,9 @@
 import pytest
 
-from online.geeks.largest_sum import largest_sum_non_adjacent, largest_sum_adjacent
+from algorithms.online.geeks.largest_sum import (
+    largest_sum_non_adjacent,
+    largest_sum_adjacent,
+)
 
 
 @pytest.mark.array

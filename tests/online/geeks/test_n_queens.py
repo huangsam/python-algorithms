@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.n_queens import n_queens
+from algorithms.online.geeks.n_queens import n_queens
 
 
 @pytest.mark.array

@@ -1,7 +1,7 @@
 import pytest
 
-from collection.tree import TreeNode
-from online.glassdoor.remove_bad_edge import remove_bad_edge
+from algorithms.collection.tree import TreeNode
+from algorithms.online.glassdoor.remove_bad_edge import remove_bad_edge
 
 
 @pytest.mark.tree

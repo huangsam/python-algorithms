@@ -1,6 +1,6 @@
 import pytest
 
-from online.codesignal.rotateImage import rotateImage
+from algorithms.online.codesignal.rotateImage import rotateImage
 
 
 @pytest.mark.array

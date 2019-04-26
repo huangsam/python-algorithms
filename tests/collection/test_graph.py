@@ -1,6 +1,6 @@
 import pytest
 
-from collection.graph import Graph
+from algorithms.collection.graph import Graph
 
 
 @pytest.mark.graph

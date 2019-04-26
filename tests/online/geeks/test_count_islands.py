@@ -1,6 +1,6 @@
 import pytest
 
-from online.geeks.count_islands import count_islands
+from algorithms.online.geeks.count_islands import count_islands
 
 
 @pytest.mark.graph

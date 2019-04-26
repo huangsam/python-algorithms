@@ -1,6 +1,6 @@
 import pytest
 
-from online.codesignal.sudoku2 import sudoku2
+from algorithms.online.codesignal.sudoku2 import sudoku2
 
 
 @pytest.mark.array

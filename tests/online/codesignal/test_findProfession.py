@@ -1,6 +1,6 @@
 import pytest
 
-from online.codesignal.findProfession import findProfession
+from algorithms.online.codesignal.findProfession import findProfession
 
 
 @pytest.mark.tree

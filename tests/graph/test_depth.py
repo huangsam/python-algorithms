@@ -1,6 +1,6 @@
 import pytest
 
-from graph.depth import dfs
+from algorithms.graph.depth import dfs
 
 
 @pytest.mark.graph

@@ -1,7 +1,10 @@
 import pytest
 
-from collection.tree import TreeNode
-from online.geeks.connect_nodes import connect_nodes_single, connect_nodes_double
+from algorithms.collection.tree import TreeNode
+from algorithms.online.geeks.connect_nodes import (
+    connect_nodes_single,
+    connect_nodes_double,
+)
 
 
 @pytest.mark.tree

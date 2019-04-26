@@ -1,4 +1,4 @@
-from collection.tree import TreeNode
+from algorithms.collection.tree import TreeNode
 
 
 # https://www.geeksforgeeks.org/construct-a-binary-tree-from-postorder-and-inorder/
