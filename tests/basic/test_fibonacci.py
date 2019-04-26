@@ -1,12 +1,6 @@
 import pytest
 
-from algorithms.basic.fibonacci import (
-    fibonacci_recursive,
-    fibonacci_iterative,
-    fibonacci_stack,
-    fibonacci_dp_bottom,
-    fibonacci_dp_top,
-)
+from algorithms.basic import fibonacci as fib
 
 
 @pytest.mark.dynamic
@@ -14,11 +8,11 @@ class TestFibonacci:
     @pytest.mark.parametrize(
         "func",
         [
-            fibonacci_iterative,
-            fibonacci_recursive,
-            fibonacci_stack,
-            fibonacci_dp_bottom,
-            fibonacci_dp_top,
+            fib.fibonacci_iterative,
+            fib.fibonacci_recursive,
+            fib.fibonacci_stack,
+            fib.fibonacci_dp_bottom,
+            fib.fibonacci_dp_top,
         ],
     )
     @pytest.mark.parametrize(
