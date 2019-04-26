@@ -1,7 +1,7 @@
 import pytest
 
-from graph.creation import create_postorder_inorder, create_preorder_inorder
-from graph.inorder import inorder_recursive
+from tree.creation import create_postorder_inorder, create_preorder_inorder
+from tree.inorder import inorder_recursive
 
 
 @pytest.mark.tree
