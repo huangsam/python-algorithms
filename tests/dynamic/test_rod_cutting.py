@@ -3,6 +3,7 @@ import pytest
 from algorithms.dynamic import rod_cutting as rods
 
 
+@pytest.mark.dynamic
 class TestRodCutting:
     @pytest.mark.parametrize("func", [rods.rod_cutting_dp, rods.rod_cutting_rec])
     def test_rod_cutting(self, func):
