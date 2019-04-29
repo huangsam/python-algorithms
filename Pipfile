@@ -8,7 +8,7 @@ pytest = "*"
 
 [dev-packages]
 flake8 = "*"
-black = {version="*", markers="python_version >= '3.6'"}
+black = "*"
 
 [requires]
 python_version = "3"
