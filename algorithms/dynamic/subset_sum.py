@@ -11,6 +11,7 @@ def subset_sum_rec(nums, s):
     return False
 
 
+# https://algorithms.tutorialhorizon.com//dynamic-programming-subset-sum-problem/
 def subset_sum_dp(nums, s):
     nlen = len(nums)
     matrix = [[False] * (s + 1) for _ in range(nlen + 1)]
