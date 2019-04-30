@@ -11,6 +11,7 @@ def rod_cutting_rec(n, prices):
     return result
 
 
+# https://algorithms.tutorialhorizon.com//dynamic-programming-rod-cutting-problem/
 def rod_cutting_dp(n, prices):
     revenue = [0] * max(2, n + 1)
     revenue[1] = prices[0]
