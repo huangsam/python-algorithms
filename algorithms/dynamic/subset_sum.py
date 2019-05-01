@@ -14,13 +14,13 @@ def subset_sum_rec(nums, s):
 # https://algorithms.tutorialhorizon.com//dynamic-programming-subset-sum-problem/
 def subset_sum_dp(nums, s):
     nlen = len(nums)
-    matrix = [[False] * (s + 1) for _ in range(nlen + 1)]
     snums = [_ for _ in sorted(nums)]
+    using = [[False] * (s + 1) for _ in range(nlen + 1)]
     for i in range(nlen + 1):
-        matrix[i][0] = True
+        using[i][0] = True
     for i in range(1, nlen + 1):
         for j in range(1, s + 1):
-            matrix[i][j] = matrix[i - 1][j]
-            if not matrix[i][j] and j >= snums[i - 1]:
-                matrix[i][j] = matrix[i - 1][j - snums[i - 1]]
-    return matrix[nlen][s]
+            using[i][j] = using[i - 1][j]
+            if not using[i][j] and j >= snums[i - 1]:
+                using[i][j] = using[i - 1][j - snums[i - 1]]
+    return using[nlen][s]
