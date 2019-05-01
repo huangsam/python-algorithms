@@ -3,6 +3,7 @@ import pytest
 from algorithms.dynamic.lis import lis
 
 
+@pytest.mark.array
 @pytest.mark.dynamic
 class TestLis:
     @pytest.mark.parametrize("n", [1, 5, 100])
