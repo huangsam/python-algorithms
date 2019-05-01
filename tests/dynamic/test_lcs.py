@@ -15,21 +15,23 @@ class TestLcs:
             ("fadeway", "aw", 2),
         ],
     )
-    def test_lcs_all(self, a, b, o):
-        assert lcs.lcs_rec(a, b) == o
+    @pytest.mark.parametrize("f", [lcs.lcs_rec, lcs.lcs_dp])
+    def test_lcs_all(self, f, a, b, o):
+        assert f(a, b) == o
 
     @pytest.mark.parametrize(
         "a, b, o",
         [
             ("ai", "abcdefghi", 2),
             ("ali", "abcdefghi", 2),
-            ("aeghijklmnop", "abcdefghi", 5),
+            ("allli", "abcdefghi", 2),
+            ("aeghij", "abcdefghi", 5),
         ],
     )
-    def test_lcs_partial(self, a, b, o):
+    @pytest.mark.parametrize("f", [lcs.lcs_rec, lcs.lcs_dp])
+    def test_lcs_partial(self, f, a, b, o):
         assert lcs.lcs_rec(a, b) == o
 
-    def test_lcs_none(self):
-        astr = "abcd"
-        bstr = "efgh"
-        assert lcs.lcs_rec(astr, bstr) == 0
+    @pytest.mark.parametrize("f", [lcs.lcs_rec, lcs.lcs_dp])
+    def test_lcs_none(self, f):
+        assert f("abcd", "efgh") == 0
