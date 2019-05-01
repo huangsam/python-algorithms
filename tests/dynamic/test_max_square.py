@@ -3,6 +3,7 @@ import pytest
 from algorithms.dynamic import max_square as maxsq
 
 
+@pytest.mark.array
 @pytest.mark.dynamic
 class TestMaxSquare:
     @pytest.mark.parametrize("i", [1, 2, 3, 4])
