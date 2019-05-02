@@ -16,6 +16,10 @@ class TestLis:
         a = [_ for _ in range(n - 1, -1, -1)]
         assert lis(a) == 1
 
-    def test_lis_mixed(self):
+    def test_lis_mixed_small(self):
+        a = [1, 12, 7]
+        assert lis(a) == 2
+
+    def test_lis_mixed_big(self):
         a = [1, 12, 7, 0, 23, 11, 52, 31, 61, 69, 70, 2]
         assert lis(a) == 7
