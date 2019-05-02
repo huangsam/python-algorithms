@@ -19,3 +19,7 @@ class TestMaxSquare:
     def test_max_square_partial(self):
         m = [[0, 0, 0], [1, 1, 1], [1, 1, 1]]
         assert maxsq.max_square(m) == 2
+
+    def test_max_square_one(self):
+        m = [[0, 0, 0], [0, 0, 0], [1, 1, 1]]
+        assert maxsq.max_square(m) == 1
