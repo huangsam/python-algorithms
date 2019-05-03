@@ -32,6 +32,7 @@ class TestLcs:
     def test_lcs_partial(self, f, a, b, o):
         assert lcs.lcs_rec(a, b) == o
 
+    @pytest.mark.parametrize("a, b", [("", ""), ("a", "b"), ("abcd", "efgh")])
     @pytest.mark.parametrize("f", [lcs.lcs_rec, lcs.lcs_dp])
-    def test_lcs_none(self, f):
-        assert f("abcd", "efgh") == 0
+    def test_lcs_none(self, f, a, b):
+        assert f(a, b) == 0
