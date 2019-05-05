@@ -23,3 +23,7 @@ class TestMaxSquare:
     def test_max_square_one(self):
         m = [[0, 0, 0], [0, 0, 0], [1, 1, 1]]
         assert maxsq.max_square(m) == 1
+
+    def test_max_square_none(self):
+        m = [[0]]
+        assert maxsq.max_square(m) == 0
