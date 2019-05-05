@@ -28,11 +28,12 @@ def search_min(nums):
         while hi >= 0 and nums[hi] == nums[hi - 1]:
             hi = hi - 1
         mid = (lo + hi) // 2
-        if nums[lo] <= nums[mid] <= nums[hi]:
-            return nums[lo]
-        if nums[lo] > nums[mid]:
-            lo = lo + 1
-            hi = mid
-        if nums[mid] > nums[hi]:
+        if mid < hi and nums[mid + 1] < nums[mid]:
+            return nums[mid + 1]
+        if mid > lo and nums[mid] < nums[mid - 1]:
+            return nums[mid]
+        if nums[hi] > nums[mid]:
+            hi = mid - 1
+        else:
             lo = mid + 1
     return nums[lo]
