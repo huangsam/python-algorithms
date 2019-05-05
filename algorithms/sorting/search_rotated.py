@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 def search_rotated(nums, target):
     lo, hi = 0, len(nums) - 1
     while lo <= hi:
