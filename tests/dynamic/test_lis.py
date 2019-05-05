@@ -23,3 +23,7 @@ class TestLis:
     def test_lis_mixed_big(self):
         a = [1, 12, 7, 0, 23, 11, 52, 31, 61, 69, 70, 2]
         assert lis(a) == 7
+
+    def test_lis_empty(self):
+        a = []
+        assert lis(a) == 0
