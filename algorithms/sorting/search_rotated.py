@@ -18,6 +18,7 @@ def search_rotated(nums, target):
     return False
 
 
+# https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/
 def search_min(nums):
     lo = 0
     hi = len(nums) - 1
