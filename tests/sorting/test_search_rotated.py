@@ -24,3 +24,7 @@ class TestSearchRotated:
     @pytest.mark.parametrize("a", cycle_(5))
     def test_search_min(self, a):
         assert rotate.search_min(a) == min(a)
+
+    def test_search_min_dupe(self):
+        a = [3, 3, 3, 5, 5, 7, 9, 9, 9, 1, 1, 2, 2, 2]
+        assert rotate.search_min(a) == min(a)
