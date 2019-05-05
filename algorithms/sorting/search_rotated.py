@@ -19,20 +19,15 @@ def search_rotated(nums, target):
 
 
 def search_min(nums):
-    return search_min_wh(nums, 0, len(nums) - 1)
-
-
-def search_min_wh(nums, lo, hi):
-    mid = (lo + hi) // 2
-
-    if lo == hi:
-        return nums[lo]
-
-    if nums[lo] <= nums[mid] <= nums[hi]:
-        return nums[lo]
-
-    if nums[lo] > nums[mid]:
-        return search_min_wh(nums, lo + 1, mid)
-
-    if nums[mid] > nums[hi]:
-        return search_min_wh(nums, mid + 1, hi)
+    lo = 0
+    hi = len(nums) - 1
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if nums[lo] <= nums[mid] <= nums[hi]:
+            return nums[lo]
+        if nums[lo] > nums[mid]:
+            lo = lo + 1
+            hi = mid
+        if nums[mid] > nums[hi]:
+            lo = mid + 1
+    return nums[lo]
