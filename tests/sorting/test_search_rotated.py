@@ -17,9 +17,9 @@ def cycle_(n, start=1):
 @pytest.mark.sorting
 class TestSearchRotated:
     @pytest.mark.parametrize("a", cycle_(5))
-    def test_search_rotated(self, a):
+    def test_search_one(self, a):
         for v in a:
-            assert rotate.search_rotated(a, v) is True
+            assert rotate.search_one(a, v) is True
 
     @pytest.mark.parametrize("a", cycle_(5))
     def test_search_min(self, a):
