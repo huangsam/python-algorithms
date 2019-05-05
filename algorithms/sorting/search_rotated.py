@@ -22,6 +22,10 @@ def search_min(nums):
     lo = 0
     hi = len(nums) - 1
     while lo < hi:
+        while lo < len(nums) and nums[lo] == nums[lo + 1]:
+            lo = lo + 1
+        while hi >= 0 and nums[hi] == nums[hi - 1]:
+            hi = hi - 1
         mid = (lo + hi) // 2
         if nums[lo] <= nums[mid] <= nums[hi]:
             return nums[lo]
