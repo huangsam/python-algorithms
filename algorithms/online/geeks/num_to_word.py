@@ -42,9 +42,9 @@ def num_to_word(n):
         return single[n]
     if n < 20:
         return double[n % 10]
-    if n < 10 ** 2:
+    if n < 100:
         return tens[n // 10] + " " + num_to_word(n % 10)
-    if n < 10 ** 3:
+    if n < 1000:
         prefix = single[n // 100]
         if n % 100 == 0:
             return prefix + " hundred"
