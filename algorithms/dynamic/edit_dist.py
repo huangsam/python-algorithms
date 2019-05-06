@@ -9,10 +9,10 @@ def edit_dist_wh(s1, i1, s2, i2):
         return i1
     if s1[i1 - 1] == s2[i2 - 1]:
         return edit_dist_wh(s1, i1 - 1, s2, i2 - 1)
-    return min(
-        1 + edit_dist_wh(s1, i1 - 1, s2, i2),
-        1 + edit_dist_wh(s1, i1, s2, i2 - 1),
-        1 + edit_dist_wh(s1, i1 - 1, s2, i2 - 1),
+    return 1 + min(
+        edit_dist_wh(s1, i1 - 1, s2, i2),
+        edit_dist_wh(s1, i1, s2, i2 - 1),
+        edit_dist_wh(s1, i1 - 1, s2, i2 - 1),
     )
 
 
