@@ -29,5 +29,8 @@ def edit_dist_dp(s1, s2):
             if s1[i - 1] == s2[j - 1]:
                 dist[i][j] = dist[i - 1][j - 1]
             else:
-                dist[i][j] = 1 + min(dist[i - 1][j], dist[i][j - 1], dist[i - 1][j - 1])
+                delete_left = dist[i - 1][j]
+                delete_right = dist[i][j - 1]
+                replace_one = dist[i - 1][j - 1]
+                dist[i][j] = 1 + min(delete_left, delete_right, replace_one)
     return dist[-1][-1]
