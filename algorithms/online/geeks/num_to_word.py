@@ -55,11 +55,7 @@ def num_to_word(n):
         divisor = 1000 ** (i + 1)
         bound = 1000 ** (i + 2)
         if n < bound:
-            return (
-                num_to_word(n // divisor)
-                + " "
-                + thousands[i]
-                + " "
-                + num_to_word(n % divisor)
-            )
+            first = num_to_word(n // divisor)
+            remainder = num_to_word(n % divisor)
+            return f"{first} {thousands[i]} {remainder}"
     raise ValueError("too big for function to process")
