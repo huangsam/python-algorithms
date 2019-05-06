@@ -1,4 +1,5 @@
 # https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/
+# http://users.monash.edu/~lloyd/tildeAlgDS/Sort/Flag/
 def dutch_flag(arr):
     result = [*arr]
     lo = 0
