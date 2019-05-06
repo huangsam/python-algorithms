@@ -25,5 +25,13 @@ class TestNumToWords:
             (10 ** 12 + 1, "one trillion one"),
         ],
     )
-    def test_num_to_word(self, a, o):
+    def test_num_to_word_good(self, a, o):
         assert word.num_to_word(a) == o
+
+    def test_num_to_word_negative(self):
+        with pytest.raises(ValueError):
+            word.num_to_word(-1)
+
+    def test_num_to_word_overflow(self):
+        with pytest.raises(ValueError):
+            word.num_to_word(10 ** 20)
