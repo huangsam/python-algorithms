@@ -54,7 +54,6 @@ def num_to_word(n):
     for i in range(len(thousands)):
         divisor = 1000 ** (i + 1)
         bound = 1000 ** (i + 2)
-        print(n, bound, divisor, "cutting")
         if n < bound:
             return (
                 num_to_word(n // divisor)
