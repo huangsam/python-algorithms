@@ -4,6 +4,7 @@ def swap_new(s1, a, b):
     return s1[:a] + sb + s1[(a + 1) : b] + sa + s1[(b + 1) :]
 
 
+# https://www.geeksforgeeks.org/linkedin-interview-experience-6/
 def swap_chars(s1, s2):
     if len(s1) != len(s2):
         return False
