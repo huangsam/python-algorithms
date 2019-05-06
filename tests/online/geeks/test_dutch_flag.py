@@ -23,7 +23,8 @@ class TestDutchFlag:
         result = dutch.dutch_flag(arr)
         self.verify(result)
 
-    def test_dutch_flag_all_2s(self):
-        arr = [2, 2, 2, 2, 2, 2]
+    @pytest.mark.parametrize("n", [0, 1, 2])
+    def test_dutch_flag_all_n(self, n):
+        arr = [n for i in range(6)]
         result = dutch.dutch_flag(arr)
         self.verify(result)
