@@ -1,6 +1,20 @@
+# https://www.geeksforgeeks.org/segregate-0s-and-1s-in-an-array-by-traversing-array-once/
+def dutch_two(arr):
+    result = [*arr]
+    lo = 0
+    hi = len(result) - 1
+    while lo <= hi:
+        if result[lo] == 0:
+            lo += 1
+        elif result[lo] == 1:
+            result[lo], result[hi] = result[hi], result[lo]
+            hi -= 1
+    return result
+
+
 # https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/
 # http://users.monash.edu/~lloyd/tildeAlgDS/Sort/Flag/
-def dutch_flag(arr):
+def dutch_three(arr):
     result = [*arr]
     lo = 0
     mid = 0
