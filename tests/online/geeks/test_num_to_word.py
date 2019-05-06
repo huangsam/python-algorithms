@@ -23,6 +23,8 @@ class TestNumToWords:
 
     def test_num_to_word_thousands(self):
         assert word.num_to_word(1234) == "one thousand two hundred thirty four"
+        assert word.num_to_word(10101) == "ten thousand one hundred one"
+        assert word.num_to_word(101010) == "one hundred one thousand ten"
         assert word.num_to_word(10000001) == "ten million one"
         assert word.num_to_word(12000034) == "twelve million thirty four"
         assert word.num_to_word(10 ** 9 + 1) == "one billion one"
