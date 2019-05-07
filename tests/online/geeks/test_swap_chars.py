@@ -16,9 +16,11 @@ class TestSwapChars:
             ("abcd", "abcd", True),
             ("abc", "cba", True),
             ("cdab", "abcd", True),
+            ("a", "b", False),
             ("ab", "ba", False),
             ("cdab", "dcba", False),
         ],
     )
-    def test_swap_chars_bad_length(self, a, b, o):
-        assert swap.swap_chars(a, b) is o
+    @pytest.mark.parametrize("f", [swap.swap_chars, swap.swap_chars_optimal])
+    def test_swap_chars_bad_length(self, f, a, b, o):
+        assert f(a, b) is o
