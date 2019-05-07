@@ -1,7 +1,7 @@
 import pytest
 
 from algorithms.online.geeks.merge_k import (
-    merge_k_queue,
+    merge_k_split,
     merge_k_heap,
     merge_two_arrays,
 )
@@ -23,7 +23,7 @@ class TestMergeK:
             ([[1], [1, 3, 5], [1, 10, 20, 30, 40]], [1, 1, 1, 3, 5, 10, 20, 30, 40]),
         ],
     )
-    @pytest.mark.parametrize("func", [merge_k_queue, merge_k_heap])
+    @pytest.mark.parametrize("func", [merge_k_split, merge_k_heap])
     def test_merge_k(self, arrays, expected, func):
         result = func(arrays)
         for i, j in zip(result, expected):
