@@ -1,13 +1,17 @@
 import heapq
 
 
-def merge_k_queue(arrays):
-    while len(arrays) >= 2:
-        arr1 = arrays.pop(0)
-        arr2 = arrays.pop(0)
-        narr = merge_two_arrays(arr1, arr2)
-        arrays.append(narr)
-    return arrays.pop(0) if arrays else []
+def merge_k_split(arrays):
+    if len(arrays) == 0:
+        return []
+    if len(arrays) == 1:
+        return arrays[0]
+    if len(arrays) == 2:
+        return merge_two_arrays(arrays[0], arrays[1])
+    mid = len(arrays) // 2
+    left_merge = merge_k_split(arrays[:mid])
+    right_merge = merge_k_split(arrays[mid:])
+    return merge_two_arrays(left_merge, right_merge)
 
 
 def merge_two_arrays(arr1, arr2):
