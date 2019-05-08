@@ -1,6 +1,9 @@
-from algorithms.dynamic import tsp
+import pytest
+
+from algorithms.graph import tsp
 
 
+@pytest.mark.graph
 class TestTsp:
     def test_tsp_brute_1(self):
         graph = [[0]]
