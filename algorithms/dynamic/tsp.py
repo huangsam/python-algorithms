@@ -10,11 +10,10 @@ def tsp_brute(graph, source):
     min_cost = 2 ** 32 - 1
     for path in permutations(other, len(other)):
         cur_cost = 0
-        start = source
-        for i in range(len(path)):
-            finish = path[i]
-            cur_cost += graph[start][finish]
-            start = finish
-        cur_cost += graph[start][source]
+        sv = source
+        for tv in path:
+            cur_cost += graph[sv][tv]
+            sv = tv
+        cur_cost += graph[sv][source]
         min_cost = min(min_cost, cur_cost)
     return min_cost
