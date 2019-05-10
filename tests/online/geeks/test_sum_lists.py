@@ -16,6 +16,8 @@ def int_to_list(n):
     return cur
 
 
+@pytest.mark.stack
+@pytest.mark.list
 class TestSumLists:
     @staticmethod
     def debug(lst):
