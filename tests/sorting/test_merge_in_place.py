@@ -30,3 +30,9 @@ class TestMergeInPlace:
         b = [2, 4, 6]
         mip.merge_in_place(a, b)
         assert is_sorted(a)
+
+    def test_merge_in_place_big(self):
+        a = [1, 3, 5, 8, 10, 14, None, None, None, None, None]
+        b = [2, 4, 6, 9, 11]
+        mip.merge_in_place(a, b)
+        assert is_sorted(a)
