@@ -9,6 +9,7 @@ def list_size(lst):
     return size
 
 
+# https://www.geeksforgeeks.org/sum-of-two-linked-lists/
 def sum_lists(l1, l2):
     l1_len = list_size(l1)
     l2_len = list_size(l2)
