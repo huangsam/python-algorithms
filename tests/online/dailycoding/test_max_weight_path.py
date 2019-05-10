@@ -1,6 +1,9 @@
+import pytest
+
 from algorithms.online.dailycoding.max_weight_path import max_weight_path
 
 
+@pytest.mark.array
 class TestMaxWeightPath:
     def test_max_weight_path(self):
         triangle = [[1], [2, 3], [1, 5, 1]]

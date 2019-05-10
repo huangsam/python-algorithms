@@ -1,8 +1,10 @@
-from algorithms.online.dailycoding.count_complete import count_complete
+import pytest
 
 from algorithms.collection.tree import TreeNode
+from algorithms.online.dailycoding.count_complete import count_complete
 
 
+@pytest.mark.tree
 class TestCountComplete:
     def test_count_complete_small(self):
         root = TreeNode(1)
