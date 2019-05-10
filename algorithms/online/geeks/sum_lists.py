@@ -19,9 +19,7 @@ def sum_lists(l1, l2):
     small_l = l2 if l1_len > l2_len else l1
     diff = max(l1_len, l2_len) - min(l1_len, l2_len)
 
-    # Variables used throughout codebase
-    tail = None
-    head = None
+    head = tail = None
     bstack = []
 
     # Step 1: Normalize list lengths
