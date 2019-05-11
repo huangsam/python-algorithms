@@ -22,10 +22,9 @@ def sum_lists(l1, l2):
     # Step 2: Calculate diff between big/small lists
     diff = abs(l1_len - l2_len)
 
+    # Step 3: Normalize list lengths
     head = tail = None
     tstack = []
-
-    # Step 3: Normalize list lengths
     while diff > 0:
         if tail is None:
             head = tail = ListNode(big_l.value)
@@ -44,8 +43,8 @@ def sum_lists(l1, l2):
         small_l = small_l.next
 
     # Step 5: Execute stack summing
-    carry = 0
     acc = tmp = None
+    carry = 0
     while len(astack) > 0:
         v1, v2 = astack.pop()
         vsum = v1 + v2 + carry
