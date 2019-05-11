@@ -14,14 +14,18 @@ def sum_lists(l1, l2):
     l1_len = list_size(l1)
     l2_len = list_size(l2)
 
-    # Identify big list and small list
-    big_l, small_l = (l1, l2) if l1_len > l2_len else (l2, l1)
+    # Step 1: Identify big/small lists
+    l1_bigger = l1_len > l2_len
+    big_l = l1 if l1_bigger else l2
+    small_l = l2 if l1_bigger else l1
+
+    # Step 2: Calculate diff between big/small lists
     diff = abs(l1_len - l2_len)
 
     head = tail = None
     tstack = []
 
-    # Step 1: Normalize list lengths
+    # Step 3: Normalize list lengths
     while diff > 0:
         if tail is None:
             head = tail = ListNode(big_l.value)
@@ -32,14 +36,14 @@ def sum_lists(l1, l2):
         big_l = big_l.next
         diff -= 1
 
-    # Step 2: Prepare stack summing
+    # Step 4: Prepare stack summing
     astack = []
     while big_l:
         astack.append((big_l.value, small_l.value))
         big_l = big_l.next
         small_l = small_l.next
 
-    # Step 3: Execute stack summing
+    # Step 5: Execute stack summing
     carry = 0
     acc = tmp = None
     while len(astack) > 0:
@@ -50,13 +54,13 @@ def sum_lists(l1, l2):
         tmp.next = acc
         acc = tmp
 
-    # Step 4: Connect stack sum with unsummed
+    # Step 6: Connect stack sum with unsummed
     if head is None:
         head = acc
     else:
         tail.next = acc
 
-    # Step 5: Handle carry for unsummed
+    # Step 7: Handle carry for unsummed
     while len(tstack) > 0:
         tail = tstack.pop()
         if carry == 0:
@@ -65,7 +69,7 @@ def sum_lists(l1, l2):
         carry, leftover = tsum // 10, tsum % 10
         tail.value = leftover
 
-    # Step 6: Add node to head if carry exists
+    # Step 8: Add node to head if carry exists
     if carry == 1:
         tmp = ListNode(1)
         tmp.next = head
