@@ -41,8 +41,7 @@ def sum_lists(l1, l2):
 
     # Step 3: Execute stack summing
     carry = 0
-    acc = None
-    tmp = None
+    acc = tmp = None
     while len(stack):
         v1, v2 = stack.pop()
         vsum = v1 + v2 + carry
