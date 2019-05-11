@@ -59,3 +59,8 @@ class TestSumLists:
     )
     def test_sum_list(self, a, b):
         self.verify(a, b)
+
+    def test_sum_list_zero(self):
+        first = int_to_list(0)
+        second = int_to_list(0)
+        assert slist.sum_lists(first, second) is None
