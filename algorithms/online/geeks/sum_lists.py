@@ -15,9 +15,8 @@ def sum_lists(l1, l2):
     l2_len = list_size(l2)
 
     # Identify big list and small list
-    big_l = l1 if l1_len > l2_len else l2
-    small_l = l2 if l1_len > l2_len else l1
-    diff = max(l1_len, l2_len) - min(l1_len, l2_len)
+    big_l, small_l = (l1, l2) if l1_len > l2_len else (l2, l1)
+    diff = abs(l1_len - l2_len)
 
     head = tail = None
     bstack = []
