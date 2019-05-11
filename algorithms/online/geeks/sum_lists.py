@@ -14,15 +14,15 @@ def sum_lists(l1, l2):
     l1_len = list_size(l1)
     l2_len = list_size(l2)
 
-    # Step 1: Identify big/small lists
+    # Step 1: Identify big + small lists
     l1_bigger = l1_len > l2_len
     big_l = l1 if l1_bigger else l2
     small_l = l2 if l1_bigger else l1
 
-    # Step 2: Calculate diff between big/small lists
+    # Step 2: Calculate diff between lists
     diff = abs(l1_len - l2_len)
 
-    # Step 3: Normalize list lengths
+    # Step 3: Trim big list and track its trimmed nodes in reverse order
     head = tail = None
     tstack = []
     while diff > 0:
@@ -35,14 +35,14 @@ def sum_lists(l1, l2):
         big_l = big_l.next
         diff -= 1
 
-    # Step 4: Prepare stack summing
+    # Step 4: Prepare stack sum
     astack = []
     while big_l:
         astack.append((big_l.value, small_l.value))
         big_l = big_l.next
         small_l = small_l.next
 
-    # Step 5: Execute stack summing
+    # Step 5: Execute stack sum
     acc = tmp = None
     carry = 0
     while len(astack) > 0:
@@ -53,13 +53,13 @@ def sum_lists(l1, l2):
         tmp.next = acc
         acc = tmp
 
-    # Step 6: Connect stack sum with unsummed
+    # Step 6: Connect trimmed nodes of big list with summed result
     if head is None:
         head = acc
     else:
         tail.next = acc
 
-    # Step 7: Handle carry for unsummed
+    # Step 7: Handle carry for trimmed nodes of big list
     while len(tstack) > 0:
         tail = tstack.pop()
         if carry == 0:
