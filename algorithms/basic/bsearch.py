@@ -4,11 +4,11 @@ def bsearch_recursive(arr, t):
 
 def bsearch_recursive_work(arr, t, lo, hi):
     if lo > hi:
-        return False
+        return -1
     mid = (lo + hi) // 2
     val = arr[mid]
     if val == t:
-        return True
+        return mid
     elif val < t:
         return bsearch_recursive_work(arr, t, mid + 1, hi)
     return bsearch_recursive_work(arr, t, lo, mid - 1)
@@ -21,9 +21,9 @@ def bsearch_iterative(arr, t):
         mid = (lo + hi) // 2
         val = arr[mid]
         if val == t:
-            return True
+            return mid
         elif val < t:
             lo, hi = mid + 1, hi
         else:
             lo, hi = lo, mid - 1
-    return False
+    return -1
