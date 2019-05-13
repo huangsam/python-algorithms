@@ -8,6 +8,9 @@ class TestHIndex:
     def test_h_index_single(self):
         assert hind.h_index([9]) == 1
 
+    def test_h_index_zero(self):
+        assert hind.h_index([0]) == 0
+
     def test_h_index_same(self):
         for i in range(1, 10):
             papers = [i for _ in range(i)]
