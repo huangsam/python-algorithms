@@ -6,6 +6,6 @@ def h_index(papers):
             if paper >= max_score:
                 valid += 1
         if valid >= max_score:
-            return valid
+            return max_score
         max_score -= 1
     return 0
