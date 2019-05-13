@@ -1,5 +1,5 @@
 def h_index(papers):
-    max_score = max(papers)
+    max_score = min(len(papers), max(papers))
     while max_score >= 0:
         valid = 0
         for paper in papers:
