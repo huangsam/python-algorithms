@@ -5,6 +5,12 @@ class TestHIndex:
     def test_h_index_sample(self):
         assert hind.h_index([4, 3, 0, 1, 5]) == 3
 
+    def test_h_index_small_sorted(self):
+        assert hind.h_index([0, 1, 3, 4, 5]) == 3
+
+    def test_h_index_big_sorted(self):
+        assert hind.h_index([0, 1, 6, 9, 11, 15, 16, 19]) == 6
+
     def test_h_index_zero(self):
         assert hind.h_index([0, 0, 0, 0, 0]) == 0
 
