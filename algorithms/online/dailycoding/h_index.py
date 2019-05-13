@@ -15,9 +15,9 @@ def h_index(papers):
         mid = (start + end) // 2
         if is_valid(papers, mid):
             result = max(result, mid)
-            # valid -> look upwards for higher valid
+            # valid -> look up for higher h
             end = mid + 1
         else:
-            # invalid -> look downwards for a good valid
+            # invalid -> look down for valid h
             start = mid - 1
     return result
