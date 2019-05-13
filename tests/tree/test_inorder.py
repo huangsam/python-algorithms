@@ -9,7 +9,6 @@ class TestInorder:
         result = in_.inorder_iterative(simple_tree)
         assert (len(result)) == 6
         assert [1, 3, 2, 5, 4, 6] == result
-        # assert "1,3,2,5,4,6" == ",".join(map(str, result))
 
     def test_inorder_recursive(self, simple_tree):
         result = in_.inorder_recursive(simple_tree)
