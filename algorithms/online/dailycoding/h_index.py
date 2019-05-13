@@ -7,8 +7,17 @@ def is_valid(papers, target):
 
 
 def h_index(papers):
-    max_score = min(len(papers), max(papers))
-    while max_score >= 0:
-        if is_valid(papers, max_score):
-            return max_score
-        max_score -= 1
+    papers.sort()
+    start = min(len(papers), max(papers))
+    end = 0
+    result = 0
+    while start >= end:
+        mid = (start + end) // 2
+        if is_valid(papers, mid):
+            result = max(result, mid)
+            # valid -> look upwards for higher valid
+            end = mid + 1
+        else:
+            # invalid -> look downwards for a good valid
+            start = mid - 1
+    return result
