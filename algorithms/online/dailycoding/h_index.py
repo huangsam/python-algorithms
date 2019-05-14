@@ -1,9 +1,17 @@
 def is_valid(papers, target):
-    valid = 0
-    for paper in papers:
-        if paper >= target:
-            valid += 1
-    return valid >= target
+    start, end = 0, len(papers) - 1
+    result = end
+    while start <= end:
+        mid = (start + end) // 2
+        val = papers[mid]
+        if val >= target:
+            result = min(result, mid)
+            # valid -> look down for smaller val
+            end = mid - 1
+        else:
+            # invalid -> look up for valid val
+            start = mid + 1
+    return (len(papers) - result) >= target
 
 
 def h_index(papers):
