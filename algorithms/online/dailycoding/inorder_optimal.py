@@ -23,6 +23,6 @@ def inorder_optimal(root):
 
             cur = left
         else:
-            result.append(cur.val)
+            result.append(cur.value)
             cur = cur.right
     return result

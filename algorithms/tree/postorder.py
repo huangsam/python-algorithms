@@ -3,7 +3,7 @@ def postorder_recursive(root):
         return []
     result = postorder_recursive(root.left)
     result.extend(postorder_recursive(root.right))
-    result.append(root.val)
+    result.append(root.value)
     return result
 
 
@@ -22,5 +22,5 @@ def postorder_iterative(root):
         if node.right is not None:
             fs.append(node.right)
     while len(ss) > 0:
-        visited.append(ss.pop().val)
+        visited.append(ss.pop().value)
     return visited

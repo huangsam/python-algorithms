@@ -2,7 +2,7 @@ def inorder_recursive(root):
     if root is None:
         return []
     result = inorder_recursive(root.left)
-    result.append(root.val)
+    result.append(root.value)
     result.extend(inorder_recursive(root.right))
     return result
 
@@ -17,6 +17,6 @@ def inorder_iterative(root):
             s.append(c)
             c = c.left
         c = s.pop()
-        visited.append(c.val)
+        visited.append(c.value)
         c = c.right
     return visited
