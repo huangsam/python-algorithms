@@ -8,14 +8,14 @@ def create_postorder_inorder(postorder, postrange, inorder, inrange):
         return TreeNode(postorder[post_right])
 
     # find root in postorder
-    val = postorder[post_right]
-    node = TreeNode(val)
+    value = postorder[post_right]
+    node = TreeNode(value)
 
     # find root in inorder
     in_left, in_right = inrange
     i = in_left
     while i <= in_right:
-        if inorder[i] == val:
+        if inorder[i] == value:
             break
         i += 1
 
@@ -45,14 +45,14 @@ def create_preorder_inorder(preorder, prerange, inorder, inrange):
         return TreeNode(preorder[pre_right])
 
     # find root in preorder
-    val = preorder[pre_left]
-    node = TreeNode(val)
+    value = preorder[pre_left]
+    node = TreeNode(value)
 
     # find root in inorder
     in_left, in_right = inrange
     i = in_left
     while i <= in_right:
-        if inorder[i] == val:
+        if inorder[i] == value:
             break
         i += 1
 

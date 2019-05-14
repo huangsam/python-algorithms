@@ -1,7 +1,7 @@
 def preorder_recursive(root):
     if root is None:
         return []
-    result = [root.val]
+    result = [root.value]
     result.extend(preorder_recursive(root.left))
     result.extend(preorder_recursive(root.right))
     return result
@@ -13,7 +13,7 @@ def preorder_iterative(root):
     s = [root]
     while len(s) > 0:
         c = s.pop()
-        visited.append(c.val)
+        visited.append(c.value)
         if c.right is not None:
             s.append(c.right)
         if c.left is not None:
