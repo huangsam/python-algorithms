@@ -14,6 +14,7 @@ class Queue:
         return len(self.array)
 
 
+# https://www.geeksforgeeks.org/queue-using-stacks/
 class FunkyQueue:
     """Queue made of two stacks."""
 

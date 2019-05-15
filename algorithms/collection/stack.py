@@ -25,6 +25,7 @@ class Stack:
         return len(self.array)
 
 
+# https://www.geeksforgeeks.org/implement-stack-using-queue/
 class FunkyStack:
     """Stack made of two queues."""
 
@@ -40,9 +41,10 @@ class FunkyStack:
         if len(self.q1) == 0 and len(self.q2) == 0:
             return None
         while len(self.q1) > 1:
-            self.q2.append(self.q1.pop(0))
+            self.q2.insert(0, self.q1.pop(0))
+        val = self.q1.pop(0)
         self.q1, self.q2 = self.q2, self.q1
-        return self.q2.pop(0)
+        return val
 
     def size(self):
         return len(self.q1) + len(self.q2)
