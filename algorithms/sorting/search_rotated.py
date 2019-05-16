@@ -7,14 +7,14 @@ def search_one(nums, target):
             return True
         if nums[lo] <= nums[mid]:
             if nums[lo] <= target <= nums[mid]:
-                lo, hi = lo, mid - 1
+                hi = mid - 1
             else:
-                lo, hi = mid + 1, hi
+                lo = mid + 1
         else:
             if nums[mid] <= target <= nums[hi]:
-                lo, hi = mid + 1, hi
+                lo = mid + 1
             else:
-                lo, hi = lo, mid - 1
+                hi = mid - 1
     return False
 
 
