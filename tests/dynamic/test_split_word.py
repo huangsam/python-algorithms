@@ -34,12 +34,10 @@ class TestSplitWord:
         ],
     )
     def test_split_word_good(self, i, o):
-        cache = {}
-        result = word.split_word(i, self.book, cache)
+        result = word.split_word(i, self.book, cache={})
         assert result == o
 
     @pytest.mark.parametrize("i", ["thisisadog", "myspace", "face", "book"])
     def test_split_word_bad(self, i):
-        cache = {}
-        result = word.split_word(i, self.book, cache)
+        result = word.split_word(i, self.book, cache={})
         assert result == word.NOT_FOUND

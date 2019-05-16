@@ -18,6 +18,5 @@ class TestSplitPalin:
         ],
     )
     def test_split_palin(self, i, o):
-        cache = {}
-        result = palin.split_palin(i, cache)
+        result = palin.split_palin(i, cache={})
         assert result == o
