@@ -8,7 +8,6 @@ def rightmost(node):
 
 
 def inorder_optimal(root):
-    result = []
     cur = root
     while cur:
         if cur.left:
@@ -23,6 +22,5 @@ def inorder_optimal(root):
 
             cur = left
         else:
-            result.append(cur.value)
+            yield cur.value
             cur = cur.right
-    return result
