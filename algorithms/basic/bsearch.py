@@ -23,7 +23,7 @@ def bsearch_iterative(arr, t):
         if val == t:
             return mid
         elif val < t:
-            lo, hi = mid + 1, hi
+            lo = mid + 1
         else:
-            lo, hi = lo, mid - 1
+            hi = mid - 1
     return -1
