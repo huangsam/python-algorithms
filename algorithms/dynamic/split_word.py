@@ -1,3 +1,6 @@
+NOT_FOUND = "N/A"
+
+
 # https://algorithms.tutorialhorizon.com//the-word-break-problem/
 def split_word(seq, book, cache):
     if seq in cache:
@@ -6,7 +9,11 @@ def split_word(seq, book, cache):
         lseq, rseq = seq[:i], seq[i:]
         if lseq not in book:
             continue
-        if rseq in book or split_word(rseq, book, cache):
-            cache[seq] = True
+        if rseq in book:
+            cache[seq] = lseq + " " + rseq
             return cache[seq]
-    return False
+        rsplit = split_word(rseq, book, cache)
+        if rsplit != NOT_FOUND:
+            cache[seq] = lseq + " " + rsplit
+            return cache[seq]
+    return NOT_FOUND
