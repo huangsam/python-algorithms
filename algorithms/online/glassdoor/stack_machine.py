@@ -2,7 +2,7 @@ MAX_VAL = 2 ** 32 - 1
 
 
 def is_digit(ch):
-    return ch in {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+    return ch in "0123456789"
 
 
 def is_multiply(ch):
