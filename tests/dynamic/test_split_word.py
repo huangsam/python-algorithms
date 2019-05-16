@@ -17,18 +17,28 @@ class TestSplitWord:
         "I",
         "is",
         "Jain",
+        "my",
         "Sumit",
         "this",
     }
 
-    @pytest.mark.parametrize("i", ["IamSumit", "facebook", "thisdogiscool"])
-    def test_split_word_good(self, i):
+    @pytest.mark.parametrize(
+        "i, o",
+        [
+            ("IamSumit", "I am Sumit"),
+            ("facebook", "face book"),
+            ("thisdogiscool", "this dog is cool"),
+            ("Ihavemydog", "I have my dog"),
+            ("mycoolbookface", "my cool book face"),
+        ],
+    )
+    def test_split_word_good(self, i, o):
         cache = {}
         result = word.split_word(i, self.book, cache)
-        assert result is True
+        assert result == o
 
-    @pytest.mark.parametrize("i", ["thisisadog", "face", "book"])
+    @pytest.mark.parametrize("i", ["thisisadog", "myspace", "face", "book"])
     def test_split_word_bad(self, i):
         cache = {}
         result = word.split_word(i, self.book, cache)
-        assert result is False
+        assert result == word.NOT_FOUND
