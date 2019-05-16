@@ -31,6 +31,7 @@ class TestSplitWord:
             ("thisdogiscool", "this dog is cool"),
             ("Ihavemydog", "I have my dog"),
             ("mycoolfriendisJain", "my cool friend is Jain"),
+            ("thisfacebookfriendIhave", "this face book friend I have"),
         ],
     )
     def test_split_word_good(self, i, o):
