@@ -22,13 +22,17 @@ def stack_machine(operation: str):
             elif is_multiply(ch):
                 result = st.pop() * st.pop()
                 if result > MAX_VAL:
-                    raise Exception("math overflow")
+                    raise OverflowError("math overflow")
                 st.append(result)
             elif is_addition(ch):
                 result = st.pop() + st.pop()
                 if result > MAX_VAL:
-                    raise Exception("math overflow")
+                    raise OverflowError("math overflow")
                 st.append(result)
-    except Exception:
+    except (OverflowError, IndexError):
         return -1
     return st.pop()
+
+
+class OverflowError(ValueError):
+    pass
