@@ -14,4 +14,4 @@ class TestStackMachine:
         assert sm.stack_machine("11++") == -1
 
     def test_stack_machine_overflow(self):
-        assert sm.stack_machine("2" * 32 + "*" * 32) == -1
+        assert sm.stack_machine("2" * 32 + "*" * 31) == -1
