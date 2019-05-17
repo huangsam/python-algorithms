@@ -5,9 +5,8 @@ def split_sum(arr, k):
     if k == len(arr):
         return max(arr)
     result = 2 ** 32 - 1
-    start, end = 0, len(arr)
     for i in range(1, len(arr)):
-        lval = sum(arr[start:i])
-        rval = split_sum(arr[i:end], k - 1)
+        lval = sum(arr[0:i])
+        rval = split_sum(arr[i : len(arr)], k - 1)
         result = min(result, max(lval, rval))
     return result
