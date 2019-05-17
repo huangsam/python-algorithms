@@ -9,18 +9,13 @@ def postorder_recursive(root):
 
 # https://www.geeksforgeeks.org/iterative-postorder-traversal/
 def postorder_iterative(root):
-    fs = []
-    ss = []
-    visited = []
-    if root:
-        fs.append(root)
-    while len(fs) > 0:
-        node = fs.pop()
-        ss.append(node)
-        if node.left is not None:
-            fs.append(node.left)
-        if node.right is not None:
-            fs.append(node.right)
-    while len(ss) > 0:
-        visited.append(ss.pop().value)
-    return visited
+    stack = [root]
+    scanned = []
+    while len(stack) > 0:
+        c = stack.pop()
+        scanned.append(c.value)
+        if c.left is not None:
+            stack.append(c.left)
+        if c.right is not None:
+            stack.append(c.right)
+    return scanned[::-1]
