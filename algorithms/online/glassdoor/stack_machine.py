@@ -20,16 +20,12 @@ def stack_machine(operation: str):
             if is_digit(ch):
                 st.append(int(ch))
             elif is_multiply(ch):
-                first = st.pop()
-                second = st.pop()
-                result = first * second
+                result = st.pop() * st.pop()
                 if result > MAX_VAL:
                     raise Exception("math overflow")
                 st.append(result)
             elif is_addition(ch):
-                first = st.pop()
-                second = st.pop()
-                result = first + second
+                result = st.pop() + st.pop()
                 if result > MAX_VAL:
                     raise Exception("math overflow")
                 st.append(result)
