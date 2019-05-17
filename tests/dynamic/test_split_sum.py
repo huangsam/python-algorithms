@@ -1,6 +1,9 @@
+import pytest
+
 import algorithms.dynamic.split_sum as split
 
 
+@pytest.mark.array
 class TestSplitSum:
     def test_split_sum_one(self):
         assert split.split_sum([1, 2, 3, 4], 1) == 10
