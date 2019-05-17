@@ -12,10 +12,10 @@ def preorder_iterative(root):
     visited = []
     s = [root]
     while len(s) > 0:
-        c = s.pop()
+        c = s.pop(0)
         visited.append(c.value)
-        if c.right is not None:
-            s.append(c.right)
         if c.left is not None:
             s.append(c.left)
+        if c.right is not None:
+            s.append(c.right)
     return visited
