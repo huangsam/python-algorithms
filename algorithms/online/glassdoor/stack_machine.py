@@ -1,30 +1,18 @@
 MAX_VAL = 2 ** 32 - 1
 
 
-def is_digit(ch):
-    return ch in "0123456789"
-
-
-def is_multiply(ch):
-    return ch == "*"
-
-
-def is_addition(ch):
-    return ch == "+"
-
-
-def stack_machine(operation: str):
+def stack_machine(operation):
     st = []
     try:
         for ch in operation:
-            if is_digit(ch):
+            if ch.isdigit():
                 st.append(int(ch))
-            elif is_multiply(ch):
+            elif ch == "*":
                 result = st.pop() * st.pop()
                 if result > MAX_VAL:
                     raise OverflowError("math overflow")
                 st.append(result)
-            elif is_addition(ch):
+            elif ch == "+":
                 result = st.pop() + st.pop()
                 if result > MAX_VAL:
                     raise OverflowError("math overflow")
