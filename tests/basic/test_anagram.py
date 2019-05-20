@@ -5,18 +5,17 @@ from algorithms.basic.anagram import check_anagram
 
 @pytest.mark.string
 class TestAnagram:
-    def test_check_anagram_good(self):
-        assert check_anagram("dog", "god") is True
-        assert check_anagram("mom", "mom") is True
-        assert check_anagram("cinema", "iceman") is True
+    @pytest.mark.parametrize("i", ["dog", "mom", "cinema"])
+    def test_check_anagram_good(self, i):
+        assert check_anagram(i, i[::-1]) is True
 
     def test_check_anagram_empty(self):
         assert check_anagram("", "") is True
 
-    def test_check_anagram_bad(self):
-        assert check_anagram("gas", "gag") is False
-        assert check_anagram("gas", "") is False
+    @pytest.mark.parametrize("i", ["gag", ""])
+    def test_check_anagram_bad(self, i):
+        assert check_anagram("gas", i) is False
 
-    def test_check_anagram_unequal(self):
-        assert check_anagram("gas", "gass") is False
-        assert check_anagram("hat", "hats") is False
+    @pytest.mark.parametrize("i1, i2", [("gas", "gass"), ("hat", "hats")])
+    def test_check_anagram_unequal(self, i1, i2):
+        assert check_anagram(i1, i2) is False
