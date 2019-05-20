@@ -8,6 +8,7 @@ def array():
     return [3, 7, 10, 9, 1, 5]
 
 
+@pytest.mark.math
 @pytest.mark.array
 class TestPairSum:
     def test_pair_sum_multiple(self, array):

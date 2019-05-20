@@ -10,6 +10,7 @@ def content(request):
     return request.param
 
 
+@pytest.mark.math
 @pytest.mark.string
 class TestPerm:
     def test_permutations(self, content):
@@ -20,6 +21,7 @@ class TestPerm:
             assert tvalue == mvalue
 
 
+@pytest.mark.math
 @pytest.mark.string
 class TestCombo:
     def test_combinations(self, content):

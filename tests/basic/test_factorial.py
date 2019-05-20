@@ -3,6 +3,7 @@ import pytest
 from algorithms.basic import factorial as fact
 
 
+@pytest.mark.math
 @pytest.mark.dynamic
 class TestFactorial:
     @pytest.mark.parametrize(

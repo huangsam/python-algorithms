@@ -3,6 +3,7 @@ import pytest
 import algorithms.online.geeks.num_to_word as word
 
 
+@pytest.mark.math
 @pytest.mark.string
 class TestNumToWords:
     @pytest.mark.parametrize(

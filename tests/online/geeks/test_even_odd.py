@@ -3,6 +3,7 @@ import pytest
 import algorithms.online.geeks.even_odd as seg
 
 
+@pytest.mark.math
 @pytest.mark.array
 class TestEvenOdd:
     @staticmethod

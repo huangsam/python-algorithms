@@ -3,6 +3,7 @@ import pytest
 from algorithms.basic import fibonacci as fib
 
 
+@pytest.mark.math
 @pytest.mark.dynamic
 class TestFibonacci:
     @pytest.mark.parametrize(
