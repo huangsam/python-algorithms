@@ -3,6 +3,7 @@ import pytest
 from algorithms.dynamic import subset_sum as sub
 
 
+@pytest.mark.math
 @pytest.mark.array
 @pytest.mark.dynamic
 class TestSubsetSum:

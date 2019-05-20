@@ -3,6 +3,7 @@ import pytest
 from algorithms.online.geeks.egg_drop import egg_drop, egg_drop_optimal
 
 
+@pytest.mark.math
 @pytest.mark.dynamic
 class TestEggDrop:
     def test_egg_drop(self):

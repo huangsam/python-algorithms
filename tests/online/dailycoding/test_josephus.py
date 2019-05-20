@@ -3,6 +3,7 @@ import pytest
 from algorithms.online.dailycoding.josephus import josephus
 
 
+@pytest.mark.math
 @pytest.mark.dynamic
 class TestJosephus:
     def test_josephus_survivor(self):

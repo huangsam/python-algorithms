@@ -3,6 +3,7 @@ import pytest
 from algorithms.online.geeks.product_array import product_array
 
 
+@pytest.mark.math
 @pytest.mark.array
 class TestProductArray:
     @pytest.mark.parametrize(

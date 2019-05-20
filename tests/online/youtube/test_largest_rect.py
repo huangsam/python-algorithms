@@ -3,6 +3,7 @@ import pytest
 from algorithms.online.youtube.largest_rect import largest_rect
 
 
+@pytest.mark.math
 @pytest.mark.array
 class TestLargestRect:
     @pytest.mark.parametrize(
