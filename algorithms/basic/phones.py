@@ -16,17 +16,16 @@ def get_phone_words_rec(n=2):
     if n > 9:
         return []
     if n == 9:
-        return ["v", "x", "y"]
+        return [get_phone_key(n, p) for p in range(1, 4)]
     result = []
     for option in get_phone_words_rec(n + 1):
         for p in range(1, 4):
-            seq = get_phone_key(n, p) + option
-            result.append(seq)
+            result.append(get_phone_key(n, p) + option)
     return result
 
 
 def get_phone_words_stk(n=8):
-    prv_st = ["v", "x", "y"]
+    prv_st = [get_phone_key(n, p) for p in range(1, 4)]
     cur_st = []
     while n >= 2:
         while len(prv_st) > 0:
