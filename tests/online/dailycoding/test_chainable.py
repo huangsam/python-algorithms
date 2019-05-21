@@ -10,6 +10,7 @@ class TestCanChain:
         [
             (["chair", "height", "racket", "touch", "tunic"], True),
             (["chair", "racket", "tunic"], True),
+            (["am", "ma", "mam", "ama"], True),
             (["tulip", "pat"], True),
             (["chair", "racket"], False),
             (["chair", "racket", "touch"], False),
