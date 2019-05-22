@@ -12,7 +12,9 @@ def get_phone_key(n, p):
     return answers[n][p]
 
 
-def get_phone_words_rec(phone="23456789", n=0):
+def get_phone_words_rec(phone, n=0):
+    if not phone:
+        raise ValueError("invalid phone number")
     if n > len(phone) - 1:
         return []
     digit = int(phone[n])
@@ -25,7 +27,9 @@ def get_phone_words_rec(phone="23456789", n=0):
     return result
 
 
-def get_phone_words_stk(phone="23456789", n=None):
+def get_phone_words_stk(phone, n=None):
+    if not phone:
+        raise ValueError("invalid phone number")
     if n is None:
         n = len(phone) - 1
     digit = int(phone[n])
