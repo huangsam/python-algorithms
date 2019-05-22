@@ -9,6 +9,7 @@ class TestEditDist:
     @pytest.mark.parametrize(
         "a, b, o",
         [
+            ("", "", 0),
             ("abcd", "abcd", 0),
             ("a", "abc", 2),
             ("abc", "a", 2),
