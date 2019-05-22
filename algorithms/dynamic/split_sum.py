@@ -1,4 +1,4 @@
-# https://stackoverflow.com/questions/39673898/divide-array-into-k-contiguos-partitions-such-that-sum-of-maximum-partition-is-m
+# https://www.geeksforgeeks.org/painters-partition-problem/
 def split_sum(arr, k):
     return split_sum_wh(arr, k, 0, len(arr), {})
 
