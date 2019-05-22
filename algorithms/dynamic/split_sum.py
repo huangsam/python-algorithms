@@ -1,12 +1,17 @@
 # https://stackoverflow.com/questions/39673898/divide-array-into-k-contiguos-partitions-such-that-sum-of-maximum-partition-is-m
-def split_sum_brute(arr, k):
+def split_sum(arr, k):
+    return split_sum_wh(arr, k, 0, len(arr), {})
+
+
+def split_sum_wh(arr, k, l, r, cache):
+    if (k, l, r) in cache:
+        return cache[(k, l, r)]
     if k == 1:
-        return sum(arr)
-    if k == len(arr):
-        return max(arr)
+        result = cache[(k, l, r)] = sum(arr[l:r])
+        return result
     result = 2 ** 32 - 1
-    for i in range(1, len(arr)):
-        lval = sum(arr[0:i])
-        rval = split_sum_brute(arr[i : len(arr)], k - 1)
+    for i in range(l + 1, r):
+        lval = cache[(k, l, i)] = sum(arr[l:i])
+        rval = cache[(k - 1, i, r)] = split_sum_wh(arr, k - 1, i, r, cache)
         result = min(result, max(lval, rval))
     return result
