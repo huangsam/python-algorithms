@@ -12,26 +12,32 @@ def get_phone_key(n, p):
     return answers[n][p]
 
 
-def get_phone_words_rec(n=2):
-    if n > 9:
+def get_phone_words_rec(phone="23456789", n=0):
+    if n > len(phone) - 1:
         return []
-    if n == 9:
-        return [get_phone_key(n, p) for p in range(1, 4)]
+    digit = int(phone[n])
+    if n == len(phone) - 1:
+        return [get_phone_key(digit, p) for p in range(1, 4)]
     result = []
-    for option in get_phone_words_rec(n + 1):
+    for option in get_phone_words_rec(phone, n + 1):
         for p in range(1, 4):
-            result.append(get_phone_key(n, p) + option)
+            result.append(get_phone_key(digit, p) + option)
     return result
 
 
-def get_phone_words_stk(n=8):
-    prv_st = [get_phone_key(n, p) for p in range(1, 4)]
+def get_phone_words_stk(phone="23456789", n=None):
+    if n is None:
+        n = len(phone) - 1
+    digit = int(phone[n])
+    prv_st = [get_phone_key(digit, p) for p in range(1, 4)]
     cur_st = []
-    while n >= 2:
+    n -= 1
+    while n >= 0:
+        digit = int(phone[n])
         while len(prv_st) > 0:
             prv_seq = prv_st.pop()
             for p in range(1, 4):
-                cur_seq = get_phone_key(n, p) + prv_seq
+                cur_seq = get_phone_key(digit, p) + prv_seq
                 cur_st.append(cur_seq)
         cur_st, prv_st = prv_st, cur_st
         n -= 1
