@@ -33,14 +33,12 @@ def get_phone_words_stk(phone, n=0):
     digit = int(phone[n])
     prv_st = [get_phone_key(digit, p) for p in range(1, 4)]
     cur_st = []
-    n += 1
-    while n <= len(phone) - 1:
-        digit = int(phone[n])
+    for i in range(n + 1, len(phone)):
+        digit = int(phone[i])
         while len(prv_st) > 0:
             prv_seq = prv_st.pop()
             for p in range(1, 4):
                 cur_seq = get_phone_key(digit, p) + prv_seq
                 cur_st.append(cur_seq)
         cur_st, prv_st = prv_st, cur_st
-        n += 1
     return prv_st
