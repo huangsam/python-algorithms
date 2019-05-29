@@ -7,13 +7,13 @@ from algorithms.basic import phones
 @pytest.mark.string
 class TestPhoneWords:
     @pytest.mark.parametrize("i", ["23456789", "3257", "3"])
-    def test_get_phone_words_rec(self, i):
+    def test_get_phone_words_rec_good(self, i):
         res = phones.get_phone_words_rec(i)
         assert isinstance(res, list)
         assert len(res) == 3 ** len(i)
 
     @pytest.mark.parametrize("i", ["23456789", "3257", "3"])
-    def test_get_phone_words_stk(self, i):
+    def test_get_phone_words_stk_good(self, i):
         res = phones.get_phone_words_stk(i)
         assert isinstance(res, list)
         assert len(res) == 3 ** len(i)
