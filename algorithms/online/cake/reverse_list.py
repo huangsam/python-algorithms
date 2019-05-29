@@ -1,3 +1,4 @@
+# https://www.geeksforgeeks.org/reverse-a-linked-list/
 def reverse_list(ll):
     cur_node = ll
     next_node = None
