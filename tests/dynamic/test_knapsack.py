@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.dynamic import knapsack as knap
+import algorithms.dynamic.knapsack as knap
 
 
 @pytest.mark.dynamic
@@ -15,8 +15,8 @@ class TestKnapsack:
             (50, [(10, 60), (20, 100), (30, 120)], 220),
         ],
     )
-    @pytest.mark.parametrize("f", [knap.knapsack_dp, knap.knapsack_rec])
-    def test_knapsack_classic(self, f, w, i, o):
+    @pytest.mark.parametrize("f", [knap.knapsack_binary_dp, knap.knapsack_binary_rec])
+    def test_knapsack_binary(self, f, w, i, o):
         assert f(w, i) == o
 
     @pytest.mark.parametrize(
@@ -27,4 +27,4 @@ class TestKnapsack:
         ],
     )
     def test_knapsack_inf(self, w, i, o):
-        assert knap.knapsack_inf(w, i) == o
+        assert knap.knapsack_infinite(w, i) == o

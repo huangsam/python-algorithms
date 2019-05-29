@@ -1,8 +1,8 @@
-def knapsack_rec(weight, items):
-    return knapsack_wh(weight, items, len(items), set(), {})
+def knapsack_binary_rec(weight, items):
+    return knapsack_binary_wh(weight, items, len(items), set(), {})
 
 
-def knapsack_wh(weight, items, n, picked, cache):
+def knapsack_binary_wh(weight, items, n, picked, cache):
     result = 0
     if n == 0 or weight == 0:
         return 0
@@ -14,19 +14,19 @@ def knapsack_wh(weight, items, n, picked, cache):
         iw, iv = items[ix]
         if iw <= weight:
             picked.add(ix)
-            used = iv + knapsack_wh(weight - iw, items, n - 1, picked, cache)
-            not_used = knapsack_wh(weight, items, n - 1, picked, cache)
+            used = iv + knapsack_binary_wh(weight - iw, items, n - 1, picked, cache)
+            not_used = knapsack_binary_wh(weight, items, n - 1, picked, cache)
             result = max(result, used, not_used)
             picked.remove(ix)
         else:
-            not_used = knapsack_wh(weight, items, n - 1, picked, cache)
+            not_used = knapsack_binary_wh(weight, items, n - 1, picked, cache)
             result = max(result, not_used)
     cache[(n, weight)] = result
     return result
 
 
 # https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
-def knapsack_dp(weight, items):
+def knapsack_binary_dp(weight, items):
     N = len(items) + 1
     W = weight + 1
     value = [[0] * W for _ in range(N)]
@@ -43,7 +43,7 @@ def knapsack_dp(weight, items):
 
 
 # https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/
-def knapsack_inf(weight, items):
+def knapsack_infinite(weight, items):
     value = [0] * (weight + 1)
     for i in range(1, weight + 1):
         for iw, iv in items:
