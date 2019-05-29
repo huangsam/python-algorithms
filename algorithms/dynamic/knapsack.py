@@ -42,6 +42,7 @@ def knapsack_dp(weight, items):
     return value[-1][-1]
 
 
+# https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/
 def knapsack_inf(weight, items):
     value = [0] * (weight + 1)
     for i in range(1, weight + 1):
