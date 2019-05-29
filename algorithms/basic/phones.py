@@ -27,16 +27,14 @@ def get_phone_words_rec(phone, n=0):
     return result
 
 
-def get_phone_words_stk(phone, n=None):
+def get_phone_words_stk(phone, n=0):
     if not phone:
         raise ValueError("invalid phone number")
-    if n is None:
-        n = len(phone) - 1
     digit = int(phone[n])
     prv_st = [get_phone_key(digit, p) for p in range(1, 4)]
     cur_st = []
-    n -= 1
-    while n >= 0:
+    n += 1
+    while n <= len(phone) - 1:
         digit = int(phone[n])
         while len(prv_st) > 0:
             prv_seq = prv_st.pop()
@@ -44,5 +42,5 @@ def get_phone_words_stk(phone, n=None):
                 cur_seq = get_phone_key(digit, p) + prv_seq
                 cur_st.append(cur_seq)
         cur_st, prv_st = prv_st, cur_st
-        n -= 1
+        n += 1
     return prv_st
