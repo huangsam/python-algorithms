@@ -29,14 +29,23 @@ def knapsack_wh(weight, items, n, picked, cache):
 def knapsack_dp(weight, items):
     N = len(items) + 1
     W = weight + 1
-    total = [[0] * W for _ in range(N)]
+    value = [[0] * W for _ in range(N)]
     for i in range(1, N):
         for j in range(1, W):
             iw, iv = items[i - 1]
-            not_used = total[i - 1][j]
+            not_used = value[i - 1][j]
             if iw <= j:
-                used = iv + total[i - 1][j - iw]
-                total[i][j] = max(used, not_used)
+                used = iv + value[i - 1][j - iw]
+                value[i][j] = max(used, not_used)
             else:
-                total[i][j] = not_used
-    return total[-1][-1]
+                value[i][j] = not_used
+    return value[-1][-1]
+
+
+def knapsack_inf(weight, items):
+    value = [0] * (weight + 1)
+    for i in range(1, weight + 1):
+        for iw, iv in items:
+            if iw <= i:
+                value[i] = max(value[i], iv + value[i - iw])
+    return value[-1]
