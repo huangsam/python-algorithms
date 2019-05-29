@@ -28,3 +28,15 @@ class TestKnapsack:
         items = [(7, 160), (3, 90), (2, 15)]
         result = knap.knapsack_rec(weight, items)
         assert result == 265
+
+    def test_knapsack_inf_1(self):
+        weight = 20
+        items = [(7, 160), (3, 90), (2, 15)]
+        result = knap.knapsack_inf(weight, items)
+        assert result == 555
+
+    def test_knapsack_inf_2(self):
+        weight = 20
+        items = [(10, 100), (5, 50), (2, 20)]
+        result = knap.knapsack_inf(weight, items)
+        assert result == 200
