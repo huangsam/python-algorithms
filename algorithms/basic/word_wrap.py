@@ -18,10 +18,7 @@ def word_wrap(words, length):
     # Step 3: Inject proper amount of spacing for current content
     space_count = 0
     cur_total = sum([len(w) for w in cur_words])
-    chars_left = length - cur_total
-    while chars_left > 0:
-        space_count += 1
-        chars_left -= len(cur_words)
+    space_count, _ = divmod(length - cur_total, len(cur_words))
     spc_content = "_" * space_count
     cur_content = spc_content.join(words[1:pointer])
 
