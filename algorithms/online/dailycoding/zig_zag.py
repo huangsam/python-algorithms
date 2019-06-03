@@ -9,11 +9,11 @@ def zig_zag_wh(content, frame, x, y, direction="down"):
     """Helper function for zig zag."""
     xn, yn = len(frame[0]), len(frame)
 
-    # Used up all the letters
+    # Frame fill is complete
     if x >= xn - 1:
         return
 
-    # Still have letters left to fill in frame
+    # Fill frame with letters
     if direction == "down":
         while x < xn and y < yn:
             frame[y][x] = content[x]
@@ -28,12 +28,18 @@ def zig_zag_wh(content, frame, x, y, direction="down"):
         zig_zag_wh(content, frame, x - 1, y + 1, direction="down")
 
 
+def print_frame(frame):
+    for row in frame:
+        print(" ".join(row))
+
+
 def main():
     sentence = "thisisazigzag"
-    k = 4
-    matrix = zig_zag(sentence, k)
-    for row in matrix:
-        print(" ".join(row))
+    print_frame(zig_zag(sentence, 8))
+    print("\n===\n")
+    print_frame(zig_zag(sentence, 4))
+    print("\n===\n")
+    print_frame(zig_zag(sentence, 2))
 
 
 if __name__ == "__main__":
