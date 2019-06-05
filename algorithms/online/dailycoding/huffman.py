@@ -13,6 +13,7 @@ def populate(root, mapping, pattern):
 
 
 # https://www.techiedelight.com/huffman-coding/
+# https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
 def huffman(frequencies):
     result = {}
     least_queue = []
