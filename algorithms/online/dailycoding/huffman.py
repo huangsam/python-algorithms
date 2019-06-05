@@ -21,10 +21,11 @@ def huffman(frequencies):
     while len(least_queue) > 1:
         f_freq, f_node = heapq.heappop(least_queue)
         s_freq, s_node = heapq.heappop(least_queue)
-        internal = TreeNode("*")
-        internal.left = f_node
-        internal.right = s_node
-        heapq.heappush(least_queue, (f_freq + s_freq, internal))
+        i_node = TreeNode("*")
+        i_node.left = f_node
+        i_node.right = s_node
+        i_freq = f_freq + s_freq
+        heapq.heappush(least_queue, (i_freq, i_node))
     l_freq, l_node = heapq.heappop(least_queue)
     populate(l_node, result, "")
     return result
