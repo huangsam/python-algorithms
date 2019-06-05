@@ -29,8 +29,3 @@ def huffman(frequencies):
     l_freq, l_node = heapq.heappop(least_queue)
     populate(l_node, result, "")
     return result
-
-
-if __name__ == "__main__":
-    result = huffman({"a": 15, "b": 7, "c": 6, "d": 6, "e": 5})
-    print(result)
