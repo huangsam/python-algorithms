@@ -40,4 +40,4 @@ class Graph:
 
     def check_edge(self, pair):
         src, dst = pair
-        return dst in self.graph[src] or src in self.graph[src]
+        return dst in self.graph[src]

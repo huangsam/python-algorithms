@@ -35,3 +35,13 @@ class TestGraph:
         assert graph.get_in_degree("a") == 0
         for child in graph.get_children("a"):
             assert graph.get_in_degree(child) == 1
+
+    def test_check_node(self):
+        graph = Graph(*self.SAMPLE_DATA)
+        for node in graph.get_nodes():
+            assert graph.check_node(node)
+
+    def test_check_edge(self):
+        graph = Graph(*self.SAMPLE_DATA)
+        assert graph.check_edge(("a", "b"))
+        assert not graph.check_edge(("b", "a"))
