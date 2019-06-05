@@ -1,11 +1,10 @@
 class TreeNode:
-    """Binary tree has two children and an associated value."""
+    """Binary tree has a value and node references."""
 
     def __init__(self, x):
         self.value = x
         self.left = None
         self.right = None
-        self.next = None
 
     def insert_left(self, value):
         self.left = TreeNode(value)
