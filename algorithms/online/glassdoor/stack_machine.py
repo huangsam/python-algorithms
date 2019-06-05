@@ -1,4 +1,4 @@
-MAX_VAL = 2 ** 32 - 1
+from algorithms.constants import MAX_INT
 
 
 def stack_machine(operation):
@@ -9,12 +9,12 @@ def stack_machine(operation):
                 st.append(int(ch))
             elif ch == "*":
                 result = st.pop() * st.pop()
-                if result > MAX_VAL:
+                if result > MAX_INT:
                     raise OverflowError("math overflow")
                 st.append(result)
             elif ch == "+":
                 result = st.pop() + st.pop()
-                if result > MAX_VAL:
+                if result > MAX_INT:
                     raise OverflowError("math overflow")
                 st.append(result)
     except (OverflowError, IndexError):

@@ -1,3 +1,6 @@
+from algorithms.constants import MAX_INT
+
+
 def is_palin(seq):
     return seq[::-1] == seq
 
@@ -9,7 +12,7 @@ def split_palin(seq, cache):
     if is_palin(seq):
         cache[seq] = 0
         return cache[seq]
-    result = 2 ** 32 - 1
+    result = MAX_INT
     for i in range(1, len(seq)):
         lseq, rseq = seq[:i], seq[i:]
         lval, rval = split_palin(lseq, cache), split_palin(rseq, cache)

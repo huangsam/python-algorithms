@@ -1,3 +1,6 @@
+from algorithms.constants import MAX_INT
+
+
 # https://www.geeksforgeeks.org/painters-partition-problem/
 def split_sum(arr, k):
     return split_sum_wh(arr, k, 0, len(arr), {})
@@ -9,7 +12,7 @@ def split_sum_wh(arr, k, l, r, cache):
     if k == 1:
         result = cache[(k, l, r)] = sum(arr[l:r])
         return result
-    result = 2 ** 32 - 1
+    result = MAX_INT
     for i in range(l + 1, r):
         lval = cache[(k, l, i)] = sum(arr[l:i])
         rval = cache[(k - 1, i, r)] = split_sum_wh(arr, k - 1, i, r, cache)
