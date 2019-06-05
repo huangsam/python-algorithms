@@ -2,7 +2,7 @@ from collections import defaultdict
 
 
 class Graph:
-    """Dictionary-based directed graph."""
+    """Graph stored as adjacency list."""
 
     def __init__(self, *edges):
         self.nodes = set()
@@ -17,11 +17,7 @@ class Graph:
             self.nodes.add(node)
 
     def add_edge(self, src, dst):
-        if dst in self.graph[src]:
-            raise ValueError(f"edge from {src} to {dst} already exists")
-        self.graph[src].add(dst)
-        self.ingress[dst] += 1
-        self.add_nodes(src, dst)
+        raise NotImplementedError("not implemented in base class")
 
     def get_children(self, src):
         return sorted(self.graph[src])
@@ -41,3 +37,27 @@ class Graph:
     def check_edge(self, pair):
         src, dst = pair
         return dst in self.graph[src]
+
+
+class DirectedGraph(Graph):
+    """Directed graph."""
+
+    def add_edge(self, src, dst):
+        if dst in self.graph[src]:
+            raise ValueError(f"edge from {src} to {dst} already exists")
+        self.graph[src].add(dst)
+        self.ingress[dst] += 1
+        self.add_nodes(src, dst)
+
+
+class UndirectedGraph(Graph):
+    """Undirected graph."""
+
+    def add_edge(self, src, dst):
+        if dst in self.graph[src]:
+            raise ValueError(f"edge from {src} to {dst} already exists")
+        self.graph[src].add(dst)
+        self.graph[dst].add(src)
+        self.ingress[src] += 1
+        self.ingress[dst] += 1
+        self.add_nodes(src, dst)

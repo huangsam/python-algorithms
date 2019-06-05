@@ -4,7 +4,7 @@ import pytest
 
 from algorithms.collection.list import ListNode
 from algorithms.collection.tree import TreeNode
-from algorithms.collection.graph import Graph
+from algorithms.collection.graph import DirectedGraph
 from algorithms.collection.trie import Trie
 
 
@@ -48,7 +48,7 @@ def simple_tree(request):
 
 @pytest.fixture(scope="function")
 def simple_graph(request):
-    graph = Graph(("a", "b"), ("a", "c"), ("b", "d"), ("c", "e"))
+    graph = DirectedGraph(("a", "b"), ("a", "c"), ("b", "d"), ("c", "e"))
     return graph
 
 
