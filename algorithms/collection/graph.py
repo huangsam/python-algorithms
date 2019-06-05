@@ -2,7 +2,7 @@ from collections import defaultdict
 
 
 class Graph:
-    """Helper for managing dictionary-based graph."""
+    """Dictionary-based directed graph."""
 
     def __init__(self, *edges):
         self.nodes = set()
