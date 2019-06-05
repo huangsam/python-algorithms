@@ -6,9 +6,9 @@ class Graph:
         self.graph = {}
         for src, dst in edges:
             self.add_edge(src, dst)
-            self._add_nodes(src, dst)
+            self.add_nodes(src, dst)
 
-    def _add_nodes(self, *nodes):
+    def add_nodes(self, *nodes):
         for node in nodes:
             self.nodes.add(node)
 
@@ -16,7 +16,7 @@ class Graph:
         if src not in self.graph:
             self.graph[src] = set()
         self.graph[src].add(dst)
-        self._add_nodes(src, dst)
+        self.add_nodes(src, dst)
 
     def get_children(self, a):
         return sorted(self.graph.get(a, []))
