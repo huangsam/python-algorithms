@@ -1,11 +1,4 @@
 def can_chain(words):
-    """Determine whether words can be chained to form a circle.
-
-    Some reference links:
-
-    - https://www.geeksforgeeks.org/given-array-strings-find-strings-can-chained-form-circle/
-    - https://www.geeksforgeeks.org/find-array-strings-can-chained-form-circle-set-2/
-    """
     first_map = {}
     for word in words:
         ch = word[0]
@@ -15,6 +8,8 @@ def can_chain(words):
     return can_chain_wh(words[0], words, first_map, set())
 
 
+# https://www.geeksforgeeks.org/given-array-strings-find-strings-can-chained-form-circle/
+# https://www.geeksforgeeks.org/find-array-strings-can-chained-form-circle-set-2/
 def can_chain_wh(cur_word, words, first_map, seen):
     if len(words) == len(seen):
         return True
