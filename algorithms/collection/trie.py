@@ -1,6 +1,5 @@
-# https://jamesroutley.co.uk/tech/2017/07/16/tries.html#implementation
 class Node:
-    """A set of children exist down the line."""
+    """A set of trie children exist down the line."""
 
     def __init__(self, value=None):
         self.value = value
@@ -9,8 +8,9 @@ class Node:
         self.ref_count = 0
 
 
+# https://jamesroutley.co.uk/tech/2017/07/16/tries.html#implementation
 class Trie:
-    """Trie starts with a root character."""
+    """Trie tree starts with a root character."""
 
     def __init__(self):
         self.node = Node()
