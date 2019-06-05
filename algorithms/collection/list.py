@@ -1,5 +1,5 @@
 class ListNode:
-    """List node has a value and references to other nodes."""
+    """Linked list has a value and node references."""
 
     def __init__(self, value=None):
         self.value = value
