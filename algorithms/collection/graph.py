@@ -17,6 +17,8 @@ class Graph:
             self.nodes.add(node)
 
     def add_edge(self, src, dst):
+        if dst in self.graph[src]:
+            raise ValueError(f"edge from {src} to {dst} already exists")
         self.graph[src].add(dst)
         self.ingress[dst] += 1
         self.add_nodes(src, dst)
