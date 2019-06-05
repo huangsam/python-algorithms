@@ -34,3 +34,10 @@ class Graph:
 
     def get_in_degree(self, src):
         return self.ingress[src]
+
+    def check_node(self, src):
+        return src in self.nodes
+
+    def check_edge(self, pair):
+        src, dst = pair
+        return dst in self.graph[src] or src in self.graph[src]
