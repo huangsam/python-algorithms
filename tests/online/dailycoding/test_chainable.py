@@ -15,6 +15,14 @@ class TestCanChain:
             (["chair", "racket"], False),
             (["chair", "racket", "touch"], False),
             (["chair", "racket", "touch", "hairy"], False),
+            (["geek", "king"], True),
+            (["for", "geek", "rig", "kaf"], True),
+            (["aab", "bac", "aaa", "cda"], True),
+            (["aaa", "bbb", "baa", "aab"], True),
+            (["aaa"], True),
+            (["aaa", "bbb"], False),
+            (["abc", "efg", "cde", "ghi", "ija"], True),
+            (["ijk", "kji", "abc", "cba"], False),
         ],
     )
     def test_can_chain(self, i, o):
