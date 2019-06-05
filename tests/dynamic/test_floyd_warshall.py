@@ -27,6 +27,6 @@ class TestFloydWarshall:
 @pytest.mark.dynamic
 class TestTransitiveClosure:
     def test_transitive_closure(self):
-        graph = [[1, 1, 0, 1], [0, 1, 1, 0], [0, 0, 1, 1], [0, 0, 0, 1]]
+        graph = [[1, 1, 1, 1], [0, 1, 1, 0], [1, 0, 1, 1], [0, 0, 0, 1]]
         result = floyd.transitive_closure(graph)
-        assert result == [[1, 1, 1, 1], [0, 1, 1, 1], [0, 0, 1, 1], [0, 0, 0, 1]]
+        assert result == [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1], [0, 0, 0, 1]]
