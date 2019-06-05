@@ -19,12 +19,12 @@ def huffman(frequencies):
     for ch, freq in frequencies.items():
         heapq.heappush(least_queue, (freq, TreeNode(ch)))
     while len(least_queue) > 1:
-        f_freq, f_node = heapq.heappop(least_queue)
-        s_freq, s_node = heapq.heappop(least_queue)
+        l_freq, l_node = heapq.heappop(least_queue)
+        r_freq, r_node = heapq.heappop(least_queue)
         i_node = TreeNode("*")
-        i_node.left = f_node
-        i_node.right = s_node
-        i_freq = f_freq + s_freq
+        i_node.left = l_node
+        i_node.right = r_node
+        i_freq = l_freq + r_freq
         heapq.heappush(least_queue, (i_freq, i_node))
     l_freq, l_node = heapq.heappop(least_queue)
     populate(l_node, result, "")
