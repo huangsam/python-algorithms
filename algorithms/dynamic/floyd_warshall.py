@@ -1,7 +1,7 @@
 # https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/
 def floyd_warshall(graph):
     V = len(graph)
-    dist = map(lambda i: map(lambda j: j, i), graph)
+    dist = [i[:] for i in graph]
     for k in range(V):
         for i in range(V):
             for j in range(V):
@@ -12,7 +12,7 @@ def floyd_warshall(graph):
 # https://www.geeksforgeeks.org/transitive-closure-of-a-graph/
 def transitive_closure(graph):
     V = len(graph)
-    reach = map(i[:] for i in graph)
+    reach = [i[:] for i in graph]
     for k in range(V):
         for i in range(V):
             for j in range(V):
