@@ -6,6 +6,9 @@ class TreeNode:
         self.left = None
         self.right = None
 
+    def __lt__(self, other):
+        return self.value < other.value
+
     def insert_left(self, value):
         self.left = TreeNode(value)
         return self.left

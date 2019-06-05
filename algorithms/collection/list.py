@@ -5,3 +5,6 @@ class ListNode:
         self.value = value
         self.next_node = None
         self.prev_node = None
+
+    def __lt__(self, other):
+        return self.value < other.value
