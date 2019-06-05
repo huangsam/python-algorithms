@@ -24,3 +24,14 @@ class TestGraph:
         assert len(children) == len(self.SAMPLE_DATA)
         assert "b" in children
         assert "c" in children
+
+    def test_get_out_degree(self):
+        graph = Graph(*self.SAMPLE_DATA)
+        assert graph.get_out_degree("a") == 3
+        assert graph.get_out_degree("d") == 0
+
+    def test_get_in_degree(self):
+        graph = Graph(*self.SAMPLE_DATA)
+        assert graph.get_in_degree("a") == 0
+        for child in graph.get_children("a"):
+            assert graph.get_in_degree(child) == 1
