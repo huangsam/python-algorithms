@@ -1,0 +1,2 @@
+MAX_INT = 2 ** 32 - 1
+MIN_INT = -MAX_INT
