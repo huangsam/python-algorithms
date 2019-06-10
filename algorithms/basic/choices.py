@@ -31,7 +31,7 @@ def combinations_wh(content, r):
     if r == 1:
         return [ch for ch in content]
     result = []
-    for ix in range(len(content) - r + 1):
+    for ix in range(len(content)):
         hchar = content[ix]
         tcontent = content[ix + 1 :]
         tresult = combinations_wh(tcontent, r - 1)
