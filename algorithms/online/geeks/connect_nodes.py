@@ -11,8 +11,7 @@ def connect_nodes_double(root):
                 next_nodes.append(n.left)
             n.next = prev_n
             prev_n = n
-        while len(next_nodes) > 0:
-            cur_nodes.append(next_nodes.pop(0))
+        cur_nodes, next_nodes = next_nodes, cur_nodes
 
 
 # https://www.geeksforgeeks.org/connect-nodes-level-level-order-traversal/
