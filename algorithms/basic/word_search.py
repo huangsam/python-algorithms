@@ -5,9 +5,7 @@ def naive(content, pattern):
         return -1
     if clen < plen:
         return -1
-    if clen == plen:
-        return 0 if content == pattern else -1
-    for ix in range(plen, len(content)):
+    for ix in range(plen, len(content) + 1):
         if content[ix - plen : ix] == pattern:
             return ix - plen
     return -1
