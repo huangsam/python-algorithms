@@ -12,9 +12,8 @@ def permutations_wh(content, r):
     result = []
     for ix in range(len(content)):
         hchar = content[ix]
-        ncontent = content[:ix] + content[ix + 1 :]
-        nresult = permutations_wh(ncontent, r - 1)
-        for nseq in nresult:
+        ocontent = content[:ix] + content[ix + 1 :]
+        for nseq in permutations_wh(ocontent, r - 1):
             result.append(hchar + nseq)
     return result
 
@@ -34,7 +33,6 @@ def combinations_wh(content, r):
     for ix in range(len(content)):
         hchar = content[ix]
         tcontent = content[ix + 1 :]
-        tresult = combinations_wh(tcontent, r - 1)
-        for tseq in tresult:
+        for tseq in combinations_wh(tcontent, r - 1):
             result.append(hchar + tseq)
     return result
