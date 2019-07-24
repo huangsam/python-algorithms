@@ -17,4 +17,6 @@ def merge_arrays(arr1, arr2):
         else:
             result.append(arr2[a2])
             a2 += 1
-    return [*result, *arr1[a1:], *arr2[a2:]]
+    if arr1:
+        return result + arr1[a1:]
+    return result + arr2[a2:]
