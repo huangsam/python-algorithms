@@ -10,8 +10,7 @@ def permutations_wh(content, r):
     if r == 1:
         return [ch for ch in content]
     result = []
-    for ix in range(len(content)):
-        head = content[ix]
+    for ix, head in enumerate(content):
         remainder = content[:ix] + content[ix + 1 :]
         for nseq in permutations_wh(remainder, r - 1):
             result.append(head + nseq)
@@ -30,8 +29,7 @@ def combinations_wh(content, r):
     if r == 1:
         return [ch for ch in content]
     result = []
-    for ix in range(len(content)):
-        head = content[ix]
+    for ix, head in enumerate(content):
         tail = content[ix + 1 :]
         for tseq in combinations_wh(tail, r - 1):
             result.append(head + tseq)
