@@ -12,8 +12,8 @@ def permutations_wh(content, r):
     result = []
     for ix, head in enumerate(content):
         remainder = content[:ix] + content[ix + 1 :]
-        for nseq in permutations_wh(remainder, r - 1):
-            result.append(head + nseq)
+        for rseq in permutations_wh(remainder, r - 1):
+            result.append(head + rseq)
     return result
 
 
