@@ -11,7 +11,7 @@ def merge_arrays(arr1, arr2):
     result = []
     a1, a2 = 0, 0
     while a1 < len(arr1) and a2 < len(arr2):
-        if arr1[a1] <= arr2[a2]:
+        if arr1[a1] < arr2[a2]:
             result.append(arr1[a1])
             a1 += 1
         else:
