@@ -1,7 +1,7 @@
 def permutations(content, r=None):
     rval = r or len(content)
-    cresult = permutations_wh(content, r=rval)
-    return [v for v in sorted(cresult)]
+    result = permutations_wh(content, r=rval)
+    return [p for p in sorted(result)]
 
 
 def permutations_wh(content, r):
@@ -19,8 +19,8 @@ def permutations_wh(content, r):
 
 def combinations(content, r=None):
     rval = r or len(content)
-    cresult = combinations_wh(content, r=rval)
-    return [v for v in sorted(cresult)]
+    result = combinations_wh(content, r=rval)
+    return [c for c in sorted(result)]
 
 
 def combinations_wh(content, r):
