@@ -1,12 +1,8 @@
 __pycache__/
-venv/
 .pytest_cache/
 .cache
 *.py[cod]
-
 htmlcov/
 .coverage
-
+venv/
 .DS_Store
-
-hosts
