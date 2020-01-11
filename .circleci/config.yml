@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: 'circleci/python:3.7.5'
+      - image: 'circleci/python:3.7.6'
 
     working_directory: ~/algorithms
 
@@ -21,7 +21,7 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: pipenv install --system --dev
+          command: pip install -r requirements.txt
 
       - run:
           name: Validate formatting
