@@ -6,3 +6,4 @@ htmlcov/
 .coverage
 venv/
 .DS_Store
+.idea/

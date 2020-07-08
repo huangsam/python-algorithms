@@ -1,6 +1,6 @@
 # python-algorithms
 
-[![CircleCI](https://circleci.com/gh/huangsam/algorithms.svg?style=svg)](https://circleci.com/gh/huangsam/algorithms)
+[![CircleCI](https://circleci.com/gh/huangsam/python-algorithms.svg?style=svg)](https://circleci.com/gh/huangsam/python-algorithms)
 
 Collection of algorithms and data structures.
 

@@ -6,13 +6,13 @@ from algorithms.online.glassdoor.remove_every_other import remove_every_other
 @pytest.mark.list
 class TestRemoveEveryOther:
     @staticmethod
-    def _add_loop(l):
+    def _add_loop(l_list):
         prev = None
-        cur = l
+        cur = l_list
         while cur:
             prev = cur
             cur = cur.next_node
-        prev.next_node = l
+        prev.next_node = l_list
 
     def test_remove_every_other(self, sorted_list):
         self._add_loop(sorted_list)
