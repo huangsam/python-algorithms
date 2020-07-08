@@ -1,8 +1,10 @@
+from itertools import combinations as thecombo
+from itertools import permutations as theperm
+
 import pytest
 
-from itertools import permutations as theperm, combinations as thecombo
-
-from algorithms.basic.choices import permutations as myperm, combinations as mycombo
+from algorithms.basic.choices import combinations as mycombo
+from algorithms.basic.choices import permutations as myperm
 
 
 @pytest.fixture(params=["abcde", "fairy", "dinner", "eevee"])

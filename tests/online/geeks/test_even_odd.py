@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.geeks.even_odd as seg
+from algorithms.online.geeks import even_odd as seg
 
 
 @pytest.mark.math

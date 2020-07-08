@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.dynamic.edit_dist as edit
+from algorithms.dynamic import edit_dist as edit
 
 
 @pytest.mark.string

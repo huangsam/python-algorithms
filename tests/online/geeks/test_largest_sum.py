@@ -1,8 +1,8 @@
 import pytest
 
 from algorithms.online.geeks.largest_sum import (
-    largest_sum_non_adjacent,
     largest_sum_adjacent,
+    largest_sum_non_adjacent,
 )
 
 

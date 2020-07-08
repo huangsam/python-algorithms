@@ -2,9 +2,9 @@ from random import randint
 
 import pytest
 
+from algorithms.collection.graph import DirectedGraph
 from algorithms.collection.list import ListNode
 from algorithms.collection.tree import TreeNode
-from algorithms.collection.graph import DirectedGraph
 from algorithms.collection.trie import Trie
 
 

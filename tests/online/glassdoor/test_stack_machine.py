@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.glassdoor.stack_machine as sm
+from algorithms.online.glassdoor import stack_machine as sm
 
 
 @pytest.mark.string

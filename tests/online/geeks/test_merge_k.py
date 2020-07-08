@@ -1,8 +1,8 @@
 import pytest
 
 from algorithms.online.geeks.merge_k import (
-    merge_k_split,
     merge_k_heap,
+    merge_k_split,
     merge_two_arrays,
 )
 

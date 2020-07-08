@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.dailycoding.huffman as huff
+from algorithms.online.dailycoding import huffman as huff
 
 
 @pytest.mark.string

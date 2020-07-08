@@ -2,8 +2,8 @@ import pytest
 
 from algorithms.collection.tree import TreeNode
 from algorithms.online.geeks.connect_nodes import (
-    connect_nodes_single,
     connect_nodes_double,
+    connect_nodes_single,
 )
 
 

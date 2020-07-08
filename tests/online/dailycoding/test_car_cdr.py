@@ -1,4 +1,4 @@
-import algorithms.online.dailycoding.car_cdr as lisp
+from algorithms.online.dailycoding import car_cdr as lisp
 
 
 class TestCarCdr:

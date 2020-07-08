@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.stack import Stack, FunkyStack
+from algorithms.collection.stack import FunkyStack, Stack
 
 
 @pytest.mark.stack

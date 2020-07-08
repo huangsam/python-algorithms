@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.dynamic.knapsack as knap
+from algorithms.dynamic import knapsack as knap
 
 
 @pytest.mark.dynamic

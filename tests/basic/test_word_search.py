@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.basic.word_search as wsearch
+from algorithms.basic import word_search as wsearch
 
 
 @pytest.mark.string
