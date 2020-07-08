@@ -1,4 +1,7 @@
-def fibonacci_recursive(n):
+from typing import Dict
+
+
+def fibonacci_recursive(n: int):
     if n == 0:
         return 0
     elif n == 1:
@@ -6,7 +9,7 @@ def fibonacci_recursive(n):
     return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
 
 
-def fibonacci_iterative(n):
+def fibonacci_iterative(n: int):
     if n == 0:
         return 0
     elif n == 1:
@@ -18,7 +21,7 @@ def fibonacci_iterative(n):
     return result
 
 
-def fibonacci_stack(n):
+def fibonacci_stack(n: int):
     if n == 0:
         return 0
     elif n == 1:
@@ -34,7 +37,7 @@ def fibonacci_stack(n):
     return stack.pop()
 
 
-def fibonacci_dp_bottom(n):
+def fibonacci_dp_bottom(n: int):
     mem = [0] * max(2, n + 1)
     mem[1] = 1
     if n < 2:
@@ -44,11 +47,11 @@ def fibonacci_dp_bottom(n):
     return mem[n]
 
 
-def fibonacci_dp_top(n):
+def fibonacci_dp_top(n: int):
     return fibonacci_dp_top_work(n, {0: 0, 1: 1})
 
 
-def fibonacci_dp_top_work(n, mem):
+def fibonacci_dp_top_work(n: int, mem: Dict[int, int]):
     if n in mem:
         return mem[n]
     mem[n] = fibonacci_dp_top_work(n - 1, mem) + fibonacci_dp_top_work(n - 2, mem)

@@ -1,4 +1,4 @@
-def naive(content, pattern):
+def naive(content: str, pattern: str):
     plen = len(pattern)
     clen = len(content)
     if plen == 0:
@@ -12,5 +12,5 @@ def naive(content, pattern):
 
 
 # https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
-def kmp(content, pattern):
+def kmp(content: str, pattern: str):
     pass

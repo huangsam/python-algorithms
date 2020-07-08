@@ -1,9 +1,12 @@
-def subset_sum_rec(nums, s):
+from typing import Set
+
+
+def subset_sum_rec(nums: Set[int], s: int):
     if s < 0:
         return False
     if s == 0:
         return True
-    for num in nums:
+    for num in nums.copy():
         nums.remove(num)
         if subset_sum_rec(nums, s - num):
             return True
@@ -11,8 +14,8 @@ def subset_sum_rec(nums, s):
     return False
 
 
-# https://algorithms.tutorialhorizon.com//dynamic-programming-subset-sum-problem/
-def subset_sum_dp(nums, s):
+# https://algorithms.tutorialhorizon.com/dynamic-programming-subset-sum-problem/
+def subset_sum_dp(nums: Set[int], s: int):
     nlen = len(nums)
     snums = [_ for _ in sorted(nums)]
     using = [[False] * (s + 1) for _ in range(nlen + 1)]

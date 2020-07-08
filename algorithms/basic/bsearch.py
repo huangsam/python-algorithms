@@ -1,8 +1,11 @@
-def bsearch_recursive(arr, t):
+from typing import Any, List
+
+
+def bsearch_recursive(arr: List[Any], t: Any):
     return bsearch_recursive_work(arr, t, 0, len(arr) - 1)
 
 
-def bsearch_recursive_work(arr, t, lo, hi):
+def bsearch_recursive_work(arr: List[Any], t: Any, lo: int, hi: int):
     if lo > hi:
         return -1
     mid = (lo + hi) // 2
@@ -15,7 +18,7 @@ def bsearch_recursive_work(arr, t, lo, hi):
 
 
 # https://en.wikipedia.org/wiki/Binary_search_algorithm
-def bsearch_iterative(arr, t):
+def bsearch_iterative(arr: List[Any], t: Any):
     lo, hi = 0, len(arr) - 1
     while lo <= hi:
         mid = (lo + hi) // 2

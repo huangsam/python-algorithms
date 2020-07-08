@@ -1,12 +1,16 @@
+from typing import Dict, List, Tuple
+
 from algorithms.constants import MAX_INT
+
+IndexCache = Dict[Tuple[int, int, int], int]
 
 
 # https://www.geeksforgeeks.org/painters-partition-problem/
-def split_sum(arr, k):
+def split_sum(arr: List[int], k: int):
     return split_sum_wh(arr, k, 0, len(arr), {})
 
 
-def split_sum_wh(arr, k, left, right, cache):
+def split_sum_wh(arr: List[int], k: int, left: int, right: int, cache: IndexCache):
     if (k, left, right) in cache:
         return cache[(k, left, right)]
     if k == 1:

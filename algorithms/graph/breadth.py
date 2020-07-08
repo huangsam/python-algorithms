@@ -1,4 +1,7 @@
-def bfs(graph, root):
+from algorithms.collection.graph import Graph
+
+
+def bfs(graph: Graph, root):
     queue = [root]
     visited = set()
     scanned = []

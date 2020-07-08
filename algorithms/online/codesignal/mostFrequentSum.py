@@ -5,7 +5,7 @@
 #     self.value = x
 #     self.left = None
 #     self.right = None
-from algorithms.collection import defaultdict
+from collections import defaultdict
 
 
 def mostFrequentBookKeep(t, mapping):

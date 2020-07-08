@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/russian-peasant-multiply-two-numbers-using-bitwise-operators/
-def multiply(x, y):
+def multiply(x: int, y: int):
     if x < 0:
         raise ValueError("x is a negative number")
     elif y < 0:

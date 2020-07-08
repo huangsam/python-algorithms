@@ -1,4 +1,7 @@
-def dfs(graph, root):
+from algorithms.collection.graph import Graph
+
+
+def dfs(graph: Graph, root):
     stack = [root]
     visited = set()
     scanned = []
