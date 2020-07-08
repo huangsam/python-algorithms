@@ -1,4 +1,4 @@
-from heapq import heappush, heappop
+from heapq import heappop, heappush
 
 
 def move_elevator(current_level, op_queue, direction):
