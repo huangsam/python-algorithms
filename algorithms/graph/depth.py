@@ -8,6 +8,8 @@ def dfs(graph, root):
             continue
         visited.add(node)
         for child in graph.get_children(node):
+            if child in visited:
+                continue
             stack.append(child)
         scanned.append(node)
     return scanned
