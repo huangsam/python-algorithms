@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.geeks.num_to_word as word
+from algorithms.online.geeks import num_to_word as word
 
 
 @pytest.mark.math

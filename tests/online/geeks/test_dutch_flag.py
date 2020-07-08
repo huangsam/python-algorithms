@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.geeks.dutch_flag as dutch
+from algorithms.online.geeks import dutch_flag as dutch
 
 
 @pytest.mark.array

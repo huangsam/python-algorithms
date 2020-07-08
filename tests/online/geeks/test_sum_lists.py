@@ -1,7 +1,7 @@
 import pytest
 
 from algorithms.collection.list import ListNode
-import algorithms.online.geeks.sum_lists as slist
+from algorithms.online.geeks import sum_lists as slist
 
 
 def int_to_list(n):

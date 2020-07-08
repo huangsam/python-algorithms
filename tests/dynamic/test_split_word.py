@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.dynamic.split_word as word
+from algorithms.dynamic import split_word as word
 
 
 @pytest.mark.string

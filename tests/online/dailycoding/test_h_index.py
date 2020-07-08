@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.dailycoding.h_index as hind
+from algorithms.online.dailycoding import h_index as hind
 
 
 @pytest.mark.array

@@ -5,7 +5,9 @@ from algorithms.basic.square_root import square_root
 
 @pytest.mark.math
 class TestSquareRoot:
-    @pytest.mark.parametrize("root, x", [(3.0, 9.0), (6.0, 36.0), (9.0, 81.0), (12.0, 144.0)])
+    @pytest.mark.parametrize(
+        "root, x", [(3.0, 9.0), (6.0, 36.0), (9.0, 81.0), (12.0, 144.0)]
+    )
     def test_square_root_exact(self, root, x):
         assert root == square_root(x)
 

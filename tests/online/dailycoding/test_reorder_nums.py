@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.dailycoding.reorder_nums as reorder
+from algorithms.online.dailycoding import reorder_nums as reorder
 
 
 @pytest.mark.array

@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.online.geeks.swap_chars as swap
+from algorithms.online.geeks import swap_chars as swap
 
 
 @pytest.mark.string

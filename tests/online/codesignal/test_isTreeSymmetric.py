@@ -1,5 +1,5 @@
-import algorithms.online.codesignal.isTreeSymmetric as symmetry
 from algorithms.collection.tree import TreeNode
+from algorithms.online.codesignal import isTreeSymmetric as symmetry
 
 
 class TestIsTreeSymmetric:

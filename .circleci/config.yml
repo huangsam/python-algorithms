@@ -28,5 +28,9 @@ jobs:
           command: flake8
 
       - run:
+          name: Validate type hinting
+          command: mypy algorithms
+
+      - run:
           name: Run tests
           command: pytest

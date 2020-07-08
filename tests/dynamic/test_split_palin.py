@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.dynamic.split_palin as palin
+from algorithms.dynamic import split_palin as palin
 
 
 @pytest.mark.string

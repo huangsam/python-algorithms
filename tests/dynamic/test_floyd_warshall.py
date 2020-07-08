@@ -1,7 +1,7 @@
 import pytest
 
 from algorithms.constants import MAX_INT
-import algorithms.dynamic.floyd_warshall as floyd
+from algorithms.dynamic import floyd_warshall as floyd
 
 
 @pytest.mark.graph

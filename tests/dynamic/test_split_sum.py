@@ -1,6 +1,6 @@
 import pytest
 
-import algorithms.dynamic.split_sum as split
+from algorithms.dynamic import split_sum as split
 
 
 @pytest.mark.array
