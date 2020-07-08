@@ -13,9 +13,9 @@ def isTreeSymmetric(t):
     return isMirror(t.left, t.right)
 
 
-def isMirror(l, r):
-    if l is None and r is None:
+def isMirror(left, right):
+    if left is None and right is None:
         return True
-    if l and r and l.value == r.value:
-        return isMirror(l.left, r.right) and isMirror(l.right, r.left)
+    if left and right and left.value == right.value:
+        return isMirror(left.left, right.right) and isMirror(left.right, right.left)
     return False
