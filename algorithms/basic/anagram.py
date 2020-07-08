@@ -1,7 +1,10 @@
-def check_anagram(s1, s2):
+from typing import Dict
+
+
+def check_anagram(s1: str, s2: str):
     if len(s1) != len(s2):
         return False
-    cmap = {}
+    cmap: Dict[str, int] = {}
     for c1 in s1:
         if c1 in cmap:
             cmap[c1] += 1

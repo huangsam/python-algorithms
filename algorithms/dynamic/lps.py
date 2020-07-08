@@ -1,7 +1,7 @@
 # https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/
-def lps_dp(seq):
+def lps_dp(seq: str):
     n = len(seq)
-    length = [[0 for x in range(n)] for x in range(n)]
+    length = [[0] * n for _ in range(n)]
 
     for i in range(n):
         length[i][i] = 1

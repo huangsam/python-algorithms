@@ -1,8 +1,8 @@
-def edit_dist_rec(s1, s2):
+def edit_dist_rec(s1: str, s2: str):
     return edit_dist_wh(s1, len(s1), s2, len(s2))
 
 
-def edit_dist_wh(s1, i1, s2, i2):
+def edit_dist_wh(s1: str, i1: int, s2: str, i2: int):
     if i1 == 0:
         return i2
     if i2 == 0:
@@ -17,7 +17,7 @@ def edit_dist_wh(s1, i1, s2, i2):
 
 
 # https://algorithms.tutorialhorizon.com//dynamic-programming-edit-distance-problem/
-def edit_dist_dp(s1, s2):
+def edit_dist_dp(s1: str, s2: str):
     l1, l2 = len(s1), len(s2)
     dist = [[0] * (l2 + 1) for _ in range(l1 + 1)]
     for i in range(l2 + 1):

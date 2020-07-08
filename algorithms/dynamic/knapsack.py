@@ -1,8 +1,17 @@
-def knapsack_binary_rec(weight, items):
+from typing import Dict, List, Set, Tuple
+
+Item = Tuple[int, int]
+ItemList = List[Item]
+ItemCache = Dict[Item, int]
+
+
+def knapsack_binary_rec(weight: int, items: ItemList):
     return knapsack_binary_wh(weight, items, len(items), set(), {})
 
 
-def knapsack_binary_wh(weight, items, n, picked, cache):
+def knapsack_binary_wh(
+    weight: int, items: ItemList, n: int, picked: Set, cache: ItemCache
+):
     result = 0
     if n == 0 or weight == 0:
         return 0
@@ -26,7 +35,7 @@ def knapsack_binary_wh(weight, items, n, picked, cache):
 
 
 # https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
-def knapsack_binary_dp(weight, items):
+def knapsack_binary_dp(weight: int, items: ItemList):
     N = len(items) + 1
     W = weight + 1
     value = [[0] * W for _ in range(N)]
@@ -43,7 +52,7 @@ def knapsack_binary_dp(weight, items):
 
 
 # https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/
-def knapsack_infinite(weight, items):
+def knapsack_infinite(weight: int, items: ItemList):
     value = [0] * (weight + 1)
     for i in range(1, weight + 1):
         for iw, iv in items:

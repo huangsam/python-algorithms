@@ -17,7 +17,7 @@ class Graph:
             self.nodes.add(node)
 
     def add_edge(self, src, dst):
-        raise NotImplementedError("not implemented in base class")
+        raise NotImplementedError
 
     def get_children(self, src):
         return sorted(self.graph[src])

@@ -1,11 +1,14 @@
-def factorial_recursive(n):
+from typing import Dict
+
+
+def factorial_recursive(n: int):
     if n < 1:
         return 1
     else:
         return n * factorial_recursive(n - 1)
 
 
-def factorial_stack(n):
+def factorial_stack(n: int):
     stack = []
     result = 1
     while n > 0:
@@ -16,18 +19,18 @@ def factorial_stack(n):
     return result
 
 
-def factorial_dp_bottom(n):
+def factorial_dp_bottom(n: int):
     answers = [1] * max(1, n + 1)
     for i in range(2, n + 1):
         answers[i] = i * answers[i - 1]
     return answers[n]
 
 
-def factorial_dp_top(n):
+def factorial_dp_top(n: int):
     return factorial_dp_top_work(n, {0: 1, 1: 1})
 
 
-def factorial_dp_top_work(n, answers):
+def factorial_dp_top_work(n: int, answers: Dict[int, int]):
     if n in answers:
         return answers[n]
     answers[n] = n * factorial_dp_top_work(n - 1, answers)

@@ -1,10 +1,11 @@
 from itertools import permutations
+from typing import List
 
 from algorithms.constants import MAX_INT
 
 
 # https://www.geeksforgeeks.org/traveling-salesman-problem-tsp-implementation/
-def tsp_brute(graph, source):
+def tsp_brute(graph: List[List[int]], source: int):
     other = []
     for i in range(len(graph)):
         if i != source:

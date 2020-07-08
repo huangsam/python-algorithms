@@ -1,8 +1,11 @@
+from typing import Any
+
+
 class TreeNode:
     """Binary tree has a value and node references."""
 
-    def __init__(self, x):
-        self.value = x
+    def __init__(self, value: Any):
+        self.value = value
         self.left = None
         self.right = None
 

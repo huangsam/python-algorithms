@@ -1,10 +1,13 @@
-def permutations(content, r=None):
+from typing import Optional
+
+
+def permutations(content: str, r: Optional[int] = None):
     rval = r or len(content)
     result = permutations_wh(content, r=rval)
     return [p for p in sorted(result)]
 
 
-def permutations_wh(content, r):
+def permutations_wh(content: str, r: int):
     if r == 0:
         return []
     if r == 1:
@@ -17,13 +20,13 @@ def permutations_wh(content, r):
     return result
 
 
-def combinations(content, r=None):
+def combinations(content: str, r: Optional[int] = None):
     rval = r or len(content)
     result = combinations_wh(content, r=rval)
     return [c for c in sorted(result)]
 
 
-def combinations_wh(content, r):
+def combinations_wh(content: str, r: int):
     if r == 0:
         return []
     if r == 1:

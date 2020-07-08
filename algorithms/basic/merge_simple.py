@@ -1,4 +1,7 @@
-def merge_sort(arr):
+from typing import List
+
+
+def merge_sort(arr: List[int]):
     if len(arr) <= 1:
         return arr
     middle = len(arr) // 2
@@ -7,7 +10,7 @@ def merge_sort(arr):
     return merge_arrays(l_merged, r_merged)
 
 
-def merge_arrays(arr1, arr2):
+def merge_arrays(arr1: List[int], arr2: List[int]):
     result = []
     a1, a2 = 0, 0
     while a1 < len(arr1) and a2 < len(arr2):
