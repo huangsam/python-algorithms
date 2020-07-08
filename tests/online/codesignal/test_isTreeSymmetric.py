@@ -1,7 +1,10 @@
+import pytest
+
 from algorithms.collection.tree import TreeNode
 from algorithms.online.codesignal import isTreeSymmetric as symmetry
 
 
+@pytest.mark.tree
 class TestIsTreeSymmetric:
     def test_symmetric_good(self):
         root = TreeNode(1)
