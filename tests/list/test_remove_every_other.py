@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.online.remove_every_other import remove_every_other
+from algorithms.list.remove_every_other import remove_every_other
 
 
 def _add_loop(l_list):
