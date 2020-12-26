@@ -22,7 +22,3 @@ def stack_machine(operation):
     except (OverflowError, IndexError):
         return -1
     return st.pop()
-
-
-class OverflowError(ValueError):
-    pass
