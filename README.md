@@ -15,14 +15,18 @@ as expected.
 
 The following categories are covered:
 
-- Basic algorithms
-- Data structures
-- Dynamic algorithms
-- System design
-- Graph algorithms
-- Online resources
-- Sorting algorithms
-- Tree algorithms
+- Arrays
+- Backtracking
+- Dynamic programming
+- Graphs
+- Linked Lists
+- Mathematics
+- Queues
+- Sorting
+- Stacks
+- Strings
+- Trees
+
 
 ## Test suite
 
