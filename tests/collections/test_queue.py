@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.queue import FunkyQueue, Queue
+from algorithms.collections.queue import FunkyQueue, Queue
 
 
 @pytest.mark.queue

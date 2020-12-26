@@ -1,6 +1,6 @@
 import heapq
 
-from algorithms.collection.tree import TreeNode
+from algorithms.collections.tree import TreeNode
 
 
 def populate(root, mapping, pattern):

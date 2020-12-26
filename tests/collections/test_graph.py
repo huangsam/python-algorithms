@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.graph import DirectedGraph, UndirectedGraph
+from algorithms.collections.graph import DirectedGraph, UndirectedGraph
 
 _SAMPLE_DATA = (("a", "b"), ("a", "c"), ("a", "d"))
 

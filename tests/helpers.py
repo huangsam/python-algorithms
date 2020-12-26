@@ -1,6 +1,6 @@
 from typing import List
 
-from algorithms.collection.list import ListNode
+from algorithms.collections.list import ListNode
 
 
 def is_sorted(array: List):

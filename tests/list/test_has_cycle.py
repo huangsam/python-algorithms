@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.list import ListNode
+from algorithms.collections.list import ListNode
 from algorithms.list.has_cycle import has_cycle
 
 
