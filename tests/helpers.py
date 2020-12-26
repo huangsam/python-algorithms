@@ -25,7 +25,7 @@ def int_to_list(n: int):
 
 
 def list_size(lst: ListNode):
-    """Get size of list node"""
+    """Get size of list node."""
     size = 0
     while lst is not None:
         lst = lst.next_node
