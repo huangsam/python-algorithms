@@ -1,18 +1,20 @@
+from collections import deque
+
 from algorithms.collection.graph import Graph
 
 
 def dfs(graph: Graph, root):
-    stack = [root]
+    dq = deque([root])
     visited = set()
     scanned = []
-    while len(stack) > 0:
-        node = stack.pop()
+    while len(dq) > 0:
+        node = dq.pop()
         if node in visited:
             continue
         visited.add(node)
         for child in graph.get_children(node):
             if child in visited:
                 continue
-            stack.append(child)
+            dq.append(child)
         scanned.append(node)
     return scanned
