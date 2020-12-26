@@ -1,16 +1,17 @@
 import pytest
 
-from algorithms.tree import postorder as post_
+from algorithms.tree import postorder as _post
 
 
 @pytest.mark.tree
-class TestPostorder:
-    def test_postorder_iterative(self, simple_tree):
-        result = post_.postorder_iterative(simple_tree)
-        assert (len(result)) == 6
-        assert [3, 5, 6, 4, 2, 1] == result
+def test_postorder_iterative(simple_tree):
+    result = _post.postorder_iterative(simple_tree)
+    assert (len(result)) == 6
+    assert [3, 5, 6, 4, 2, 1] == result
 
-    def test_postorder_recursive(self, simple_tree):
-        result = post_.postorder_recursive(simple_tree)
-        assert (len(result)) == 6
-        assert [3, 5, 6, 4, 2, 1] == result
+
+@pytest.mark.tree
+def test_postorder_recursive(simple_tree):
+    result = _post.postorder_recursive(simple_tree)
+    assert (len(result)) == 6
+    assert [3, 5, 6, 4, 2, 1] == result
