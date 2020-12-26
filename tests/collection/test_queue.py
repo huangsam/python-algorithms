@@ -4,14 +4,14 @@ from algorithms.collection.queue import FunkyQueue, Queue
 
 
 @pytest.mark.queue
-def test_push():
+def test_queue_push():
     queue = Queue()
     queue.push(1)
     queue.push(2)
 
 
 @pytest.mark.queue
-def test_pop():
+def test_queue_pop():
     queue = Queue()
     queue.push(1)
     queue.push(2)
@@ -19,7 +19,7 @@ def test_pop():
 
 
 @pytest.mark.queue
-def test_size():
+def test_queue_size():
     queue = Queue()
     for i in range(100):
         queue.push(i)
@@ -29,14 +29,14 @@ def test_size():
 
 
 @pytest.mark.queue
-def test_push():
+def test_funky_queue_push():
     queue = FunkyQueue()
     queue.push(1)
     queue.push(2)
 
 
 @pytest.mark.queue
-def test_pop():
+def test_funky_queue_pop():
     queue = FunkyQueue()
     queue.push(1)
     queue.push(2)
@@ -44,7 +44,7 @@ def test_pop():
 
 
 @pytest.mark.queue
-def test_size():
+def test_funky_queue_size():
     queue = FunkyQueue()
     for i in range(100):
         queue.push(i)
