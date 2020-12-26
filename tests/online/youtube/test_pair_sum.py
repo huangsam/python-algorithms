@@ -10,22 +10,27 @@ def array():
 
 @pytest.mark.math
 @pytest.mark.array
-class TestPairSum:
-    def test_pair_sum_multiple(self, array):
-        target = 10
-        result = pair_sum(array, target)
-        assert len(result) == 2
-        assert (5, 5) not in result
-        assert (7, 3) in result
-        assert (1, 9) in result
+def test_pair_sum_multiple(array):
+    target = 10
+    result = pair_sum(array, target)
+    assert len(result) == 2
+    assert (5, 5) not in result
+    assert (7, 3) in result
+    assert (1, 9) in result
 
-    def test_pair_sum_single(self, array):
-        target = 15
-        result = pair_sum(array, target)
-        assert len(result) == 1
-        assert (5, 10) in result
 
-    def test_pair_sum_none(self, array):
-        target = 2
-        result = pair_sum(array, target)
-        assert len(result) == 0
+@pytest.mark.math
+@pytest.mark.array
+def test_pair_sum_single(array):
+    target = 15
+    result = pair_sum(array, target)
+    assert len(result) == 1
+    assert (5, 10) in result
+
+
+@pytest.mark.math
+@pytest.mark.array
+def test_pair_sum_none(array):
+    target = 2
+    result = pair_sum(array, target)
+    assert len(result) == 0
