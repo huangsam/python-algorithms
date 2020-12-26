@@ -1,12 +1,12 @@
 # python-algorithms
 
-[![CircleCI](https://circleci.com/gh/huangsam/python-algorithms.svg?style=svg)](https://circleci.com/gh/huangsam/python-algorithms)
+[![CircleCI](https://img.shields.io/circleci/build/github/huangsam/python-algorithms)](https://circleci.com/gh/huangsam/python-algorithms)
 
 Collection of algorithms and data structures.
 
 The goal of this repository is to help both students and professionals brush up on their Computer Science fundamentals. All of the modules are written in Python and `pytest` is the test runner used for this project.
 
-**NOTE:** Please use the latest version of Python 3.x to ensure the code works as expected.  
+**NOTE:** Please use the latest version of Python 3.x to ensure the code works as expected.
 ## Categories
 
 The following categories are covered:
