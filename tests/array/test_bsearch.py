@@ -1,10 +1,13 @@
 import pytest
 
-from algorithms.array.bsearch import bsearch_iterative, bsearch_recursive
+from algorithms.array.binary_search import (
+    binary_search_iterative,
+    binary_search_recursive,
+)
 
 
 @pytest.mark.array
-@pytest.mark.parametrize("func", [bsearch_iterative, bsearch_recursive])
+@pytest.mark.parametrize("func", [binary_search_iterative, binary_search_recursive])
 def test_bsearch_good(func):
     arr = [0, 2, 4, 6, 8, 10]
     for ix, v in enumerate(arr):
@@ -12,7 +15,7 @@ def test_bsearch_good(func):
 
 
 @pytest.mark.array
-@pytest.mark.parametrize("func", [bsearch_iterative, bsearch_recursive])
+@pytest.mark.parametrize("func", [binary_search_iterative, binary_search_recursive])
 def test_bsearch_bad(func):
     arr = [0, 2, 4, 6, 8, 10]
     for v in arr:
