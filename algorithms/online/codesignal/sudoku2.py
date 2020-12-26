@@ -13,7 +13,6 @@ def sudoku2(grid):
 
 def rowValid(grid, row):
     seen = set()
-    i = 0
     for i in range(9):
         val = grid[row][i]
         if val in seen:
@@ -25,7 +24,6 @@ def rowValid(grid, row):
 
 def columnValid(grid, column):
     seen = set()
-    i = 0
     for i in range(9):
         val = grid[i][column]
         if val in seen:
