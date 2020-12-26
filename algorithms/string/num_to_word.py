@@ -47,9 +47,9 @@ def num_to_word(n):
     if n < 1000:
         prefix = single[n // 100]
         if n % 100 == 0:
-            return prefix + " hundred"
+            return f"{prefix} hundred"
         else:
-            return prefix + " hundred " + num_to_word(n % 100)
+            return f"{prefix} hundred {num_to_word(n % 100)}"
     thousands = ["thousand", "million", "billion", "trillion"]
     for i in range(len(thousands)):
         divisor = 1000 ** (i + 1)
