@@ -1,6 +1,6 @@
 from collections import deque
 
-from algorithms.collection.graph import Graph
+from algorithms.collections.graph import Graph
 
 
 def bfs(graph: Graph, root):

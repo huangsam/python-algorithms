@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.tree import TreeNode
+from algorithms.collections.tree import TreeNode
 from algorithms.tree.connect_nodes import connect_nodes_double, connect_nodes_single
 
 

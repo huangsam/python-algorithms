@@ -1,4 +1,4 @@
-from algorithms.collection.tree import TreeNode
+from algorithms.collections.tree import TreeNode
 
 
 # https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/

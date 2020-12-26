@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.tree import TreeNode
+from algorithms.collections.tree import TreeNode
 from algorithms.tree.remove_bad_edge import remove_bad_edge
 
 

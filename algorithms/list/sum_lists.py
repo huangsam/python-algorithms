@@ -1,4 +1,4 @@
-from algorithms.collection.list import ListNode
+from algorithms.collections.list import ListNode
 from tests.helpers import list_size
 
 

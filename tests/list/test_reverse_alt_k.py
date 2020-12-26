@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.list import ListNode
+from algorithms.collections.list import ListNode
 from algorithms.list.reverse_alt_k import reverse_alt_k
 
 

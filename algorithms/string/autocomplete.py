@@ -1,6 +1,6 @@
 from typing import List
 
-from algorithms.collection.trie import Trie
+from algorithms.collections.trie import Trie
 
 
 # https://www.geeksforgeeks.org/auto-complete-feature-using-trie/

@@ -2,10 +2,10 @@ from random import randint
 
 import pytest
 
-from algorithms.collection.graph import DirectedGraph
-from algorithms.collection.list import ListNode
-from algorithms.collection.tree import TreeNode
-from algorithms.collection.trie import Trie
+from algorithms.collections.graph import DirectedGraph
+from algorithms.collections.list import ListNode
+from algorithms.collections.tree import TreeNode
+from algorithms.collections.trie import Trie
 
 
 @pytest.fixture(scope="function", params=[50, 100, 400])

@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.list import ListNode
+from algorithms.collections.list import ListNode
 
 
 @pytest.mark.list

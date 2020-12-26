@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.collection.tree import TreeNode
+from algorithms.collections.tree import TreeNode
 from algorithms.tree.duplicate_subtree import duplicate_subtree
 
 
