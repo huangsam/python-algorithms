@@ -1,8 +1,10 @@
+from collections import deque
+
 from algorithms.constants import MAX_INT
 
 
 def stack_machine(operation):
-    st = []
+    st = deque()
     try:
         for ch in operation:
             if ch.isdigit():

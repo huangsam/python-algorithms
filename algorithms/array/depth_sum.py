@@ -1,3 +1,6 @@
+from collections import deque
+
+
 def depth_sum(a, weight=1):
     result = 0
     for el in a:
@@ -10,7 +13,7 @@ def depth_sum(a, weight=1):
 
 def depth_sum_stack(a):
     result = 0
-    stack = [a, 1]
+    stack = deque([a, 1])
     while len(stack) > 0:
         cur_weight = stack.pop()
         cur_list = stack.pop()

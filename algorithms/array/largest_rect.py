@@ -1,3 +1,6 @@
+from collections import deque
+
+
 # http://www.cnblogs.com/zuoyuan/p/3783993.html
 def largest_rect(histo):
     """Determine largest rectangle in a histogram.
@@ -8,7 +11,7 @@ def largest_rect(histo):
     Returns:
         The maximum area found.
     """
-    positions, heights = [], []
+    positions, heights = deque(), deque()
     max_area = 0
     # build `heights`
     for i, h in enumerate(histo):
