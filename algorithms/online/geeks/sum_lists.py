@@ -1,12 +1,5 @@
 from algorithms.collection.list import ListNode
-
-
-def list_size(lst):
-    size = 0
-    while lst is not None:
-        lst = lst.next_node
-        size += 1
-    return size
+from tests.helpers import list_size
 
 
 # https://www.geeksforgeeks.org/sum-of-two-linked-lists/

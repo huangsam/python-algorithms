@@ -1,7 +1,7 @@
 import pytest
 
 from algorithms.sorting import insertion_sort
-from tests.utils import is_sorted
+from tests.helpers import is_sorted
 
 
 @pytest.mark.array
