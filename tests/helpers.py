@@ -12,7 +12,7 @@ def is_sorted(array: List):
     return True
 
 
-def int_to_list(n: int) -> ListNode:
+def int_to_list(n: int):
     """Convert integer to list."""
     if n <= 0:
         raise ValueError(f"Invalid number: {n}")
