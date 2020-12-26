@@ -4,19 +4,16 @@ from algorithms.basic import bsearch
 
 
 @pytest.mark.array
-class TestBinarySearch:
-    @pytest.mark.parametrize(
-        "func", [bsearch.bsearch_iterative, bsearch.bsearch_recursive]
-    )
-    def test_bsearch_good(self, func):
-        arr = [0, 2, 4, 6, 8, 10]
-        for ix, v in enumerate(arr):
-            assert func(arr, v) == ix
+@pytest.mark.parametrize("func", [bsearch.bsearch_iterative, bsearch.bsearch_recursive])
+def test_bsearch_good(func):
+    arr = [0, 2, 4, 6, 8, 10]
+    for ix, v in enumerate(arr):
+        assert func(arr, v) == ix
 
-    @pytest.mark.parametrize(
-        "func", [bsearch.bsearch_iterative, bsearch.bsearch_recursive]
-    )
-    def test_bsearch_bad(self, func):
-        arr = [0, 2, 4, 6, 8, 10]
-        for v in arr:
-            assert func(arr, v - 1) == -1
+
+@pytest.mark.array
+@pytest.mark.parametrize("func", [bsearch.bsearch_iterative, bsearch.bsearch_recursive])
+def test_bsearch_bad(func):
+    arr = [0, 2, 4, 6, 8, 10]
+    for v in arr:
+        assert func(arr, v - 1) == -1
