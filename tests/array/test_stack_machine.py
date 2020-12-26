@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.online import stack_machine as sm
+from algorithms.array import stack_machine as sm
 
 
 @pytest.mark.string

@@ -1,7 +1,7 @@
 import pytest
 
 from algorithms.collection.tree import TreeNode
-from algorithms.online.remove_bad_edge import remove_bad_edge
+from algorithms.tree.remove_bad_edge import remove_bad_edge
 
 
 @pytest.mark.tree
