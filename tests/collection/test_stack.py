@@ -4,14 +4,14 @@ from algorithms.collection.stack import FunkyStack, Stack
 
 
 @pytest.mark.stack
-def test_push():
+def test_stack_push():
     stack = Stack()
     stack.push(1)
     stack.push(2)
 
 
 @pytest.mark.stack
-def test_pop():
+def test_stack_pop():
     stack = Stack()
     stack.push(1)
     stack.push(2)
@@ -19,7 +19,7 @@ def test_pop():
 
 
 @pytest.mark.stack
-def test_max_push():
+def test_stack_max_and_push():
     stack = Stack()
     stack.push(4)
     stack.push(3)
@@ -27,7 +27,7 @@ def test_max_push():
 
 
 @pytest.mark.stack
-def test_max_pop():
+def test_stack_max_and_pop():
     stack = Stack()
     stack.push(4)
     stack.push(5)
@@ -40,7 +40,7 @@ def test_max_pop():
 
 
 @pytest.mark.stack
-def test_max_pop_error():
+def test_stack_pop_error():
     stack = Stack()
     stack.push(4)
     assert stack.max() == 4
@@ -50,7 +50,7 @@ def test_max_pop_error():
 
 
 @pytest.mark.stack
-def test_size():
+def test_stack_size():
     stack = Stack()
     for i in range(100):
         stack.push(i)
@@ -60,14 +60,14 @@ def test_size():
 
 
 @pytest.mark.stack
-def test_push():
+def test_funky_stack_push():
     stack = FunkyStack()
     stack.push(1)
     stack.push(2)
 
 
 @pytest.mark.stack
-def test_pop():
+def test_funky_stack_pop():
     stack = FunkyStack()
     stack.push(1)
     stack.push(2)
