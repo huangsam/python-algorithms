@@ -22,3 +22,12 @@ def int_to_list(n: int):
         cur = node
         tmp = tmp // 10
     return cur
+
+
+def list_size(lst: ListNode):
+    """Get size of list node"""
+    size = 0
+    while lst is not None:
+        lst = lst.next_node
+        size += 1
+    return size

@@ -1,7 +1,7 @@
 import pytest
 
 from algorithms.online.geeks import sum_lists as slist
-from tests.utils import int_to_list
+from tests.helpers import int_to_list
 
 
 def _verify(a, b):
