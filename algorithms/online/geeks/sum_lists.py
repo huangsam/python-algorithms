@@ -4,7 +4,7 @@ from algorithms.collection.list import ListNode
 def list_size(lst):
     size = 0
     while lst is not None:
-        lst = lst.next
+        lst = lst.next_node
         size += 1
     return size
 
@@ -29,35 +29,35 @@ def sum_lists(l1, l2):
         if tail is None:
             head = tail = ListNode(big_l.value)
         else:
-            tail.next = ListNode(big_l.value)
-            tail = tail.next
+            tail.next_node = ListNode(big_l.value)
+            tail = tail.next_node
         tstack.append(tail)
-        big_l = big_l.next
+        big_l = big_l.next_node
         diff -= 1
 
     # Step 4: Prepare stack sum
     astack = []
     while big_l:
         astack.append((big_l.value, small_l.value))
-        big_l = big_l.next
-        small_l = small_l.next
+        big_l = big_l.next_node
+        small_l = small_l.next_node
 
     # Step 5: Execute stack sum
-    acc = tmp = None
+    acc = None
     carry = 0
     while len(astack) > 0:
         v1, v2 = astack.pop()
         vsum = v1 + v2 + carry
         carry, leftover = vsum // 10, vsum % 10
         tmp = ListNode(leftover)
-        tmp.next = acc
+        tmp.next_node = acc
         acc = tmp
 
     # Step 6: Connect trimmed nodes of big list with summed result
     if head is None:
         head = acc
     else:
-        tail.next = acc
+        tail.next_node = acc
 
     # Step 7: Handle carry for trimmed nodes of big list
     while len(tstack) > 0:
@@ -71,7 +71,7 @@ def sum_lists(l1, l2):
     # Step 8: Add node to head if carry exists
     if carry == 1:
         tmp = ListNode(1)
-        tmp.next = head
+        tmp.next_node = head
         head = tmp
 
     return head

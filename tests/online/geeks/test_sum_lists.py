@@ -1,30 +1,18 @@
 import pytest
 
-from algorithms.collection.list import ListNode
 from algorithms.online.geeks import sum_lists as slist
-
-
-def _int_to_list(n):
-    """Helper method for test data"""
-    tmp = n
-    cur = None
-    while tmp > 0:
-        node = ListNode(tmp % 10)
-        node.next = cur
-        cur = node
-        tmp = tmp // 10
-    return cur
+from tests.utils import int_to_list
 
 
 def _verify(a, b):
-    first = _int_to_list(a)
-    second = _int_to_list(b)
+    first = int_to_list(a)
+    second = int_to_list(b)
     l1 = slist.sum_lists(first, second)
-    l2 = _int_to_list(a + b)
+    l2 = int_to_list(a + b)
     while l1 and l2:
         assert l1.value == l2.value
-        l1 = l1.next
-        l2 = l2.next
+        l1 = l1.next_node
+        l2 = l2.next_node
     assert l1 is None
     assert l2 is None
 
@@ -57,6 +45,6 @@ def test_sum_list(a, b):
 @pytest.mark.stack
 @pytest.mark.list
 def test_sum_list_zero():
-    first = _int_to_list(0)
-    second = _int_to_list(0)
+    first = int_to_list(0)
+    second = int_to_list(0)
     assert slist.sum_lists(first, second) is None
