@@ -26,7 +26,6 @@ def _verify(a, b):
         (563, 842),
         (1, 999),
         (34, 80),
-        (1, 0),
         (1, 1),
         (1, 9),
         (11, 9),
@@ -39,12 +38,3 @@ def _verify(a, b):
 )
 def test_sum_list(a, b):
     _verify(a, b)
-
-
-@pytest.mark.math
-@pytest.mark.stack
-@pytest.mark.list
-def test_sum_list_zero():
-    first = int_to_list(0)
-    second = int_to_list(0)
-    assert slist.sum_lists(first, second) is None

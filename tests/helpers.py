@@ -12,10 +12,12 @@ def is_sorted(array: List):
     return True
 
 
-def int_to_list(n: int):
+def int_to_list(n: int) -> ListNode:
     """Convert integer to list."""
-    tmp = n
-    cur = None
+    if n <= 0:
+        raise ValueError(f"Invalid number: {n}")
+    cur = ListNode(n % 10)
+    tmp = n // 10
     while tmp > 0:
         node = ListNode(tmp % 10)
         node.next_node = cur
@@ -27,7 +29,9 @@ def int_to_list(n: int):
 def list_size(lst: ListNode):
     """Get size of list node."""
     size = 0
-    while lst is not None:
+    while True:
+        if not lst.next_node:
+            break
         lst = lst.next_node
         size += 1
     return size
