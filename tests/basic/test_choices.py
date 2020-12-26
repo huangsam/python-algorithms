@@ -14,21 +14,19 @@ def content(request):
 
 @pytest.mark.math
 @pytest.mark.string
-class TestPerm:
-    def test_permutations(self, content):
-        for rcur in range(1, len(content) + 1):
-            tvalue = ["".join(v) for v in sorted(theperm(content, r=rcur))]
-            mvalue = [v for v in myperm(content, r=rcur)]
-            assert len(tvalue) == len(mvalue)
-            assert tvalue == mvalue
+def test_permutations(content):
+    for rcur in range(1, len(content) + 1):
+        tvalue = ["".join(v) for v in sorted(theperm(content, r=rcur))]
+        mvalue = [v for v in myperm(content, r=rcur)]
+        assert len(tvalue) == len(mvalue)
+        assert tvalue == mvalue
 
 
 @pytest.mark.math
 @pytest.mark.string
-class TestCombo:
-    def test_combinations(self, content):
-        for rcur in range(1, len(content) + 1):
-            tvalue = ["".join(v) for v in sorted(thecombo(content, r=rcur))]
-            mvalue = [v for v in mycombo(content, r=rcur)]
-            assert len(tvalue) == len(mvalue)
-            assert tvalue == mvalue
+def test_combinations(content):
+    for rcur in range(1, len(content) + 1):
+        tvalue = ["".join(v) for v in sorted(thecombo(content, r=rcur))]
+        mvalue = [v for v in mycombo(content, r=rcur)]
+        assert len(tvalue) == len(mvalue)
+        assert tvalue == mvalue
