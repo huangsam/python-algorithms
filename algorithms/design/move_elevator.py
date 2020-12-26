@@ -33,10 +33,10 @@ def get_bound(current_level, op_queue, direction):
     """Calculate boundary given remaining operations."""
     if direction.upper() == "UP":
         max_level = get_max_level(op_queue)
-        return (current_level, max_level)
+        return current_level, max_level
     elif direction.upper() == "DOWN":
         min_level = get_min_level(op_queue)
-        return (min_level, current_level)
+        return min_level, current_level
 
 
 def valid(pair, direction):
@@ -90,7 +90,7 @@ def opposite(direction):
 
 
 def main():
-    op_queue = set([(4, 8), (7, 4), (6, 3), (8, 9), (1, 2)])
+    op_queue = {(4, 8), (7, 4), (6, 3), (8, 9), (1, 2)}
     current_level = 5
     direction = "UP"
     move_elevator(current_level, op_queue, direction)
