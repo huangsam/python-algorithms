@@ -5,25 +5,36 @@ from algorithms.dynamic.lis import lis
 
 @pytest.mark.array
 @pytest.mark.dynamic
-class TestLis:
-    @pytest.mark.parametrize("n", [1, 5, 100])
-    def test_lis_always(self, n):
-        a = [_ for _ in range(n)]
-        assert lis(a) == n
+@pytest.mark.parametrize("n", [1, 5, 100])
+def test_lis_always(n):
+    a = [_ for _ in range(n)]
+    assert lis(a) == n
 
-    @pytest.mark.parametrize("n", [1, 5, 100])
-    def test_lis_never(self, n):
-        a = [_ for _ in range(n - 1, -1, -1)]
-        assert lis(a) == 1
 
-    def test_lis_mixed_small(self):
-        a = [1, 12, 7]
-        assert lis(a) == 2
+@pytest.mark.array
+@pytest.mark.dynamic
+@pytest.mark.parametrize("n", [1, 5, 100])
+def test_lis_never(n):
+    a = [_ for _ in range(n - 1, -1, -1)]
+    assert lis(a) == 1
 
-    def test_lis_mixed_big(self):
-        a = [1, 12, 7, 0, 23, 11, 52, 31, 61, 69, 70, 2]
-        assert lis(a) == 7
 
-    def test_lis_empty(self):
-        a = []
-        assert lis(a) == 0
+@pytest.mark.array
+@pytest.mark.dynamic
+def test_lis_mixed_small():
+    a = [1, 12, 7]
+    assert lis(a) == 2
+
+
+@pytest.mark.array
+@pytest.mark.dynamic
+def test_lis_mixed_big():
+    a = [1, 12, 7, 0, 23, 11, 52, 31, 61, 69, 70, 2]
+    assert lis(a) == 7
+
+
+@pytest.mark.array
+@pytest.mark.dynamic
+def test_lis_empty():
+    a = []
+    assert lis(a) == 0
