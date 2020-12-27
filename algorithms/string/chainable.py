@@ -1,5 +1,8 @@
-def can_chain(words):
-    first_map = {}
+from typing import Dict, List, Set
+
+
+def can_chain(words: List[str]):
+    first_map: Dict[str, Set[str]] = {}
     for word in words:
         ch = word[0]
         if ch not in first_map:
@@ -10,7 +13,9 @@ def can_chain(words):
 
 # https://www.geeksforgeeks.org/given-array-strings-find-strings-can-chained-form-circle/
 # https://www.geeksforgeeks.org/find-array-strings-can-chained-form-circle-set-2/
-def can_chain_wh(cur_word, words, first_map, seen):
+def can_chain_wh(
+    cur_word: str, words: List[str], first_map: Dict[str, Set[str]], seen: Set[str]
+):
     if len(words) == len(seen):
         return True
     if cur_word in seen:
