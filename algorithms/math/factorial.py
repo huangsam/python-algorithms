@@ -27,11 +27,11 @@ def factorial_dp_bottom(n: int):
 
 
 def factorial_dp_top(n: int):
-    return factorial_dp_top_work(n, {0: 1, 1: 1})
+    return _factorial_dp_top_work(n, {0: 1, 1: 1})
 
 
-def factorial_dp_top_work(n: int, answers: Dict[int, int]):
+def _factorial_dp_top_work(n: int, answers: Dict[int, int]):
     if n in answers:
         return answers[n]
-    answers[n] = n * factorial_dp_top_work(n - 1, answers)
+    answers[n] = n * _factorial_dp_top_work(n - 1, answers)
     return answers[n]

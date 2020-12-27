@@ -2,10 +2,10 @@ from typing import Any, List
 
 
 def binary_search_recursive(arr: List[Any], t: Any):
-    return binary_search_recursive_work(arr, t, 0, len(arr) - 1)
+    return _binary_search_recursive_work(arr, t, 0, len(arr) - 1)
 
 
-def binary_search_recursive_work(arr: List[Any], t: Any, lo: int, hi: int):
+def _binary_search_recursive_work(arr: List[Any], t: Any, lo: int, hi: int):
     if lo > hi:
         return -1
     mid = (lo + hi) // 2
@@ -13,8 +13,8 @@ def binary_search_recursive_work(arr: List[Any], t: Any, lo: int, hi: int):
     if val == t:
         return mid
     elif val < t:
-        return binary_search_recursive_work(arr, t, mid + 1, hi)
-    return binary_search_recursive_work(arr, t, lo, mid - 1)
+        return _binary_search_recursive_work(arr, t, mid + 1, hi)
+    return _binary_search_recursive_work(arr, t, lo, mid - 1)
 
 
 # https://en.wikipedia.org/wiki/Binary_search_algorithm
