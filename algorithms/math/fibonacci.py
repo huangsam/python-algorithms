@@ -48,11 +48,11 @@ def fibonacci_dp_bottom(n: int):
 
 
 def fibonacci_dp_top(n: int):
-    return fibonacci_dp_top_work(n, {0: 0, 1: 1})
+    return _fibonacci_dp_top_work(n, {0: 0, 1: 1})
 
 
-def fibonacci_dp_top_work(n: int, mem: Dict[int, int]):
+def _fibonacci_dp_top_work(n: int, mem: Dict[int, int]):
     if n in mem:
         return mem[n]
-    mem[n] = fibonacci_dp_top_work(n - 1, mem) + fibonacci_dp_top_work(n - 2, mem)
+    mem[n] = _fibonacci_dp_top_work(n - 1, mem) + _fibonacci_dp_top_work(n - 2, mem)
     return mem[n]
