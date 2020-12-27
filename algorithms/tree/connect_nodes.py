@@ -1,6 +1,17 @@
-def connect_nodes_double(root):
-    cur_nodes = [root]
-    next_nodes = []
+from typing import Any, List, Optional
+
+from algorithms.collections.tree import TreeNode
+
+
+class NextNode(TreeNode):
+    def __init__(self, value: Any):
+        super().__init__(value)
+        self.next: Optional[NextNode] = None
+
+
+def connect_nodes_double(root: NextNode):
+    cur_nodes: List[NextNode] = [root]
+    next_nodes: List[NextNode] = []
     while len(cur_nodes) > 0 or len(next_nodes) > 0:
         prev_n = None
         while len(cur_nodes) > 0:
@@ -15,8 +26,8 @@ def connect_nodes_double(root):
 
 
 # https://www.geeksforgeeks.org/connect-nodes-level-level-order-traversal/
-def connect_nodes_single(root):
-    queue = [root, None]
+def connect_nodes_single(root: NextNode):
+    queue: List[Optional[NextNode]] = [root, None]
     while len(queue) > 0:
         n = queue.pop(0)
         if n:

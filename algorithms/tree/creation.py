@@ -1,8 +1,12 @@
+from typing import List, Tuple
+
 from algorithms.collections.tree import TreeNode
 
 
 # https://www.geeksforgeeks.org/construct-a-binary-tree-from-postorder-and-inorder/
-def create_postorder_inorder(postorder, postrange, inorder, inrange):
+def create_postorder_inorder(
+    postorder: List, postrange: Tuple[int, int], inorder: List, inrange: Tuple[int, int]
+):
     post_left, post_right = postrange
     if post_right - post_left == 0:
         return TreeNode(postorder[post_right])
@@ -20,9 +24,9 @@ def create_postorder_inorder(postorder, postrange, inorder, inrange):
         i += 1
 
     # generate left node
-    left_inrange = (in_left, i - 1)
+    left_inrange: Tuple[int, int] = (in_left, i - 1)
     left_diff = (i - 1) - in_left
-    left_postrange = (post_left, post_left + left_diff)
+    left_postrange: Tuple[int, int] = (post_left, post_left + left_diff)
     node.left = create_postorder_inorder(
         postorder, left_postrange, inorder, left_inrange
     )
@@ -39,7 +43,9 @@ def create_postorder_inorder(postorder, postrange, inorder, inrange):
 
 
 # https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
-def create_preorder_inorder(preorder, prerange, inorder, inrange):
+def create_preorder_inorder(
+    preorder: List, prerange: Tuple[int, int], inorder: List, inrange: Tuple[int, int]
+):
     pre_left, pre_right = prerange
     if pre_right - pre_left == 0:
         return TreeNode(preorder[pre_right])
@@ -57,15 +63,15 @@ def create_preorder_inorder(preorder, prerange, inorder, inrange):
         i += 1
 
     # get left node
-    left_inorder = (in_left, i - 1)
+    left_inorder: Tuple[int, int] = (in_left, i - 1)
     left_diff = (i - 1) - in_left
-    left_preorder = (pre_left + 1, pre_left + left_diff + 1)
+    left_preorder: Tuple[int, int] = (pre_left + 1, pre_left + left_diff + 1)
     node.left = create_preorder_inorder(preorder, left_preorder, inorder, left_inorder)
 
     # get right node
-    right_inorder = (i + 1, in_right)
+    right_inorder: Tuple[int, int] = (i + 1, in_right)
     right_diff = in_right - (i + 1)
-    right_preorder = (pre_right - right_diff, pre_right)
+    right_preorder: Tuple[int, int] = (pre_right - right_diff, pre_right)
     node.right = create_preorder_inorder(
         preorder, right_preorder, inorder, right_inorder
     )

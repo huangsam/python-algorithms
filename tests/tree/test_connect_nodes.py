@@ -1,18 +1,21 @@
 import pytest
 
-from algorithms.collections.tree import TreeNode
-from algorithms.tree.connect_nodes import connect_nodes_double, connect_nodes_single
+from algorithms.tree.connect_nodes import (
+    NextNode,
+    connect_nodes_double,
+    connect_nodes_single,
+)
 
 
 @pytest.mark.tree
 @pytest.mark.parametrize("func", [connect_nodes_double, connect_nodes_single])
 def test_connect_nodes(func):
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.right = TreeNode(3)
-    root.left.left = TreeNode(4)
-    root.right.left = TreeNode(5)
-    root.right.right = TreeNode(6)
+    root = NextNode(1)
+    root.left = NextNode(2)
+    root.right = NextNode(3)
+    root.left.left = NextNode(4)
+    root.right.left = NextNode(5)
+    root.right.right = NextNode(6)
     func(root)
     assert root.left.next is root.right
     assert root.right.next is None

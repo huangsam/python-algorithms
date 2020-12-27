@@ -1,4 +1,9 @@
-def postorder_recursive(root):
+from typing import Optional
+
+from algorithms.collections.tree import TreeNode
+
+
+def postorder_recursive(root: Optional[TreeNode]):
     if root is None:
         return []
     result = postorder_recursive(root.left)
@@ -8,7 +13,7 @@ def postorder_recursive(root):
 
 
 # https://www.geeksforgeeks.org/iterative-postorder-traversal/
-def postorder_iterative(root):
+def postorder_iterative(root: TreeNode):
     stack = [root]
     scanned = []
     while len(stack) > 0:

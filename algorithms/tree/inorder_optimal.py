@@ -1,18 +1,21 @@
-def rightmost(node):
-    prev = None
+from typing import Optional
+
+from algorithms.collections.tree import TreeNode
+
+
+def _rightmost(node: TreeNode):
     cur = node
-    while cur:
-        prev = cur
+    while cur.right:
         cur = cur.right
-    return prev
+    return cur
 
 
-def inorder_optimal(root):
-    cur = root
+def inorder_optimal(root: TreeNode):
+    cur: Optional[TreeNode] = root
     while cur:
         if cur.left:
             left = cur.left
-            left_r = rightmost(left)
+            left_r = _rightmost(left)
 
             # Avoid dead end
             left_r.right = cur
