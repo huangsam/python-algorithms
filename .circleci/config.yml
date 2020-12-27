@@ -12,13 +12,13 @@ jobs:
           pkg-manager: pip
       - run:
           command: flake8
-          name: Lint
+          name: Run linter
       - run:
           command: mypy algorithms
-          name: Type hinting
+          name: Run type checker
       - run:
           command: pytest
-          name: Test
+          name: Run tests
 
 workflows:
   main:
