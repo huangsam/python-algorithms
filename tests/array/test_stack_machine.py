@@ -19,4 +19,4 @@ def test_stack_machine_pop_by_one():
 @pytest.mark.string
 @pytest.mark.stack
 def test_stack_machine_overflow():
-    assert sm.stack_machine("2" * 32 + "*" * 31) == -1
+    assert sm.stack_machine("2" * 100 + "*" * 99) == -1
