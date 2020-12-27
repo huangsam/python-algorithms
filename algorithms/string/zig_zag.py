@@ -1,11 +1,11 @@
 def zig_zag(content, k):
     """Driver function for zig-zag."""
     frame = [[" "] * len(content) for _ in range(k)]
-    zig_zag_wh(content, frame, 0, 0, direction="down")
+    _zig_zag_wh(content, frame, 0, 0, direction="down")
     return frame
 
 
-def zig_zag_wh(content, frame, x, y, direction="down"):
+def _zig_zag_wh(content, frame, x, y, direction="down"):
     """Helper function for zig zag."""
     xn, yn = len(frame[0]), len(frame)
 
@@ -19,13 +19,13 @@ def zig_zag_wh(content, frame, x, y, direction="down"):
             frame[y][x] = content[x]
             x += 1
             y += 1
-        zig_zag_wh(content, frame, x - 1, y - 1, direction="up")
+        _zig_zag_wh(content, frame, x - 1, y - 1, direction="up")
     else:
         while x < xn and y >= 0:
             frame[y][x] = content[x]
             x += 1
             y -= 1
-        zig_zag_wh(content, frame, x - 1, y + 1, direction="down")
+        _zig_zag_wh(content, frame, x - 1, y + 1, direction="down")
 
 
 def print_frame(frame):

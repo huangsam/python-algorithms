@@ -1,17 +1,17 @@
 def lcs_rec(astr: str, bstr: str):
-    return lcs_wh(astr, len(astr) - 1, bstr, len(bstr) - 1)
+    return _lcs_wh(astr, len(astr) - 1, bstr, len(bstr) - 1)
 
 
-def lcs_wh(astr: str, aind: int, bstr: str, bind: int):
+def _lcs_wh(astr: str, aind: int, bstr: str, bind: int):
     if aind < 0 or bind < 0:
         return 0
 
     if astr[aind] == bstr[bind]:
-        match = 1 + lcs_wh(astr, aind - 1, bstr, bind - 1)
+        match = 1 + _lcs_wh(astr, aind - 1, bstr, bind - 1)
         return match
 
-    alcs = lcs_wh(astr, aind - 1, bstr, bind)
-    blcs = lcs_wh(astr, aind, bstr, bind - 1)
+    alcs = _lcs_wh(astr, aind - 1, bstr, bind)
+    blcs = _lcs_wh(astr, aind, bstr, bind - 1)
     return max(alcs, blcs)
 
 

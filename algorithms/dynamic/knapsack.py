@@ -6,10 +6,10 @@ ItemCache = Dict[Item, int]
 
 
 def knapsack_binary_rec(weight: int, items: ItemList):
-    return knapsack_binary_wh(weight, items, len(items), set(), {})
+    return _knapsack_binary_wh(weight, items, len(items), set(), {})
 
 
-def knapsack_binary_wh(
+def _knapsack_binary_wh(
     weight: int, items: ItemList, n: int, picked: Set, cache: ItemCache
 ):
     result = 0
@@ -23,12 +23,12 @@ def knapsack_binary_wh(
         iw, iv = items[ix]
         if iw <= weight:
             picked.add(ix)
-            used = iv + knapsack_binary_wh(weight - iw, items, n - 1, picked, cache)
-            not_used = knapsack_binary_wh(weight, items, n - 1, picked, cache)
+            used = iv + _knapsack_binary_wh(weight - iw, items, n - 1, picked, cache)
+            not_used = _knapsack_binary_wh(weight, items, n - 1, picked, cache)
             result = max(result, used, not_used)
             picked.remove(ix)
         else:
-            not_used = knapsack_binary_wh(weight, items, n - 1, picked, cache)
+            not_used = _knapsack_binary_wh(weight, items, n - 1, picked, cache)
             result = max(result, not_used)
     cache[(n, weight)] = result
     return result

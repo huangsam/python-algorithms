@@ -1,18 +1,18 @@
 def edit_dist_rec(s1: str, s2: str):
-    return edit_dist_wh(s1, len(s1), s2, len(s2))
+    return _edit_dist_wh(s1, len(s1), s2, len(s2))
 
 
-def edit_dist_wh(s1: str, i1: int, s2: str, i2: int):
+def _edit_dist_wh(s1: str, i1: int, s2: str, i2: int):
     if i1 == 0:
         return i2
     if i2 == 0:
         return i1
     if s1[i1 - 1] == s2[i2 - 1]:
-        return edit_dist_wh(s1, i1 - 1, s2, i2 - 1)
+        return _edit_dist_wh(s1, i1 - 1, s2, i2 - 1)
     return 1 + min(
-        edit_dist_wh(s1, i1 - 1, s2, i2),
-        edit_dist_wh(s1, i1, s2, i2 - 1),
-        edit_dist_wh(s1, i1 - 1, s2, i2 - 1),
+        _edit_dist_wh(s1, i1 - 1, s2, i2),
+        _edit_dist_wh(s1, i1, s2, i2 - 1),
+        _edit_dist_wh(s1, i1 - 1, s2, i2 - 1),
     )
 
 
