@@ -2,7 +2,7 @@ from typing import Any, Optional
 
 
 class ListNode:
-    """Linked list has a value and node references."""
+    """Linked list node has a value and node references."""
 
     def __init__(self, value: Any):
         self.value = value

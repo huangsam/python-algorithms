@@ -2,7 +2,7 @@ from typing import Any
 
 
 class TreeNode:
-    """Binary tree has a value and node references."""
+    """Binary tree node has a value and node references."""
 
     def __init__(self, value: Any):
         self.value = value
