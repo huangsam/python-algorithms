@@ -1,4 +1,9 @@
-def preorder_recursive(root):
+from typing import Optional
+
+from algorithms.collections.tree import TreeNode
+
+
+def preorder_recursive(root: Optional[TreeNode]):
     if root is None:
         return []
     result = [root.value]
@@ -8,7 +13,7 @@ def preorder_recursive(root):
 
 
 # https://www.geeksforgeeks.org/iterative-preorder-traversal/
-def preorder_iterative(root):
+def preorder_iterative(root: TreeNode):
     visited = []
     s = [root]
     while len(s) > 0:

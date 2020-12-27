@@ -1,14 +1,19 @@
-def depth(root):
+from typing import Optional
+
+from algorithms.collections.tree import TreeNode
+
+
+def _depth(root: Optional[TreeNode]):
     if root is None:
         return 0
-    return 1 + max(depth(root.left), depth(root.right))
+    return 1 + max(_depth(root.left), _depth(root.right))
 
 
-def is_balanced(root):
+def is_balanced(root: Optional[TreeNode]):
     if root is None:
         return True
-    left_depth = depth(root.left)
-    right_depth = depth(root.right)
+    left_depth = _depth(root.left)
+    right_depth = _depth(root.right)
     return (
         abs(left_depth - right_depth) <= 1
         and is_balanced(root.left)
@@ -16,7 +21,7 @@ def is_balanced(root):
     )
 
 
-def is_balanced_optimal(root):
+def is_balanced_optimal(root: Optional[TreeNode]):
     if root is None:
         return (True, 0)
     left_b, left_h = is_balanced_optimal(root.left)
