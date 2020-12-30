@@ -65,15 +65,15 @@ def num_to_word(n):
         word_list.appendleft(num_to_word(n % 1000))
 
     # Handle remaining digit groups
-    current = n // 1000
+    n_head = n // 1000
     i = 0
-    while current > 0:
+    while n_head > 0:
         if i > len(_THOUSANDS) - 1:
             raise ValueError("too big for function to process")
-        current_digits = current % 1000
+        current_digits = n_head % 1000
         if current_digits > 0:
             word_list.appendleft(f"{num_to_word(current_digits)} {_THOUSANDS[i]}")
-        current //= 1000
+        n_head //= 1000
         i += 1
 
     return " ".join(word_list)
