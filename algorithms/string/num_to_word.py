@@ -70,9 +70,8 @@ def num_to_word(n):
     while n_head > 0:
         if i > len(_THOUSANDS) - 1:
             raise ValueError("too big for function to process")
-        current_digits = n_head % 1000
-        if current_digits > 0:
-            word_list.appendleft(f"{num_to_word(current_digits)} {_THOUSANDS[i]}")
+        if n_head % 1000 > 0:
+            word_list.appendleft(f"{num_to_word(n_head % 1000)} {_THOUSANDS[i]}")
         n_head //= 1000
         i += 1
 
