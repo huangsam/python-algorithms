@@ -12,6 +12,7 @@ from algorithms.string import num_to_word as word
         (9, "nine"),
         (10, "ten"),
         (19, "nineteen"),
+        (20, "twenty"),
         (100, "one hundred"),
         (200, "two hundred"),
         (202, "two hundred two"),

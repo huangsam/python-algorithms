@@ -37,13 +37,17 @@ def num_to_word(n):
         "ninety",
     ]
     if n < 0:
-        raise ValueError("must be a positive integer")
+        raise ValueError("cannot be a negative integer")
     if n < 10:
         return single[n]
     if n < 20:
         return double[n % 10]
     if n < 100:
-        return tens[n // 10] + " " + num_to_word(n % 10)
+        prefix = tens[n // 10]
+        if n % 10 == 0:
+            return prefix
+        else:
+            return f"{prefix} {num_to_word(n % 10)}"
     if n < 1000:
         prefix = single[n // 100]
         if n % 100 == 0:
