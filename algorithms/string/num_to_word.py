@@ -39,7 +39,7 @@ def num_to_word(n):
     # Handle bad inputs
     if n <= -1:
         raise ValueError("integer cannot be negative")
-    elif n >= 1000000000000:
+    elif n >= 10 ** 12:
         raise ValueError("integer is too big")
 
     # Handle a single digit group
@@ -68,8 +68,6 @@ def num_to_word(n):
     n_head = n // 1000
     i = 0
     while n_head > 0:
-        if i > len(_THOUSANDS) - 1:
-            raise ValueError("too big for function to process")
         if n_head % 1000 > 0:
             word_list.appendleft(f"{num_to_word(n_head % 1000)} {_THOUSANDS[i]}")
         n_head //= 1000
