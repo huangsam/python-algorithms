@@ -1,11 +1,14 @@
+from typing import List
+
+
 # https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/
-def n_queens(board, col):
+def n_queens(board: List[List[int]], col: int):
     if col >= len(board):
         return True
 
     # Try all rows in current column
     for row in range(len(board)):
-        if is_safe(board, row, col) is True:
+        if _is_safe(board, row, col) is True:
             board[row][col] = 1
             if n_queens(board, col + 1) is True:
                 return True
@@ -13,7 +16,7 @@ def n_queens(board, col):
     return False
 
 
-def is_safe(board, row, col):
+def _is_safe(board: List[List[int]], row: int, col: int):
     for i in range(len(board)):
         if board[row][i] == 1:
             return False
