@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.dynamic.pair_sum import pair_sum
+from algorithms.array.pair_sum import pair_sum
 
 
 @pytest.fixture(scope="function")
