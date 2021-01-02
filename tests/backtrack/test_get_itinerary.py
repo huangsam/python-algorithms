@@ -7,20 +7,22 @@ from algorithms.backtrack.get_itinerary import get_itinerary
 @pytest.mark.backtrack
 @pytest.mark.parametrize(
     "start, flights, expected",
+    # fmt: off
     [
-        (
-            "YUL",
+        ("YUL",
             [("HNL", "AKL"), ("YUL", "ORD"), ("ORD", "SFO"), ("SFO", "HNL")],
-            [("YUL", "ORD"), ("ORD", "SFO"), ("SFO", "HNL"), ("HNL", "AKL")],
-        ),
-        ("SFO", [("SFO", "HNL"), ("HNL", "SFO")], [("SFO", "HNL"), ("HNL", "SFO")]),
-        ("HNL", [("SFO", "HNL"), ("HNL", "SFO")], [("HNL", "SFO"), ("SFO", "HNL")]),
-        (
-            "HNL",
+            [("YUL", "ORD"), ("ORD", "SFO"), ("SFO", "HNL"), ("HNL", "AKL")]),
+        ("SFO",
+            [("SFO", "HNL"), ("HNL", "SFO")],
+            [("SFO", "HNL"), ("HNL", "SFO")]),
+        ("HNL",
+            [("SFO", "HNL"), ("HNL", "SFO")],
+            [("HNL", "SFO"), ("SFO", "HNL")]),
+        ("HNL",
             [("SFO", "HNL"), ("HNL", "SFO"), ("HNL", "ORD")],
-            [("HNL", "SFO"), ("SFO", "HNL"), ("HNL", "ORD")],
-        ),
+            [("HNL", "SFO"), ("SFO", "HNL"), ("HNL", "ORD")]),
     ],
+    # fmt: on
 )
 def test_get_itinerary_good(start, flights, expected):
     result = get_itinerary(start, flights)
