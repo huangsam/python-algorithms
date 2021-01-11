@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/power-set/
-def powerset(items):
+def power_set(items):
     N = len(items)
     # run 2 ** N possible combinations
     for i in range(2 ** N):
