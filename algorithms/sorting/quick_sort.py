@@ -6,7 +6,7 @@ def sort(arr, iterative=True):
         quicksort_recursive(arr, 0, len(arr) - 1)
 
 
-def partition_lomuto(arr, lo, hi):
+def _partition_lomuto(arr, lo, hi):
     i = lo
     pivot = arr[hi]
     for j in range(lo, hi):
@@ -22,13 +22,13 @@ def quicksort_iterative(arr, lo, hi):
     while len(stack) > 0:
         lo, hi = stack.pop()
         if lo < hi:
-            p = partition_lomuto(arr, lo, hi)
+            p = _partition_lomuto(arr, lo, hi)
             stack.append((lo, p - 1))
             stack.append((p + 1, hi))
 
 
 def quicksort_recursive(arr, lo, hi):
     if lo < hi:
-        p = partition_lomuto(arr, lo, hi)
+        p = _partition_lomuto(arr, lo, hi)
         quicksort_recursive(arr, lo, p - 1)
         quicksort_recursive(arr, p + 1, hi)
