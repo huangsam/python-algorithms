@@ -50,7 +50,7 @@ def num_to_word(n):
         if n % 10 == 0:
             return prefix
         else:
-            return f"{prefix} {num_to_word(n % 10)}"
+            return f"{prefix} {_ANSWERS[n % 10]}"
     elif n < 1000:
         prefix = _ANSWERS[n // 100]
         if n % 100 == 0:
