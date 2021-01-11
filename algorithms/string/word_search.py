@@ -1,13 +1,13 @@
 def naive(content: str, pattern: str):
-    plen = len(pattern)
-    clen = len(content)
-    if plen == 0:
+    p_len = len(pattern)
+    c_len = len(content)
+    if p_len == 0:
         return -1
-    if clen < plen:
+    if c_len < p_len:
         return -1
-    for ix in range(plen, len(content) + 1):
-        if content[ix - plen : ix] == pattern:
-            return ix - plen
+    for ix in range(p_len, len(content) + 1):
+        if content[ix - p_len : ix] == pattern:
+            return ix - p_len
     return -1
 
 
