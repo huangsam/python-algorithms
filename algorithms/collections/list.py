@@ -11,3 +11,14 @@ class ListNode:
 
     def __lt__(self, other):
         return self.value < other.value
+
+
+def list_size(lst: ListNode):
+    """Get size of list node."""
+    size = 0
+    while True:
+        if not lst.next_node:
+            break
+        lst = lst.next_node
+        size += 1
+    return size

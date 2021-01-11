@@ -1,5 +1,4 @@
-from algorithms.collections.list import ListNode
-from tests.helpers import list_size
+from algorithms.collections.list import ListNode, list_size
 
 
 # https://www.geeksforgeeks.org/sum-of-two-linked-lists/
