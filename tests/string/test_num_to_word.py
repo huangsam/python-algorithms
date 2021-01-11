@@ -7,6 +7,7 @@ from algorithms.string import num_to_word as word
 @pytest.mark.string
 @pytest.mark.parametrize(
     "a, o",
+    # fmt: off
     [
         (0, "zero"),
         (9, "nine"),
@@ -25,8 +26,10 @@ from algorithms.string import num_to_word as word
         (101010, "one hundred one thousand ten"),
         (10000001, "ten million one"),
         (12000034, "twelve million thirty four"),
+        (123456789, "one hundred twenty three million four hundred fifty six thousand seven hundred eighty nine"),
         (10 ** 9 + 1, "one billion one"),
     ],
+    # fmt: on
 )
 def test_num_to_word_good(a, o):
     assert word.num_to_word(a) == o
