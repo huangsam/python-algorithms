@@ -1,6 +1,6 @@
 # https://www.geeksforgeeks.org/sort-array-according-order-defined-another-array/
 def relative_sort(a1, a2):
-    a1_set = get_count(a1)
+    a1_set = _get_count(a1)
     result = []
     for e in a2:
         if e in a1_set:
@@ -11,7 +11,7 @@ def relative_sort(a1, a2):
     return result
 
 
-def get_count(a):
+def _get_count(a):
     result = {}
     for e in a:
         if e not in result:

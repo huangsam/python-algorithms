@@ -7,10 +7,10 @@ def merge_sort(arr: List[int]):
     middle = len(arr) // 2
     l_merged = merge_sort(arr[:middle])
     r_merged = merge_sort(arr[middle:])
-    return merge_arrays(l_merged, r_merged)
+    return _merge_arrays(l_merged, r_merged)
 
 
-def merge_arrays(arr1: List[int], arr2: List[int]):
+def _merge_arrays(arr1: List[int], arr2: List[int]):
     result = []
     a1, a2 = 0, 0
     while a1 < len(arr1) and a2 < len(arr2):
