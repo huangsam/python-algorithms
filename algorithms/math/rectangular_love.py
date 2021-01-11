@@ -5,12 +5,12 @@ class Rectangle:
 
 
 def rectangular_love(r1, r2):
-    y_coords = (r1.bottom, r1.top, r2.bottom, r2.top)
-    x_coords = (r1.left, r1.right, r2.left, r2.right)
-    return has_overlap(*y_coords) and has_overlap(*x_coords)
+    y_coord = (r1.bottom, r1.top, r2.bottom, r2.top)
+    x_coord = (r1.left, r1.right, r2.left, r2.right)
+    return _has_overlap(*y_coord) and _has_overlap(*x_coord)
 
 
-def has_overlap(a_min, a_max, b_min, b_max):
+def _has_overlap(a_min, a_max, b_min, b_max):
     if (a_min > b_max) or (a_max < b_min):
         return False
     return True
