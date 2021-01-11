@@ -5,11 +5,11 @@ def count_islands(grid):
         for j in range(len(grid[0])):
             if grid[i][j] == 1:
                 result += 1
-                visit_island(i, j, grid)
+                _visit_island(i, j, grid)
     return result
 
 
-def visit_island(i, j, grid):
+def _visit_island(i, j, grid):
     if i < 0 or j < 0:
         return
     elif i >= len(grid) or j >= len(grid[0]):
@@ -17,11 +17,11 @@ def visit_island(i, j, grid):
     elif grid[i][j] == 0:
         return
     grid[i][j] = 0
-    visit_island(i - 1, j, grid)
-    visit_island(i + 1, j, grid)
-    visit_island(i, j - 1, grid)
-    visit_island(i, j + 1, grid)
-    visit_island(i - 1, j - 1, grid)
-    visit_island(i + 1, j + 1, grid)
-    visit_island(i - 1, j + 1, grid)
-    visit_island(i + 1, j - 1, grid)
+    _visit_island(i - 1, j, grid)
+    _visit_island(i + 1, j, grid)
+    _visit_island(i, j - 1, grid)
+    _visit_island(i, j + 1, grid)
+    _visit_island(i - 1, j - 1, grid)
+    _visit_island(i + 1, j + 1, grid)
+    _visit_island(i - 1, j + 1, grid)
+    _visit_island(i + 1, j - 1, grid)
