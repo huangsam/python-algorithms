@@ -3,13 +3,6 @@ from typing import Optional
 from algorithms.collections.tree import TreeNode
 
 
-def _rightmost(node: TreeNode):
-    cur = node
-    while cur.right:
-        cur = cur.right
-    return cur
-
-
 def inorder_optimal(root: TreeNode):
     cur: Optional[TreeNode] = root
     while cur:
@@ -27,3 +20,10 @@ def inorder_optimal(root: TreeNode):
         else:
             yield cur.value
             cur = cur.right
+
+
+def _rightmost(node: TreeNode):
+    cur = node
+    while cur.right:
+        cur = cur.right
+    return cur
