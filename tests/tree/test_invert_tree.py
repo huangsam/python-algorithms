@@ -1,6 +1,5 @@
 import pytest
 
-from algorithms.collections.tree import TreeNode
 from algorithms.tree.inorder import inorder_recursive
 from algorithms.tree.invert_tree import invert_tree
 
