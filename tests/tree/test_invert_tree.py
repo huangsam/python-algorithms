@@ -6,7 +6,6 @@ from algorithms.tree.invert_tree import invert_tree
 
 @pytest.mark.tree
 def test_invert_tree(simple_tree):
-    original_inorder = [1, 3, 2, 5, 4, 6]
-    assert inorder_recursive(simple_tree) == original_inorder
+    original_inorder = inorder_recursive(simple_tree)
     invert_tree(simple_tree)
     assert inorder_recursive(simple_tree) == list(reversed(original_inorder))
