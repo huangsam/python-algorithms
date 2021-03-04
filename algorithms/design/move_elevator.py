@@ -1,5 +1,11 @@
+from enum import Enum, auto
 from heapq import heappop, heappush
 from typing import Tuple
+
+
+class Direction(Enum):
+    UP = auto()
+    DOWN = auto()
 
 
 def move_elevator(current_level, op_queue, direction):
@@ -32,17 +38,17 @@ def move_elevator(current_level, op_queue, direction):
 
 def _get_bound(current_level, op_queue, direction) -> Tuple[int, int]:
     """Calculate boundary given remaining operations."""
-    if direction.upper() == "UP":
+    if direction == Direction.UP:
         max_level = _get_max_level(op_queue)
         return current_level, max_level
-    elif direction.upper() == "DOWN":
+    else:
         min_level = _get_min_level(op_queue)
         return min_level, current_level
 
 
 def _valid(pair, direction) -> bool:
     """Determine whether pair is valid given direction."""
-    if direction.upper() == "UP":
+    if direction == Direction.UP:
         return pair[0] < pair[1]
     else:
         return pair[0] > pair[1]
@@ -70,15 +76,15 @@ def _spans(bound, pair) -> bool:
     return bl <= pl <= br and bl <= pr <= br
 
 
-def _opposite(direction) -> str:
+def _opposite(direction) -> Enum:
     """Simple toggle for direction."""
-    return "DOWN" if direction.upper() == "UP" else "UP"
+    return Direction.DOWN if direction == Direction.UP else Direction.UP
 
 
 def main():
     op_queue = {(4, 8), (7, 4), (6, 3), (8, 9), (1, 2)}
     current_level = 5
-    direction = "UP"
+    direction = Direction.UP
     move_elevator(current_level, op_queue, direction)
 
 
