@@ -1,13 +1,11 @@
-from algorithms.types import Comparable
+from typing import Any
 
 
-def binary_search_recursive(arr: list[Comparable], t: Comparable):
+def binary_search_recursive(arr: list[Any], t: Any):
     return _binary_search_recursive_work(arr, t, 0, len(arr) - 1)
 
 
-def _binary_search_recursive_work(
-    arr: list[Comparable], t: Comparable, lo: int, hi: int
-):
+def _binary_search_recursive_work(arr: list[Any], t: Any, lo: int, hi: int):
     if lo > hi:
         return -1
     mid = (lo + hi) // 2
@@ -20,7 +18,7 @@ def _binary_search_recursive_work(
 
 
 # https://en.wikipedia.org/wiki/Binary_search_algorithm
-def binary_search_iterative(arr: list[Comparable], t: Comparable):
+def binary_search_iterative(arr: list[Any], t: Any):
     lo, hi = 0, len(arr) - 1
     while lo <= hi:
         mid = (lo + hi) // 2
