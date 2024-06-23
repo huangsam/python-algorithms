@@ -39,7 +39,7 @@ def num_to_word(n):
     # Handle bad inputs
     if n <= -1:
         raise ValueError("integer cannot be negative")
-    elif n >= 10 ** 12:
+    elif n >= 10**12:
         raise ValueError("integer is too big")
 
     # Handle a single digit group

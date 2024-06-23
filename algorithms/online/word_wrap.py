@@ -1,8 +1,5 @@
-from typing import List
-
-
 # https://algorithms.tutorialhorizon.com/text-justification-problem/
-def word_wrap(words: List[str], length: int):
+def word_wrap(words: list[str], length: int):
     if len(words) == 0:
         return ""
 

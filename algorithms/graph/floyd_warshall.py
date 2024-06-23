@@ -1,8 +1,5 @@
-from typing import List
-
-
 # https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/
-def floyd_warshall(graph: List[List[int]]):
+def floyd_warshall(graph: list[list[int]]):
     V = len(graph)
     dist = [i[:] for i in graph]
     for k in range(V):
@@ -13,7 +10,7 @@ def floyd_warshall(graph: List[List[int]]):
 
 
 # https://www.geeksforgeeks.org/transitive-closure-of-a-graph/
-def transitive_closure(graph: List[List[int]]):
+def transitive_closure(graph: list[list[int]]):
     V = len(graph)
     reach = [i[:] for i in graph]
     for k in range(V):

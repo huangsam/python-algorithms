@@ -1,10 +1,9 @@
 from collections import deque
-from typing import Deque, List, Optional
 
 from algorithms.collections.tree import TreeNode
 
 
-def inorder_recursive(root: Optional[TreeNode]):
+def inorder_recursive(root: TreeNode | None):
     if root is None:
         return []
     result = inorder_recursive(root.left)
@@ -15,9 +14,9 @@ def inorder_recursive(root: Optional[TreeNode]):
 
 # https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
 def inorder_iterative(root: TreeNode):
-    visited: List[TreeNode] = []
-    c: Optional[TreeNode] = root
-    s: Deque[TreeNode] = deque()
+    visited: list[TreeNode] = []
+    c: TreeNode | None = root
+    s: deque[TreeNode] = deque()
     while c is not None or len(s) > 0:
         while c is not None:
             s.append(c)

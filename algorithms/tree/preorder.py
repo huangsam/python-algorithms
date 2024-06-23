@@ -1,9 +1,7 @@
-from typing import Optional
-
 from algorithms.collections.tree import TreeNode
 
 
-def preorder_recursive(root: Optional[TreeNode]):
+def preorder_recursive(root: TreeNode | None):
     if root is None:
         return []
     result = [root.value]

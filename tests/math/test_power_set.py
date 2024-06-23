@@ -8,4 +8,4 @@ from algorithms.math.power_set import power_set
 def test_power_set(size):
     vals = tuple([val for val in range(size)])
     result = list(power_set(vals))
-    assert len(result) == 2 ** size
+    assert len(result) == 2**size

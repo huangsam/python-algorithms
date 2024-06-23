@@ -1,7 +1,4 @@
-from typing import List
-
-
-def rod_cutting_rec(n: int, prices: List[int]):
+def rod_cutting_rec(n: int, prices: list[int]):
     if n == 0:
         return 0
     if n == 1:
@@ -15,7 +12,7 @@ def rod_cutting_rec(n: int, prices: List[int]):
 
 
 # https://algorithms.tutorialhorizon.com/dynamic-programming-rod-cutting-problem/
-def rod_cutting_dp(n: int, prices: List[int]):
+def rod_cutting_dp(n: int, prices: list[int]):
     revenue = [0] * max(2, n + 1)
     revenue[1] = prices[0]
     if n < 2:

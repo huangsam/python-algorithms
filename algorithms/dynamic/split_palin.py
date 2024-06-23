@@ -1,5 +1,3 @@
-from typing import Dict
-
 from algorithms.constants import MAX_INT
 
 
@@ -8,7 +6,7 @@ def is_palin(seq: str):
 
 
 # https://algorithms.tutorialhorizon.com/dynamic-programming-split-the-string-into-minimum-number-of-palindromes/
-def split_palin(seq: str, cache: Dict[str, int]):
+def split_palin(seq: str, cache: dict[str, int]):
     if seq in cache:
         return cache[seq]
     if is_palin(seq):

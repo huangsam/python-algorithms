@@ -1,10 +1,8 @@
-from typing import Optional
-
 from algorithms.collections.tree import TreeNode
 
 
 def inorder_optimal(root: TreeNode):
-    cur: Optional[TreeNode] = root
+    cur: TreeNode | None = root
     while cur:
         if cur.left:
             left = cur.left

@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 class Node:
     """A set of trie children exist down the line."""
 
@@ -30,7 +27,7 @@ class Trie:
         node.is_complete = True
 
     # Optimized to account for rework
-    def search(self, key: str, prev_node: Optional[Node] = None):
+    def search(self, key: str, prev_node: Node | None = None):
         node = prev_node if prev_node is not None else self.node
         for letter in key:
             if letter not in node.children:

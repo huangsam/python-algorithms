@@ -1,9 +1,7 @@
-from typing import Optional
-
 from algorithms.collections.tree import TreeNode
 
 
-def postorder_recursive(root: Optional[TreeNode]):
+def postorder_recursive(root: TreeNode | None):
     if root is None:
         return []
     result = postorder_recursive(root.left)

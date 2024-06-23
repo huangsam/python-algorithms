@@ -1,8 +1,5 @@
-from typing import Dict, List
-
-
 # https://www.youtube.com/watch?v=XKu_SEDAykw
-def pair_sum(arr: List[int], target: int):
+def pair_sum(arr: list[int], target: int):
     """Return pair of array values that yield target sum.
 
     Args:
@@ -12,7 +9,7 @@ def pair_sum(arr: List[int], target: int):
     Returns:
         dict: "Set" of pairs that were found.
     """
-    ind_to_diff: Dict[int, int] = {}
+    ind_to_diff: dict[int, int] = {}
     pairs = {}
     for val in arr:
         if val in ind_to_diff:

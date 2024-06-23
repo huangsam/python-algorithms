@@ -1,6 +1,3 @@
-from typing import Dict
-
-
 def fibonacci_recursive(n: int):
     if n == 0:
         return 0
@@ -51,7 +48,7 @@ def fibonacci_dp_top(n: int):
     return _fibonacci_dp_top_work(n, {0: 0, 1: 1})
 
 
-def _fibonacci_dp_top_work(n: int, mem: Dict[int, int]):
+def _fibonacci_dp_top_work(n: int, mem: dict[int, int]):
     if n in mem:
         return mem[n]
     mem[n] = _fibonacci_dp_top_work(n - 1, mem) + _fibonacci_dp_top_work(n - 2, mem)

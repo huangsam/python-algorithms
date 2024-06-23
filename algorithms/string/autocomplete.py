@@ -1,10 +1,8 @@
-from typing import List
-
 from algorithms.collections.trie import Trie
 
 
 # https://www.geeksforgeeks.org/auto-complete-feature-using-trie/
-def autocomplete(s: str, queries: List[str]):
+def autocomplete(s: str, queries: list[str]):
     trie = Trie()
     for query in queries:
         trie.insert(query)

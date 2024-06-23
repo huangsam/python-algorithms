@@ -1,9 +1,7 @@
-from typing import Optional
-
 from algorithms.collections.tree import TreeNode
 
 
-def invert_tree(root: Optional[TreeNode]):
+def invert_tree(root: TreeNode | None):
     if not root:
         return
     invert_tree(root.left)

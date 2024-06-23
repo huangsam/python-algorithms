@@ -1,6 +1,3 @@
-from typing import Dict
-
-
 def factorial_recursive(n: int):
     if n < 1:
         return 1
@@ -30,7 +27,7 @@ def factorial_dp_top(n: int):
     return _factorial_dp_top_work(n, {0: 1, 1: 1})
 
 
-def _factorial_dp_top_work(n: int, answers: Dict[int, int]):
+def _factorial_dp_top_work(n: int, answers: dict[int, int]):
     if n in answers:
         return answers[n]
     answers[n] = n * _factorial_dp_top_work(n - 1, answers)

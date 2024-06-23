@@ -1,6 +1,4 @@
 # https://www.geeksforgeeks.org/check-binary-tree-contains-duplicate-subtrees-size-2/
-from typing import Optional
-
 from algorithms.collections.tree import TreeNode
 
 
@@ -9,7 +7,7 @@ def duplicate_subtree(root: TreeNode):
     return answer
 
 
-def _duplicate_subtree_work(root: Optional[TreeNode]):
+def _duplicate_subtree_work(root: TreeNode | None):
     if root is None:
         return "", set(), False
 

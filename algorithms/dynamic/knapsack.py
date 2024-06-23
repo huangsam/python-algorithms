@@ -1,8 +1,6 @@
-from typing import Dict, List, Set, Tuple
-
-Item = Tuple[int, int]
-ItemList = List[Item]
-ItemCache = Dict[Item, int]
+Item = tuple[int, int]
+ItemList = list[Item]
+ItemCache = dict[Item, int]
 
 
 def knapsack_binary_rec(weight: int, items: ItemList):
@@ -10,7 +8,7 @@ def knapsack_binary_rec(weight: int, items: ItemList):
 
 
 def _knapsack_binary_wh(
-    weight: int, items: ItemList, n: int, picked: Set, cache: ItemCache
+    weight: int, items: ItemList, n: int, picked: set, cache: ItemCache
 ):
     result = 0
     if n == 0 or weight == 0:

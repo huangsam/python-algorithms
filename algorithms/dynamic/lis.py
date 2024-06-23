@@ -1,8 +1,5 @@
-from typing import List
-
-
 # https://algorithms.tutorialhorizon.com/dynamic-programming-longest-increasing-subsequence/
-def lis(arr: List[int]):
+def lis(arr: list[int]):
     longest = [1] * len(arr)
     for i in range(1, len(arr)):
         for j in range(i):

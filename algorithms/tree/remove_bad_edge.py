@@ -1,21 +1,19 @@
-from typing import Optional, Set
-
 from algorithms.collections.tree import TreeNode
 
 
 def remove_bad_edge(root: TreeNode):
-    seen: Set = set()
-    cur: Optional[TreeNode] = root
-    par: Optional[TreeNode] = None
-    direction: Optional[str] = None
+    seen: set = set()
+    cur: TreeNode | None = root
+    par: TreeNode | None = None
+    direction: str | None = None
     _remove_bad_edge_work(cur, par, direction, seen)
 
 
 def _remove_bad_edge_work(
-    cur: Optional[TreeNode],
-    par: Optional[TreeNode],
-    direction: Optional[str],
-    seen: Set,
+    cur: TreeNode | None,
+    par: TreeNode | None,
+    direction: str | None,
+    seen: set,
 ):
     if cur is None:
         return

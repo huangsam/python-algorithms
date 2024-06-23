@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any
 
 
 class ListNode:
@@ -6,8 +6,8 @@ class ListNode:
 
     def __init__(self, value: Any):
         self.value = value
-        self.next_node: Optional[ListNode] = None
-        self.prev_node: Optional[ListNode] = None
+        self.next_node: ListNode | None = None
+        self.prev_node: ListNode | None = None
 
     def __lt__(self, other):
         return self.value < other.value

@@ -1,6 +1,5 @@
 from enum import Enum, auto
 from heapq import heappop, heappush
-from typing import Tuple
 
 
 class Direction(Enum):
@@ -36,7 +35,7 @@ def move_elevator(current_level, op_queue, direction):
             move_elevator(left, op_queue, _opposite(direction))
 
 
-def _get_bound(current_level, op_queue, direction) -> Tuple[int, int]:
+def _get_bound(current_level, op_queue, direction) -> tuple[int, int]:
     """Calculate boundary given remaining operations."""
     if direction == Direction.UP:
         max_level = _get_max_level(op_queue)

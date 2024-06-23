@@ -1,8 +1,5 @@
-from typing import List
-
-
 # https://algorithms.tutorialhorizon.com/dynamic-programming-maximum-size-square-sub-matrix-with-all-1s/
-def max_square(matrix: List[List[int]]):
+def max_square(matrix: list[list[int]]):
     m, n = len(matrix), len(matrix[0])
     size = [[0] * n for _ in range(m)]
     for i in range(m):

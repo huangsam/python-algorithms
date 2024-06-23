@@ -1,4 +1,4 @@
-from typing import Any, List, Optional
+from typing import Any
 
 from algorithms.collections.tree import TreeNode
 
@@ -6,12 +6,12 @@ from algorithms.collections.tree import TreeNode
 class NextNode(TreeNode):
     def __init__(self, value: Any):
         super().__init__(value)
-        self.next: Optional[NextNode] = None
+        self.next: NextNode | None = None
 
 
 def connect_nodes_double(root: NextNode):
-    cur_nodes: List[NextNode] = [root]
-    next_nodes: List[NextNode] = []
+    cur_nodes: list[NextNode] = [root]
+    next_nodes: list[NextNode] = []
     while len(cur_nodes) > 0 or len(next_nodes) > 0:
         prev_n = None
         while len(cur_nodes) > 0:
@@ -27,7 +27,7 @@ def connect_nodes_double(root: NextNode):
 
 # https://www.geeksforgeeks.org/connect-nodes-level-level-order-traversal/
 def connect_nodes_single(root: NextNode):
-    queue: List[Optional[NextNode]] = [root, None]
+    queue: list[NextNode | None] = [root, None]
     while len(queue) > 0:
         n = queue.pop(0)
         if n:

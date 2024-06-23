@@ -46,4 +46,4 @@ def test_num_to_word_negative():
 @pytest.mark.string
 def test_num_to_word_overflow():
     with pytest.raises(ValueError):
-        word.num_to_word(10 ** 20)
+        word.num_to_word(10**20)

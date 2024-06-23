@@ -1,10 +1,9 @@
 import math
-from typing import Optional
 
 from algorithms.collections.tree import TreeNode
 
 
-def is_bst(node: Optional[TreeNode]):
+def is_bst(node: TreeNode | None):
     if node is None:
         return True
     if node.left and _get_max(node.left) > node.value:
@@ -31,7 +30,7 @@ def is_bst_optimal(node: TreeNode):
     return _is_bst_util(node, -math.inf, math.inf)
 
 
-def _is_bst_util(node: Optional[TreeNode], min_val: float, max_val: float):
+def _is_bst_util(node: TreeNode | None, min_val: float, max_val: float):
     if node is None:
         return True
     if node.value < min_val or node.value > max_val:

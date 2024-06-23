@@ -1,15 +1,13 @@
-from typing import Optional
-
 from algorithms.collections.tree import TreeNode
 
 
-def _depth(root: Optional[TreeNode]):
+def _depth(root: TreeNode | None):
     if root is None:
         return 0
     return 1 + max(_depth(root.left), _depth(root.right))
 
 
-def is_balanced(root: Optional[TreeNode]):
+def is_balanced(root: TreeNode | None):
     if root is None:
         return True
     left_depth = _depth(root.left)
@@ -21,7 +19,7 @@ def is_balanced(root: Optional[TreeNode]):
     )
 
 
-def is_balanced_optimal(root: Optional[TreeNode]):
+def is_balanced_optimal(root: TreeNode | None):
     if root is None:
         return True, 0
     left_b, left_h = is_balanced_optimal(root.left)

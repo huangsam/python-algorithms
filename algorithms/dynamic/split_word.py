@@ -1,10 +1,8 @@
-from typing import Dict
-
 NOT_FOUND = "N/A"
 
 
 # https://algorithms.tutorialhorizon.com/the-word-break-problem/
-def split_word(seq: str, book: str, cache: Dict[str, str]):
+def split_word(seq: str, book: str, cache: dict[str, str]):
     if seq in cache:
         return cache[seq]
     for i in range(1, len(seq)):

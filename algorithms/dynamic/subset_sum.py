@@ -1,7 +1,4 @@
-from typing import Set
-
-
-def subset_sum_rec(nums: Set[int], s: int):
+def subset_sum_rec(nums: set[int], s: int):
     if s < 0:
         return False
     if s == 0:
@@ -15,7 +12,7 @@ def subset_sum_rec(nums: Set[int], s: int):
 
 
 # https://algorithms.tutorialhorizon.com/dynamic-programming-subset-sum-problem/
-def subset_sum_dp(nums: Set[int], s: int):
+def subset_sum_dp(nums: set[int], s: int):
     nlen = len(nums)
     snums = [_ for _ in sorted(nums)]
     using = [[False] * (s + 1) for _ in range(nlen + 1)]
