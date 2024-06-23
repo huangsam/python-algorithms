@@ -7,7 +7,7 @@ def count_unival(root: TreeNode):
 
 
 # https://www.geeksforgeeks.org/find-count-of-singly-subtrees/
-def _count_unival_work(root: TreeNode):
+def _count_unival_work(root: TreeNode | None):
     if root is None:
         return (True, 0)
     elif root.left is None and root.right is None:

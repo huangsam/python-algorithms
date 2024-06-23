@@ -5,9 +5,9 @@ class TreeNode:
     """Binary tree node has a value and node references."""
 
     def __init__(self, value: Any):
-        self.value = value
-        self.left = None
-        self.right = None
+        self.value: Any = value
+        self.left: TreeNode | None = None
+        self.right: TreeNode | None = None
 
     def __lt__(self, other):
         return self.value < other.value

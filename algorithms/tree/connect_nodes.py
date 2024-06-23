@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, cast
 
 from algorithms.collections.tree import TreeNode
 
@@ -9,6 +9,10 @@ class NextNode(TreeNode):
         self.next: NextNode | None = None
 
 
+def next_node(node: TreeNode) -> NextNode:
+    return cast(NextNode, node)
+
+
 def connect_nodes_double(root: NextNode):
     cur_nodes: list[NextNode] = [root]
     next_nodes: list[NextNode] = []
@@ -17,9 +21,9 @@ def connect_nodes_double(root: NextNode):
         while len(cur_nodes) > 0:
             n = cur_nodes.pop(0)
             if n.right:
-                next_nodes.append(n.right)
+                next_nodes.append(next_node(n.right))
             if n.left:
-                next_nodes.append(n.left)
+                next_nodes.append(next_node(n.left))
             n.next = prev_n
             prev_n = n
         cur_nodes, next_nodes = next_nodes, cur_nodes
@@ -33,8 +37,8 @@ def connect_nodes_single(root: NextNode):
         if n:
             n.next = queue[0]
             if n.left:
-                queue.append(n.left)
+                queue.append(next_node(n.left))
             if n.right:
-                queue.append(n.right)
+                queue.append(next_node(n.right))
         elif len(queue) > 0:
             queue.append(None)

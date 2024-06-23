@@ -2,7 +2,7 @@ from algorithms.collections.tree import TreeNode
 
 
 # https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/
-def create_bst_from_array(arr, left, right):
+def create_bst_from_array(arr: list[int], left: int, right: int) -> TreeNode | None:
     if left > right:
         return None
     middle = (left + right) // 2
