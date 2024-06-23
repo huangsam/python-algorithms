@@ -18,7 +18,7 @@ def depth_sum_stack(a):
         cur_weight = stack.pop()
         cur_list = stack.pop()
         for el in cur_list:
-            if type(el) != list:
+            if isinstance(el, int):
                 result += el * cur_weight
             else:
                 stack.append(el)
