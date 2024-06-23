@@ -4,7 +4,7 @@ from collections import deque
 def depth_sum(a, weight=1):
     result = 0
     for el in a:
-        if type(el) != list:
+        if isinstance(el, int):
             result += el * weight
         else:
             result += depth_sum(el, weight + 1)
