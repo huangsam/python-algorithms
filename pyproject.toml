@@ -8,3 +8,19 @@ force_grid_wrap = 0
 use_parentheses = true
 ensure_newline_before_comments = true
 line_length = 160
+
+[tool.pytest.ini_options]
+addopts = "-q"
+markers = [
+    "array: involves arrays.",
+    "backtrack: involves backtracking.",
+    "dynamic: involves dynamic programming.",
+    "graph: involves graphs.",
+    "list: involves linked lists.",
+    "math: involves mathematics.",
+    "queue: involves queues.",
+    "sorting: involves sorting arrays.",
+    "stack: involves stacks.",
+    "string: involves string manipulation.",
+    "tree: involves trees with nodes.",
+]
