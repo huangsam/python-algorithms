@@ -1,10 +1,6 @@
 import pytest
 
-from algorithms.tree.connect_nodes import (
-    NextNode,
-    connect_nodes_double,
-    connect_nodes_single,
-)
+from algorithms.tree.connect_nodes import NextNode, connect_nodes_double, connect_nodes_single
 
 
 @pytest.mark.tree

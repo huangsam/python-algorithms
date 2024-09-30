@@ -1,9 +1,6 @@
 import pytest
 
-from algorithms.array.binary_search import (
-    binary_search_iterative,
-    binary_search_recursive,
-)
+from algorithms.array.binary_search import binary_search_iterative, binary_search_recursive
 
 
 @pytest.mark.array
