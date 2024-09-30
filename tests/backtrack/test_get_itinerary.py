@@ -3,11 +3,11 @@ import pytest
 from algorithms.backtrack.get_itinerary import get_itinerary
 
 
+# fmt: off
 @pytest.mark.array
 @pytest.mark.backtrack
 @pytest.mark.parametrize(
     "start, flights, expected",
-    # fmt: off
     [
         ("YUL",
             [("HNL", "AKL"), ("YUL", "ORD"), ("ORD", "SFO"), ("SFO", "HNL")],
@@ -22,8 +22,8 @@ from algorithms.backtrack.get_itinerary import get_itinerary
             [("SFO", "HNL"), ("HNL", "SFO"), ("HNL", "ORD")],
             [("HNL", "SFO"), ("SFO", "HNL"), ("HNL", "ORD")]),
     ],
-    # fmt: on
 )
+# fmt: on
 def test_get_itinerary_good(start, flights, expected):
     result = get_itinerary(start, flights)
     if result is None:

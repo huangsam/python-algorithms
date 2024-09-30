@@ -15,7 +15,7 @@ jobs:
       - python/install-packages:
           pkg-manager: pip
       - run:
-          command: flake8
+          command: ruff check algorithms
           name: Run linter
       - run:
           command: mypy algorithms

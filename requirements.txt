@@ -1,5 +1,4 @@
-black
-flake8
 isort
 mypy
+ruff
 pytest==8.2.2

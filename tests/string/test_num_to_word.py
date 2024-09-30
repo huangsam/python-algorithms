@@ -3,11 +3,11 @@ import pytest
 from algorithms.string import num_to_word as word
 
 
+# fmt: off
 @pytest.mark.math
 @pytest.mark.string
 @pytest.mark.parametrize(
     "a, o",
-    # fmt: off
     [
         (0, "zero"),
         (9, "nine"),
@@ -29,8 +29,8 @@ from algorithms.string import num_to_word as word
         (123456789, "one hundred twenty three million four hundred fifty six thousand seven hundred eighty nine"),
         (10 ** 9 + 1, "one billion one"),
     ],
-    # fmt: on
 )
+# fmt: on
 def test_num_to_word_good(a, o):
     assert word.num_to_word(a) == o
 

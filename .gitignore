@@ -1,10 +1,14 @@
-__pycache__/
-.pytest_cache/
-.mypy_cache/
-.cache
-*.py[cod]
-htmlcov/
-.coverage
-venv/
+# System
 .DS_Store
+
+# Python
+*.py[cod]
+.cache
+.coverage
 .idea/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+htmlcov/
+venv/
