@@ -1,6 +1,6 @@
 # python-algorithms
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/huangsam/python-algorithms/ci.yml)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/huangsam/python-algorithms/ci.yml)](https://github.com/huangsam/python-algorithms/actions)
 
 Collection of algorithms and data structures.
 
