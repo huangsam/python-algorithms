@@ -1,6 +1,6 @@
 # python-algorithms
 
-[![CircleCI](https://img.shields.io/circleci/build/github/huangsam/python-algorithms)](https://circleci.com/gh/huangsam/python-algorithms)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/huangsam/python-algorithms/ci.yml)
 
 Collection of algorithms and data structures.
 
