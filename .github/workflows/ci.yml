@@ -33,5 +33,5 @@ jobs:
           mypy algorithms
       - name: Run tests with coverage and pytest
         run: |
-          coverage run -m pytest --source=algorithms
+          coverage run --source=algorithms -m pytest
           coverage report
