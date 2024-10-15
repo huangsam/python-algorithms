@@ -3,14 +3,13 @@ import pytest
 from algorithms.sorting import search_rotated as rotate
 
 
-def _rotate(arr, n):
-    x = arr[::-1]
-    return x[:n][::-1] + x[n:][::-1]
-
-
-def _cycle(n, start=1):
-    arr = [start + 3 * i for i in range(n)]
-    return [_rotate(arr, i) for i in range(n)]
+def _cycle(n: int) -> list[list[int]]:
+    arr: list[int] = [1 + 3 * i for i in range(n)]
+    cycles: list[list[int]] = []
+    for i in range(n):
+        rev = arr[::-1]
+        cycles.append(rev[:i][::-1] + rev[i:][::-1])
+    return cycles
 
 
 @pytest.mark.array

@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
-def search_one(nums, target):
+def search_one(nums: list[int], target: int):
     lo, hi = 0, len(nums) - 1
     while lo <= hi:
         mid = (lo + hi) // 2
@@ -19,7 +19,7 @@ def search_one(nums, target):
 
 
 # https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/
-def search_min(nums):
+def search_min(nums: list[int]):
     lo = 0
     hi = len(nums) - 1
     while lo < hi:
