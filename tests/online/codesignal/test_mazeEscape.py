@@ -3,7 +3,6 @@ import pytest
 from algorithms.online.codesignal.mazeEscape import mazeEscape
 
 
-# fmt: off
 @pytest.mark.graph
 @pytest.mark.parametrize(
     "w, h, dist, impassable",
@@ -46,7 +45,6 @@ from algorithms.online.codesignal.mazeEscape import mazeEscape
             14, 5,
         ]),
     ],
-)
-# fmt: on
+)  # fmt: skip
 def test_escape(w, h, dist, impassable):
     assert mazeEscape(w, h, impassable) == dist
