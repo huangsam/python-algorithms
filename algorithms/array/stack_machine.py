@@ -3,8 +3,8 @@ from collections import deque
 from algorithms.constants import MAX_INT
 
 
-def stack_machine(operation):
-    st = deque()
+def stack_machine(operation: str):
+    st: deque[int] = deque()
     try:
         for ch in operation:
             if ch.isdigit():

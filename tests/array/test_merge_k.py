@@ -19,7 +19,7 @@ from algorithms.array.merge_k import merge_k_heap, merge_k_split, merge_two_arra
     ],
 )
 @pytest.mark.parametrize("func", [merge_k_split, merge_k_heap])
-def test_merge_k(arrays, expected, func):
+def test_merge_k(arrays: list[list[int]], expected: list[int], func):
     result = func(arrays)
     for i, j in zip(result, expected):
         assert i == j

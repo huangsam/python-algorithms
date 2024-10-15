@@ -2,9 +2,9 @@ from collections import deque
 
 
 # https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
-def check_parens(exp):
-    mapping = {")": "(", "}": "{", "]": "["}
-    seen = deque()
+def check_parens(exp: str):
+    mapping: dict[str, str] = {")": "(", "}": "{", "]": "["}
+    seen: deque[str] = deque()
     for ch in exp:
         if ch in mapping.values():
             seen.append(ch)

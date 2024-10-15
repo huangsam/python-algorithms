@@ -13,5 +13,5 @@ from algorithms.array.largest_rect import largest_rect
         ([1, 3, 2, 1, 2], 5),
     ],
 )
-def test_largest_rect(histo, expected):
+def test_largest_rect(histo: list[int], expected: int):
     assert largest_rect(histo) == expected

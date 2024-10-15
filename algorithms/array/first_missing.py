@@ -1,4 +1,4 @@
-def first_missing(arr):
+def first_missing(arr: list[int]):
     mapping = {1: False}
 
     # Assume val + 1 is False if unset
@@ -23,7 +23,7 @@ def first_missing(arr):
 
 
 # https://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/
-def first_missing_optimal(arr):
+def first_missing_optimal(arr: list[int]):
     # Ignore zeros and negatives
     for i, val in enumerate(arr):
         if val < 0:

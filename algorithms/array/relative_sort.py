@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/sort-array-according-order-defined-another-array/
-def relative_sort(a1, a2):
+def relative_sort(a1: list[int], a2: list[int]) -> list[int]:
     a1_set = _get_count(a1)
     result = []
     for e in a2:
@@ -11,7 +11,7 @@ def relative_sort(a1, a2):
     return result
 
 
-def _get_count(a):
+def _get_count(a: list[int]) -> dict[int, int]:
     result = {}
     for e in a:
         if e not in result:

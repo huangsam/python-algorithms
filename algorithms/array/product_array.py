@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/a-product-array-puzzle/
-def product_array(arr):
+def product_array(arr: list[int]):
     l_multi, r_multi = 1, 1
     new_arr = [1] * len(arr)
     for i in range(1, len(arr)):

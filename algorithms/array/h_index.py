@@ -1,4 +1,4 @@
-def h_index(papers):
+def h_index(papers: list[int]):
     papers.sort()
     start = min(len(papers), max(papers))
     end = 0
@@ -15,7 +15,7 @@ def h_index(papers):
     return result
 
 
-def _is_valid(papers, target):
+def _is_valid(papers, target: int):
     start, end = 0, len(papers) - 1
     result = end
     while start <= end:

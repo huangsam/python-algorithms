@@ -1,7 +1,7 @@
 import heapq
 
 
-def merge_k_split(arrays):
+def merge_k_split(arrays: list[list[int]]):
     if len(arrays) == 0:
         return []
     if len(arrays) == 1:
@@ -14,7 +14,7 @@ def merge_k_split(arrays):
     return merge_two_arrays(left_merge, right_merge)
 
 
-def merge_two_arrays(arr1, arr2):
+def merge_two_arrays(arr1: list[int], arr2: list[int]):
     i1 = 0
     i2 = 0
     result = []
@@ -33,7 +33,7 @@ def merge_two_arrays(arr1, arr2):
 
 
 # https://www.geeksforgeeks.org/merge-k-sorted-arrays/
-def merge_k_heap(arrays):
+def merge_k_heap(arrays: list[list[int]]):
     result = []
 
     heap = [(arr[0], i, 0) for i, arr in enumerate(arrays) if arr]

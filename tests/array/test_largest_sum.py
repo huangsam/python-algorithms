@@ -18,7 +18,7 @@ from algorithms.array.largest_sum import largest_sum_adjacent, largest_sum_non_a
         ([-1, 0, -3, 5, 8], 8),
     ],
 )
-def test_largest_sum_non_adjacent(given, expected):
+def test_largest_sum_non_adjacent(given: list[int], expected: int):
     assert largest_sum_non_adjacent(given) == expected
 
 

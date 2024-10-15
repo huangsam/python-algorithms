@@ -3,7 +3,7 @@ import pytest
 from algorithms.array import even_odd as seg
 
 
-def _verify(arr):
+def _verify(arr: list[int]):
     lo = 0
     hi = len(arr) - 1
     while arr[lo] % 2 == 0 and lo < hi:

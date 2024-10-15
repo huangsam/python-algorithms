@@ -10,7 +10,7 @@ def array():
 
 @pytest.mark.math
 @pytest.mark.array
-def test_pair_sum_multiple(array):
+def test_pair_sum_multiple(array: list[int]):
     target = 10
     result = pair_sum(array, target)
     assert len(result) == 2
@@ -21,7 +21,7 @@ def test_pair_sum_multiple(array):
 
 @pytest.mark.math
 @pytest.mark.array
-def test_pair_sum_single(array):
+def test_pair_sum_single(array: list[int]):
     target = 15
     result = pair_sum(array, target)
     assert len(result) == 1
@@ -30,7 +30,7 @@ def test_pair_sum_single(array):
 
 @pytest.mark.math
 @pytest.mark.array
-def test_pair_sum_none(array):
+def test_pair_sum_none(array: list[int]):
     target = 2
     result = pair_sum(array, target)
     assert len(result) == 0

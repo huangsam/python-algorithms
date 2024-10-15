@@ -21,5 +21,5 @@ from algorithms.array.first_missing import first_missing, first_missing_optimal
     ],
 )
 @pytest.mark.parametrize("func", [first_missing, first_missing_optimal])
-def test_first_missing(arr, missing, func):
+def test_first_missing(arr: list[int], missing: int, func):
     assert func(arr) is missing

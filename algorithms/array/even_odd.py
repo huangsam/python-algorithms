@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/segregate-even-and-odd-numbers/
-def even_odd(arr):
+def even_odd(arr: list[str]):
     result = [*arr]
     lo = 0
     hi = len(arr) - 1

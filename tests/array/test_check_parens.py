@@ -14,5 +14,5 @@ from algorithms.array.check_parens import check_parens
         ("{()}", True),
     ],
 )
-def test_check_parens(exp, valid):
+def test_check_parens(exp: str, valid: bool):
     assert check_parens(exp) is valid

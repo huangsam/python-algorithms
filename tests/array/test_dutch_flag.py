@@ -3,12 +3,12 @@ import pytest
 from algorithms.array import dutch_flag as dutch
 
 
-def _verify(arr):
+def _verify(result) -> None:
     i = 0
     for j in (0, 1, 2):
-        while i < len(arr) and arr[i] == j:
+        while i < len(result) and result[i] == j:
             i += 1
-    assert i == len(arr)
+    assert i == len(result)
 
 
 @pytest.mark.array

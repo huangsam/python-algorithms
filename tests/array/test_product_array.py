@@ -13,7 +13,7 @@ from algorithms.array.product_array import product_array
         ([0, 5, 10, 20], [1000, 0, 0, 0]),
     ],
 )
-def test_product_array(old, expected):
+def test_product_array(old: list[int], expected: list[int]):
     new_arr = product_array(old)
     for i, j in zip(new_arr, expected):
         assert i == j

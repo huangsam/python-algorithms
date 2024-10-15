@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/segregate-0s-and-1s-in-an-array-by-traversing-array-once/
-def dutch_two(arr):
+def dutch_two(arr: list[int]):
     result = [*arr]
     lo = 0
     hi = len(result) - 1
@@ -14,7 +14,7 @@ def dutch_two(arr):
 
 # https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/
 # http://users.monash.edu/~lloyd/tildeAlgDS/Sort/Flag/
-def dutch_three(arr):
+def dutch_three(arr: list[int]):
     result = [*arr]
     lo = 0
     mid = 0
