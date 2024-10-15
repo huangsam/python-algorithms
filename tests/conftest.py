@@ -9,12 +9,12 @@ from algorithms.collections.trie import Trie
 
 
 @pytest.fixture(scope="function", params=[50, 100, 400])
-def array(request):
+def array(request) -> list[int]:
     return [randint(0, 100) for i in range(request.param)]
 
 
 @pytest.fixture(scope="function", params=[50, 100, 400])
-def sorted_list(request):
+def sorted_list(request) -> ListNode:
     """
     1 -> 2 -> 3 -> ... -> n
     """
@@ -27,7 +27,7 @@ def sorted_list(request):
 
 
 @pytest.fixture(scope="function")
-def simple_tree(request):
+def simple_tree(request) -> TreeNode:
     """
        1
         \
@@ -47,13 +47,13 @@ def simple_tree(request):
 
 
 @pytest.fixture(scope="function")
-def simple_graph(request):
+def simple_graph(request) -> DirectedGraph:
     graph = DirectedGraph(("a", "b"), ("a", "c"), ("b", "d"), ("c", "e"))
     return graph
 
 
 @pytest.fixture(scope="function")
-def simple_trie():
+def simple_trie() -> Trie:
     tr = Trie()
     tr.insert("hello")
     tr.insert("hat")
