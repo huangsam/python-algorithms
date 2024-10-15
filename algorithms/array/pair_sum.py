@@ -1,5 +1,5 @@
 # https://www.youtube.com/watch?v=XKu_SEDAykw
-def pair_sum(arr: list[int], target: int):
+def pair_sum(arr: list[int], target: int) -> set[tuple[int, int]]:
     """Return pair of array values that yield target sum.
 
     Args:
@@ -10,11 +10,11 @@ def pair_sum(arr: list[int], target: int):
         dict: "Set" of pairs that were found.
     """
     ind_to_diff: dict[int, int] = {}
-    pairs = {}
+    pairs: set[tuple[int, int]] = set()
     for val in arr:
         if val in ind_to_diff:
             left, right = val, ind_to_diff[val]
-            pairs[(left, right)] = True
+            pairs.add((left, right))
         diff = target - val
         ind_to_diff[diff] = val
     return pairs
