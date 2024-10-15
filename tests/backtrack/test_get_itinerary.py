@@ -3,28 +3,34 @@ import pytest
 from algorithms.backtrack.get_itinerary import get_itinerary
 
 
-# fmt: off
 @pytest.mark.array
 @pytest.mark.backtrack
 @pytest.mark.parametrize(
     "start, flights, expected",
     [
-        ("YUL",
+        (
+            "YUL",
             [("HNL", "AKL"), ("YUL", "ORD"), ("ORD", "SFO"), ("SFO", "HNL")],
-            [("YUL", "ORD"), ("ORD", "SFO"), ("SFO", "HNL"), ("HNL", "AKL")]),
-        ("SFO",
+            [("YUL", "ORD"), ("ORD", "SFO"), ("SFO", "HNL"), ("HNL", "AKL")]
+        ),
+        (
+            "SFO",
             [("SFO", "HNL"), ("HNL", "SFO")],
-            [("SFO", "HNL"), ("HNL", "SFO")]),
-        ("HNL",
+            [("SFO", "HNL"), ("HNL", "SFO")]
+        ),
+        (
+            "HNL",
             [("SFO", "HNL"), ("HNL", "SFO")],
-            [("HNL", "SFO"), ("SFO", "HNL")]),
-        ("HNL",
+            [("HNL", "SFO"), ("SFO", "HNL")]
+        ),
+        (
+            "HNL",
             [("SFO", "HNL"), ("HNL", "SFO"), ("HNL", "ORD")],
-            [("HNL", "SFO"), ("SFO", "HNL"), ("HNL", "ORD")]),
+            [("HNL", "SFO"), ("SFO", "HNL"), ("HNL", "ORD")]
+        ),
     ],
-)
-# fmt: on
-def test_get_itinerary_good(start, flights, expected):
+)  # fmt: skip
+def test_get_itinerary_good(start: str, flights: list[tuple[str, str]], expected: list[tuple[str, str]]):
     result = get_itinerary(start, flights)
     if result is None:
         assert result == expected
@@ -45,6 +51,6 @@ def test_get_itinerary_good(start, flights, expected):
         ("SFO", [("SFO", "HNL"), ("SFO", "ORD")]),
     ],
 )
-def test_get_itinerary_bad(start, flights):
+def test_get_itinerary_bad(start: str, flights: list[tuple[str, str]]):
     result = get_itinerary(start, flights)
     assert result is None

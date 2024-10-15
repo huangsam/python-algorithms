@@ -1,10 +1,10 @@
-def get_itinerary(start, flights):
-    itinerary = []
+def get_itinerary(start: str, flights) -> list[tuple[str, str]] | None:
+    itinerary: list[tuple[str, str]] = []
     exists = _get_itinerary_work(start, flights, itinerary, set())
     return itinerary[::-1] if exists is True else None
 
 
-def _get_itinerary_work(start, flights, itinerary, visited):
+def _get_itinerary_work(start: str, flights, itinerary: list[tuple[str, str]], visited: set[tuple[str, str]]) -> bool:
     if 0 < len(flights) == len(visited):
         return True
     for src, dst in flights:
