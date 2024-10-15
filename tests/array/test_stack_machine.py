@@ -6,7 +6,7 @@ from algorithms.array import stack_machine as sm
 @pytest.mark.string
 @pytest.mark.stack
 @pytest.mark.parametrize("i, o", [("13+62*7+*", 76), ("11+", 2)])
-def test_stack_machine_good(i, o):
+def test_stack_machine_good(i: str, o: int):
     assert sm.stack_machine(i) == o
 
 

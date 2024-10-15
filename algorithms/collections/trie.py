@@ -1,4 +1,4 @@
-class Node:
+class TrieNode:
     """A set of trie children exist down the line."""
 
     def __init__(self, value=None):
@@ -13,7 +13,7 @@ class Trie:
     """Trie tree starts with a root character."""
 
     def __init__(self):
-        self.node = Node()
+        self.node = TrieNode()
 
     def insert(self, key: str):
         node = self.node
@@ -21,13 +21,13 @@ class Trie:
             if letter in node.children:
                 node = node.children[letter]
             else:
-                new_node = Node(letter)
+                new_node = TrieNode(letter)
                 node.children[letter] = new_node
                 node = new_node
         node.is_complete = True
 
     # Optimized to account for rework
-    def search(self, key: str, prev_node: Node | None = None):
+    def search(self, key: str, prev_node: TrieNode | None = None) -> tuple[bool, TrieNode | None]:
         node = prev_node if prev_node is not None else self.node
         for letter in key:
             if letter not in node.children:

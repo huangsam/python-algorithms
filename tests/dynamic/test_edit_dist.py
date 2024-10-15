@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.dynamic import edit_dist as edit
+from algorithms.dynamic.edit_dist import edit_dist_dp, edit_dist_rec
 
 
 @pytest.mark.string
@@ -18,6 +18,6 @@ from algorithms.dynamic import edit_dist as edit
         ("sunday", "saturday", 3),
     ],
 )
-@pytest.mark.parametrize("f", [edit.edit_dist_rec, edit.edit_dist_dp])
+@pytest.mark.parametrize("f", [edit_dist_dp, edit_dist_rec])
 def test_edit_dist(f, a, b, o):
     assert f(a, b) == o

@@ -1,4 +1,4 @@
-def reorder_nums(jumbled: str) -> list[int]:
+def reorder_nums(jumbled: list[str | None]) -> list[int]:
     greater_count = sum([1 for ch in jumbled if ch == "+"])
     first_num = len(jumbled) - greater_count - 1
     greater_num = first_num + 1

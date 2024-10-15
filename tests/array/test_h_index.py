@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.array import h_index as hind
+from algorithms.array.h_index import h_index
 
 
 @pytest.mark.array
@@ -16,11 +16,11 @@ from algorithms.array import h_index as hind
     ],
 )
 def test_h_index_sample(i: list[int], o: int):
-    assert hind.h_index(i) == o
+    assert h_index(i) == o
 
 
 @pytest.mark.array
 @pytest.mark.parametrize("i", [_ for _ in range(1, 13)])
 def test_h_index_same(i: int):
     papers = [i for _ in range(i)]
-    assert hind.h_index(papers) == i
+    assert h_index(papers) == i
