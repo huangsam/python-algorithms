@@ -2,7 +2,7 @@ import pytest
 
 from algorithms.dynamic import split_word as word
 
-_BOOK = {
+_BOOK: set[str] = {
     "am",
     "book",
     "cool",
@@ -33,7 +33,7 @@ _BOOK = {
         ("thisfacebookfriendIhave", "this face book friend I have"),
     ],
 )
-def test_split_word_good(i, o):
+def test_split_word_good(i: str, o: str):
     result = word.split_word(i, _BOOK, cache={})
     assert result == o
 
@@ -41,6 +41,6 @@ def test_split_word_good(i, o):
 @pytest.mark.string
 @pytest.mark.dynamic
 @pytest.mark.parametrize("i", ["thisisadog", "myspace", "face", "book"])
-def test_split_word_bad(i):
+def test_split_word_bad(i: str):
     result = word.split_word(i, _BOOK, cache={})
     assert result == word.NOT_FOUND

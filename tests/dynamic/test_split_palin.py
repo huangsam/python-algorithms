@@ -16,6 +16,6 @@ from algorithms.dynamic import split_palin as palin
         ("abcde", 4),
     ],
 )
-def test_split_palin(i, o):
+def test_split_palin(i: str, o: int):
     result = palin.split_palin(i, cache={})
     assert result == o
