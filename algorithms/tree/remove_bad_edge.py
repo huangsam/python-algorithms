@@ -18,7 +18,7 @@ def _remove_bad_edge_work(
     if cur is None:
         return
 
-    if cur.value in seen:
+    if id(cur) in seen:
         if direction == "l" and par:
             par.left = None
             return
@@ -26,7 +26,7 @@ def _remove_bad_edge_work(
             par.right = None
             return
     else:
-        seen.add(cur.value)
+        seen.add(id(cur))
 
     _remove_bad_edge_work(cur.left, cur, "l", seen)
     _remove_bad_edge_work(cur.right, cur, "r", seen)
