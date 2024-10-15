@@ -2,9 +2,7 @@ from algorithms.collections.tree import TreeNode
 
 
 # https://www.geeksforgeeks.org/construct-a-binary-tree-from-postorder-and-inorder/
-def create_postorder_inorder(
-    postorder: list, postrange: tuple[int, int], inorder: list, inrange: tuple[int, int]
-):
+def create_postorder_inorder(postorder: list, postrange: tuple[int, int], inorder: list, inrange: tuple[int, int]):
     post_left, post_right = postrange
     if post_right - post_left == 0:
         return TreeNode(postorder[post_right])
@@ -25,25 +23,19 @@ def create_postorder_inorder(
     left_inrange: tuple[int, int] = (in_left, i - 1)
     left_diff = (i - 1) - in_left
     left_postrange: tuple[int, int] = (post_left, post_left + left_diff)
-    node.left = create_postorder_inorder(
-        postorder, left_postrange, inorder, left_inrange
-    )
+    node.left = create_postorder_inorder(postorder, left_postrange, inorder, left_inrange)
 
     # generate right node
     right_inrange = (i + 1, in_right)
     right_diff = in_right - (i + 1)
     right_postrange = (post_right - right_diff - 1, post_right - 1)
-    node.right = create_postorder_inorder(
-        postorder, right_postrange, inorder, right_inrange
-    )
+    node.right = create_postorder_inorder(postorder, right_postrange, inorder, right_inrange)
 
     return node
 
 
 # https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
-def create_preorder_inorder(
-    preorder: list, prerange: tuple[int, int], inorder: list, inrange: tuple[int, int]
-):
+def create_preorder_inorder(preorder: list, prerange: tuple[int, int], inorder: list, inrange: tuple[int, int]):
     pre_left, pre_right = prerange
     if pre_right - pre_left == 0:
         return TreeNode(preorder[pre_right])
@@ -70,8 +62,6 @@ def create_preorder_inorder(
     right_inorder: tuple[int, int] = (i + 1, in_right)
     right_diff = in_right - (i + 1)
     right_preorder: tuple[int, int] = (pre_right - right_diff, pre_right)
-    node.right = create_preorder_inorder(
-        preorder, right_preorder, inorder, right_inorder
-    )
+    node.right = create_preorder_inorder(preorder, right_preorder, inorder, right_inorder)
 
     return node

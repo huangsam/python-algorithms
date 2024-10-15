@@ -7,9 +7,7 @@ def knapsack_binary_rec(weight: int, items: ItemList):
     return _knapsack_binary_wh(weight, items, len(items), set(), {})
 
 
-def _knapsack_binary_wh(
-    weight: int, items: ItemList, n: int, picked: set, cache: ItemCache
-):
+def _knapsack_binary_wh(weight: int, items: ItemList, n: int, picked: set, cache: ItemCache):
     result = 0
     if n == 0 or weight == 0:
         return 0

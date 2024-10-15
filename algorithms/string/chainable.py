@@ -10,9 +10,7 @@ def can_chain(words: list[str]):
 
 # https://www.geeksforgeeks.org/given-array-strings-find-strings-can-chained-form-circle/
 # https://www.geeksforgeeks.org/find-array-strings-can-chained-form-circle-set-2/
-def _can_chain_wh(
-    cur_word: str, words: list[str], first_map: dict[str, set[str]], seen: set[str]
-):
+def _can_chain_wh(cur_word: str, words: list[str], first_map: dict[str, set[str]], seen: set[str]):
     if len(words) == len(seen):
         return True
     if cur_word in seen:

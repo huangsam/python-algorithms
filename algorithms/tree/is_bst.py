@@ -35,6 +35,4 @@ def _is_bst_util(node: TreeNode | None, min_val: float, max_val: float):
         return True
     if node.value < min_val or node.value > max_val:
         return False
-    return _is_bst_util(node.left, min_val, node.value - 1) and _is_bst_util(
-        node.right, node.value + 1, max_val
-    )
+    return _is_bst_util(node.left, min_val, node.value - 1) and _is_bst_util(node.right, node.value + 1, max_val)
