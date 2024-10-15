@@ -31,6 +31,7 @@ jobs:
       - name: Type check with mypy
         run: |
           mypy algorithms
-      - name: Test with pytest
+      - name: Run tests with coverage and pytest
         run: |
-          pytest
+          coverage run -m pytest --source=algorithms
+          coverage report
