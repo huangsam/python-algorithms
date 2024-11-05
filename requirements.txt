@@ -2,4 +2,4 @@ isort
 mypy
 ruff
 coverage==7.6.3
-pytest==8.2.2
+pytest==8.3.3
