@@ -9,13 +9,12 @@ def bfs(graph: Graph, root):
     scanned = []
     while len(dq) > 0:
         node = dq.pop()
-        if node in visited:
+        if id(node) in visited:
             continue
-        visited.add(node)
+        visited.add(id(node))
         for child in graph.get_children(node):
-            if child in visited:
-                continue
-            dq.appendleft(child)
+            if id(child) not in visited:
+                dq.appendleft(child)
         scanned.append(node)
     return scanned
 
@@ -26,12 +25,11 @@ def dfs(graph: Graph, root):
     scanned = []
     while len(dq) > 0:
         node = dq.pop()
-        if node in visited:
+        if id(node) in visited:
             continue
-        visited.add(node)
+        visited.add(id(node))
         for child in graph.get_children(node):
-            if child in visited:
-                continue
-            dq.append(child)
+            if id(child) not in visited:
+                dq.append(child)
         scanned.append(node)
     return scanned
