@@ -5,10 +5,10 @@ from collections import defaultdict
 class Graph(ABC):
     """Graph stored as adjacency list."""
 
-    def __init__(self, *edges):
-        self.nodes = set()
-        self.graph = defaultdict(set)
-        self.ingress = defaultdict(int)
+    def __init__(self, *edges: tuple):
+        self.nodes: set = set()
+        self.graph: defaultdict = defaultdict(set)
+        self.ingress: defaultdict = defaultdict(int)
         for src, dst in edges:
             self.add_edge(src, dst)
             self.nodes.update([src, dst])
