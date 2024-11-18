@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/count-possible-decodings-given-digit-sequence/
-def count_decode(digit):
+def count_decode(digit: str):
     n = len(digit)
     count = [0] * max(2, n + 1)
     count[0] = 1

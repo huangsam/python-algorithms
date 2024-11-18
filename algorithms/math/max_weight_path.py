@@ -1,4 +1,4 @@
-def max_weight_path(triangle):
+def max_weight_path(triangle: list[list[int]]):
     height = len(triangle)
     prev_val = None
     for i in range(height - 1, 0, -1):
@@ -10,4 +10,6 @@ def max_weight_path(triangle):
             row_val = max(row[j] + above[j], row[j + 1] + above[j])
             sums.append(row_val)
         prev_val = sums
+    if prev_val is None:
+        raise RuntimeError("This should not happen")
     return prev_val[0]
