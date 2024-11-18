@@ -53,8 +53,8 @@ def test_check_node_directed():
 @pytest.mark.graph
 def test_check_edge_directed():
     graph = DirectedGraph(*_SAMPLE_DATA)
-    assert graph.check_edge(("a", "b"))
-    assert not graph.check_edge(("b", "a"))
+    assert graph.check_edge("a", "b")
+    assert not graph.check_edge("b", "a")
 
 
 @pytest.mark.graph
@@ -88,5 +88,5 @@ def test_check_node_undirected():
 @pytest.mark.graph
 def test_check_edge_undirected():
     graph = UndirectedGraph(*_SAMPLE_DATA)
-    assert graph.check_edge(("a", "b"))
-    assert graph.check_edge(("b", "a"))
+    assert graph.check_edge("a", "b")
+    assert graph.check_edge("b", "a")
