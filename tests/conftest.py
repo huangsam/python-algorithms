@@ -61,8 +61,8 @@ def acyclic_digraph() -> DirectedGraph:
 
 @pytest.fixture(scope="function")
 def simple_trie() -> Trie:
-    tr = Trie()
-    tr.insert("hello")
-    tr.insert("hat")
-    tr.insert("cat")
-    return tr
+    trie = Trie()
+    trie.insert("hello")
+    trie.insert("hat")
+    trie.insert("cat")
+    return trie
