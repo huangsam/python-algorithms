@@ -2,9 +2,9 @@ def merge_sort(arr: list[int]):
     if len(arr) <= 1:
         return arr
     middle = len(arr) // 2
-    l_merged = merge_sort(arr[:middle])
-    r_merged = merge_sort(arr[middle:])
-    return _merge_arrays(l_merged, r_merged)
+    left_merged = merge_sort(arr[:middle])
+    right_merged = merge_sort(arr[middle:])
+    return _merge_arrays(left_merged, right_merged)
 
 
 def _merge_arrays(arr1: list[int], arr2: list[int]):
