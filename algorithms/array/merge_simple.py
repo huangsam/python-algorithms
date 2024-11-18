@@ -1,13 +1,13 @@
-def merge_sort(arr: list[int]):
+def merge_sort(arr: list[int]) -> list[int]:
     if len(arr) <= 1:
         return arr
     middle = len(arr) // 2
     left_merged = merge_sort(arr[:middle])
     right_merged = merge_sort(arr[middle:])
-    return _merge_arrays(left_merged, right_merged)
+    return merge_sorted_arrays(left_merged, right_merged)
 
 
-def _merge_arrays(arr1: list[int], arr2: list[int]):
+def merge_sorted_arrays(arr1: list[int], arr2: list[int]) -> list[int]:
     result = []
     a1, a2 = 0, 0
     while a1 < len(arr1) and a2 < len(arr2):
@@ -17,6 +17,4 @@ def _merge_arrays(arr1: list[int], arr2: list[int]):
         else:
             result.append(arr2[a2])
             a2 += 1
-    if arr1:
-        return result + arr1[a1:]
-    return result + arr2[a2:]
+    return result + arr1[a1:] + arr2[a2:]
