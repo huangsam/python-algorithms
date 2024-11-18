@@ -29,7 +29,7 @@ from algorithms.string.num_to_word import num_to_word
         (10 ** 9 + 1, "one billion one"),
     ],
 )  # fmt: skip
-def test_num_to_word_good(a, o):
+def test_num_to_word_good(a: int, o: str):
     assert num_to_word(a) == o
 
 

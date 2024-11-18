@@ -23,7 +23,7 @@ from tests.helpers import int_to_list
         (9999999, 99999999999),
     ],
 )
-def test_sum_list(a, b):
+def test_sum_list(a: int, b: int):
     first = int_to_list(a)
     second = int_to_list(b)
     l1 = sum_lists(first, second)

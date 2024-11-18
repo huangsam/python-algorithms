@@ -16,5 +16,5 @@ from algorithms.math.fibonacci import fibonacci_dp_bottom, fibonacci_dp_top, fib
     ],
 )
 @pytest.mark.parametrize("i,o", [(0, 0), (1, 1), (2, 1), (3, 2), (4, 3), (5, 5), (6, 8)])
-def test_fibonacci(func, i, o):
+def test_fibonacci(func, i: int, o: int):
     assert func(i) == o

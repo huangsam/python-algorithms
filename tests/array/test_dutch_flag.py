@@ -3,7 +3,7 @@ import pytest
 from algorithms.array.dutch_flag import dutch_three, dutch_two
 
 
-def _verify(result) -> None:
+def _verify(result: list[int]) -> None:
     i = 0
     for j in (0, 1, 2):
         while i < len(result) and result[i] == j:

@@ -12,5 +12,5 @@ def test_egg_drop():
 @pytest.mark.math
 @pytest.mark.dynamic
 @pytest.mark.parametrize("eggs, floors, expected", [(2, 10, 4), (2, 36, 8)])
-def test_egg_drop_optimal(eggs, floors, expected):
+def test_egg_drop_optimal(eggs: int, floors: int, expected: int):
     assert egg_drop_optimal(eggs, floors) == expected

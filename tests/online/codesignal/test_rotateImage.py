@@ -28,7 +28,7 @@ from algorithms.online.codesignal.rotateImage import rotateImage
             [1, 2, 3, 4, 5, 6, 7, 8],
         ],
     ],
-)
+)  # fmt: skip
 def test_rotate_image(image):
     rotated = rotateImage(image)
     ilen = len(image)

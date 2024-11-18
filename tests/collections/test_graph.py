@@ -2,7 +2,7 @@ import pytest
 
 from algorithms.collections.graph import DirectedGraph, UndirectedGraph
 
-_SAMPLE_DATA = (("a", "b"), ("a", "c"), ("a", "d"))
+_SAMPLE_DATA: tuple = (("a", "b"), ("a", "c"), ("a", "d"))
 
 
 @pytest.mark.graph

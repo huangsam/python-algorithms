@@ -14,16 +14,20 @@ from algorithms.list.reverse_alt_k import reverse_alt_k
         (2, 5, [2, 1, 3, 4, 5]),
     ],
 )
-def test_reverse_alt_k(k, size, expected):
+def test_reverse_alt_k(k: int, size: int, expected: list[int]):
     head = ListNode(1)
-    node = head
+    node: ListNode | None = head
     for i in range(2, size + 1):
+        assert node is not None
         node.next_node = ListNode(i)
         node = node.next_node
-    nhead = reverse_alt_k(head, k)
-    node = nhead
-    i = 0
+
+    new_head = reverse_alt_k(head, k)
+
+    node = new_head
+    actual = []
     while node:
-        expected[i] = node.value
+        actual.append(node.value)
         node = node.next_node
-        i += 1
+
+    assert actual == expected

@@ -17,8 +17,9 @@ from algorithms.tree.is_bst import is_bst
         ([1, 2, 3, 4, 5, 6, 7], 4),
     ],
 )
-def test_create_bst_from_array(given, expected):
+def test_create_bst_from_array(given: list[int], expected: int):
     root = create_bst_from_array(given, 0, len(given) - 1)
+    assert root is not None
     assert root.value == expected
     assert is_bst(root) is True
     visited = inorder_recursive(root)

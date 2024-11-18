@@ -15,5 +15,5 @@ from algorithms.math.factorial import factorial_dp_bottom, factorial_dp_top, fac
     ],
 )
 @pytest.mark.parametrize("i,o", [(0, 1), (1, 1), (2, 2), (3, 6), (4, 24), (5, 120)])
-def test_factorial(func, i, o):
+def test_factorial(func, i: int, o: int):
     assert func(i) == o

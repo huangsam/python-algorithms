@@ -14,14 +14,14 @@ def _cycle(n: int) -> list[list[int]]:
 
 @pytest.mark.array
 @pytest.mark.parametrize("any_cycle", _cycle(5))
-def test_search_one(any_cycle):
+def test_search_one(any_cycle: list[int]):
     for val in any_cycle:
         assert search_one(any_cycle, val) is True
 
 
 @pytest.mark.array
 @pytest.mark.parametrize("any_cycle", _cycle(5))
-def test_search_min(any_cycle):
+def test_search_min(any_cycle: list[int]):
     assert search_min(any_cycle) == min(any_cycle)
 
 

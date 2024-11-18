@@ -23,5 +23,5 @@ def test_josephus_2():
 @pytest.mark.math
 @pytest.mark.dynamic
 @pytest.mark.parametrize("n, k, expected", [(5, 3, 4), (5, 5, 2)])
-def test_josephus_k(n, k, expected):
+def test_josephus_k(n: int, k: int, expected: int):
     assert josephus(n, k) == expected

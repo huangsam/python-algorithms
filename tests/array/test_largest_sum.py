@@ -27,5 +27,5 @@ def test_largest_sum_non_adjacent(given: list[int], expected: int):
     "given, expected",
     [([], 0), ([1], 1), ([-1], 0), ([-1, 2], 2), ([2, 6, -13, 9, 3, -3, 5, 6], 20)],
 )
-def test_largest_sum_adjacent(given, expected):
+def test_largest_sum_adjacent(given: list[int], expected: int):
     assert largest_sum_adjacent(given) == expected

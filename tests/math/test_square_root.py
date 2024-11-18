@@ -20,5 +20,5 @@ def test_square_root_exact(root, x):
         (14.0, 15.0, 200.0),
     ],
 )
-def test_square_root_about(left, right, x):
+def test_square_root_about(left: float, right: float, x: float):
     assert left < square_root(x) < right

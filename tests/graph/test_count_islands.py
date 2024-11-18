@@ -13,5 +13,5 @@ from algorithms.graph.count_islands import count_islands
         ([[0, 0, 0], [0, 0, 0], [0, 0, 0]], 0),
     ],
 )
-def test_count_islands(grid, answer):
+def test_count_islands(grid: list[list[int]], answer: int):
     assert count_islands(grid) == answer

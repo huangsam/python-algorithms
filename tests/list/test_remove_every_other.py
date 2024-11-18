@@ -1,15 +1,14 @@
 import pytest
 
+from algorithms.collections.list import ListNode
 from algorithms.list.remove_every_other import remove_every_other
 
 
-def _add_loop(l_list):
-    prev = None
-    cur = l_list
-    while cur:
-        prev = cur
+def _add_loop(list_node: ListNode):
+    cur = list_node
+    while cur.next_node is not None:
         cur = cur.next_node
-    prev.next_node = l_list
+    cur.next_node = list_node
 
 
 @pytest.mark.list

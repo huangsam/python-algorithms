@@ -5,7 +5,7 @@ from algorithms.math.multiply import multiply
 
 @pytest.mark.math
 @pytest.mark.parametrize("x,y", [(2, 0), (0, 2), (0, 0)])
-def test_multiply_zero(x, y):
+def test_multiply_zero(x: int, y: int):
     assert multiply(x, y) == 0
 
 
@@ -21,6 +21,6 @@ def test_multiply_odd():
 
 @pytest.mark.math
 @pytest.mark.parametrize("x,y", [(-1, 1), (1, -1), (-1, -1)])
-def test_multiply_neg(x, y):
+def test_multiply_neg(x: int, y: int):
     with pytest.raises(ValueError):
         multiply(x, y)

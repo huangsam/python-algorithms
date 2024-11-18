@@ -19,5 +19,5 @@ from algorithms.dynamic.edit_dist import edit_dist_dp, edit_dist_rec
     ],
 )
 @pytest.mark.parametrize("f", [edit_dist_dp, edit_dist_rec])
-def test_edit_dist(f, a, b, o):
+def test_edit_dist(f, a: str, b: str, o: int):
     assert f(a, b) == o
