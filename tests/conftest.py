@@ -27,7 +27,7 @@ def sorted_list_node(request) -> ListNode:
 
 
 @pytest.fixture(scope="function")
-def simple_tree(request) -> TreeNode:
+def simple_tree() -> TreeNode:
     """
         1
          \
@@ -47,7 +47,7 @@ def simple_tree(request) -> TreeNode:
 
 
 @pytest.fixture(scope="function")
-def acyclic_digraph(request) -> DirectedGraph:
+def acyclic_digraph() -> DirectedGraph:
     """
         a
        / \
