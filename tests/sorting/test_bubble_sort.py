@@ -6,7 +6,7 @@ from tests.helpers import is_sorted
 
 @pytest.mark.array
 @pytest.mark.sorting
-def test_bubble_sort(array):
-    assert not is_sorted(array)
-    bubble_sort.sort(array)
-    assert is_sorted(array)
+def test_bubble_sort(random_array):
+    assert not is_sorted(random_array)
+    bubble_sort.sort(random_array)
+    assert is_sorted(random_array)

@@ -3,7 +3,7 @@ import pytest
 from algorithms.array.merge_simple import merge_sort
 
 
-def _is_sorted(array):
+def _is_sorted(array: list[int]) -> bool:
     alen = len(array)
     for i in range(1, alen):
         if array[i - 1] > array[i]:
@@ -13,15 +13,13 @@ def _is_sorted(array):
 
 @pytest.mark.array
 @pytest.mark.sorting
-def test_merge_simple(array: list[int]):
-    assert not _is_sorted(array)
-    array = merge_sort(array)
-    assert _is_sorted(array)
+def test_merge_simple(random_array):
+    assert not _is_sorted(random_array)
+    random_array = merge_sort(random_array)
+    assert _is_sorted(random_array)
 
 
 @pytest.mark.array
 @pytest.mark.sorting
 def test_merge_empty():
-    arr = []
-    actual = merge_sort(arr)
-    assert actual == arr
+    assert merge_sort([]) == []

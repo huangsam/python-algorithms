@@ -9,7 +9,7 @@ from algorithms.collections.trie import Trie
 
 
 @pytest.fixture(scope="function", params=[50, 100, 400])
-def array(request) -> list[int]:
+def random_array(request) -> list[int]:
     return [randint(0, 100) for i in range(request.param)]
 
 
