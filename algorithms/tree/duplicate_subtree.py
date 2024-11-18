@@ -14,8 +14,8 @@ def _duplicate_subtree_work(root: TreeNode | None) -> tuple[str, set, bool]:
     left_post, left_seen, left_dup = _duplicate_subtree_work(root.left)
     right_post, right_seen, right_dup = _duplicate_subtree_work(root.right)
 
-    cur_seq = left_post + right_post + str(root.value)
-    seen = left_seen.union(right_seen) | {cur_seq}
-    is_duplicate = left_dup or right_dup or any(len(post_seq) > 1 for post_seq in left_seen & right_seen)
+    seq = left_post + right_post + str(root.value)
+    seen = left_seen | right_seen | {seq}
+    dup = left_dup or right_dup or any(len(post_seq) > 1 for post_seq in left_seen & right_seen)
 
-    return cur_seq, seen, is_duplicate
+    return seq, seen, dup
