@@ -47,7 +47,7 @@ def simple_tree(request) -> TreeNode:
 
 
 @pytest.fixture(scope="function")
-def simple_graph(request) -> DirectedGraph:
+def acyclic_digraph(request) -> DirectedGraph:
     graph = DirectedGraph(("a", "b"), ("a", "c"), ("b", "d"), ("c", "e"))
     return graph
 
