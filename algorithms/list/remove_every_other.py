@@ -1,19 +1,23 @@
-def remove_every_other(head):
-    toggle = False
-    prev = None
-    cur = head
-    traversed = 0
+from algorithms.collections.list import ListNode
+
+
+def remove_every_other(head: ListNode):
+    is_other = False
+    prev: ListNode | None = None
+    cur: ListNode | None = head
+    head_passed_count = 0
 
     while True:
-        if cur == head:
-            traversed += 1
-            if traversed == 2:
+        if cur is head:
+            head_passed_count += 1
+            if head_passed_count == 2:
                 return
 
-        if toggle is True and cur != head:
+        if is_other and cur and prev and cur is not head:
             prev.next_node = cur.next_node
 
-        toggle ^= True
+        is_other ^= True
 
         prev = cur
-        cur = cur.next_node
+        if cur:
+            cur = cur.next_node

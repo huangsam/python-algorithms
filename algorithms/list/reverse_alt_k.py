@@ -1,10 +1,13 @@
+from algorithms.collections.list import ListNode
+
+
 # https://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/
-def reverse_alt_k(head, k):
+def reverse_alt_k(head: ListNode | None, k: int):
     if head is None or head.next_node is None:
         return head
 
-    cur = head
-    prev = None
+    cur: ListNode | None = head
+    prev: ListNode | None = None
 
     # Run reversal
     counter = k
