@@ -2,19 +2,19 @@
 from algorithms.collections.tree import TreeNode
 
 
-def duplicate_subtree(root: TreeNode):
+def duplicate_subtree(root: TreeNode) -> bool:
     _, _, answer = _duplicate_subtree_work(root)
     return answer
 
 
-def _duplicate_subtree_work(root: TreeNode | None):
+def _duplicate_subtree_work(root: TreeNode | None) -> tuple[str, set, bool]:
     if root is None:
         return "", set(), False
 
     left_post, left_seen, left_dup = _duplicate_subtree_work(root.left)
     right_post, right_seen, right_dup = _duplicate_subtree_work(root.right)
 
-    cur_str = left_post + right_post + root.value
+    cur_str: str = left_post + right_post + root.value
     common = [i for i in left_seen.intersection(right_seen) if len(i) > 1]
 
     is_duplicate = len(common) > 0 or left_dup or right_dup
