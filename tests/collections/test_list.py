@@ -5,9 +5,9 @@ from algorithms.constants import MAX_INT
 
 
 @pytest.mark.list
-def test_list_is_sorted(sorted_list: ListNode):
+def test_list_is_sorted(sorted_list_node: ListNode):
     prev_node = None
-    cur_node: ListNode | None = sorted_list
+    cur_node: ListNode | None = sorted_list_node
     while cur_node:
         if prev_node:
             assert cur_node.value > prev_node.value
@@ -16,10 +16,10 @@ def test_list_is_sorted(sorted_list: ListNode):
 
 
 @pytest.mark.list
-def test_list_is_unsorted(sorted_list: ListNode):
+def test_list_is_unsorted(sorted_list_node: ListNode):
     prev_node = None
     cur_node = ListNode(MAX_INT)
-    cur_node.next_node = sorted_list
+    cur_node.next_node = sorted_list_node
     is_unsorted = False
     while cur_node:
         if prev_node:

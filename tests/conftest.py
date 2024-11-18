@@ -14,7 +14,7 @@ def array(request) -> list[int]:
 
 
 @pytest.fixture(scope="function", params=[50, 100, 400])
-def sorted_list(request) -> ListNode:
+def sorted_list_node(request) -> ListNode:
     """
     1 -> 2 -> 3 -> ... -> n
     """

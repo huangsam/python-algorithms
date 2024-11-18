@@ -20,5 +20,5 @@ def test_has_cycle_non_root():
 
 
 @pytest.mark.list
-def test_has_no_cycle(sorted_list):
-    assert has_cycle(sorted_list) is False
+def test_has_no_cycle(sorted_list_node):
+    assert has_cycle(sorted_list_node) is False

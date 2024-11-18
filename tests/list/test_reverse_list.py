@@ -4,10 +4,10 @@ from algorithms.list.reverse_list import reverse_list
 
 
 @pytest.mark.list
-def test_reverse_list(sorted_list):
+def test_reverse_list(sorted_list_node):
     prev_node = None
-    cur_node = sorted_list
-    new_node = reverse_list(sorted_list)
+    cur_node = sorted_list_node
+    new_node = reverse_list(sorted_list_node)
     assert cur_node != new_node
     while cur_node:
         if prev_node:
