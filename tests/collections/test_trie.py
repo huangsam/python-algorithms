@@ -1,4 +1,5 @@
 import pytest
+
 from algorithms.collections.trie import Trie
 
 
