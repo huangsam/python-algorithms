@@ -1,7 +1,7 @@
 import pytest
 
 from algorithms.constants import MAX_INT
-from algorithms.graph import floyd_warshall as floyd
+from algorithms.graph.floyd_warshall import floyd_warshall, transitive_closure
 
 
 @pytest.mark.graph
@@ -13,7 +13,7 @@ def test_floyd_warshall():
         [MAX_INT, MAX_INT, 0, 1],
         [MAX_INT, MAX_INT, MAX_INT, 0],
     ]
-    result = floyd.floyd_warshall(graph)
+    result = floyd_warshall(graph)
     assert result == [
         [0, 5, 8, 9],
         [MAX_INT, 0, 3, 4],
@@ -26,5 +26,5 @@ def test_floyd_warshall():
 @pytest.mark.dynamic
 def test_transitive_closure():
     graph = [[1, 1, 1, 1], [0, 1, 1, 0], [1, 0, 1, 1], [0, 0, 0, 1]]
-    result = floyd.transitive_closure(graph)
+    result = transitive_closure(graph)
     assert result == [[1, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1], [0, 0, 0, 1]]

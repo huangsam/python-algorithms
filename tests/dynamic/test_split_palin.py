@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.dynamic import split_palin as palin
+from algorithms.dynamic.split_palin import split_palin
 
 
 @pytest.mark.string
@@ -17,5 +17,5 @@ from algorithms.dynamic import split_palin as palin
     ],
 )
 def test_split_palin(i: str, o: int):
-    result = palin.split_palin(i, cache={})
+    result = split_palin(i, cache={})
     assert result == o

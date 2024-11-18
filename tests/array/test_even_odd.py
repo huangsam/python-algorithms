@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.array import even_odd as seg
+from algorithms.array.even_odd import even_odd
 
 
 def _verify(arr: list[int]):
@@ -21,7 +21,7 @@ def _verify(arr: list[int]):
 @pytest.mark.array
 def test_even_odd_sample():
     arr = [12, 34, 45, 9, 8, 90, 3]
-    result = seg.even_odd(arr)
+    result = even_odd(arr)
     _verify(result)
 
 
@@ -29,7 +29,7 @@ def test_even_odd_sample():
 @pytest.mark.array
 def test_even_odd_zigzag():
     arr = [1, 2, 3, 4, 5, 6]
-    result = seg.even_odd(arr)
+    result = even_odd(arr)
     _verify(result)
 
 
@@ -37,7 +37,7 @@ def test_even_odd_zigzag():
 @pytest.mark.array
 def test_even_odd_done():
     arr = [2, 4, 1, 3]
-    result = seg.even_odd(arr)
+    result = even_odd(arr)
     _verify(result)
 
 
@@ -45,7 +45,7 @@ def test_even_odd_done():
 @pytest.mark.array
 def test_even_odd_done_all_odd():
     arr = [1, 3, 5, 7]
-    result = seg.even_odd(arr)
+    result = even_odd(arr)
     _verify(result)
 
 
@@ -53,5 +53,5 @@ def test_even_odd_done_all_odd():
 @pytest.mark.array
 def test_even_odd_done_all_even():
     arr = [2, 4, 6, 8]
-    result = seg.even_odd(arr)
+    result = even_odd(arr)
     _verify(result)

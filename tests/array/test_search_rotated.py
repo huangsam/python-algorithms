@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.array.search_rotated import search_one, search_min
+from algorithms.array.search_rotated import search_min, search_one
 
 
 def _cycle(n: int) -> list[list[int]]:

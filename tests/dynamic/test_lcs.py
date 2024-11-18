@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.dynamic import lcs
+from algorithms.dynamic.lcs import lcs_dp, lcs_rec
 
 
 @pytest.mark.string
@@ -14,7 +14,7 @@ from algorithms.dynamic import lcs
         ("fadeway", "aw", 2),
     ],
 )
-@pytest.mark.parametrize("f", [lcs.lcs_rec, lcs.lcs_dp])
+@pytest.mark.parametrize("f", [lcs_rec, lcs_dp])
 def test_lcs_all(f, a: str, b: str, o: int):
     assert f(a, b) == o
 
@@ -30,14 +30,14 @@ def test_lcs_all(f, a: str, b: str, o: int):
         ("aeghij", "abcdefghi", 5),
     ],
 )
-@pytest.mark.parametrize("f", [lcs.lcs_rec, lcs.lcs_dp])
+@pytest.mark.parametrize("f", [lcs_rec, lcs_dp])
 def test_lcs_partial(f, a: str, b: str, o: int):
-    assert lcs.lcs_rec(a, b) == o
+    assert f(a, b) == o
 
 
 @pytest.mark.string
 @pytest.mark.dynamic
 @pytest.mark.parametrize("a, b", [("", ""), ("a", "b"), ("abcd", "efgh")])
-@pytest.mark.parametrize("f", [lcs.lcs_rec, lcs.lcs_dp])
+@pytest.mark.parametrize("f", [lcs_rec, lcs_dp])
 def test_lcs_none(f, a: str, b: str):
     assert f(a, b) == 0
