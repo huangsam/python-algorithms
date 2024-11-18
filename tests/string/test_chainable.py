@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.string import chainable
+from algorithms.string.chainable import can_chain
 
 
 @pytest.mark.string
@@ -25,4 +25,4 @@ from algorithms.string import chainable
     ],
 )
 def test_can_chain(i, o):
-    assert chainable.can_chain(i) == o
+    assert can_chain(i) == o

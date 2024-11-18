@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.string import num_to_word as word
+from algorithms.string.num_to_word import num_to_word
 
 
 @pytest.mark.math
@@ -30,18 +30,18 @@ from algorithms.string import num_to_word as word
     ],
 )  # fmt: skip
 def test_num_to_word_good(a, o):
-    assert word.num_to_word(a) == o
+    assert num_to_word(a) == o
 
 
 @pytest.mark.math
 @pytest.mark.string
 def test_num_to_word_negative():
     with pytest.raises(ValueError):
-        word.num_to_word(-1)
+        num_to_word(-1)
 
 
 @pytest.mark.math
 @pytest.mark.string
 def test_num_to_word_overflow():
     with pytest.raises(ValueError):
-        word.num_to_word(10**20)
+        num_to_word(10**20)

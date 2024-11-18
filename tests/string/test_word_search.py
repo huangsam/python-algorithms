@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.string import word_search as wsearch
+from algorithms.string import word_search
 
 
 @pytest.mark.string
@@ -16,4 +16,4 @@ from algorithms.string import word_search as wsearch
     ],
 )
 def test_naive(astr, bstr, ix):
-    assert wsearch.naive(astr, bstr) == ix
+    assert word_search.naive(astr, bstr) == ix

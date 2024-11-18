@@ -1,6 +1,6 @@
 import pytest
 
-from algorithms.math import fibonacci as fib
+from algorithms.math.fibonacci import fibonacci_dp_bottom, fibonacci_dp_top, fibonacci_iterative, fibonacci_recursive, fibonacci_stack
 
 
 @pytest.mark.math
@@ -8,11 +8,11 @@ from algorithms.math import fibonacci as fib
 @pytest.mark.parametrize(
     "func",
     [
-        fib.fibonacci_iterative,
-        fib.fibonacci_recursive,
-        fib.fibonacci_stack,
-        fib.fibonacci_dp_bottom,
-        fib.fibonacci_dp_top,
+        fibonacci_iterative,
+        fibonacci_recursive,
+        fibonacci_stack,
+        fibonacci_dp_bottom,
+        fibonacci_dp_top,
     ],
 )
 @pytest.mark.parametrize("i,o", [(0, 0), (1, 1), (2, 1), (3, 2), (4, 3), (5, 5), (6, 8)])

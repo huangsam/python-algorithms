@@ -1,9 +1,9 @@
-from algorithms.math import car_cdr as lisp
+from algorithms.math.car_cdr import car, cdr, cons
 
 
 def test_car():
-    assert lisp.car(lisp.cons(3, 4)) == 3
+    assert car(cons(3, 4)) == 3
 
 
 def test_cdr():
-    assert lisp.cdr(lisp.cons(3, 4)) == 4
+    assert cdr(cons(3, 4)) == 4
