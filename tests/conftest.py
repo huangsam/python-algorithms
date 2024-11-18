@@ -29,13 +29,13 @@ def sorted_list_node(request) -> ListNode:
 @pytest.fixture(scope="function")
 def simple_tree(request) -> TreeNode:
     """
-       1
-        \
-         2
-        / \
-       3   4
-          / \
-         5   6
+        1
+         \
+          2
+         / \
+        3   4
+           / \
+          5   6
     """
     root = TreeNode(1)
     root.right = TreeNode(2)
@@ -48,6 +48,13 @@ def simple_tree(request) -> TreeNode:
 
 @pytest.fixture(scope="function")
 def acyclic_digraph(request) -> DirectedGraph:
+    """
+        a
+       / \
+      c   b
+     /     \
+    e       d
+    """
     graph = DirectedGraph(("a", "b"), ("a", "c"), ("b", "d"), ("c", "e"))
     return graph
 
