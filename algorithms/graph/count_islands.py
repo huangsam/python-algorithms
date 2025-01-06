@@ -22,6 +22,6 @@ def _visit_island(i: int, j: int, grid: list[list[int]]):
     _visit_island(i, j - 1, grid)
     _visit_island(i, j + 1, grid)
     _visit_island(i - 1, j - 1, grid)
-    _visit_island(i + 1, j + 1, grid)
     _visit_island(i - 1, j + 1, grid)
     _visit_island(i + 1, j - 1, grid)
+    _visit_island(i + 1, j + 1, grid)
