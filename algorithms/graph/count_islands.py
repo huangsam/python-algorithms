@@ -1,5 +1,5 @@
 # https://www.geeksforgeeks.org/find-number-of-islands/
-def count_islands(grid: list[list[int]]):
+def count_islands(grid: list[list[int]]) -> int:
     result = 0
     for i in range(len(grid)):
         for j in range(len(grid[0])):
@@ -9,7 +9,7 @@ def count_islands(grid: list[list[int]]):
     return result
 
 
-def _visit_island(i: int, j: int, grid: list[list[int]]):
+def _visit_island(i: int, j: int, grid: list[list[int]]) -> None:
     if i < 0 or j < 0:
         return
     elif i >= len(grid) or j >= len(grid[0]):
