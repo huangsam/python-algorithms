@@ -2,12 +2,14 @@ from algorithms.collections.tree import TreeNode
 
 
 def _depth(root: TreeNode | None):
+    """Calculates the depth of a binary tree."""
     if root is None:
         return 0
     return 1 + max(_depth(root.left), _depth(root.right))
 
 
 def is_balanced(root: TreeNode | None):
+    """Checks if a binary tree is balanced."""
     if root is None:
         return True
     left_depth = _depth(root.left)
@@ -16,6 +18,7 @@ def is_balanced(root: TreeNode | None):
 
 
 def is_balanced_optimal(root: TreeNode | None):
+    """Checks if a binary tree is balanced using an optimized approach."""
     if root is None:
         return True, 0
     left_b, left_h = is_balanced_optimal(root.left)

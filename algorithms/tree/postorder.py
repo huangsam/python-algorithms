@@ -2,6 +2,7 @@ from algorithms.collections.tree import TreeNode
 
 
 def postorder_recursive(root: TreeNode | None):
+    """Performs recursive postorder traversal of a binary tree."""
     if root is None:
         return []
     result = postorder_recursive(root.left)
@@ -12,6 +13,7 @@ def postorder_recursive(root: TreeNode | None):
 
 # https://www.geeksforgeeks.org/iterative-postorder-traversal/
 def postorder_iterative(root: TreeNode):
+    """Performs iterative postorder traversal of a binary tree."""
     stack = [root]
     scanned = []
     while len(stack) > 0:

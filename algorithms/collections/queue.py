@@ -5,12 +5,15 @@ class Queue:
         self.array = []
 
     def push(self, val):
+        """Adds an element to the end of the queue."""
         self.array.append(val)
 
     def pop(self):
+        """Removes and returns the front element of the queue."""
         return self.array.pop(0)
 
     def size(self):
+        """Returns the number of elements in the queue."""
         return len(self.array)
 
 
@@ -24,9 +27,11 @@ class FunkyQueue:
 
     # Optimized for push
     def push(self, val):
+        """Adds an element to the queue."""
         self.s1.append(val)
 
     def pop(self):
+        """Removes and returns the front element, or None if empty."""
         if len(self.s1) == 0 and len(self.s2) == 0:
             return None
         if len(self.s2) == 0:
@@ -35,4 +40,5 @@ class FunkyQueue:
         return self.s2.pop()
 
     def size(self):
+        """Returns the number of elements in the queue."""
         return len(self.s1) + len(self.s2)

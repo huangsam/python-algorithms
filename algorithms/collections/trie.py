@@ -16,6 +16,7 @@ class Trie:
         self.node = TrieNode()
 
     def insert(self, key: str):
+        """Inserts a key into the trie."""
         node = self.node
         for letter in key:
             if letter in node.children:
@@ -28,6 +29,7 @@ class Trie:
 
     # Optimized to account for rework
     def search(self, key: str, prev_node: TrieNode | None = None) -> tuple[bool, TrieNode | None]:
+        """Searches for a key in the trie, returning if found and the node."""
         node = prev_node if prev_node is not None else self.node
         for letter in key:
             if letter not in node.children:

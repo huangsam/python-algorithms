@@ -1,5 +1,6 @@
 # https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/
 def n_queens(board: list[list[int]], col: int):
+    """Solves the N-Queens problem using backtracking."""
     if col >= len(board):
         return True
 
@@ -14,6 +15,7 @@ def n_queens(board: list[list[int]], col: int):
 
 
 def _is_safe(board: list[list[int]], row: int, col: int):
+    """Checks if placing a queen at the given row and column is safe."""
     for i in range(len(board)):
         if board[row][i] == 1:
             return False

@@ -3,6 +3,7 @@ from algorithms.collections.tree import TreeNode
 
 # https://www.geeksforgeeks.org/construct-a-binary-tree-from-postorder-and-inorder/
 def create_postorder_inorder(postorder: list, postrange: tuple[int, int], inorder: list, inrange: tuple[int, int]):
+    """Constructs a binary tree from postorder and inorder traversals."""
     post_left, post_right = postrange
     if post_right - post_left == 0:
         return TreeNode(postorder[post_right])
@@ -36,6 +37,7 @@ def create_postorder_inorder(postorder: list, postrange: tuple[int, int], inorde
 
 # https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
 def create_preorder_inorder(preorder: list, prerange: tuple[int, int], inorder: list, inrange: tuple[int, int]):
+    """Constructs a binary tree from preorder and inorder traversals."""
     pre_left, pre_right = prerange
     if pre_right - pre_left == 0:
         return TreeNode(preorder[pre_right])

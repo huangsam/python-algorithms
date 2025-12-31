@@ -4,6 +4,7 @@ from algorithms.collections.tree import TreeNode
 
 
 def inorder_recursive(root: TreeNode | None):
+    """Performs recursive inorder traversal of a binary tree."""
     if root is None:
         return []
     result = inorder_recursive(root.left)
@@ -14,6 +15,7 @@ def inorder_recursive(root: TreeNode | None):
 
 # https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
 def inorder_iterative(root: TreeNode):
+    """Performs iterative inorder traversal of a binary tree."""
     visited: list[TreeNode] = []
     c: TreeNode | None = root
     s: deque[TreeNode] = deque()

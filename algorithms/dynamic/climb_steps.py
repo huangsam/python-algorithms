@@ -1,5 +1,6 @@
 # https://www.geeksforgeeks.org/count-ways-reach-nth-stair/
 def climb_steps(n: int, steps: list[int]):
+    """Calculates the number of ways to climb n steps with given step sizes."""
     max_step = max(steps)
     answers = [0] * max(max_step + 1, n + 1)
     for step in steps:
