@@ -10,8 +10,15 @@ class SegmentTree:
 
     def __init__(self, arr: list[int]) -> None:
         """Initializes the segment tree with the given array."""
+        # N represents the size of the input array
         self.n = len(arr)
+
+        # The segment tree array can be up to 4 times the size of the input array
+        # so that we have enough space to store all segments, given that 4xN is
+        # a safe boundary for a complete binary tree
         self.tree = [0] * (4 * self.n)
+
+        # Build the segment tree
         self.build(arr, 0, 0, self.n - 1)
 
     def build(self, arr: list[int], node: int, start: int, end: int) -> None:
