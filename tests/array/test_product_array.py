@@ -15,5 +15,5 @@ from algorithms.array.product_array import product_array
 )
 def test_product_array(old: list[int], expected: list[int]):
     new_arr = product_array(old)
-    for i, j in zip(new_arr, expected):
+    for i, j in zip(new_arr, expected, strict=False):
         assert i == j

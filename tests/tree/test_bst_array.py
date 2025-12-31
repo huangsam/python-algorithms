@@ -24,5 +24,5 @@ def test_create_bst_from_array(given: list[int], expected: int):
     assert is_bst(root) is True
     visited = inorder_recursive(root)
     assert len(visited) == len(given)
-    for v, g in zip(visited, given):
+    for v, g in zip(visited, given, strict=False):
         assert v == g

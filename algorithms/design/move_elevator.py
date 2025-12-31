@@ -14,7 +14,7 @@ def move_elevator(current_level, op_queue, direction):
     next_level = None
     priority = []
     visited = set()
-    print("== {dir} from level {cur}".format(dir=direction, cur=current_level))
+    print(f"== {direction} from level {current_level}")
     bound = _get_bound(current_level, op_queue, direction)
     for pair in op_queue:
         pair_left, pair_right = pair
@@ -25,7 +25,7 @@ def move_elevator(current_level, op_queue, direction):
     op_queue = op_queue.difference(visited)
     while len(priority) > 0:
         _, next_level = heappop(priority)
-        print("Arrived at this level: {nxt}".format(nxt=next_level))
+        print(f"Arrived at this level: {next_level}")
     if len(op_queue) > 0:
         if next_level:
             move_elevator(next_level, op_queue, _opposite(direction))

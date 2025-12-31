@@ -15,5 +15,5 @@ from algorithms.array.common_elements import common_elements
 )
 def test_common_elements(a1: list, a2: list, a3: list, expected: list):
     result = common_elements(a1, a2, a3)
-    for i, j in zip(result, expected):
+    for i, j in zip(result, expected, strict=False):
         assert i == j

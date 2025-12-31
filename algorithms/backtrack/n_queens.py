@@ -19,12 +19,12 @@ def _is_safe(board: list[list[int]], row: int, col: int):
             return False
 
     # Check upper diagonal
-    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+    for i, j in zip(range(row, -1, -1), range(col, -1, -1), strict=False):
         if board[i][j] == 1:
             return False
 
     # Check lower diagonal
-    for i, j in zip(range(row, len(board), 1), range(col, -1, -1)):
+    for i, j in zip(range(row, len(board), 1), range(col, -1, -1), strict=False):
         if board[i][j] == 1:
             return False
 

@@ -13,7 +13,7 @@ def _knapsack_binary_wh(weight: int, items: ItemList, n: int, picked: set, cache
         return 0
     if (n, weight) in cache:
         return cache[(n, weight)]
-    for ix, val in enumerate(items):
+    for ix, _val in enumerate(items):
         if ix in picked:
             continue
         iw, iv = items[ix]

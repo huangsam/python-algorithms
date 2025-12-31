@@ -1,5 +1,4 @@
-isort
 mypy
 ruff
-coverage==7.6.10
-pytest==8.3.4
+coverage==7.13.1
+pytest==9.0.2

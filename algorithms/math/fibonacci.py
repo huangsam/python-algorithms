@@ -12,7 +12,7 @@ def fibonacci_iterative(n: int):
     elif n == 1:
         return 1
     f, s = 0, 1
-    for i in range(n - 1):
+    for _i in range(n - 1):
         result = f + s
         f, s = s, result
     return result

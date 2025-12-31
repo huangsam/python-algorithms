@@ -23,7 +23,7 @@ def test_queue_size():
     queue = Queue()
     for i in range(100):
         queue.push(i)
-    for i in range(20):
+    for _ in range(20):
         queue.pop()
     assert queue.size() == 80
 
@@ -48,6 +48,6 @@ def test_funky_queue_size():
     queue = FunkyQueue()
     for i in range(100):
         queue.push(i)
-    for i in range(20):
+    for _ in range(20):
         queue.pop()
     assert queue.size() == 80

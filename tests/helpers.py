@@ -1,9 +1,7 @@
-from typing import List
-
 from algorithms.collections.list import ListNode
 
 
-def is_sorted(array: List):
+def is_sorted(array: list):
     """Verify that list is sorted."""
     alen = len(array)
     for i in range(1, alen):

@@ -21,7 +21,7 @@ from algorithms.array.merge_k import merge_k_heap, merge_k_split, merge_two_arra
 @pytest.mark.parametrize("func", [merge_k_split, merge_k_heap])
 def test_merge_k(arrays: list[list[int]], expected: list[int], func):
     result = func(arrays)
-    for i, j in zip(result, expected):
+    for i, j in zip(result, expected, strict=False):
         assert i == j
 
 
@@ -36,5 +36,5 @@ def test_merge_k(arrays: list[list[int]], expected: list[int], func):
 )
 def test_merge_two_arrays(arr1, arr2, expected):
     result = merge_two_arrays(arr1, arr2)
-    for i, j in zip(result, expected):
+    for i, j in zip(result, expected, strict=False):
         assert i == j

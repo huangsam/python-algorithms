@@ -31,7 +31,7 @@ def first_missing_optimal(arr: list[int]):
     maximum = 0
 
     # Idempotent negative
-    for i, val in enumerate(arr):
+    for _, val in enumerate(arr):
         a_val = abs(val)
         if maximum < a_val:
             maximum = a_val

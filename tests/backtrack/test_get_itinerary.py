@@ -36,7 +36,7 @@ def test_get_itinerary_good(start: str, flights: list[tuple[str, str]], expected
         assert result == expected
     else:
         print(result, expected)
-        for i, j in zip(result, expected):
+        for i, j in zip(result, expected, strict=False):
             assert i == j
 
 

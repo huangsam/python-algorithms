@@ -54,7 +54,7 @@ def test_stack_size():
     stack = Stack()
     for i in range(100):
         stack.push(i)
-    for i in range(20):
+    for _ in range(20):
         stack.pop()
     assert stack.size() == 80
 

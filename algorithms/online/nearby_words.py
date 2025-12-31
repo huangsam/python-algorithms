@@ -1,6 +1,6 @@
 def get_nearby_chars(char):
     consonants = {"c", "b", "h", "k", "t", "r"}
-    vowels = {"a", "e", "o", "i", "o", "u"}
+    vowels = {"a", "e", "o", "i", "u"}
     if char in consonants:
         return consonants
     if char in vowels:
@@ -56,7 +56,7 @@ def nearby_words(word):
 def main():
     not_sures = ["ki", "kat"]
     for not_sure in not_sures:
-        print("Possible words for {}:".format(not_sure))
+        print(f"Possible words for {not_sure}:")
         for word in nearby_words(not_sure):
             print(word)
 
