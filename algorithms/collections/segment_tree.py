@@ -27,6 +27,7 @@ class SegmentTree:
     def build(self, arr: list[int], node: int, start: int, end: int) -> None:
         """Builds the segment tree recursively."""
         if start == end:
+            # Leaf node setup
             self.tree[node] = SegmentNode(arr[start], arr[start], arr[start], arr[start])
             return
 
@@ -43,6 +44,7 @@ class SegmentTree:
     def update(self, node: int, start: int, end: int, idx: int, val: int) -> None:
         """Updates the value at index idx to val."""
         if start == end:
+            # Leaf node update
             self.tree[node] = SegmentNode(val, val, val, val)
             return
 
