@@ -1,3 +1,14 @@
+[project]
+name = "python-algorithms"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "mypy",
+    "ruff",
+    "coverage==7.13.1",
+    "pytest==9.0.2",
+]
+
 [tool.ruff]
 line-length = 160
 

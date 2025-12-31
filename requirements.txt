@@ -1,4 +1,0 @@
-mypy
-ruff
-coverage==7.13.1
-pytest==9.0.2
