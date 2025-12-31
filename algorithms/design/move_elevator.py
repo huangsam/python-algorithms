@@ -9,17 +9,17 @@ class Direction(Enum):
 
 
 class Elevator:
-    def __init__(self, current_level: int, requests: set[tuple[int, int]]):
+    def __init__(self, current_level: int, requests: set[tuple[int, int]]) -> None:
         self.current_level = current_level
         self.requests = deque(requests)  # Use deque for efficient queue operations
         self.direction = Direction.UP
 
-    def move(self):
+    def move(self) -> None:
         """Iteratively move the elevator, processing requests in sweeps."""
         while self.requests:
             print(f"== {self.direction.name} from level {self.current_level}")
             bound = self._get_bound()
-            priority = []
+            priority: list[tuple[int, int]] = []
             visited_requests = set()
             visited_levels = set()
 
@@ -54,7 +54,7 @@ class Elevator:
             min_level = self._get_min_level()
             return min_level, self.current_level
 
-    def _valid(self, req) -> bool:
+    def _valid(self, req: tuple[int, int]) -> bool:
         """Determine whether request is valid given direction."""
         req_min, req_max = min(req), max(req)
         if self.direction == Direction.UP:
@@ -76,7 +76,7 @@ class Elevator:
         """Get minimum level for remaining requests."""
         return min(v for req in self.requests for v in req)
 
-    def _spans(self, bound, req) -> bool:
+    def _spans(self, bound: tuple[int, int], req: tuple[int, int]) -> bool:
         """Determine whether boundary spans request."""
         bl, br = bound
         rl, rr = req
