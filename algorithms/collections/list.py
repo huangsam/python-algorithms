@@ -15,10 +15,8 @@ class ListNode:
 
 def list_size(lst: ListNode):
     """Get size of list node."""
-    size = 0
-    while True:
-        if not lst.next_node:
-            break
+    size = 1
+    while lst.next_node:
         lst = lst.next_node
         size += 1
     return size

@@ -35,3 +35,15 @@ def test_list_node_lt():
     node2 = ListNode(2)
     assert node1 < node2
     assert not (node2 < node1)
+
+
+@pytest.mark.list
+def test_list_size():
+    from algorithms.collections.list import list_size
+
+    # Single node
+    node = ListNode(1)
+    assert list_size(node) == 1
+    # Multiple
+    node.next_node = ListNode(2)
+    assert list_size(node) == 2

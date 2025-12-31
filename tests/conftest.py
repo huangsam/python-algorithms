@@ -60,6 +60,19 @@ def acyclic_digraph() -> DirectedGraph:
 
 
 @pytest.fixture(scope="function")
+def cyclic_digraph() -> DirectedGraph:
+    """
+        a
+       / \
+      c -- b
+           \
+            d
+    """
+    graph = DirectedGraph(("a", "b"), ("a", "c"), ("b", "c"), ("b", "d"))
+    return graph
+
+
+@pytest.fixture(scope="function")
 def simple_trie() -> Trie:
     trie = Trie()
     trie.insert("hello")

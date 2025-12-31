@@ -1,6 +1,13 @@
 import pytest
 
-from algorithms.string.phones import get_phone_words_rec, get_phone_words_stk
+from algorithms.string.phones import get_phone_key, get_phone_words_rec, get_phone_words_stk
+
+
+@pytest.mark.math
+@pytest.mark.string
+def test_get_phone_key():
+    assert get_phone_key(2, 1) == "a"
+    assert get_phone_key(9, 3) == "y"
 
 
 @pytest.mark.math

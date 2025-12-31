@@ -10,6 +10,12 @@ def test_square_root_exact(root, x):
 
 
 @pytest.mark.math
+def test_square_root_exact_tight():
+    # Test with tight precision to hit the exact return
+    assert 3.0 == square_root(9.0, precision=0.0)
+
+
+@pytest.mark.math
 @pytest.mark.parametrize(
     "left, right, x",
     [

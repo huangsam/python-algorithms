@@ -1,5 +1,5 @@
 def permutations(content: str, r: int | None = None):
-    rval = r or len(content)
+    rval = r if r is not None else len(content)
     result = _permutations_wh(content, r=rval)
     return [p for p in sorted(result)]
 
@@ -18,7 +18,7 @@ def _permutations_wh(content: str, r: int):
 
 
 def combinations(content: str, r: int | None = None):
-    rval = r or len(content)
+    rval = r if r is not None else len(content)
     result = _combinations_wh(content, r=rval)
     return [c for c in sorted(result)]
 

@@ -17,3 +17,8 @@ from algorithms.string import word_search
 )
 def test_naive(astr, bstr, ix):
     assert word_search.naive(astr, bstr) == ix
+
+
+@pytest.mark.string
+def test_naive_not_found():
+    assert word_search.naive("hello", "xyz") == -1

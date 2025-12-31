@@ -15,6 +15,11 @@ def test_count_complete_small():
 
 
 @pytest.mark.tree
+def test_count_complete_none():
+    assert count_complete(None) == 0
+
+
+@pytest.mark.tree
 def test_count_complete_big():
     root = TreeNode(1)
     root.left = TreeNode(2)
