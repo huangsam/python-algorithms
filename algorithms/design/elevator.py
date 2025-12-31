@@ -4,11 +4,15 @@ from heapq import heappop, heappush
 
 
 class Direction(Enum):
+    """Direction of elevator movement."""
+
     UP = auto()
     DOWN = auto()
 
 
 class Elevator:
+    """Elevator system processing requests in sweeps."""
+
     def __init__(self, current_level: int, requests: set[tuple[int, int]]) -> None:
         self.current_level = current_level
         self.requests = deque(requests)  # Use deque for efficient queue operations
