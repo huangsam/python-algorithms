@@ -1,5 +1,12 @@
 class SegmentTree:
-    """A segment tree for range sum queries and point updates."""
+    """A segment tree for range sum queries and point updates.
+
+    A segment tree is a data structure that allows efficient range queries and updates on an array.
+    It divides the array into segments and stores them in a tree structure, enabling operations like
+    summing a range of elements or updating a single element in O(log n) time. This implementation
+    supports range sum queries and point updates, making it useful for problems involving frequent
+    range aggregations and modifications.
+    """
 
     def __init__(self, arr: list[int]) -> None:
         """Initializes the segment tree with the given array."""

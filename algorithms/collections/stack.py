@@ -1,5 +1,10 @@
 class Stack:
-    """Stack is a LIFO data structure."""
+    """Stack is a LIFO data structure.
+
+    A last-in, first-out (LIFO) data structure with O(1) push and pop operations. It also supports finding
+    the maximum element efficiently by maintaining a separate stack for maximum values, useful in scenarios
+    where tracking the max is needed without additional space overhead.
+    """
 
     def __init__(self):
         self.array = []
@@ -31,7 +36,12 @@ class Stack:
 
 # https://www.geeksforgeeks.org/implement-stack-using-queue/
 class FunkyStack:
-    """Stack made of two queues."""
+    """Stack made of two queues.
+
+    A stack implementation using two queues, optimized for push operations. Elements are enqueued and
+    dequeued using queue operations to simulate stack behavior, demonstrating how different data structures
+    can be adapted to implement others.
+    """
 
     def __init__(self):
         self.q1 = []

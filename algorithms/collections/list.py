@@ -2,7 +2,12 @@ from typing import Any
 
 
 class ListNode:
-    """Linked list node has a value and node references."""
+    """Linked list node has a value and node references.
+
+    A node in a doubly linked list, containing a value and references to the previous and next nodes.
+    This allows for efficient insertion and deletion operations in both directions, making it suitable
+    for implementations of linked lists where bidirectional traversal is needed.
+    """
 
     def __init__(self, value: Any):
         self.value = value

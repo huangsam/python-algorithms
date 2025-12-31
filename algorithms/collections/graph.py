@@ -3,7 +3,13 @@ from collections import defaultdict
 
 
 class Graph(ABC):
-    """Graph stored as adjacency list."""
+    """Graph stored as adjacency list.
+
+    A graph data structure represented using an adjacency list, where each node maintains a list of its
+    neighboring nodes. This representation is efficient for sparse graphs and allows for quick traversal
+    and neighbor lookups. The graph can be directed or undirected, with support for adding edges and
+    querying degrees and connectivity. It uses a defaultdict for adjacency and ingress tracking.
+    """
 
     def __init__(self, *edges: tuple):
         """Initializes the graph with optional edges."""
@@ -45,7 +51,12 @@ class Graph(ABC):
 
 
 class DirectedGraph(Graph):
-    """Directed graph."""
+    """Directed graph.
+
+    A directed graph where edges have a direction from source to destination. This class extends the
+    base Graph class and implements directed edge addition, ensuring no duplicate edges from the same
+    source. It tracks in-degrees for topological sorting and other directed graph algorithms.
+    """
 
     def add_edge(self, src, dst):
         """Adds a directed edge from src to dst."""
@@ -57,7 +68,12 @@ class DirectedGraph(Graph):
 
 
 class UndirectedGraph(Graph):
-    """Undirected graph."""
+    """Undirected graph.
+
+    An undirected graph where edges are bidirectional. This class extends the base Graph class and
+    implements undirected edge addition, maintaining symmetry in the adjacency list. It updates both
+    directions and ingress counts for connectivity analysis in undirected graph problems.
+    """
 
     def add_edge(self, src, dst):
         """Adds an undirected edge between src and dst."""

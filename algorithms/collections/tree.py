@@ -2,7 +2,12 @@ from typing import Any
 
 
 class TreeNode:
-    """Binary tree node has a value and node references."""
+    """Binary tree node has a value and node references.
+
+    A node in a binary tree, holding a value and references to left and right child nodes. This structure
+    forms the basis for binary tree algorithms, supporting recursive traversals and tree manipulations.
+    It includes methods for inserting children and comparing nodes by value.
+    """
 
     def __init__(self, value: Any):
         self.value: Any = value
