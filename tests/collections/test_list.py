@@ -27,3 +27,11 @@ def test_list_is_unsorted(sorted_list_node: ListNode):
         prev_node = cur_node
         cur_node = cur_node.next_node
     assert is_unsorted
+
+
+@pytest.mark.list
+def test_list_node_lt():
+    node1 = ListNode(1)
+    node2 = ListNode(2)
+    assert node1 < node2
+    assert not (node2 < node1)

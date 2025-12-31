@@ -34,8 +34,12 @@ _BOOK: set[str] = {
     ],
 )
 def test_split_word_good(i: str, o: str):
-    result = split_word(i, _BOOK, cache={})
+    cache: dict[str, str] = {}
+    result = split_word(i, _BOOK, cache)
     assert result == o
+    # Test cache hit
+    result2 = split_word(i, _BOOK, cache)
+    assert result2 == o
 
 
 @pytest.mark.string

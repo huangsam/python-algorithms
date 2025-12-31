@@ -4,6 +4,7 @@ from algorithms.online.codesignal.simplifyPath import simplifyPath
 
 
 @pytest.mark.string
+@pytest.mark.online
 @pytest.mark.parametrize(
     "long_path, short_path",
     [

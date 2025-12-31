@@ -4,6 +4,7 @@ from algorithms.online.codesignal.findProfession import findProfession
 
 
 @pytest.mark.tree
+@pytest.mark.online
 @pytest.mark.parametrize(
     "level, pos, expected",
     [

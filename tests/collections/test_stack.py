@@ -75,3 +75,9 @@ def test_funky_stack_pop():
     assert stack.size() == 1
     assert stack.pop() == 1
     assert stack.size() == 0
+
+
+@pytest.mark.stack
+def test_funky_stack_pop_empty():
+    stack = FunkyStack()
+    assert stack.pop() is None

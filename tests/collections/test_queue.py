@@ -44,6 +44,12 @@ def test_funky_queue_pop():
 
 
 @pytest.mark.queue
+def test_funky_queue_pop_empty():
+    queue = FunkyQueue()
+    assert queue.pop() is None
+
+
+@pytest.mark.queue
 def test_funky_queue_size():
     queue = FunkyQueue()
     for i in range(100):

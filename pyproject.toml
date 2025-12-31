@@ -13,6 +13,7 @@ markers = [
     "graph: involves graphs.",
     "list: involves linked lists.",
     "math: involves mathematics.",
+    "online: involves online algorithms.",
     "queue: involves queues.",
     "sorting: involves sorting arrays.",
     "stack: involves stacks.",

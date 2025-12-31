@@ -4,6 +4,7 @@ from algorithms.online.codesignal.mazeEscape import mazeEscape
 
 
 @pytest.mark.graph
+@pytest.mark.online
 @pytest.mark.parametrize(
     "w, h, dist, impassable",
     [

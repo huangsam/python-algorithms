@@ -18,6 +18,18 @@ def test_setup_undirected():
 
 
 @pytest.mark.graph
+def test_empty_directed():
+    graph = DirectedGraph()
+    assert len(graph.get_nodes()) == 0
+
+
+@pytest.mark.graph
+def test_empty_undirected():
+    graph = UndirectedGraph()
+    assert len(graph.get_nodes()) == 0
+
+
+@pytest.mark.graph
 def test_add_edge_directed():
     graph = DirectedGraph()
     for src, dst in _SAMPLE_DATA:
@@ -90,3 +102,19 @@ def test_check_edge_undirected():
     graph = UndirectedGraph(*_SAMPLE_DATA)
     assert graph.check_edge("a", "b")
     assert graph.check_edge("b", "a")
+
+
+@pytest.mark.graph
+def test_add_duplicate_edge_directed():
+    graph = DirectedGraph()
+    graph.add_edge("a", "b")
+    with pytest.raises(ValueError):
+        graph.add_edge("a", "b")
+
+
+@pytest.mark.graph
+def test_add_duplicate_edge_undirected():
+    graph = UndirectedGraph()
+    graph.add_edge("a", "b")
+    with pytest.raises(ValueError):
+        graph.add_edge("a", "b")

@@ -4,6 +4,7 @@ from algorithms.online.codesignal.rotateImage import rotateImage
 
 
 @pytest.mark.array
+@pytest.mark.online
 @pytest.mark.parametrize(
     "image",
     [

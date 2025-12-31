@@ -17,6 +17,8 @@ def _cycle(n: int) -> list[list[int]]:
 def test_search_one(any_cycle: list[int]):
     for val in any_cycle:
         assert search_one(any_cycle, val) is True
+    # Test not found
+    assert search_one(any_cycle, 999) is False
 
 
 @pytest.mark.array

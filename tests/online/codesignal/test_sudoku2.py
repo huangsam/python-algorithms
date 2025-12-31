@@ -4,6 +4,7 @@ from algorithms.online.codesignal.sudoku2 import sudoku2
 
 
 @pytest.mark.array
+@pytest.mark.online
 def test_grid_good():
     grid = [
         [".", ".", ".", "1", "4", ".", ".", "2", "."],
@@ -20,6 +21,7 @@ def test_grid_good():
 
 
 @pytest.mark.array
+@pytest.mark.online
 def test_grid_bad():
     grid = [
         [".", ".", ".", ".", "2", ".", ".", "9", "."],

@@ -5,6 +5,7 @@ from algorithms.online.codesignal.isTreeSymmetric import isTreeSymmetric
 
 
 @pytest.mark.tree
+@pytest.mark.online
 def test_symmetric_good():
     root = TreeNode(1)
     root.left = TreeNode(2)
@@ -17,6 +18,7 @@ def test_symmetric_good():
 
 
 @pytest.mark.tree
+@pytest.mark.online
 def test_symmetric_bad():
     root = TreeNode(1)
     root.left = TreeNode(2)
