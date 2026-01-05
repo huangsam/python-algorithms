@@ -1,5 +1,6 @@
 def longest_subseq_diff(nums: list[int], target: int) -> int:
-    """
+    """Find the longest subsequence with differences less than target.
+
     Given an array of integers, return the length of the longest subsequence
     where the difference between any two elements is less than the target.
     """

@@ -3,7 +3,8 @@ import math
 
 
 def sorted_squares(nums: list[int]) -> list[int]:
-    """
+    """Find the squares of a sorted array in sorted order.
+
     Given a sorted array of integers (which may include negatives), return
     the squares of the numbers in sorted order.
     """
@@ -22,8 +23,10 @@ def sorted_squares(nums: list[int]) -> list[int]:
 
 
 def find_kth_squared_value(nums: list[int], k: int) -> int:
-    """
-    As a follow-up, find the k-th smallest squared value in the sorted array.
+    """Find the k-th smallest squared value in a sorted array.
+
+    As a follow-up based on the previous function, find the k-th smallest
+    squared value in the sorted array.
     """
     # 1. Define the search range for the ANSWER (the squared value)
     low = 0
