@@ -29,18 +29,18 @@ def find_kth_squared_value(nums: list[int], k: int) -> int:
     squared value in the sorted array.
     """
     # 1. Define the search range for the ANSWER (the squared value)
-    low = 0
+    lo = 0
     # The largest possible square is the square of the largest absolute value
-    high = max(nums[0] ** 2, nums[-1] ** 2)
+    hi = max(nums[0] ** 2, nums[-1] ** 2)
 
-    result = high
+    result = hi
 
-    while low <= high:
-        mid_val = (low + high) // 2
+    while lo <= hi:
+        mid = (lo + hi) // 2
 
-        # 2. Count squares <= mid_val
-        # This is equivalent to finding elements in range [-sqrt(mid_val), sqrt(mid_val)]
-        root = math.isqrt(mid_val)  # Integer square root
+        # 2. Count squares <= mid
+        # This is equivalent to finding elements in range [-sqrt(mid), sqrt(mid)]
+        root = math.isqrt(mid)  # Integer square root
 
         # Find index of first element >= -root
         left_idx = bisect.bisect_left(nums, -root)
@@ -51,9 +51,9 @@ def find_kth_squared_value(nums: list[int], k: int) -> int:
 
         # 3. Standard Binary Search logic
         if count >= k:
-            result = mid_val
-            high = mid_val - 1
+            result = mid
+            hi = mid - 1
         else:
-            low = mid_val + 1
+            lo = mid + 1
 
     return result
