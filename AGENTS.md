@@ -25,10 +25,14 @@ This project provides a comprehensive collection of algorithm implementations in
 - queue
 - segment_tree
 - stack
+- circular_buffer
+- piece_table
+- bloom_filter
 
 ## Design
 
 - elevator
+- consistent_hashing
 
 ## Dynamic Programming
 
@@ -98,6 +102,8 @@ This project provides a comprehensive collection of algorithm implementations in
 - chainable
 - choices
 - hanoi
+- myers_diff
+- regex_engine
 
 ## Tree Algorithms
 

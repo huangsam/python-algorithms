@@ -30,4 +30,6 @@ markers = [
     "stack: involves stacks.",
     "string: involves string manipulation.",
     "tree: involves trees with nodes.",
+    "collections: involves specialized collections.",
+    "design: involves system design problems.",
 ]
