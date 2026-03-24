@@ -1,5 +1,12 @@
 class CircularBuffer:
-    """A fixed-size circular buffer."""
+    """A fixed-size circular buffer.
+
+    Uses a list with head/tail pointers instead of a deque for:
+    - Educational clarity: Explicitly demonstrates circular indexing with modulo arithmetic
+    - Memory efficiency: Pre-allocated fixed-size array avoids dynamic resizing
+    - Direct indexing: Supports O(1) random access via __getitem__ (deque is O(n))
+    - Fixed capacity: Emphasizes the bounded nature of the buffer
+    """
 
     def __init__(self, capacity: int):
         if capacity <= 0:
