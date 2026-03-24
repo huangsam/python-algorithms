@@ -2,9 +2,9 @@ class Piece:
     """A single piece in the PieceTable."""
 
     def __init__(self, buffer_index: int, start: int, length: int):
-        self.buffer_index = buffer_index  # 0 for original, 1 for added
-        self.start = start
-        self.length = length
+        self.buffer_index = buffer_index  # 0 for original buffer, 1 for added buffer
+        self.start = start  # Starting index in the buffer
+        self.length = length  # Length of the text segment
 
     def __repr__(self):
         return f"Piece(index={self.buffer_index}, start={self.start}, len={self.length})"
@@ -14,7 +14,9 @@ class PieceTable:
     """A piece table data structure for efficient text editing."""
 
     def __init__(self, original_text: str):
+        # Two buffers: [0] original text, [1] added text
         self.buffers = [original_text, ""]
+        # List of pieces representing the current text composition
         self.pieces = [Piece(0, 0, len(original_text))] if original_text else []
 
     def insert(self, position: int, text: str):
@@ -22,6 +24,7 @@ class PieceTable:
         if not text:
             return
 
+        # Step 1: Append to added buffer and create new piece
         added_start = len(self.buffers[1])
         self.buffers[1] += text
         new_piece = Piece(1, added_start, len(text))
@@ -30,16 +33,17 @@ class PieceTable:
             self.pieces.append(new_piece)
             return
 
+        # Step 2: Find the piece and offset where insertion occurs
         piece_index, offset = self._find_piece(position)
 
         if offset == 0:
-            # Insert at the beginning of a piece
+            # Insert at the beginning of a piece - just insert before it
             self.pieces.insert(piece_index, new_piece)
         elif offset == self.pieces[piece_index].length:
-            # Insert at the end of a piece
+            # Insert at the end of a piece - insert after it
             self.pieces.insert(piece_index + 1, new_piece)
         else:
-            # Split old piece around the insertion point
+            # Insert in the middle - split the piece into left and right parts
             old_piece = self.pieces[piece_index]
             left_piece = Piece(old_piece.buffer_index, old_piece.start, offset)
             right_piece = Piece(old_piece.buffer_index, old_piece.start + offset, old_piece.length - offset)
@@ -62,25 +66,27 @@ class PieceTable:
             available_in_piece = piece.length - offset
 
             if offset == 0:
+                # Deleting from the start of the piece
                 if available_in_piece <= remaining_to_delete:
-                    # Delete the whole piece
+                    # Delete the entire piece
                     self.pieces.pop(piece_index)
                     remaining_to_delete -= available_in_piece
-                    # Index remains same for next piece
+                    # piece_index stays the same for next iteration
                 else:
-                    # Shrink from start
+                    # Shrink the piece from the start
                     piece.start += remaining_to_delete
                     piece.length -= remaining_to_delete
                     remaining_to_delete = 0
             else:
+                # Deleting from the middle or end of the piece
                 if available_in_piece <= remaining_to_delete:
-                    # Shrink from end
+                    # Shrink the piece to end at the deletion start
                     piece.length = offset
                     remaining_to_delete -= available_in_piece
                     piece_index += 1
-                    offset = 0
+                    offset = 0  # Reset offset for next piece
                 else:
-                    # Split and delete middle
+                    # Split the piece: keep left part, create right part after deletion
                     left_piece = Piece(piece.buffer_index, piece.start, offset)
                     right_piece = Piece(
                         piece.buffer_index,
@@ -99,6 +105,7 @@ class PieceTable:
             if current_pos <= position <= current_pos + piece.length:
                 return i, position - current_pos
             current_pos += piece.length
+        # If position is beyond all pieces, return last piece info
         return len(self.pieces) - 1, self.pieces[-1].length if self.pieces else 0
 
     def get_text(self) -> str:
