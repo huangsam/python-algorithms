@@ -39,11 +39,13 @@ class PieceTable:
             # Insert at the end of a piece
             self.pieces.insert(piece_index + 1, new_piece)
         else:
-            # Split the piece
+            # Split old piece around the insertion point
             old_piece = self.pieces[piece_index]
             left_piece = Piece(old_piece.buffer_index, old_piece.start, offset)
             right_piece = Piece(old_piece.buffer_index, old_piece.start + offset, old_piece.length - offset)
+            # Replace old piece with left piece
             self.pieces[piece_index] = left_piece
+            # Insert new piece and right piece after left piece
             self.pieces.insert(piece_index + 1, new_piece)
             self.pieces.insert(piece_index + 2, right_piece)
 
@@ -93,6 +95,7 @@ class PieceTable:
         """Find the piece index and offset for a given text position."""
         current_pos = 0
         for i, piece in enumerate(self.pieces):
+            # Check if the position falls within the current piece
             if current_pos <= position <= current_pos + piece.length:
                 return i, position - current_pos
             current_pos += piece.length
